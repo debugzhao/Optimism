@@ -175,7 +175,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | snaildarter |   | | | | | | | | | | | | | | | | | | | | |
 | William-02-02 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | pillowtalk-Qy | ✅ | | | | | | | | | | | | | | | | | | | | |
-| wuyanhui |   | | | | | | | | | | | | | | | | | | | | |
+| wuyanhui | ✅ | | | | | | | | | | | | | | | | | | | | |
 | btcnice |   | | | | | | | | | | | | | | | | | | | | |
 | amandakelake | ✅ | | | | | | | | | | | | | | | | | | | | |
 | chendafu2573 |   | | | | | | | | | | | | | | | | | | | | |
@@ -190,6 +190,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
