@@ -5,53 +5,9 @@ timezone: Asia/Shanghai
 > 请在上边的 timezone 添加你的当地时区，这会有助于你的打卡状态的自动化更新，如果没有添加，默认为北京时间 UTC+8 时区
 > 时区请参考以下列表，请移除 # 以后的内容
 
-timezone: Pacific/Honolulu # 夏威夷-阿留申标准时间 (UTC-10)
-
-timezone: America/Anchorage # 阿拉斯加标准时间 (UTC-9)
-
-timezone: America/Los_Angeles # 太平洋标准时间 (UTC-8)
-
-timezone: America/Denver # 山地标准时间 (UTC-7)
-
-timezone: America/Chicago # 中部标准时间 (UTC-6)
-
-timezone: America/New_York # 东部标准时间 (UTC-5)
-
-timezone: America/Halifax # 大西洋标准时间 (UTC-4)
-
-timezone: America/St_Johns # 纽芬兰标准时间 (UTC-3:30)
-
-timezone: America/Sao_Paulo # 巴西利亚时间 (UTC-3)
-
-timezone: Atlantic/Azores # 亚速尔群岛时间 (UTC-1)
-
-timezone: Europe/London # 格林威治标准时间 (UTC+0)
-
-timezone: Europe/Berlin # 中欧标准时间 (UTC+1)
-
-timezone: Europe/Helsinki # 东欧标准时间 (UTC+2)
-
-timezone: Europe/Moscow # 莫斯科标准时间 (UTC+3)
-
-timezone: Asia/Dubai # 海湾标准时间 (UTC+4)
-
-timezone: Asia/Kolkata # 印度标准时间 (UTC+5:30)
-
-timezone: Asia/Dhaka # 孟加拉国标准时间 (UTC+6)
-
-timezone: Asia/Bangkok # 中南半岛时间 (UTC+7)
-
-timezone: Asia/Shanghai # 中国标准时间 (UTC+8)
-
-timezone: Asia/Tokyo # 日本标准时间 (UTC+9)
-
-timezone: Australia/Sydney # 澳大利亚东部标准时间 (UTC+10)
-
-timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
-
 ---
 
-# {ATON}
+# ATON
 
 1. 自我介绍--web3新人 我要找web3工作！！！！！！！！！
 
@@ -63,7 +19,91 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-笔记内容
+======================================
+
+**Optimism是什么？**
+
+https://www.youtube.com/watch?v=fHkgFu3NLmY&ab_channel=Exodus
+
+基于ETH网络的（Layer2）为降低gas提高效率产品
+
+rollup 将多比交易一起处理为单笔eth交易。
+
+ai大致了解一下
+
+> ### Layer 2 扩容方案
+>
+> - **定义**：Layer 2 是指在以太坊主链（Layer 1）之上构建的第二层协议，用于处理交易和智能合约的执行，从而减轻 Layer 1 的负担。
+> - **目的**：通过在 Layer 2 上进行大部分计算和存储，减少 Layer 1 的交易数量和复杂性，从而实现更高的吞吐量和更低的费用。
+>
+> ### Optimistic Rollups
+>
+> - **基本原理**：Optimistic Rollups 是一种 Layer 2 扩容技术，它假设交易是有效的，除非有人提出异议。交易数据和执行结果会被压缩并提交到 Layer 1，而具体的执行过程则在 Layer 2 上进行。
+> - 优点
+>   - **高吞吐量**：可以在 Layer 2 上处理大量交易，然后将结果批量提交到 Layer 1。
+>   - **低交易费用**：由于大部分计算和存储在 Layer 2 上完成，Layer 1 的费用显著降低。
+>   - **兼容性**：与以太坊的 EVM 兼容，允许现有的以太坊应用和智能合约在 Layer 2 上运行。
+>
+> ### Tokenomics
+>
+> - **OP 代币**：Optimism 的原生代币是 OP，用于激励网络参与者，如验证者和开发者。
+> - **用途**：OP 代币可用于治理投票、参与网络的维护和奖励贡献者等。
+>
+> ### 阶段（Stages）
+>
+> - **介绍**：Optimism 的发展分为多个阶段，每个阶段代表了技术进步和生态系统的成熟度。
+> - **目的**：通过分阶段的迭代，逐步完善 Optimistic Rollups 技术和生态系统，确保安全性和可靠性。
+
+optimism是基于layer1的他是怎样的存在形式 一个智能合约吗？
+
+> Optimism 不是一个单独的智能合约，而是由一组智能合约以及与以太坊主网交互的外部系统组成的。 
+>
+> 什么外部系统？
+>
+> 就是指类似于eth的链结构，及其代码中的组件：sequencer verifier state_sync bridgeInfrastructure client
+>
+> 可以直接和l1上的op相关合约交互来实现op链上的交互
+
+rollup就是指op把他链上的交易做一个打包 然后糅合成一笔交易发送并保存在eth啊网络上吗？
+
+> 是的，**Rollup**（尤其是 **Optimistic Rollup**，如 Optimism）就是指将 **Layer 2**（例如 Optimism）上的交易批量打包，合并成一笔交易，然后将这个交易或状态根提交到 **Layer 1（以太坊）** 网络上进行记录和验证。简而言之，Rollup 通过将多个交易“打包”来提高吞吐量，减少费用，同时仍然保持以太坊主网的安全性。
+
+**主网怎么验证op数据包的正确性的**
+
+> op发送状态根给主网上的智能合约，**这个状态根是 hash[旧状态根+新状态(合约/账户)]** 计算得到的。主网上合约可以验证op状态根的正确性，然后等待挑战期。过后主网上合约就会保存这个有效的状态根，从而保障op的数据可用性DA。主网账户不会保存op链上的具体账户数据。
+
+**怎么发起挑战**
+
+> 如果某个节点或用户认为状态根是错误的（例如通过不合法的交易或状态更新），他们可以在挑战期内 **发起挑战**。挑战需要提供 **欺诈证明**（Fraud Proof），这通常是一个证明，展示如何从当前的状态根回溯到一个不合法的状态或交易。
+>
+> 这个 **欺诈证明** 可能包括：
+>
+> - **Merkle Proof**：证明特定交易或账户状态变更是非法的。
+> - **交易链**：通过一系列合法的或非法的交易链来展示如何从原状态根到新的状态根之间存在不一致。
+>
+> **挑战成功的奖励**：如果你成功挑战了不合法的状态根，通常会获得奖励。这可能包括 **ETH** 或其他原生代币，奖励的分配是为了激励节点或用户参与网络的安全验证。
+>
+> **恶意行为的惩罚**：如果一个节点被证明提交了非法的状态根，可能会受到 **经济惩罚**，例如，损失部分押金或被暂时或永久禁止参与网络操作。
+
+
+
+**Rollup详解**
+
+Block Storage: As these blocks are submitted as transactions using EIP-4844 blobs, there is no way to modify or censor them after the "transaction" is included in a block that has enough attestations. 无需验证 无法修改 blob存储
+
+sequence：私有内存池来产生block    可接受直接提交的交易或L1上的交易（无需验证）
+
+跨链：通过在L1转给OP主网 OP网络在自己的网络上添加对应的金额完成跨链存款
+
+
+
+**EIP4844**
+
+
+
+**合约实现的详解**
+
+
 
 ### 2024.07.12
 
