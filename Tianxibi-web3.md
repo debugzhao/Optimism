@@ -63,8 +63,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-笔记内容
-
+关于Optimistic Rollup 
+1.理解 Optimistic Rollup 是如何依赖于以太坊等“父”区块链的安全性来运行的。
+2.了解 Optimism 作为 Optimistic Rollup 的具体实现及其设计目标。
+3.Optimism 是一种“Optimistic Rollup”，利用以太坊的共识机制，而不提供自己的机制
 ### 2024.07.12
 
 <!-- Content_END -->
