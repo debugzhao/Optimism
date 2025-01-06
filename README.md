@@ -154,7 +154,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | StarryDesert | ✅ | | | | | | | | | | | | | | | | | | | | |
 | debugzhao |   | | | | | | | | | | | | | | | | | | | | |
 | JacksonStack |   | | | | | | | | | | | | | | | | | | | | |
-| jjeejj |   | | | | | | | | | | | | | | | | | | | | |
+| jjeejj | ✅ | | | | | | | | | | | | | | | | | | | | |
 | luffythink | ✅ | | | | | | | | | | | | | | | | | | | | |
 | iossocket |   | | | | | | | | | | | | | | | | | | | | |
 | cherry-yl-sh |   | | | | | | | | | | | | | | | | | | | | |
@@ -190,6 +190,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
