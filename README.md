@@ -172,7 +172,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | zhengjunhe | ✅ | | | | | | | | | | | | | | | | | | | | |
 | goudanxiaokui |   | | | | | | | | | | | | | | | | | | | | |
 | 8280998 |   | | | | | | | | | | | | | | | | | | | | |
-| snaildarter |   | | | | | | | | | | | | | | | | | | | | |
+| snaildarter | ✅ | | | | | | | | | | | | | | | | | | | | |
 | William-02-02 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | pillowtalk-Qy | ✅ | | | | | | | | | | | | | | | | | | | | |
 | wuyanhui | ✅ | | | | | | | | | | | | | | | | | | | | |
@@ -192,6 +192,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | YiShengYouNi |   | | | | | | | | | | | | | | | | | | | | |
 | Thogsloc |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
