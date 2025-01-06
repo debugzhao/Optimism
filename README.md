@@ -149,7 +149,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | verygud-0 |   | | | | | | | | | | | | | | | | | | | | |
 | MRzzz-cyber | ✅ | | | | | | | | | | | | | | | | | | | | |
 | punkcanyang | ✅ | | | | | | | | | | | | | | | | | | | | |
-| brucexu-eth | ✅ | | | | | | | | | | | | | | | | | | | | |
+| brucexu-eth | ✅ |   | | | | | | | | | | | | | | | | | | | |
 | qiaopengjun5162 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | StarryDesert | ✅ | | | | | | | | | | | | | | | | | | | | |
 | debugzhao |   | | | | | | | | | | | | | | | | | | | | |
@@ -185,11 +185,12 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | LunaWang5209 |   | | | | | | | | | | | | | | | | | | | | |
 | partypill |   | | | | | | | | | | | | | | | | | | | | |
 | jiubate888 | ✅ | | | | | | | | | | | | | | | | | | | | |
-| Coooder-Crypto |   | | | | | | | | | | | | | | | | | | | | |
+| Coooder-Crypto | ✅ | | | | | | | | | | | | | | | | | | | | |
 | yoow4536 |   | | | | | | | | | | | | | | | | | | | | |
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
