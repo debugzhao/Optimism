@@ -181,7 +181,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | chendafu2573 |   | | | | | | | | | | | | | | | | | | | | |
 | CJC824 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | yiwen4 |   | | | | | | | | | | | | | | | | | | | | |
-| chenziyu-bxy |   | | | | | | | | | | | | | | | | | | | | |
+| chenziyu-bxy | ✅ | | | | | | | | | | | | | | | | | | | | |
 | LunaWang5209 |   | | | | | | | | | | | | | | | | | | | | |
 | partypill |   | | | | | | | | | | | | | | | | | | | | |
 | jiubate888 | ✅ | | | | | | | | | | | | | | | | | | | | |
@@ -190,6 +190,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
