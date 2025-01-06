@@ -49,10 +49,10 @@ EVM 等效性：Optimism 100% 兼容以太坊虚拟机（EVM），支持以太�
 
 
 
-### Optimism rollups 的演变历史
+### Optimistic rollups 的演变历史
 Layer2 的存在是是为了解决以太坊吞吐量不大的问题，以太坊目前的处理速度限制在每秒约 15-20 笔交易，这降低了短期内扩展以处理更多用户的可能性。这个问题存在的主要原因是以太坊的共识机制需要许多对等节点来验证区块链状态的每次更新
 而这是很难满足大规模应用的，在之前，
-在 Optimisic rollups 之前，有一个 Plsma 的扩容方案，Plsma 的扩容方案在 Optimism rollups 推出之前，一直都是以太坊的重要扩容方案，Polygon 之前也是沿用 plsma 的设计
+在 Optimistic rollups 之前，有一个 Plsma 的扩容方案，Plsma 的扩容方案在 Optimistic rollups 推出之前，一直都是以太坊的重要扩容方案，Polygon 之前也是沿用 plsma 的设计
 
 Plasma 是一种链下扩展方案，利用子链（或称 Plasma 链）处理大部分交易，同时仅将必要的信息提交到以太坊主网。
 
@@ -74,13 +74,13 @@ Plasma 是一种链下扩展方案，利用子链（或称 Plasma 链）处理�
 
 ![image](https://github.com/user-attachments/assets/e86821bd-6509-464a-8df9-9cf48604ddcf)
 
-Plasma 上并不能跑 Uniswap，为了解决这个问题，Plasma Group 推出了 Optimisic rollups
+Plasma 上并不能跑 Uniswap，为了解决这个问题，Plasma Group 推出了 Optimistic rollups
 
 由于 Plasma 子链 (Child Chain) 架构的一大缺点，就是在 L2 和 L1 层之间转移资金的耗时很长，有时用户甚至需要等上 1 周之久。这也使得像 Uniswap 这样的通用型智能合约无法运用在 Plasma 上。尽管 Ben 带领技术团队做了很多尝试，但「跑 Uniswap」的问题始终没有被解决。
 
 就这样，Plasma Group 被自己亲手培养出的独角兽给难住了，Plasma 这个曾经被视为以太坊扩容「EndGame」的方案，也似乎走进了技术死胡同。现在，Plasma Group 的三位「扩容性先驱」必须找出新的解决方案。
 
-Optimisi rollups 的论文来源是 Vitalik 2014 年发布的一篇论文，里面提到了 Shadow chain 的概念（有点类似于比特币的闪电网络），从而推出了 Optimistic Rollup
+Optimistic rollups 的论文来源是 Vitalik 2014 年发布的一篇论文，里面提到了 Shadow chain 的概念（有点类似于比特币的闪电网络），从而推出了 Optimistic Rollup
 
 Optimistic Rollup 借鉴了 Plasma 的设计，但牺牲了其几乎无限的扩容性，以运行被叫做 OVM (Optimistic Virtual Machine) 的 EVM 兼容虚拟机，这也使 Optimistic Rollup 能够运行以太坊上能够运行的所有应用。
 
