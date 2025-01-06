@@ -183,13 +183,14 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | yiwen4 |   | | | | | | | | | | | | | | | | | | | | |
 | chenziyu-bxy | ✅ | | | | | | | | | | | | | | | | | | | | |
 | LunaWang5209 |   | | | | | | | | | | | | | | | | | | | | |
-| partypill |   | | | | | | | | | | | | | | | | | | | | |
+| partypill | ✅ | | | | | | | | | | | | | | | | | | | | |
 | jiubate888 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | Coooder-Crypto | ✅ | | | | | | | | | | | | | | | | | | | | |
 | yoow4536 |   | | | | | | | | | | | | | | | | | | | | |
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
