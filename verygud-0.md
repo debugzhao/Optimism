@@ -51,7 +51,7 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {若无}
+# {verygud-0}
 
 1. 一个喜欢学习的人，2017年入圈的老韭菜，希望更多的了解Optimism
 2. 我一定会坚持到底
