@@ -165,7 +165,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | wyeeeh |   | | | | | | | | | | | | | | | | | | | | |
 | gpteth |   | | | | | | | | | | | | | | | | | | | | |
 | bxmyzzbc |   | | | | | | | | | | | | | | | | | | | | |
-| Zhangdajiang |   | | | | | | | | | | | | | | | | | | | | |
+| Zhangdajiang | ✅ | | | | | | | | | | | | | | | | | | | | |
 | Alexliwenhao |   | | | | | | | | | | | | | | | | | | | | |
 | stualan |   | | | | | | | | | | | | | | | | | | | | |
 | CHENFANGC | ✅ | | | | | | | | | | | | | | | | | | | | |
@@ -189,7 +189,10 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | yoow4536 |   | | | | | | | | | | | | | | | | | | | | |
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
+| YiShengYouNi |   | | | | | | | | | | | | | | | | | | | | |
+| Thogsloc |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
