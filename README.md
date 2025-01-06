@@ -172,7 +172,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | zhengjunhe | ✅ | | | | | | | | | | | | | | | | | | | | |
 | goudanxiaokui |   | | | | | | | | | | | | | | | | | | | | |
 | 8280998 |   | | | | | | | | | | | | | | | | | | | | |
-| snaildarter |   | | | | | | | | | | | | | | | | | | | | |
+| snaildarter | ✅ | | | | | | | | | | | | | | | | | | | | |
 | William-02-02 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | pillowtalk-Qy | ✅ | | | | | | | | | | | | | | | | | | | | |
 | wuyanhui | ✅ | | | | | | | | | | | | | | | | | | | | |
@@ -182,7 +182,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | CJC824 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | yiwen4 |   | | | | | | | | | | | | | | | | | | | | |
 | chenziyu-bxy | ✅ | | | | | | | | | | | | | | | | | | | | |
-| LunaWang5209 |   | | | | | | | | | | | | | | | | | | | | |
+| LunaWang5209 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | partypill | ✅ | | | | | | | | | | | | | | | | | | | | |
 | jiubate888 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | Coooder-Crypto | ✅ | | | | | | | | | | | | | | | | | | | | |
@@ -191,7 +191,12 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 | YiShengYouNi |   | | | | | | | | | | | | | | | | | | | | |
 | Thogsloc |   | | | | | | | | | | | | | | | | | | | | |
+| zedz |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
+
+
+
 
 
 
