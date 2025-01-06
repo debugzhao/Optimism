@@ -187,7 +187,9 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Coooder-Crypto |   | | | | | | | | | | | | | | | | | | | | |
 | yoow4536 |   | | | | | | | | | | | | | | | | | | | | |
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
+| foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
