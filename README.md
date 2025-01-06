@@ -152,8 +152,8 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | brucexu-eth | ✅ |   | | | | | | | | | | | | | | | | | | | |
 | qiaopengjun5162 | ✅ | | | | | | | | | | | | | | | | | | | | |
 | StarryDesert | ✅ | | | | | | | | | | | | | | | | | | | | |
-| debugzhao |   | | | | | | | | | | | | | | | | | | | | |
-| JacksonStack |   | | | | | | | | | | | | | | | | | | | | |
+| debugzhao | ✅ | | | | | | | | | | | | | | | | | | | | |
+| JacksonStack | ✅ | | | | | | | | | | | | | | | | | | | | |
 | jjeejj | ✅ | | | | | | | | | | | | | | | | | | | | |
 | luffythink | ✅ | | | | | | | | | | | | | | | | | | | | |
 | iossocket |   | | | | | | | | | | | | | | | | | | | | |
@@ -190,6 +190,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
