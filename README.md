@@ -191,7 +191,9 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 | YiShengYouNi |   | | | | | | | | | | | | | | | | | | | | |
 | Thogsloc |   | | | | | | | | | | | | | | | | | | | | |
+| zedz |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
