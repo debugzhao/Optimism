@@ -63,7 +63,7 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-笔记内容
+Optimism 的核心是帮助来自世界各地的人在中心化经济背景下利用它的 Optimistic Rollup 技术以及 Optimism 的 Tokenomics 搭建社区的治理体系。它的 Rollup 机制跟随着以太坊的共识作为核心思想，这个选择由于跟随主链的共识避免产生新共识造成的分叉，在一定程度上为其提供了足够的安全性。
 
 ### 2024.07.12
 
