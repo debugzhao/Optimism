@@ -113,8 +113,11 @@ Rollup 机制：Optimism Rollups 将交易数据和状态变化压缩后提交�
 
 ### Reference
 https://blog.ethereum.org/2014/09/17/scalability-part-1-building-top (Vitalik: Shadow Chain)
+
 https://foresightnews.pro/article/detail/5893 (Optimisic rollup 成长史)
+
 https://ethereum.org/en/developers/docs/scaling/plasma/
+
 https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/
 
 
