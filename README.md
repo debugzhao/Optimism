@@ -192,7 +192,10 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | YiShengYouNi |   | | | | | | | | | | | | | | | | | | | | |
 | Thogsloc |   | | | | | | | | | | | | | | | | | | | | |
 | zedz |   | | | | | | | | | | | | | | | | | | | | |
+| ChoeyGit |   | | | | | | | | | | | | | | | | | | | | |
+| Tianxibi-web3 |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
