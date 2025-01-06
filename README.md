@@ -146,7 +146,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | A3438 |   | | | | | | | | | | | | | | | | | | | | |
 | MagicalBridge |   | | | | | | | | | | | | | | | | | | | | |
 | verygud-0 |   | | | | | | | | | | | | | | | | | | | | |
-| MRzzz-cyber |   | | | | | | | | | | | | | | | | | | | | |
+| MRzzz-cyber | ✅ | | | | | | | | | | | | | | | | | | | | |
 | punkcanyang | ✅ | | | | | | | | | | | | | | | | | | | | |
 | brucexu-eth | ✅ | | | | | | | | | | | | | | | | | | | | |
 | qiaopengjun5162 | ✅ | | | | | | | | | | | | | | | | | | | | |
@@ -167,7 +167,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Zhangdajiang |   | | | | | | | | | | | | | | | | | | | | |
 | Alexliwenhao |   | | | | | | | | | | | | | | | | | | | | |
 | stualan |   | | | | | | | | | | | | | | | | | | | | |
-| CHENFANGC |   | | | | | | | | | | | | | | | | | | | | |
+| CHENFANGC | ✅ | | | | | | | | | | | | | | | | | | | | |
 | zhengjunhe |   | | | | | | | | | | | | | | | | | | | | |
 | goudanxiaokui |   | | | | | | | | | | | | | | | | | | | | |
 | 8280998 |   | | | | | | | | | | | | | | | | | | | | |
@@ -187,7 +187,13 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Coooder-Crypto |   | | | | | | | | | | | | | | | | | | | | |
 | yoow4536 |   | | | | | | | | | | | | | | | | | | | | |
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
+| foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
+
+
+
+
 
 
 

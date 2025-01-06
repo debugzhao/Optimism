@@ -1,5 +1,5 @@
 ---
-timezone: Asia/Shanghai
+timezone: America/Chicago
 ---
 
 > 请在上边的 timezone 添加你的当地时区，这会有助于你的打卡状态的自动化更新，如果没有添加，默认为北京时间 UTC+8 时区
@@ -51,12 +51,11 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# Cora
+# Alan Xin
 
-1. 自我介绍
-   I'm Cora, a web front-end engineer, currently working on an AI project.
-2. 你认为你会完成本次残酷学习吗？
-   of course
+1. Now: Web3 builder/investor Prev: CoinDesk Chinese, BanklessDAO
+
+2. 你认为你会完成本次残酷学习吗？Yes.
 
 ## Notes
 
@@ -64,8 +63,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-阅读文档内容[Layer2 扩容方案](https://docs.optimism.io/stack/rollup/overview)
+笔记内容
 
-### 2025.01.07
+### 2024.07.12
 
 <!-- Content_END -->
