@@ -189,12 +189,13 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | yoow4536 |   | | | | | | | | | | | | | | | | | | | | |
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
-| YiShengYouNi |   | | | | | | | | | | | | | | | | | | | | |
+| YiShengYouNi | ✅ | | | | | | | | | | | | | | | | | | | | |
 | Thogsloc |   | | | | | | | | | | | | | | | | | | | | |
 | zedz |   | | | | | | | | | | | | | | | | | | | | |
 | ChoeyGit |   | | | | | | | | | | | | | | | | | | | | |
 | Tianxibi-web3 |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
