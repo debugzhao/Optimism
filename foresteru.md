@@ -66,6 +66,7 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 I've added some extended readings to this chapter.
 
 ## Layer2 扩容方案 的补充材料
+
 ### What is Bedrock?
 Bedrock is a major upgrade and the codebase architecture for Optimism. Optimism uses Optimistic Rollup technology to improve transaction throughput and reduce costs while inheriting the security of Ethereum. The Bedrock upgrade represents a fundamental shift in how Optimism operates, aiming for improved performance, modularity, and Ethereum equivalence.
 
@@ -94,13 +95,13 @@ Bedrock is a major upgrade and the codebase architecture for Optimism. Optimism 
 6. Multi-Proof System:
 - Bedrock introduces support for multi-proof systems, paving the way for advanced fraud proofs and better security for the rollup.
 
-### II. Why Is Bedrock Important?
+**II. Why Is Bedrock Important?**
 - Scalability: With reduced costs and improved performance, Bedrock strengthens Optimism's ability to handle a higher transaction volume, making Ethereum-based applications more accessible to users.
 - Developer Friendly: The Ethereum equivalence ensures that developers do not need to learn a new framework to build or deploy on Optimism.
 - Interoperability: Bedrock's modularity and Ethereum compatibility promote interoperability with other Layer 2 solutions and Ethereum-based applications.
 - Ecosystem Growth: Lower transaction fees and improved performance make Optimism an attractive platform for decentralized applications (dApps), boosting user adoption and network activity.
 
-### III. Bedrock and the OP Stack
+**III. Bedrock and the OP Stack**
 The OP Stack is a set of standardized, open-source components for building scalable blockchains. Bedrock is a flagship implementation of the OP Stack, showcasing its potential as a robust L2 solution. Other projects can use the OP Stack to create their own rollups, contributing to the broader modular blockchain ecosystem.
 Bedrock signifies a leap forward for Optimism and demonstrates how Layer 2 solutions can evolve to provide scalable, cost-efficient, and user-friendly infrastructure while staying closely aligned with Ethereum's values.
 
@@ -116,15 +117,19 @@ This proposal is a significant step toward full Danksharding, Ethereum's long-te
   - EIP-4844 introduces a new type of transaction that carries blobs of data.
   - Blobs are large chunks of binary data designed to store rollup-related information.
   - These blobs are not stored permanently on the Ethereum blockchain but are instead available for a short period (e.g., a few weeks) to be processed by rollups.
+
 2. Off-Chain Blob Storage:
 - Blobs are stored off-chain, reducing the burden on the Ethereum blockchain's state.
 - Validators and clients only need to verify the availability of these blobs for a limited time, ensuring data integrity while minimizing long-term storage requirements.
+
 3. Lower Data Costs:
 - The cost of including blob data in a transaction is significantly lower than the cost of storing data on-chain.
 - This reduction in costs is a major benefit for L2 rollups, which rely on storing transaction data as calldata on Ethereum.
+
 4. Improved Scalability for Rollups:
 - Rollups (Optimistic Rollups and ZK Rollups) benefit from EIP-4844 because it provides a cost-effective way to publish their data to Ethereum.
 - This enhances their throughput and reduces fees for end users.
+
 5. Transition Toward Danksharding:
 - EIP-4844 lays the groundwork for Danksharding, Ethereum’s full sharding design, which will implement multiple shard chains and significantly increase Ethereum’s data availability and scalability.
 - Proto-Danksharding is a simpler, intermediate step to achieve some of the benefits of Danksharding without requiring the full sharding infrastructure immediately.
