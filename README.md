@@ -194,7 +194,9 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | zedz |   | | | | | | | | | | | | | | | | | | | | |
 | ChoeyGit |   | | | | | | | | | | | | | | | | | | | | |
 | Tianxibi-web3 |   | | | | | | | | | | | | | | | | | | | | |
+| 183Aaros |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
