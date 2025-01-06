@@ -167,7 +167,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Zhangdajiang |   | | | | | | | | | | | | | | | | | | | | |
 | Alexliwenhao |   | | | | | | | | | | | | | | | | | | | | |
 | stualan |   | | | | | | | | | | | | | | | | | | | | |
-| CHENFANGC |   | | | | | | | | | | | | | | | | | | | | |
+| CHENFANGC | ✅ | | | | | | | | | | | | | | | | | | | | |
 | zhengjunhe |   | | | | | | | | | | | | | | | | | | | | |
 | goudanxiaokui |   | | | | | | | | | | | | | | | | | | | | |
 | 8280998 |   | | | | | | | | | | | | | | | | | | | | |
@@ -189,6 +189,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Marcus-Chen98 |   | | | | | | | | | | | | | | | | | | | | |
 | foresteru |   | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
