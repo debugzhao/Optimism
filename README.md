@@ -156,7 +156,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | JacksonStack | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
 | jjeejj | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
 | luffythink | ✅ |   | | | | | | | | | | | | | | | | | | | |
-| iossocket | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| iossocket | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
 | cherry-yl-sh | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
 | Dfbb7879 | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
 | DasNarrenschiff | ✅ |   | | | | | | | | | | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ |   | | | | | | | | | | | | | | | | | | | |
 | 183Aaros | ✅ |   | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
