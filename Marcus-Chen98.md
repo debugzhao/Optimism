@@ -45,7 +45,7 @@ Verifiers（验证者）：
 从 Ethereum L1 获取交易批次或存款数据。
 验证输出提案是否正确，并在必要时发起挑战
 
-*不同Layer2运行环境与技术对比：*
+# **不同Layer2运行环境与技术对比：**
 Ethereum (Layer 1)：作为基准环境，不使用任何扩容技术。
 ZK Rollup：采用零知识证明技术，交易验证快速，但计算成本较高。
 ZK Porter：结合 ZK Rollup 和 Validium 技术，将部分数据存储在链下，提高扩展性。
