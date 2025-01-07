@@ -192,8 +192,28 @@ According to OP docs, the withdrawal from OP mainnet to Ethereum is finalized af
 **A:** 
 Yes, the one-week challenge period for withdrawals from Optimism (OP) to Ethereum Layer 1 (L1) can feel long compared to traditional non-blockchain transactions, which are typically finalized almost instantly. This delay is a fundamental aspect of the Optimistic Rollup design, ensuring security through a fraud-proof mechanism. 
 
+### Stage 的介绍
 
+Framework to guid the progreassion of rollups from Stage 0 to Stage 2.
 
+**Stage 0**
+  - Call itself a rollup.
+  - L2 state roots are posted on L1
+  - Provide data availability on L1
+  - Capable of reconstructing the rollup's state source
+
+**Stage 1**
+  - Use a proper proof system
+  - at least  external actors that can submit a fraud proof. (Why 5?)
+  - Users can exit without the operator's coordination
+  - Users have at least 7days to exit in case of unwanted upgrades
+  - Security council is properly set up
+
+**Stage 2**
+  - Fraud proof system is permissionless
+  - Users have at least 30 days to exit in case of unwanted upgrades.
+  - Security Council is restricted to act only due to errors detected on chain.
+    
 ### 2024.07.12
 
 <!-- Content_END -->
