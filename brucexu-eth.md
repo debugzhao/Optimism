@@ -183,7 +183,7 @@ Reading
 - https://docs.optimism.io/builders/chain-operators/self-hosted
 - https://docs.optimism.io/builders/chain-operators/tutorials/create-l2-rollup
 
-# 2025.01.7
+### 2025.01.07
 
 ## Deposit flow https://docs.optimism.io/stack/transactions/deposit-flow
 
