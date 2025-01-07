@@ -51,7 +51,7 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {HeliosLz}
+# HeliosLz
 
 1. 自我介绍：hi，大家好。我叫 Helios，希望可以深入了解 Optimism 方面的知识，加深自己对生态的理解程度。
 2. 你认为你会完成本次残酷学习吗？Yes
