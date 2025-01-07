@@ -16,7 +16,7 @@ timezone: Asia/Shanghai
 
 ### 2025.01.06
 
-笔记内容
+今天学习了这个文章：https://docs.optimism.io/stack/rollup/overview
 
 ### 2024.07.12
 
