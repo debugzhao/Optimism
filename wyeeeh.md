@@ -30,6 +30,10 @@ Optimism 的区块生产主要由单一的“排序器 (sequencer)”管理，�
 - **通过Layer 2 内部的P2P网络同步状态。** 执行引擎（op-geth 组件）通过点对点（P2P）网络与其他在同一 Layer 2 网络上的执行引擎进行通信和数据同步。
 - **通过rollup 节点（op-node 组件）实现，从 L1 派生 L2 区块。** 这种方法相比于直接的 P2P 网络同步会慢一些，因为它需要等待 L1 区块的确认，并且处理从 L1 到 L2 的映射逻辑。然而，这种方法能抗审查。由于 L2 区块的生成是基于已经公开且被广泛认可的 L1 数据，这就使得任何试图对 L2 数据进行审查或篡改的行为都会被发现并受到阻止。可以把这种机制比喻为通过官方渠道获取信息，虽然可能不是最快的，但却是最可靠和最不容易被篡改的。
 
+
+
+
+### 2025.01.07
 ##### Bridge
 Optimism 允许用户在 L2（如 OP Mainnet）和底层 L1（如 Ethereum mainnet）之间的智能合约发送任意消息，从而实现 ETH 或代币（包括 ERC20 代币）的转移。标准桥（Standard bridge）使用这一功能，允许用户从 Ethereum 存入代币到 OP Mainnet，并允许从 OP Mainnet 提取代币回 Ethereum。
 
@@ -38,6 +42,5 @@ Optimism 允许用户在 L2（如 OP Mainnet）和底层 L1（如 Ethereum mainn
 - **从 OP Mainnet 到 Ethereum**: 称为提款(withdrawl)，分为三个阶段：初始化提款 L2 交易、等待下一个输出根提交到 L1 并提交提款证明、以及在故障挑战期结束后完成提款。
 
 
-### 2025.01.07
 
 <!-- Content_END -->
