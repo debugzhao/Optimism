@@ -51,4 +51,29 @@ Optimism is a Layer 2 scaling solution for Ethereum that aims to increase the tr
 
 ### 2025.01.07
 
+#### Bridging Tokens Between L1 and L2
+
+Purpose of Design: Optimism is designed to allow users to send arbitrary messages between smart contracts on Layer 2 (such as OP Mainnet and OP Sepolia) and the underlying Layer 1 (Ethereum mainnet and Sepolia). This capability enables the transfer of ETH or tokens (including ERC20 tokens) between the two networks. The specific mechanisms of communication differ depending on the direction in which messages are sent.
+
+#### Functionality of the Standard Bridge
+
+On the OP Mainnet, users can utilize the Standard Bridge functionality to perform the following actions:
+
+1. Deposit tokens from Ethereum (L1) to OP Mainnet (L2).
+2. Withdraw the same tokens from OP Mainnet (L2) back to Ethereum (L1).
+
+#### Moving from OP Mainnet to Ethereum
+
+The process of withdrawing from OP Mainnet (L2) to Ethereum consists of three stages:
+
+1. Initialize Withdrawal: This is done by initiating a withdrawal operation through an L2 transaction.
+
+2. Wait for Output Root Submission: Users must wait for the next output root to be submitted to L1. This process can be monitored using the SDK. Users are required to submit a withdrawal proof using proveWithdrawalTransaction. This new step allows for off-chain monitoring of withdrawals, making it easier to identify incorrect withdrawals or output roots, thereby protecting users on OP Mainnet from various potential bridge vulnerabilities.
+
+3. Finalize Withdrawal: After the fault challenge period ends (one week on the mainnet, a shorter time on the test network), the withdrawal operation will be finalized.
+
+#### Summary
+
+In summary, Optimism provides a mechanism through the Standard Bridge that allows users to effectively transfer ETH and tokens between the Ethereum mainnet (L1) and OP Mainnet (L2). The deposit and withdrawal mechanisms enable users to flexibly convert assets while ensuring security.
+
 <!-- Content_END -->
