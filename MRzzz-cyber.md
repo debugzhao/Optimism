@@ -122,6 +122,7 @@ https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/
 
 
 ### 2025.01.07
+
 昨天已完整的了解了 Optimmism 的演变史，以及一些基本工作原理
 今天学习目标，学习一下故障证明的概念
 
