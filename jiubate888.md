@@ -90,6 +90,7 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 今天学习Optimism 与其他 Layer 2 的比较：https://learnblockchain.cn/article/3703
 
 1.二层继承了以太坊的安全性，那么只专注扩展性，和去中心化，这样就破解了区块链三角困境，一个很好的思路。
+
 2.看到一个图如下
 <img width="711" alt="截屏2025-01-07 10 50 24" src="https://github.com/user-attachments/assets/0c8e44b7-bf42-4dc7-a75e-576ff0135f6b" />
 
