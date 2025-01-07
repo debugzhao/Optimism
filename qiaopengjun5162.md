@@ -65,7 +65,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-笔记内容
+Rollups 通过将大量交易打包到一个单一交易中，并将其提交到主链。这种方法可以分为两种类型：乐观 Rollups（Optimistic Rollups）和零知识 Rollups（zk-Rollups）。
+
+- Op Rollups：假设交易是有效的，只有在有争议时才进行验证
+- Zk Rollups：通过零知识证明技术，在提交交易数据的同时，保证其正确性。
 
 ### 2025.01.07
 

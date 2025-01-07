@@ -51,13 +51,11 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {partypill}
+# {183Aaros}
 
-1. 自我介绍
-一个自学了一些python的老白。想努力学习获得更多收益。
-
-2. 你认为你会完成本次残酷学习吗？
-我愿意为此努力。
+1.  About me: Hey, I'm 183Aaros, a member of OPCN and one of the tutors of the OP co-learning this time. I'm delighted to learn the fundamentals of OP together with everyone here. Here's my personal web if you're interested in know more about me :) -> 183aaros.notion.site
+2. About Notes: trying to use md grammar after 2-3 days 
+3. Yes
 
 ## Notes
 
@@ -65,22 +63,50 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-笔记内容
-1、今天第一天打卡，记录那些我不懂的东西并明天得出结论。
-“默认假设所有交易都是有效的，只有在有人提出争议时才进行验证”：以太坊的验证机制是什么？怎么通过验证机制保持安全性？这点我不懂需要继续学习。
-以太坊虚拟机（EVM）：不懂这个东西是啥，需要进一步回溯学习。
-“挑战期”（Challenge Period）：不知道这个概念
-复杂智能合约：不懂这个的机制，只知道因为它需要主网交互，导致需要高处理。
-L2 和 L1 层：对概念掌握不清晰。
-退出时间：这个也不清楚，需要搞明白挑战期。
+Optimism Co-learning Notes, day1: OP and OP Rollup
 
-欺诈证明（Fraud Proof）机制：不懂。
-2、今天学到的东西
-知道了op设计的初衷是为了降低eth的高gas，因为安全，去中心化和速度是不可能三角。eth保证了安全和去中心化，但速度没法保证。所以一开始设计了子链Plsma，除了少数必要的交易其他都在子链上处理，但这导致了子链的信息无法同步到eth主网，一个是不安全，另一个是挑战期退出慢。
-然后op设计了打包交易上传，等于压缩了多次交易只需要一次上链，好处是同步速度快，坏处就是扩容性差。
+#Optimism
 
-3、阅读steps去了解必要的信息。
+Dedication:
 
-### 2024.07.12
+scaling Ethereum's tech
+
+expanding its ability
+
+coordinape ppl world-wide to build decentralised economies+governance systems
+
+Principle:
+
+impact=profit
+
+OP Collective:
+
+Builds open-source software
+
+OP Stack:
+
+decentralised software stack
+
+backbone of blockchains i.e. OP Mainnet& base
+
+OP Rollups
+
+Leverage the consensus mechanism of L1
+
+#Block
+
+Block storage
+
+using non-contract address(for min gas) on ETH
+
+write in compressed format
+
+transaction anti-censorship via EIP-4844 blobs
+
+inherits ETH availability& integrity
+
+#Optimism #Note #Co-learning #Blockchain/Layer2 #Technical
+
+### 2024.01.07
 
 <!-- Content_END -->
