@@ -65,7 +65,7 @@ The OP Stack of today was built to support [the Optimism Superchain](https://do
 * 区块生产：由`sequencer`单一管理
 * **Fault proofs** （故障证明）：challenge window持续7天
 
-### 2024.07.12
+### 2025.01.07
 
 #### Layer2 解决方案对比
 
