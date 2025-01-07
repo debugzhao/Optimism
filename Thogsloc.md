@@ -63,7 +63,53 @@ Waaaagh！
 
 ### 2025.01.06
 
-笔记内容
+Optimistic Rollup 依赖于“父链”的安全性，核心思想是利用父链的共识机制。
+
+Bedrock 版本中，L2 区块被存储在以太坊区块链上，使用非合约地址来减少 L1 的交易费用。区块以压缩格式写入 L1。
+
+Sequencer 负责：
+提供交易确认和状态更新、
+构建和执行 L2 区块、
+将用户交易提交到 L1。
+
+op-geth 组件通过两种机制接收区块：
+通过点对点网络与其他执行引擎同步。
+从L1派生L2区块。
+
+OP Rollup 通过以上方法使得交易得到快速处理和保持低成本。
+
+### 2025.01.07
+
+OP Stack 是支持 OP Rollup 的基础架构和协议栈，为 OP Rollup 提供了必要的组件和功能，包含：
+
+桥接（Bridges）
+允许不同区块链之间的交互。
+信使（Messengers）：用于在链之间传递消息。
+存款（Deposits）：用户将资产转移到Optimism链的过程。
+取款（Withdrawals）：用户从Optimism链提取资产的过程。
+担保的 gas 费市场（Guaranteed Gas Market）：确保交易费用的透明和可预测性。
+提案（Proposals）：用户可以提交改进建议。
+
+执行引擎（Execution Engine）
+负责处理和执行交易的核心组件。
+
+汇总节点（Rollup Node）
+用于聚合和验证交易的节点。
+P2P 通信：节点之间的点对点通信。
+派生（Derivation）：如何从 L1 链派生出 L2 链的状态。
+
+故障证明（Fault Proof）
+确保交易安全性和有效性。
+Cannon Fault Proof VM：用于验证交易的虚拟机。
+
+预编译（Precompiles）、预部署（Predeploys）、预安装（Preinstalls）
+涉及到在 Optimism 链上预先配置的合约和功能。
+
+超级链配置（Superchain Configuration）
+允许用户根据需求调整协议参数。
+
+治理代币（Governance Token）
+描述 Optimism 的治理机制，用户如何参与决策。
 
 ### 2024.07.12
 

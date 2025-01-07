@@ -51,11 +51,11 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {DongChoeyGit/董卓杰}
+# {183Aaros}
 
-1. Working hard to be a Web3 builder、Eterpay Web3 department manager、Bankless DAO member、Bankless CNmember、LeapOnchain Channel builder、Lil Nounser
-
-2. 是的，我会完成本次残酷共学
+1.  About me: Hey, I'm 183Aaros, a member of OPCN and one of the tutors of the OP co-learning this time. I'm delighted to learn the fundamentals of OP together with everyone here. Here's my personal web if you're interested in know more about me :) -> 183aaros.notion.site
+2. About Notes: trying to use md grammar after 2-3 days 
+3. Yes
 
 ## Notes
 
@@ -63,12 +63,50 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-Optimism 的核心是帮助来自世界各地的人在中心化经济背景下利用它的 Optimistic Rollup 技术以及 Optimism 的 Tokenomics 搭建社区的治理体系。它的 Rollup 机制跟随着以太坊的共识作为核心思想，这个选择由于跟随主链的共识避免产生新共识造成的分叉，在一定程度上为其提供了足够的安全性。
+Optimism Co-learning Notes, day1: OP and OP Rollup
 
-### 2025.01.07
+#Optimism
 
-在 Optimism 的迭代更新“Bedrock”后，使用了一种非合约地址保存到以太坊的方式来减少 L1 的 gas fee，具体是将数据以压缩格式打包储存，使用 EIP-4844 的 blobs 作为实现路径。该路径的设计可以做到保持数据不可修改性同时，保证了可用性与完整性，更重要的是区块以压缩的格式写入 L1 极大减少了交易成本。
+Dedication:
 
-### 2024.07.12
+scaling Ethereum's tech
+
+expanding its ability
+
+coordinape ppl world-wide to build decentralised economies+governance systems
+
+Principle:
+
+impact=profit
+
+OP Collective:
+
+Builds open-source software
+
+OP Stack:
+
+decentralised software stack
+
+backbone of blockchains i.e. OP Mainnet& base
+
+OP Rollups
+
+Leverage the consensus mechanism of L1
+
+#Block
+
+Block storage
+
+using non-contract address(for min gas) on ETH
+
+write in compressed format
+
+transaction anti-censorship via EIP-4844 blobs
+
+inherits ETH availability& integrity
+
+#Optimism #Note #Co-learning #Blockchain/Layer2 #Technical
+
+### 2024.01.07
 
 <!-- Content_END -->
