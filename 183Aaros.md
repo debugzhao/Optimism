@@ -51,11 +51,11 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {你的名字}
+# {183Aaros}
 
-1. 自我介绍
-
-2. 你认为你会完成本次残酷学习吗？
+1.  About me: Hey, I'm 183Aaros, a member of OPCN and one of the tutors of the OP co-learning this time. I'm delighted to learn the fundamentals of OP together with everyone here. Here's my personal web if you're interested in know more about me :) -> 183aaros.notion.site
+2. About Notes: trying to use md grammar after 2-3 days 
+3. Yes
 
 ## Notes
 
@@ -63,8 +63,50 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-笔记内容
+Optimism Co-learning Notes, day1: OP and OP Rollup
 
-### 2024.07.12
+#Optimism
+
+Dedication:
+
+scaling Ethereum's tech
+
+expanding its ability
+
+coordinape ppl world-wide to build decentralised economies+governance systems
+
+Principle:
+
+impact=profit
+
+OP Collective:
+
+Builds open-source software
+
+OP Stack:
+
+decentralised software stack
+
+backbone of blockchains i.e. OP Mainnet& base
+
+OP Rollups
+
+Leverage the consensus mechanism of L1
+
+#Block
+
+Block storage
+
+using non-contract address(for min gas) on ETH
+
+write in compressed format
+
+transaction anti-censorship via EIP-4844 blobs
+
+inherits ETH availability& integrity
+
+#Optimism #Note #Co-learning #Blockchain/Layer2 #Technical
+
+### 2024.01.07
 
 <!-- Content_END -->

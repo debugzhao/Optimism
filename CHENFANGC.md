@@ -51,11 +51,12 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {你的名字}
+# Cora
 
 1. 自我介绍
-
+   I'm Cora, a web front-end engineer, currently working on an AI project.
 2. 你认为你会完成本次残酷学习吗？
+   of course
 
 ## Notes
 
@@ -63,8 +64,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-笔记内容
+阅读文档内容[Layer2 扩容方案](https://docs.optimism.io/stack/rollup/overview)
 
-### 2024.07.12
+### 2025.01.07
+
+阅读文档内容[Optimism 与其他 Layer 2 的比较](https://learnblockchain.cn/article/3703)
 
 <!-- Content_END -->
