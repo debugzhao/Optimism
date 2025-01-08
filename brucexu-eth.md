@@ -288,4 +288,59 @@ l1GasUsed            2048
 
 TODO 这个步骤失效了，文档上的链接，看不到实际的 internal failed txs The next step is to find the hash of the failed relay. The easiest way to do this is to look in the internal transactions of the destination contract, and select the latest one that appears as a failure. It should be a call to L2CrossDomainMessenger at address 0x420...007. This is the call you need to replay. 提交了一个 PR 进行反馈：https://github.com/ethereum-optimism/docs/issues/1226。
 
+### 2025.01.08
+
+TODO 一些需要研究的很大的课题：
+
+- OP L2 的跨链流程和技术实现细节，包括底层原理分析
+  - https://docs.optimism.io/builders/app-developers/tutorials/cross-dom-bridge-erc20
+- OP 中心化和信任的风险点
+- OP 的压缩算法以及原始数据到压缩数据的变化
+  - https://specs.optimism.io/protocol/derivation.html#batch-submission
+
+## Withdrawal flow https://docs.optimism.io/stack/transactions/withdrawal-flow
+
+大概流程：
+
+1. 在 L2 提交取款流程
+2. 在 L1 提交证明，我已经在 L2 进行了取款操作
+3. 等待挑战期过了之后，可以进行实际的提款
+
+## Transaction flow https://docs.optimism.io/stack/transactions/transaction-flow
+
+![alt text](brucexu-eth_assets/image-2.png)
+
+op-batcher has two main jobs:
+
+- Compress transactions into batches.
+- Post those batches to L1 to ensure availability and integrity.
+
+TODO L2 发送到 L1 的交易，会被执行或者 L1 认可吗？毕竟是被 compress 了。
+
+State processing can be divided into two steps:
+
+1. Applying the transaction to the old state to produce the new state, which is performed by op-geth.
+2. Proposing the new Merkle root of the state. Merkle roots are used because the actual state is long and would cost too much to write to L1. This step is performed by op-proposer.
+
+## How to start a self-hosted chain
+
+OP Stack 的架构：
+
+- 也是跟以太坊一样有 execution 和 consensus 客户端
+- sequencer nodes（op-geth + op-node）分别是客户端，拿到数据之后，提供 op-batcher 和 op-proposer 提交到 L1
+-
+
+组件介绍：
+
+- op-geth：执行层
+- op-node：共识层，类似 beacon-node
+- op-batcher：提交 L2 sequencer data 到 L1。只提交最少的可以 reproduce L2 blocks 的数据到 L1 进行保存，确保安全性。TODO 可以用测试网模拟 OP 挂掉
+- op-proposer：提交 output roots，TODO 具体提交了什么东西？
+
+TODO 研究一下 predeploys contract 的实现和运行逻辑 https://docs.optimism.io/stack/smart-contracts#layer-2-contracts-predeploys
+
+TODO 在家启动一个 OP Chain https://docs.optimism.io/builders/chain-operators/self-hosted
+
+TODO 明天的工作就是跑一个 testnet https://docs.optimism.io/builders/chain-operators/tutorials/create-l2-rollup
+
 <!-- Content_END -->

@@ -63,50 +63,68 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2025.01.06
 
-Optimism Co-learning Notes, day1: OP and OP Rollup
+Optimism Co-learning Notes, day1: 
 
-#Optimism
+#### OP and OP Rollup
 
 Dedication:
-
 scaling Ethereum's tech
-
 expanding its ability
-
 coordinape ppl world-wide to build decentralised economies+governance systems
 
 Principle:
-
 impact=profit
 
 OP Collective:
-
 Builds open-source software
 
 OP Stack:
-
 decentralised software stack
-
 backbone of blockchains i.e. OP Mainnet& base
 
-OP Rollups
-
+OP Rollups:
 Leverage the consensus mechanism of L1
 
-#Block
+#### Block
 
-Block storage
-
+Block storage:
 using non-contract address(for min gas) on ETH
-
 write in compressed format
-
 transaction anti-censorship via EIP-4844 blobs
-
 inherits ETH availability& integrity
 
-#Optimism #Note #Co-learning #Blockchain/Layer2 #Technical
+Biobiography:
+https://specs.optimism.io/
 
 ### 2024.01.07
+
+Key takeaway:
+
+#### OP Mainnet Transaction fee
+Transaction fee [Execution Gas Fee(Base fee, Priority fee), L1 Data Fee]
+
+##### L1 Data Fee，Ecotone:
+(1)tx_compressed_size = [(count_zero_bytes(tx_data)*4 + count_non_zero_bytes(tx_data)*16)] / 16
+
+(2)
+weighted_gas_price = 16*base_fee_scalar*base_fee + blob_base_fee_scalar*blob_base_fee
+
+L1 Data Fee, Ecotone = (1) * (2)
+
+##### L1 Data Fee，Fjord
+L1 Data Fee，Fjord(FastLZ-compressed size, base fee/ blob base fee):
+
+(1) estimatedSizeScaled = max(minTransactionSize * 1e6, intercept + fastlzCoef*fastlzSize)
+
+(2)l1FeeScaled = baseFeeScalar*l1BaseFee*16 + blobFeeScalar*l1BlobBaseFee
+
+where both scalars are scaled by 1e6,
+
+thus,
+
+L1cost = (1)*(2)/1e12
+
+##### Biobiography:
+https://docs.optimism.io/stack/transactions/fees
 
 <!-- Content_END -->
