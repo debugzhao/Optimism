@@ -343,4 +343,111 @@ TODO 在家启动一个 OP Chain https://docs.optimism.io/builders/chain-operato
 
 TODO 明天的工作就是跑一个 testnet https://docs.optimism.io/builders/chain-operators/tutorials/create-l2-rollup
 
+### 2025.01.09
+
+# OP Stack deployment overview
+
+每个 OP Stack chain 需要在 L1 部署一系列的智能合约。
+
+需要至少一个 Sequencer 节点，共识层可以用 op-node、执行层可以用 op-geth。
+
+TODO 未来 LXDAO or ETHPanda 可以维护一个客户端。
+
+# 跑起来了
+
+非常的丝滑，文档写的很好 https://docs.optimism.io/builders/chain-operators/tutorials/create-l2-rollup
+
+op-geth 启动日志：
+
+```
+INFO [01-08|22:28:56.193] Loaded most recent local block           number=0 hash=e5bbce..c2ab4c td=0 age=28m56s
+WARN [01-08|22:28:56.193] Failed to load snapshot                  err="missing or corrupted snapshot"
+INFO [01-08|22:28:56.196] Rebuilding state snapshot
+INFO [01-08|22:28:56.197] Initialized transaction indexer          range="entire chain"
+INFO [01-08|22:28:56.197] Initialising Ethereum protocol           network=42069 dbversion=<nil>
+INFO [01-08|22:28:56.197] Resuming state snapshot generation       root=1ded36..ebe414 accounts=0 slots=0 storage=0.00B dangling=0 elapsed=1.377ms
+INFO [01-08|22:28:56.198] Gasprice oracle is ignoring threshold set threshold=2
+WARN [01-08|22:28:56.199] Engine API enabled                       protocol=eth
+INFO [01-08|22:28:56.199] Starting peer-to-peer node               instance=Geth/vuntagged-ae1828f1-20250106/linux-amd64/go1.22.7
+INFO [01-08|22:28:56.216] New local node record                    seq=1,736,375,336,215 id=03419be04da539f2 ip=127.0.0.1 udp=0 tcp=30303
+INFO [01-08|22:28:56.216] Started P2P networking                   self="enode://b7ea477dc7e5380b4bb7a15ef4e4574453195123e7b413978b9effea7738821bbdcf9071700b6b52c1cbc98dc7abf3b6727115f7df2f60cb9547dc2be5b0ed2b@127.0.0.1:30303?discport=0"
+INFO [01-08|22:28:56.216] IPC endpoint opened                      url=/root/op-geth/datadir/geth.ipc
+INFO [01-08|22:28:56.217] Loaded JWT secret file                   path=jwt.txt crc32=0x57d995ce
+INFO [01-08|22:28:56.218] HTTP server started                      endpoint=[::]:8545 auth=false prefix= cors=* vhosts=*
+INFO [01-08|22:28:56.218] WebSocket enabled                        url=ws://[::]:8546
+INFO [01-08|22:28:56.218] WebSocket enabled                        url=ws://[::]:8551
+INFO [01-08|22:28:56.218] HTTP server started                      endpoint=[::]:8551 auth=true  prefix= cors=localhost vhosts=*
+INFO [01-08|22:28:56.293] Generated state snapshot                 accounts=2333 slots=2081 storage=392.21KiB dangling=0 elapsed=97.232ms
+```
+
+op-node 启动日志:
+
+```
+INFO [01-08|22:31:27.873] Not opted in to ProtocolVersions signal loading, disabling ProtocolVersions contract now.
+INFO [01-08|22:31:27.873] No persisted sequencer state loaded
+INFO [01-08|22:31:27.873] Rollup Config                            l2_chain_id=42069 l2_network="unknown L2" l1_chain_id=11,155,111 l1_network=sepolia l2_start_time=1,736,373,600 l2_block_hash=0xe5bbceda0bd76d6a79e1e9a600f2ded39f819d48577ca62b475ae3b9f1c2ab4c l2_block_number=0 l1_block_hash=0x8a70bb5e0687979fd6713dc595fa53ccceb2c2f3628b5367d29b4fafb60dbfe2 l1_block_number=7,449,439 regolith_time="@ genesis" canyon_time="@ genesis" delta_time="(not configured)" ecotone_time="(not configured)" fjord_time="(not configured)" interop_time="(not configured)"
+INFO [01-08|22:31:27.873] Initializing rollup node                 version=v0.0.0-a06cae81-1705510057
+WARN [01-08|22:31:28.451] No beacon endpoint configured. Configuration is mandatory for the Ecotone upgrade
+INFO [01-08|22:31:29.267] loaded new runtime config values!        p2p_seq_address=0x09db2A241B0A3Efa27c1508EB065319403D2374C
+INFO [01-08|22:31:29.267] Admin RPC enabled
+INFO [01-08|22:31:29.267] Starting JSON-RPC server
+INFO [01-08|22:31:29.268] metrics disabled
+INFO [01-08|22:31:29.268] Starting execution engine driver
+INFO [01-08|22:31:29.268] Starting driver                          sequencerEnabled=true sequencerStopped=false
+INFO [01-08|22:31:29.268] Rollup node started
+INFO [01-08|22:31:29.268] State loop started
+INFO [01-08|22:31:29.272] Loaded current L2 heads                  unsafe=e5bbce..c2ab4c:0 safe=e5bbce..c2ab4c:0 finalized=e5bbce..c2ab4c:0 unsafe_origin=8a70bb..0dbfe2:7449439 safe_origin=8a70bb..0dbfe2:7449439
+INFO [01-08|22:31:29.562] Walking back L1Block by number           curr=8a70bb..0dbfe2:7449439 next=8a70bb..0dbfe2:7449439 l2block=e5bbce..c2ab4c:0
+INFO [01-08|22:31:29.562] Hit finalized L2 head, returning immediately unsafe=e5bbce..c2ab4c:0 safe=e5bbce..c2ab4c:0 finalized=e5bbce..c2ab4c:0 unsafe_origin=8a70bb..0dbfe2:7449439 safe_origin=8a70bb..0dbfe2:7449439
+INFO [01-08|22:31:29.562] Sync progress                            reason="reset derivation work" l2_finalized=e5bbce..c2ab4c:0 l2_safe=e5bbce..c2ab4c:0 l2_pending_safe=e5bbce..c2ab4c:0 l2_unsafe=e5bbce..c2ab4c:0 l2_time=1,736,373,600 l1_derived=8a70bb..0dbfe2:7449439
+INFO [01-08|22:31:29.562] completed reset of derivation pipeline   origin=8a70bb..0dbfe2:7449439
+INFO [01-08|22:31:30.319] Reset of L1Retrieval done                origin=8a70bb..0dbfe2:7449439
+INFO [01-08|22:31:31.996] Advancing bq origin                      origin=849c5b..fd214c:7449440 originBehind=false
+INFO [01-08|22:31:34.010] Advancing bq origin                      origin=059eeb..219012:7449441 originBehind=false
+INFO [01-08|22:31:35.947] Advancing bq origin                      origin=e10a3e..ce8ced:7449442 originBehind=false
+WARN [01-08|22:31:35.947] tx in inbox with unauthorized submitter  addr=0x92953Fa6b10B84A6ec7B2826530717892E0439D9 hash=e1321b..35f439 err=nil
+INFO [01-08|22:31:37.444] Advancing bq origin                      origin=7d8d5d..197e7a:7449443 originBehind=false
+INFO [01-08|22:31:39.141] Advancing bq origin                      origin=e292ec..19006d:7449444 originBehind=false
+WARN [01-08|22:31:39.141] tx in inbox with unauthorized submitter  addr=0x3b7ffDca934681CFAdac54C29DBd224854923A02 hash=da06cb..86bf39 err=nil
+INFO [01-08|22:31:40.359] Advancing bq origin                      origin=f564a6..4fe1c9:7449445 originBehind=false
+INFO [01-08|22:31:41.702] Advancing bq origin                      origin=8a5bc1..d36b15:7449446 originBehind=false
+INFO [01-08|22:31:42.659] Received first L1 head signal            l1_head=ef7da5..cc245a:7449596
+INFO [01-08|22:31:42.951] Advancing bq origin                      origin=c6bd6d..70ca25:7449447 originBehind=false
+INFO [01-08|22:31:44.384] Advancing bq origin                      origin=a9cf85..281926:7449448 originBehind=false
+INFO [01-08|22:31:45.918] Advancing bq origin                      origin=017ad7..5a1e79:7449449 originBehind=false
+```
+
+op-batcher 启动日志:
+
+```
+INFO [01-08|22:33:32.640] Initializing Batch Submitter
+INFO [01-08|22:33:33.630] metrics disabled
+INFO [01-08|22:33:33.630] Admin RPC enabled
+INFO [01-08|22:33:33.630] Starting JSON-RPC server
+INFO [01-08|22:33:33.641] Starting batcher                         notSubmittingOnStart=false
+INFO [01-08|22:33:33.641] Starting Batch Submitter
+INFO [01-08|22:33:33.641] Batch Submitter started
+INFO [01-08|22:33:36.313] Starting batch-submitter work at safe-head safe=e5bbce..c2ab4c:0
+WARN [01-08|22:33:36.313] Error calculating L2 block range         err="L2 safe head ahead of L2 unsafe head"
+WARN [01-08|22:33:38.736] Error calculating L2 block range         err="L2 safe head ahead of L2 unsafe head"
+WARN [01-08|22:33:39.987] Error calculating L2 block range         err="L2 safe head ahead of L2 unsafe head"
+WARN [01-08|22:33:41.250] Error calculating L2 block range         err="L2 safe head ahead of L2 unsafe head"
+```
+
+op-proposer 启动日志:
+
+```
+INFO [01-08|22:38:04.879] Initializing L2Output Submitter
+INFO [01-08|22:38:05.662] metrics disabled
+INFO [01-08|22:38:05.931] Connected to L2OutputOracle              address=0x8dAFe7Ba7325dc35c9524389e6BB3B04D1c5338D version=1.7.0
+INFO [01-08|22:38:05.932] Starting JSON-RPC server
+INFO [01-08|22:38:05.943] Starting Proposer
+INFO [01-08|22:38:05.943] Starting Proposer
+INFO [01-08|22:38:05.943] Proposer started
+```
+
+有一个小问题是 ubuntu 不再次执行 bash 无法读取使用 forge 或者 direnv，然后就是运行命令的时候，这些 env 没有生效，需要手动 export，比较奇怪。
+
+发送了一个 0.1 Sepolia 测试币，真的到账了我本地搭建的节点。tx https://sepolia.etherscan.io/tx/0x5e7bf371be6c29a44242f0e3174ecacba7e470c6a1f9e10fa7a19ca4d74bb10c 后面分析一下。
+
 <!-- Content_END -->
