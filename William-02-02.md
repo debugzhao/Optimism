@@ -194,13 +194,39 @@ Optimism 还通过 **OP基金会** 和其他生态系统项目来推动生态建
 任务：
 
 1. GAS相关表述https://learnblockchain.cn/article/3703
-2. **合约实现的详解**
-3. 分片sharding withEIP4844
+
+EIP-4488: Transaction calldata gas cost reduction with total calldata limit
+
+> - 用户的交易通过第二层（Layer 2）的“分组”进行汇总，并通过“calldata”发布到主网。该改进将使发布 calldata 到主网的成本降低，从而显著减少最终用户的气费。
+> - ZK-rollup 比以太坊基础层便宜 40 到 100 倍，由于在多笔交易中分摊气费，交易费用已经降低了 3 到 8 倍。根据 Buterin 的说法，扩大数据区域将使“rollup 成本降低 5 倍”。
+
+Gas
+
+> zkSync = **链下部分（存储 + 证明者成本 验证snark）**+**链上部分（gas 成本 验证snark）**
+>
+> Rollup的交易地板价依赖于 ETH 主网 calldata 的费用。 --EIP4488
+>
+> zkPorter = 链下成本
+>
+> ![image-20250108215836301](./.William-02-02.assets/image-20250108215836301.png)
+>
+> Arbitrum= ![26.png](./.William-02-02.assets/50.png)
+>
+> optimism= L2 执行费和 L1 数据/安全费。
+>
+> 
+>
+> L2s 是目前以太坊扩展的最佳解决方案，在提供高吞吐量和更便宜的费用的同时，可以很好的利用 L1s 的安全性。但由于Layer 2的扩容解决方案也在不断的更新和调整，每种方案都有其各自的优劣势，总体来说，zk rollup的交易费用更低、极限/部分TPS更快、最大拓展性也大大的得到提高以及在安全性上也有保证，zkporter次之；其他解决方案的交易费用也有所降低，但是同zk rollup相比略逊色。
 
 
 
 
 
 ### 2025.01.09
+
+​	zkSync zkPorter
+
+1. **合约实现的详解** 
+2. 分片sharding withEIP4844
 
 <!-- Content_END -->

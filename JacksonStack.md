@@ -60,8 +60,34 @@ Rollup的交易地板价依赖于 ETH 主网 calldata 的费用。
 
 ETH 的 gas 的相关处于草案阶段的 EIP 主要为 EIP4488，该方案将 calldata 非0字节数据由16gas 降低至 3 gas，对 layer2 TPS的影响较大，利好 layer2 的 Rollup，可以大大降低Rollup主网的交易成本，非0字节的数据可以降低为当前的 1/5 的成本不到，0 字节的也可以微微降低（ab，op，zk 等预计都可以下降至目前 1/5 的手续费）。  
 （3）费用支付方式   
-zkSync 中的转账天然支持“无气体交易”：用户在被转账的代币中支付交易费用。因此，例如，如果您想交易 DAI 稳定币，您无需拥有 ETH 或任何其他代币。只需支付一小部分 DAI 的费用。  
-**zkPorter的交易费用**
-目前 github 无 zkPorter 相关代码，由于 zkPorter 不需要链上数据可用性，预计成本将大大降低。  
-主要为链下成本，交易可以控制在 1 到 3 美分的恒定费用。
+zkSync 中的转账天然支持“无气体交易”：用户在被转账的代币中支付交易费用。因此，例如，如果您想交易 DAI 稳定币，您无需拥有 ETH 或任何其他代币。只需支付一小部分 DAI 的费用。     
+**zkPorter的交易费用**  
+目前 github 无 zkPorter 相关代码，由于 zkPorter 不需要链上数据可用性，预计成本将大大降低。    
+主要为链下成本，交易可以控制在 1 到 3 美分的恒定费用。  
+### 2025.01.08
+在zkSync 2.0中，L2 状态将分为 2 个方面：具有链上数据可用性的 ZK Rollup 和具有链下数据可用性的 zkPorter。   
+![image](https://github.com/user-attachments/assets/421cfd66-493b-499f-8d33-dc8552ff4e03)
+这两部分将是可组合和可互操作的：ZK Rollup 端的合约和账户将能够与 zkPorter 端的账户无缝交互。从用户的角度来看，唯一明显的区别是 zkPorter 账户的费用减少了 100 倍。  
+zkPorter 账户的数据可用性将由 zkSync 代币持有者（称为监护人）保护。他们将通过签署区块来跟踪 zkPorter 端的状态，以确认 zkPorter 帐户的数据可用性。  
+监护人使用 zkSync 代币参与权益证明 (PoS)，因此任何数据可用性故障都将导致他们被削减。这为数据可用性提供了加密经济保证。 需要注意的是，zkSync 中的 PoS 比侧链等其他系统中的 PoS 安全得多。这是因为 zkSync 监护人本质上是无法窃取资金。他们只能冻结 zkPorter 状态（冻结他们自己的权益）。 每个用户都可以自由选择自己的安全阈值。任何想要所有链上可用数据的用户都可以完全留在Rollup,使用ZK Rollup账号。  
+**Arbitrum Gas 机制**  
+Arbgas 费用将根据用户与 Arbitrum 的交互方式而有所不同，但下表可用作一般参考：  
+![image](https://github.com/user-attachments/assets/a87ad017-135c-458d-b48c-eb26a4fa2621)   
+
+**optimism Gas 机制**  
+optimism 交易中的两个成本来源：L2 执行费和 L1 数据/安全费。   
+（1）L2 执行费  
+就像在以太坊上一样，Optimism 上的交易必须为他们使用的计算量和存储量支付gas 。每笔 L2 交易都会支付一定的 执行费用，等于交易使用的 gas 数量乘以交易附带的 gas 价格。这也是以太坊的收费方式。    
+这是（简单的）公式： l2_execution_fee = transaction_gas_price * l2_gas_used  
+使用的 L2 气体量取决于您尝试发送的特定交易，交易在 Optimism 上使用的 gas 量通常与在 Ethereum 上的大致相同。  
+（2）L1 数据费  
+Optimism 与以太坊不同，因为 Optimism 上的所有交易也都发布到以太坊。此步骤对于 Optimism 的安全属性至关重要，因为这意味着同步 Optimism 节点所需的所有数据始终在以太坊上公开可用。这就是使 Optimism 成为 L2 的原因。  
+ 
+Optimism 上的用户必须支付向以太坊提交交易的费用。称之为L1 数据费用 ，这是 Optimism（和其他 L2）与以太坊之间的主要差异。由于以太坊上的 gas 成本非常昂贵，因此 L1 数据费用通常会在 Optimism 上占据交易的总成本。该费用基于四个因素：  
+以太坊当前的gas价格。  
+将交易发布到以太坊的 gas 成本。这交易长度的大小（以字节为单位）成比例。    
+以gas计价的固定费用。  
+一种动态的间接费用，按固定数字支付的 L1 费用。  
+公式： L1_data_fee = L1_gas_price * (tx_data_gas + fixed_overhead) * dynamic_overhead  
+
 <!-- Content_END -->
