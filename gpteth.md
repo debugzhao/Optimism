@@ -51,17 +51,20 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {你的名字}
+# Alan
 
-1. 自我介绍
+1. 工作经验: 5年
+技术栈: Solidity Golang
 
+多年web3智能合约开发经验，用Solidity开发过EVM生态DEFI、 NFT 、Dapp，对区块链特别感兴趣，想参加共学做出好的项目
 2. 你认为你会完成本次残酷学习吗？
+会完成共学，之前搭建过公链，有过相关经验
 
 ## Notes
 
 <!-- Content_START -->
 
-### 2025.01.06
+### 2024.07.11
 
 笔记内容
 

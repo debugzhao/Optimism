@@ -51,11 +51,12 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {你的名字}
+# Felix.Chen
 
-1. 自我介绍
+1. 散修初级程序员
 
 2. 你认为你会完成本次残酷学习吗？
+应该能行
 
 ## Notes
 
