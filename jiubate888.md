@@ -113,16 +113,22 @@ Plasma若是加上，零知识证明，会解决什么问题，零知识证明�
 
 ### 2025.01.08
 
-学习第三天，今天学习Stage 的介绍：https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe
+学习第三天：
+今天学习Stage 的介绍：https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe
 
 1.stage的意思，事物发展的阶段，等级，在这里就是一个判断框架，目的就是来判断评估 Rollups 项目，处于那个阶段，以便让用户知道，它的去中心化程度。分为以下三个阶段：
+
 第0️⃣阶段：由操作员运行，有一个开源可用软件。
+
 第1️⃣阶段：由操作员运行，升级为智能合约运行，保留一个安全委员会，解决少部分问题，OP是用的故障证明。
+
 第2️⃣阶段：完全由智能合约运行，安全委员会非必要不干涉，除了重大问题。
+
 这三个阶段，从0️⃣到2️⃣，将人操作干涉，逐渐不断缩小，交给代码，体验到了，代码的力量。
 
-2.在[
+2.[
 ](https://l2beat.com/scaling/summary)
+
 网站上，选取了前排名52个项目里，处于第0️⃣阶段的有42个，处于第1️⃣阶段的有2个，处于第2️⃣阶段有3个。
 
 
