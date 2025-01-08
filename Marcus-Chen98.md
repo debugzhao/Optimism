@@ -45,13 +45,35 @@ Verifiers（验证者）：
 从 Ethereum L1 获取交易批次或存款数据。
 验证输出提案是否正确，并在必要时发起挑战
 
-# **不同Layer2运行环境与技术对比：**
-Ethereum (Layer 1)：作为基准环境，不使用任何扩容技术。
-ZK Rollup：采用零知识证明技术，交易验证快速，但计算成本较高。
-ZK Porter：结合 ZK Rollup 和 Validium 技术，将部分数据存储在链下，提高扩展性。
-Optimism：采用 Optimistic Rollup 技术，假设交易有效，仅在必要时进行欺诈证明。
-Arbitrum：同样基于 Optimistic Rollup，但使用多轮欺诈证明，适合复杂智能合约。
-AnyTrust：基于 Plasma 和 zkport 技术，更适合对数据隐私有更高需求的场景。
+**不同Layer2扩容方案运行环境与技术对比：**
+- Ethereum (Layer 1)：作为基准环境，不使用任何扩容技术。
+- ZK Rollup：采用零知识证明技术，交易验证快速，但计算成本较高。
+- ZK Porter：结合 ZK Rollup 和 Validium 技术，将部分数据存储在链下，提高扩展性。
+- Optimism：采用 Optimistic Rollup 技术，假设交易有效，仅在必要时进行欺诈证明。
+- Arbitrum：同样基于 Optimistic Rollup，但使用多轮欺诈证明，适合复杂智能合约。
+- AnyTrust：基于 Plasma 和 zkport 技术，更适合对数据隐私有更高需求的场景。
+
+### 2025.01.08
+//OP Stack 是一组标准化的组件和工具，开发者可以用它来搭建自己的区块链或扩容方案
+OP Stack 的结构可以分为多个模块，以下是一些核心组件：
+
+Execution Layer（执行层）：
+负责运行智能合约和处理交易。
+类似以太坊的 EVM（以太坊虚拟机），OP Stack 支持与 EVM 完全兼容的操作。
+
+Consensus Layer（共识层）：
+确定交易的顺序和确认。
+在 Optimism 中，Sequencer 是负责排序交易的核心角色。→Sequencer（*时间顺序、GAS费用优先、批次优化*）定期将已排序和打包的交易批次提交到以太坊（Layer 1），确认交易（提交内容为（*1交易批次数据*、*2状态根*））
+
+Settlement Layer（结算层）：
+管理与 Layer 1 的交互，例如提交批次交易和欺诈证明。
+提供了跨 Layer 2 和 Layer 1 的安全保障。
+
+Data Availability Layer（数据可用性层）：
+记录交易数据并确保所有验证者都能访问。
+OP Stack 目前依赖以太坊的 Layer 1 提供数据可用性
+
+
 
 ### 2025.02.07
 
