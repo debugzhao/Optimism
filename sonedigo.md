@@ -140,40 +140,40 @@ Execution of Smart Contracts: Once smart contracts are deployed and execute auto
 
 In summary, "uncensorable" underscores one of the core values provided by Ethereum as a blockchain technology — offering an open, transparent, and trustless environment where information and value exchanges can occur freely without interference. This attribute is crucial for protecting user privacy, safeguarding freedom of speech, and building censorship-resistant applications.
 
-In order to satisfy the requriement of Ethereum L1 & L2s infrasturucture, Optimistic comes with OVM and targeting to be an EVM equivalence. If L2s want to surf Ethereum’s wave of infrastructural network effects, they must become EVM equivalent.
+In order to satisfy the requriement of Ethereum L1 & L2s infrastructure, Optimistic comes with OVM and targeting to be an EVM equivalence. If L2s want to surf Ethereum’s wave of infrastructural network effects, they must become EVM equivalent.
 
-Optimisistc practice EVM equivalence by achieveing L2 blocks executed with precise EVM equivalence. Instead of implementing the EVM in Solidity, implement a VM with a much smaller, simpler instruction set, and run the EVM within this VM during fraud proofs. To do this, we must simply compile an existing EVM interpreter, such as geth’s, to run within the simpler VM.
+Optimisistc practice EVM equivalence by achieving L2 blocks executed with precise EVM equivalence. Instead of implementing the EVM in Solidity, implement a VM with a much smaller, simpler instruction set, and run the EVM within this VM during fraud proofs. To do this, we must simply compile an existing EVM interpreter, such as geth’s, to run within the simpler VM.
 
-next day plan: focusing on sequencers, users, messagers role in Optimistic protocol stack and step into the next step of Optimistic protocol.
+next day plan: focusing on sequencers, users, messages role in Optimistic protocol stack and step into the next step of Optimistic protocol.
 
 ### 2024.01.08
 
 今天的学习内容将聚焦于sequencers，users, messagers在Optimistic协议栈中的角色，以及进入Optimistic协议的下一步。
 
-user has two majority activities: submit transcation and query transaction.
+user has two majority activities: submit transaction and query transaction.
 
-user submits transcation to interact with Ethereum through a sequencer
-user query transcation from the interfaces operated by verifier
+user submits transaction to interact with Ethereum through a sequencer
+user query transaction from the interfaces operated by the verifier
 
 according to the above two activites, we need to about two roles: sequencers and verifiers
 
-sequencers fill the role as block producer. In conclusion, sequencers will have these five activities:
+sequencers fill the role as block producers. In conclusion, sequencers will have these five activities:
 1.Accepts transactions directly from Users.
 2.Observes "deposit" transactions generated on Ethereum.
 3.Consolidates both transaction streams into ordered L2 blocks.
-4.Submits information to L1 that is sufficient to fully reproduce those L2 blocks.
+4.Submits information to L1 that is sufficient to reproduce those L2 blocks fully.
 5.Provides real-time access to pending L2 blocks that have not yet been confirmed on L1.
 
-One thing need to be noted that the sequencers are not a trusted actor but responsible for improving the user experience by ordering transactions much more quickly and cheaply than would currently be possible if users were to submit all transactions directly to L1.
+One thing needs to be noted that the sequencers are not trusted actors but are responsible for improving the user experience by ordering transactions much more quickly and cheaply than would currently be possible if users were to submit all transactions directly to L1.
 
-Verifier fill the role to download and execute the L2 state transition function independently of the Sequencer.
+Verifier fills the downloading role and executes the L2 state transition function independently of the Sequencer.
 
-The depositing and sending transcation will have 5 steps:
+The depositing and sending transaction will have 5 steps:
 
 1.Submit Deposit: Users initiate the process by submitting a deposit from Ethereum Layer 1 (L1) to the L2 network.
 2.Fetch Deposit Events: The Sequencer  fetches deposit events from Ethereum L1 by OptimismPortal. This step ensures that the L2 network is aware of the deposits made on L1.
 3.Generate Deposit Block: The Sequencer generates a deposit block based on the fetched deposit events. This block contains information about the deposits and is used to update the state of the L2 network.
-4.Send Transactions: Once users have deposited ETH to pay fees, they can start sending transactions on the L2 network. These transactions are processed more efficiently than on L1 due to the nature of L2 solutions.
+4.Send Transactions: Users can start sending transactions on the L2 network once they have deposited ETH to pay fees. These transactions are processed more efficiently than on L1 due to the nature of L2 solutions.
 5.Submit Transaction Batches: The Sequencer submits transaction batches to the Batch Inbox Address on Ethereum L1. This step involves bundling multiple transactions into a single batch, which is then submitted to L1 for finality.
 ![alt text](image.png)
 
@@ -183,11 +183,11 @@ The withdrawal process is similar to the deposit process, but instead of sending
 2.Submit Transaction Batch: The Sequencer submits a batch of transactions, including the withdrawal initialization, to the Batch Inbox Address on Ethereum L1.
 3.Submit Output Proposal: Proposers submit an output proposal to the DisputeGameFactory contract on L2.
 4.Generate Game: The DisputeGameFactory generates a game based on the output proposal and sends it to the FaultDisputeGame contract.
-5.Submit Withdrawal Proof: Users submit a proof of the withdrawal to the OptimismPortal contract on L2.
+5.Submit Withdrawal Proof: Users submit proof of the withdrawal to the OptimismPortal contract on L2.
 6.Wait for Finalization: The system waits for the finalization of the withdrawal process.
 7.Submit Withdrawal Finalization: Users submit the finalization of the withdrawal to the OptimismPortal contract.
 8.Check Game Validity: The OptimismPortal checks the validity of the game generated by the FaultDisputeGame contract.
-9.Execute Withdrawal Transaction: Once the game is validated, the OptimismPortal executes the withdrawal transaction to transfer the funds to external contracts on Ethereum L1.
+9.Execute Withdrawal Transaction: Once the game is validated, OptimismPortal executes the withdrawal transaction to transfer the funds to external contracts on Ethereum L1.
 
 next day(2025.01.09) will learn about some new words/roles: Proposers, Game and OptimismPortal.
 
