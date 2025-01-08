@@ -134,4 +134,43 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 
 
+### 2025.01.08
+
+笔记内容
+
+#### Arbitrum 和 Optimism —— 以太坊扩展方案的异同点
+
+技术架构对比：
+
+- Arbitrum：使用 Arbitrum VM 执行智能合约，采用 Fraud Proof 验证机制
+- Optimism：使用 OVM (Optimistic Virtual Machine) 执行智能合约，采用 Fraud Prover 机制
+
+验证机制：
+
+- 两者都采用 Optimistic Rollup 技术
+- 主要区别在于验证过程：
+  - Arbitrum：所有验证人都可参与投票验证交易
+  - Optimism：使用 Sequencer 机制，只有特定验证人可以打包交易
+
+技术创新：
+
+- Arbitrum：
+  - 可定制的聚合签名
+  - 优化的区块链交互技术
+  - 高度优化的虚拟机
+- Optimism：
+  - OVM 虚拟机对 EVM 的兼容性优化
+  - 简化的验证流程
+
+安全机制：
+
+- 两者都使用欺诈式证明（Fraud Proof）
+- 核心区别：
+  - Arbitrum 的验证更分散化
+  - Optimism 的验证更中心化但效率更高
+
+这些技术特点反映了两个项目在扩容方案上的不同侧重点：Arbitrum 更注重去中心化和安全性，而 Optimism 更注重处理效率和兼容性。
+
+
+
 <!-- Content_END -->
