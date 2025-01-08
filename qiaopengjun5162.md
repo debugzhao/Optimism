@@ -76,7 +76,7 @@ Optimistic Rollups 是一种基于承诺链（commit chain）和执行链（exec
 
 ### 2025.01.08
 
-笔记内容
+Op-stack 主要由 op-node, op-geth, op-batcher, op-proposer, CrossDomainMessenger, OptimismPortal, Bridge contracts 和 L2OutputOracle contract 等角色组成
 
 ### 2025.01.09
 
