@@ -146,7 +146,7 @@ Optimisistc practice EVM equivalence by achieving L2 blocks executed with precis
 
 next day plan: focusing on sequencers, users, messages role in Optimistic protocol stack and step into the next step of Optimistic protocol.
 
-### 2024.01.08
+### 2025.01.08
 
 今天的学习内容将聚焦于sequencers，users, messagers在Optimistic协议栈中的角色，以及进入Optimistic协议的下一步。
 
