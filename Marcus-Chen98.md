@@ -74,6 +74,7 @@ Data Availability Layer（数据可用性层）：
 OP Stack 目前依赖以太坊的 Layer 1 提供数据可用性
 
 **L1 Smart Contract**
+
 1、L1StandardBridge：
 - 提供标准的资产桥接功能（ERC20、ETH 等），负责管理资产的存款和提款。
 - 支持发送和接收跨层消息。
@@ -110,23 +111,34 @@ OP Stack 目前依赖以太坊的 Layer 1 提供数据可用性
 - 存储已提交的交易批次，用于 Layer 1 的验证和管理
 
 **举例：从用户交互到争议解决的全流程--以ERC20代币为例**
+
 *Step 1: 用户发起存款*
+
 - 用户通过钱包向 Layer 1 的 L1StandardBridge 发起存款请求。
 - 资产锁定：ERC20 代币在 L1 被锁定，并通过 L1StandardBridge 通知 Layer 2。
+
 *Step 2: L1 向 Layer 2 通知*
+
 - L1CrossDomainMessenger 接收存款事件，将消息传递给 Layer 2。
 - Layer 2 的 Sequencer（排序器）根据存款事件更新 Layer 2 的状态，为用户创建等量的 Layer 2 代币。
+
 *Step 3: 用户在 Layer 2 中发起交易*
+
 - 用户使用 Layer 2 的资产进行交易。
 - Layer 2 的 Sequencer 收集这些交易，并生成一个批次。
+
 *Step 4: Batcher 打包交易*
+
 - Batcher 将 Layer 2 的交易批次发送到 Layer 1，通过 Batch Inbox Address 存储。
 - 作用：这些批次被作为 Layer 2 状态的证据存储在 Layer 1。
+
 *Step 5: 验证或争议*
 - 如果验证者认为提交的交易批次或状态根有错误，他们可以通过 DisputeGameFactory 发起争议。
+
 *争议解决：*
 - FaultDisputeGame 启动验证流程。
 - 如果确认错误，系统将回滚状态并惩罚提交错误状态的角色。
+
 *Step 6: 系统安全管理*
 - 如果出现重大异常，Guardian 可以通过 OptimismPortal 暂停系统操作，防止进一步损害。
 
