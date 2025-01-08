@@ -76,4 +76,51 @@ The process of withdrawing from OP Mainnet (L2) to Ethereum consists of three st
 
 In summary, Optimism provides a mechanism through the Standard Bridge that allows users to effectively transfer ETH and tokens between the Ethereum mainnet (L1) and OP Mainnet (L2). The deposit and withdrawal mechanisms enable users to flexibly convert assets while ensuring security.
 
+### 2025.01.08
+
+#### Fraud Proofs and the Challenge Window in Optimism Rollup
+
+The **challenge window** for fraud proofs occurs on **L1 (Ethereum Mainnet)**. This is a key design feature of Optimism Rollup (and other similar optimistic rollup solutions), aimed at ensuring the correctness of L2 state transitions.
+
+#### Why Does the Challenge Window Happen on L1?
+
+1. **Security**:
+
+   - L1 (Ethereum Mainnet) offers higher security and decentralization. Handling fraud proofs on L1 ensures that the challenge process is not affected by potential centralization or malicious behavior on L2.
+
+2. **Data Availability**:
+
+   - L2 transaction data and state roots are periodically submitted to L1. Verifiers can access this data on L1 to check whether the state transitions submitted by the Sequencer are correct.
+
+3. **Finality**:
+   - L1 serves as the ultimate arbitration layer. If the Sequencer submits an incorrect state transition, verifiers can initiate a challenge on L1 and execute the fraud proof logic there, ensuring that the incorrect state is corrected.
+
+#### How the Challenge Window Works
+
+1. **State Submission**:
+
+   - The Sequencer submits batches of L2 transactions and state roots to L1.
+
+2. **Challenge Period Begins**:
+
+   - After submission, a fixed challenge window (typically 7 days) opens. During this period, anyone can verify whether the state transitions submitted by the Sequencer are correct.
+
+3. **Fraud Proof**:
+
+   - If a verifier detects that the Sequencer has submitted an incorrect state root, they can initiate a challenge on L1 and provide a fraud proof.
+   - A fraud proof typically includes:
+     - The problematic batch of transactions.
+     - Evidence that the Sequencer executed certain transactions incorrectly.
+
+4. **Arbitration**:
+
+   - Smart contracts on L1 will verify the fraud proof. If the proof is valid, the state root submitted by the Sequencer will be rejected, and the incorrect state transition will be rolled back.
+
+5. **Penalization**:
+   - If the Sequencer is proven to have submitted an incorrect state transition, they may be penalized (e.g., their staked collateral may be slashed).
+
+#### Summary
+
+The **challenge window** for fraud proofs occurs on L1 (Ethereum Mainnet) to leverage L1's security and decentralization, ensuring the correctness of L2 state transitions. The existence of a challenge window is a core mechanism of optimistic rollups, using economic incentives and cryptographic proofs to ensure that the Sequencer cannot act maliciously or submit incorrect state transitions.
+
 <!-- Content_END -->
