@@ -143,9 +143,13 @@ OP Stack 目前依赖以太坊的 Layer 1 提供数据可用性
 - 如果出现重大异常，Guardian 可以通过 OptimismPortal 暂停系统操作，防止进一步损害。
 
 **资产操作（存款/提现）** 通过 **L1 Bridge**模块完成。
+
 **交易批次管理** 通过 **Batcher 和 Batch Inbox Address**实现。
+
 **跨层通信** 依靠 **L1CrossDomainMessenger**。
+
 **争议解决** 由 **FaultDisputeGame** 保障系统安全性。
+
 **系统安全** 由 **Guardian** 提供紧急保护
 
 ### 2025.01.09
