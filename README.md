@@ -152,7 +152,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | brucexu-eth | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | |
 | qiaopengjun5162 | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | StarryDesert | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | |
-| debugzhao | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
+| debugzhao | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | JacksonStack | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | jjeejj | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | luffythink | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
 | 183Aaros | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
