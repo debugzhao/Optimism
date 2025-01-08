@@ -106,7 +106,7 @@ next day plan: focusing on sequencers, users, messages role in Optimistic protoc
 
 
 
-### 2024.01.07
+### 2025.01.07
 
 According to yesterday learning notes, I will start to learn about the Optimism's rollup architecture. Today will start to learn about EVM Equivalence,the sequencers and messager and the rollup node  with https://specs.optimism.io/protocol/messengers.html\
 
