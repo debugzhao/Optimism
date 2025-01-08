@@ -182,7 +182,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | CJC824 | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | yiwen4 | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | |
 | chenziyu-bxy | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
-| LunaWang5209 | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
+| LunaWang5209 | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | partypill | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | jiubate888 | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | Coooder-Crypto | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
 | 183Aaros | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
