@@ -78,4 +78,11 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
       2. Arbitrum 会经过多伦协商，将最后单步的断言发给 EVM 进行验证， 消耗更少的 gas
       3. Optimism 解决争议的方式 更加简单，更加快速
 
+### 2025.01.08
+
+1. 学习了 文章 https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe 引入了 Stage 的概念 来判断 rollup 的 成熟程度
+   1. Stage 0 还在中心化管理
+   2. Stage 1 过度到智能合约管理，但是安理会可以独自解决潜在的错误
+   3. Stage 2 完全由智能合约管理
+
 <!-- Content_END -->
