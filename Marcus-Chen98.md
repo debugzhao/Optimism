@@ -54,7 +54,7 @@ Verifiers（验证者）：
 - AnyTrust：基于 Plasma 和 zkport 技术，更适合对数据隐私有更高需求的场景。
 
 ### 2025.01.08
-//OP Stack 是一组标准化的组件和工具，开发者可以用它来搭建自己的区块链或扩容方案
+**OP Stack** 是一组标准化的组件和工具，开发者可以用它来搭建自己的区块链或扩容方案
 OP Stack 的结构可以分为多个模块，以下是一些核心组件：
 
 Execution Layer（执行层）：
@@ -73,7 +73,70 @@ Data Availability Layer（数据可用性层）：
 记录交易数据并确保所有验证者都能访问。
 OP Stack 目前依赖以太坊的 Layer 1 提供数据可用性
 
+**L1 Smart Contract**
+1、L1StandardBridge：
+- 提供标准的资产桥接功能（ERC20、ETH 等），负责管理资产的存款和提款。
+- 支持发送和接收跨层消息。
 
+2、L1ERC721Bridge：
+- 类似于 L1StandardBridge，但专门用于 NFT 的桥接。
+- 允许用户将 NFT 存入或提取到 Layer 1 或 Layer 2。
+
+3、L1CrossDomainMessenger：
+- 负责 Layer 1 和 Layer 2 之间的消息传递。
+- 确保不同层之间的信息是同步的，例如交易完成或存款成功。
+
+4、OptimismPortal：
+- 是系统的入口和核心交互点。
+- 提供了状态查询、提案验证等功能，同时支持暂停/恢复系统操作。
+
+5、DisputeGameFactory：
+- 用于生成和管理争议游戏（Dispute Game）。
+- 挑战者可以通过此模块验证 Layer 2 的状态根是否正确。
+
+6、FaultDisputeGame：
+- 管理具体的争议实例，用于防止 Layer 2 的欺诈状态被提交。
+
+7、SuperchainConfig 和 SystemConfig：
+- 配置整个系统的参数，例如区块时间、Gas 费用等。
+
+8、AnchorStateRegistry：
+- 用于存储和更新锚定状态（Anchor States），确保 Layer 1 和 Layer 2 的状态一致。
+
+9、DelayedWETH：
+- 管理延迟提款的 WETH，可能是为了增加额外的安全性或优化流程。
+
+10、BatchInbox Address：
+- 存储已提交的交易批次，用于 Layer 1 的验证和管理
+
+**举例：从用户交互到争议解决的全流程--以ERC20代币为例**
+*Step 1: 用户发起存款*
+- 用户通过钱包向 Layer 1 的 L1StandardBridge 发起存款请求。
+- 资产锁定：ERC20 代币在 L1 被锁定，并通过 L1StandardBridge 通知 Layer 2。
+*Step 2: L1 向 Layer 2 通知*
+- L1CrossDomainMessenger 接收存款事件，将消息传递给 Layer 2。
+- Layer 2 的 Sequencer（排序器）根据存款事件更新 Layer 2 的状态，为用户创建等量的 Layer 2 代币。
+*Step 3: 用户在 Layer 2 中发起交易*
+- 用户使用 Layer 2 的资产进行交易。
+- Layer 2 的 Sequencer 收集这些交易，并生成一个批次。
+*Step 4: Batcher 打包交易*
+- Batcher 将 Layer 2 的交易批次发送到 Layer 1，通过 Batch Inbox Address 存储。
+- 作用：这些批次被作为 Layer 2 状态的证据存储在 Layer 1。
+*Step 5: 验证或争议*
+- 如果验证者认为提交的交易批次或状态根有错误，他们可以通过 DisputeGameFactory 发起争议。
+*争议解决：*
+- FaultDisputeGame 启动验证流程。
+- 如果确认错误，系统将回滚状态并惩罚提交错误状态的角色。
+*Step 6: 系统安全管理*
+- 如果出现重大异常，Guardian 可以通过 OptimismPortal 暂停系统操作，防止进一步损害。
+
+**资产操作（存款/提现）** 通过 **L1 Bridge**模块完成。
+**交易批次管理** 通过 **Batcher 和 Batch Inbox Address**实现。
+**跨层通信** 依靠 **L1CrossDomainMessenger**。
+**争议解决** 由 **FaultDisputeGame** 保障系统安全性。
+**系统安全** 由 **Guardian** 提供紧急保护
+
+### 2025.01.09
 
 ### 2025.02.07
 
