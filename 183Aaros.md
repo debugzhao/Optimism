@@ -96,7 +96,7 @@ inherits ETH availability& integrity
 Biobiography:
 https://specs.optimism.io/
 
-### 2024.01.07
+### 2025.01.07
 
 Key takeaway:
 
@@ -127,7 +127,7 @@ L1cost = (1)*(2)/1e12
 ##### Biobiography:
 https://docs.optimism.io/stack/transactions/fees
 
-### 2024.01.08
+### 2025.01.08
 
 Key takeaway:
 
