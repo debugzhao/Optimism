@@ -36,6 +36,33 @@ Superchain 内的每条链都需要将排序器总收入或利润的 15% 支付�
 
 ### 2025.01.07
 
+## Retro Funding 的演变
+
+Retro Funding 的历史：
+
+在早期的 Retro Funding 中，追溯的只包含公共物品，例如  RetroPGF 3 的目标：
+
+> *“Optimism 的追溯性公共物品资助（Retroactive Public Goods Funding, RetroPGF）的目标是通过追溯性分配奖励，实现“**影响力=利润**”的原则——即对集体的积极影响应转化为个人的利润。这一原则作为北极星，激励创建一个更具生产力和可持续性的经济体系。*
+> 
+
+> ***影响力**：表示贡献者为 Optimism 集体创造的价值。*
+> 
+
+> ***利润**：表示贡献者从 Optimism 集体中提取的价值。*
+> 
+
+> ***差距**：表示贡献者的影响力与利润之间的差异。*
+> 
+> 
+> *（例如：影响力 - 利润 = 差距）*
+> 
+
+> *RetroPGF 填补了贡献者的影响力与利润之间的差距，从而实现“**影响力=利润**”的状态。”*
+> 
+
+在 Retro Funding 4 中，社区考虑到之前三轮 Retroactive Public Goods Funding（回溯性公共物品激励）中，缺乏对 OP 网络实际使用者的支持（在 RPGF 3 中只分配了 5% 的奖励给到网络实际使用量中前 20% 的使用者），尤其缺乏对 Superchain 上开发者增长的支持，并且 OP 社区的徽章持有者对 Retro Funding 的可持续性提出了担忧，在 Retro Funding 的 1~3 轮次，Retro Funding 依赖 850M OP 的回溯性公共物品资助（RPGF）来发放奖励。
+
+在 Retro Funding 的第 4 轮次及之后，Retro Funding 将逐渐转向依赖协议盈余收入作为奖励来源，而之前的协议盈余收入不足以维持回溯性公共物品资助，所以 Retro Funding 在鼓励公共物品创新之外，还肩负起了直接激励网络增长的任务，**于是 Retro Funding 在第 4 轮次时首次提出对链上贡献者的资助（Onchain Builder）**，以激励开发者增长和网络活动的增加。
 
 ### 2025.01.08
 

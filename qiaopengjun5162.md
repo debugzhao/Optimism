@@ -72,11 +72,11 @@ Rollups 通过将大量交易打包到一个单一交易中，并将其提交到
 
 ### 2025.01.07
 
-笔记内容
+Optimistic Rollups 是一种基于承诺链（commit chain）和执行链（execution chain）的 Layer2 扩展方案。它将大量交易数据存储在链外的执行链上，并定期将执行结果提交到链上的承诺链中。通过链外计算和链上争议解决机制，Optimistic Rollups 实现了高性能的智能合约执行，同时保留了以太坊的去中心化特性。
 
 ### 2025.01.08
 
-笔记内容
+Op-stack 主要由 op-node, op-geth, op-batcher, op-proposer, CrossDomainMessenger, OptimismPortal, Bridge contracts 和 L2OutputOracle contract 等角色组成
 
 ### 2025.01.09
 
