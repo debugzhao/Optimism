@@ -450,4 +450,8 @@ INFO [01-08|22:38:05.943] Proposer started
 
 发送了一个 0.1 Sepolia 测试币，真的到账了我本地搭建的节点。tx https://sepolia.etherscan.io/tx/0x5e7bf371be6c29a44242f0e3174ecacba7e470c6a1f9e10fa7a19ca4d74bb10c 后面分析一下。
 
+TODO 研究下跨链这个 0.1 ETH 背后发生了什么，然后看看怎么 withdraw 以及相关流程。
+
+TODO 有没有简单的 evm explorer？不需要 etherscan 这样的，可以慢一点，但是可以帮忙调用相关的参数和功能
+
 <!-- Content_END -->
