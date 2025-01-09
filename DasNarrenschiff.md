@@ -34,7 +34,7 @@ Superchain 内的每条链都需要将排序器总收入或利润的 15% 支付�
     - Base 的治理权限将逐步转移至由全球独立社区成员组成的安全理事会，推动 Superchain 的去中心化进程，Base 将在安全理事会中拥有部分治理权限，但其投票权限不超过总权限的 9%
     - OP 无疑是目前 L2 生态中最去中心化和最具生态多样性的，Base 依托 Coinbase 和相关经验可以为 OP 拓展更多现实世界的可能性，而 Base 也需要 OP 的去中心化治理/运营模式，及经验。
 
-### 2025.01.07
+### 2025.01.09
 
 ## Retro Funding 的演变
 
@@ -91,11 +91,38 @@ Retro Funding S7‘s 3 main points:
         - 工具在链上应用开发中的重要性。
         - 支持建设者在 SuperChain 跨链互操作性采用的组件。
             - 二月开始进行评估，奖励每月发放。
+         
 
-### 2025.01.08
+### 2025.01.10
+
+Pending research link list:
+
+https://docs.contributionism.io/contributionism/characteristics/cooperative-and-competitive-environments
+
+https://mirror.xyz/optimismcn.eth/uJcBF6kl9UwUFOjCt6SnmkZBz_CUsK-W8debwVUnv6g
+
+Accelerated Decentralization Proposal For Optimism (GFX labs)
+https://gov.optimism.io/t/accelerated-decentralization-proposal-for-optimism/8875
+
+Insightful philosophical perspectives on governance (polynya)
+https://polynya.mirror.xyz/
+
+Delegate nodes to learn:
+
+https://optimism.curiahub.xyz/delegate/delegate.l2beat.eth
+
+https://optimism.curiahub.xyz/delegate/joxes.eth
+
+https://optimism.curiahub.xyz/delegate/opmichael.eth
+
+https://vote.optimism.io/delegates/0x5d36a202687fd6bd0f670545334bf0b4827cc1e
+
+https://david.truong.vc/
+
+seed gov
 
 
 
-### 2025.01.09
+### 2025.01.11
 
 <!-- Content_END -->
