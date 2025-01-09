@@ -31,9 +31,8 @@ Optimistic Rollups：Optimism 使用了一种为 Optimistic Rollups的技术。�
 ### 2025.01.08
 补打
 ### 2025.01.09
-打卡
-### 2025.01.10
-打卡
+打卡签到，今后按时参加会议查看书签
+
 ### 2024.07.12
 
 <!-- Content_END -->
