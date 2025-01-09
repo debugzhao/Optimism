@@ -152,4 +152,17 @@ Stage 2 - No ~, final stage, no council.
 - 30 days exit window
 - Security Council restricted to errors detected
 
+### 2025.01.09
+The notes today head back to VB's original articles on scaling, which inspring the design of Optimism.
+
+Key takeaway: (mainly focus the aspect of VB's analytical framework)
+Some prior background - Blockchain scaling/decentralised/safety triangle dillema etc.
+
+Identify the problem - the consensus architectures rely on every node processing every transaction.
+
+
+##### Biobiography:
+Buterin, V. (2014) 'Scalability, Part 1: Building on Top', Vitalik Buterin's Blog, 17 September 2014.
+https://blog.ethereum.org/2014/09/17/scalability-part-1-building-top
+
 <!-- Content_END -->
