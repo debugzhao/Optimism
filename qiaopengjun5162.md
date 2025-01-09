@@ -80,7 +80,10 @@ Op-stack 主要由 op-node, op-geth, op-batcher, op-proposer, CrossDomainMesseng
 
 ### 2025.01.09
 
-笔记内容
+Op-stack 的 rollup 由两个服务来承担
+
+op-batcher 服务：主要职责是负责将交易数据提交到 Layer1 的 EOA 地址
+op-proposer 服务：主要职责是负责将交易状态提交到 Layer1 的 L2OutputOracle 合约
 
 ### 2025.01.10
 

@@ -42,5 +42,31 @@ Optimism 允许用户在 L2（如 OP Mainnet）和底层 L1（如 Ethereum mainn
 - **从 OP Mainnet 到 Ethereum**: 称为提款(withdrawl)，分为三个阶段：初始化提款 L2 交易、等待下一个输出根提交到 L1 并提交提款证明、以及在故障挑战期结束后完成提款。
 
 
+### 2025.01.08
+#### Layer2的解决方案交易成本对比
+
+- **为什么要L2？更快、更便宜**
+   普通转账eth需要字节数112左右，ZK压缩为12个字节，op系压缩为78.4（不固定，假设压缩了30%的空间），假设swap转账需要字节数约180左右，ZK压缩为14个字节，op系压缩为126个字节。
+- 目前主要有四种技术方案：**Optimistic Rollup、ZK Rollup、Plasma、Validium。**
+
+##### Optimistic Rollup
+**交易成本**
+- L2 执行费：每笔 L2 交易都会支付一定的执行费用，等于交易使用的 gas 数量乘以交易附带的 gas 价格。
+   - `l2_execution_fee = transaction_gas_price * l2_gas_used`
+- L1 数据/安全费：Optimism 上的用户必须支付向以太坊提交交易的费用，称之为L1 数据费用
+   - `L1_data_fee = L1_gas_price * (tx_data_gas + fixed_overhead) * dynamic_overhead`
+
+##### ZK Rollup
+**交易成本**
+在zkSync 中，每笔交易的成本有两个组成部分：
+- 链下部分（存储 + 证明者成本）：状态存储和 SNARK（零知识证明）生成的成本。这部分依赖于硬件资源的使用，因此是不变的。
+- 链上部分（gas 成本）：对于每个zkSync 区块，验证者必须支付以太坊 gas 来验证 SNARK，另外每笔交易额外支付约 0.4k gas 来发布状态。
+
+**影响地板价的因素**
+Rollup的交易地板价依赖于 ETH 主网 calldata 的费用。
+
+**无气体转账**
+用户可以直接用被转账的代币中支付交易费用（如DAI）而无需使用原生Token支付
+
 
 <!-- Content_END -->
