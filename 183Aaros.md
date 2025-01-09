@@ -96,7 +96,7 @@ inherits ETH availability& integrity
 Biobiography:
 https://specs.optimism.io/
 
-### 2024.01.07
+### 2025.01.07
 
 Key takeaway:
 
@@ -126,5 +126,30 @@ L1cost = (1)*(2)/1e12
 
 ##### Biobiography:
 https://docs.optimism.io/stack/transactions/fees
+
+### 2025.01.08
+
+Key takeaway:
+
+Stage 0 - Full training wheels, still an source available software allows reconstruction of the state.
+
+ - rollup
+ - state roots
+ - provide DA (data availability) on L1
+ - reconstructiion of state source available
+
+Stage 1 - Limited ~, governed by smart contract, council implementation for security.
+
+- proper proof system
+- fraud proof
+- user may exit without oper's coordination
+- 7 days exit window
+- 50% of the security council participants from external
+
+Stage 2 - No ~, final stage, no council.
+
+- permissionless
+- 30 days exit window
+- Security Council restricted to errors detected
 
 <!-- Content_END -->
