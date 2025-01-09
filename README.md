@@ -190,12 +190,13 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Marcus-Chen98 | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | foresteru | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | |
 | YiShengYouNi | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | |
-| Thogsloc | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | |
+| Thogsloc | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | |
 | zedz | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | |
 | ChoeyGit | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | |
 | Tianxibi-web3 | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | |
 | 183Aaros | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
