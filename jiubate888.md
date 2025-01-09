@@ -137,4 +137,22 @@ Plasma若是加上，零知识证明，会解决什么问题，零知识证明�
 
 ### 2025.01.09
 
+
+学习第四天，今天学习有关零知识证明的知识
+
+1.ZK（或是ZKP）全称Zero-knowledge proof,即零知识证明，它是一种方法，目的呢是，通过该方法，证明者可以向另一方验证者证明一个事实，不需要透露该事实的具体信息。这个脑补了一下，感觉很有意思。相应的带来好处，是保护隐私，还有一个是解决验证难的问题。
+
+2.ZK-SNARK全写Zero-Knowledge Succinct Non-Interactive Argument of Knowledge，其中succinct是简洁的意思，Non-Interactive，其中Non,是非，不的意思，而Interactive是交互的意思，合起来是非交互式的。Argument是论证的意思，总体合起来就是，零知识证明里的一种简洁非交互式的知识论证。注意它只是其中一种，零知识证明构造的方法。
+
+3.ZK-SNAEKs到ZK-STARKs,这里的s代表可扩展的，ZK-STARKs是前面的升级版本，这里的字母T代表透明性，比起ZK-SNAEKs,效率更高，理论上强十倍，更加去中心化，还可以抗量子特性，但相应的有个缺点，就是技术相对来说新一点。实现难度比较大，做个简单类比，相当于欺诈证明，与有效证明的关系。ZK-SNAEKs是目前通用的证明算法，而ZK-STARKs目前技术不够成熟，是特用的证明算法，目前使用ZK-STARKs的项目有StarkWare ,POlygon Miden等。
+
+4.zkEVM其实是运行在L2层的类EVM虚拟机器，因此更为精确的说法是Zero Knowledge virtual Machine,Virtual 是虚拟的意思，zkvm,只不过大家强调其兼容以太坊而称为zkEVM,现有项目也在考虑逐渐放弃了为特定应用程序而做优化，而升级支持运行通运合约即zkEVM Rollup.因此ZKEVM Rollup虽然作为ZK Rollup的下位概念，在大部分情况下，提起ZK Rollup时变指zkEVM rollup.
+
+5.总结，好好理解吸收这些概念，才能知道这些项目方在干嘛。
+
+
+### 2025.01.10
+
+
+
 <!-- Content_END -->
