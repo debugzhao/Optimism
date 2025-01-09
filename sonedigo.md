@@ -191,4 +191,26 @@ The withdrawal process is similar to the deposit process, but instead of sending
 
 next day(2025.01.09) will learn about some new words/roles: Proposers, Game and OptimismPortal.
 
+### 2025.01.09
+
+Today's plan to take away the new words/roles: Proposers, Game and OptimismPortal.
+
+为了理解Proposers, 我们需要认识到Proposers在L2网络中角色所在的意义，以及Proposers在L2网络中如何与L1网络进行交互。
+
+Proposers:
+
+After processing one or more blocks the outputs will need to be synchronized with the settlement layer (L1) for trustless execution of L2-to-L1 messaging, such as withdrawals. These output proposals act as the bridge's view into the L2 state. **Actors called "Proposers" submit the output roots to the settlement layer (L1) and can be contested with a fault proof, with a bond at stake if the proof is wrong.**
+
+The proposer's role is to construct and submit output roots, which are commitments to the L2's state. To practice these submission operation, proposers will post through contract L2OutputOracle on L1. The L2OutputOracle contract is responsible for submitting output roots to the L1. 
+
+repo for optimism L2 proposers code: https://github.com/ethereum-optimism/optimism/tree/d48b45954c381f75a13e61312da68d84e9b41418/op-proposer
+
+L2 blocks are produced at a constant rate of L2_BLOCK_TIME (2 seconds). A new L2 output MUST be appended to the chain once per SUBMISSION_INTERVAL which is based on a number of blocks. The exact number is yet to be determined, and will depend on the design of the fault proving game.
+
+OptimismPortal:
+
+The OptimismPortal is a low-level contract responsible for passing messages between L1 and L2. Messages sent directly to the OptimismPortal have no form of replayability. Users are encouraged to use the L1CrossDomainMessenger for a higher-level interface.
+
+Next day(2025.01.10) will step into comparison between OP and other rollup proposals.
+
 <!-- Content_END -->
