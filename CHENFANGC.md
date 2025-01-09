@@ -74,4 +74,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 阅读文档内容[Stage 的介绍](https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe)
 
+### 2025.01.09
+
+阅读文档内容[治理理念](https://community.optimism.io/welcome/welcome-overview)
+
 <!-- Content_END -->
