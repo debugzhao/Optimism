@@ -154,6 +154,40 @@ OP Stack 目前依赖以太坊的 Layer 1 提供数据可用性
 
 ### 2025.01.09
 
+**Stage 0: Minimal Trust Assumptions（最小信任假设）**
+
+- Rollup 的安全性主要依赖 Layer 1（例如以太坊）的保障，但仍需要信任某些中心化的角色。
+- Sequencer（排序者）是中心化的，通常由单个实体控制。
+- 数据可用性完全依赖于 Layer 1。
+
+**Stage 1: Permissionless Validators（无许可验证者）**
+
+- 任何人都可以成为验证者，验证 Rollup 的交易和状态。
+- 通过引入争议解决机制（Fault Proof 或 Validity Proof）来确保数据的正确性。*验证者的加入无须许可，任何人都可以运行验证节点*
+- 数据验证和存储依然依赖 Layer 1。
+- 
+**Stage 2: Full Decentralization（完全去中心化）**
+
+- Rollup 实现完全去中心化，Sequencer、验证者、数据存储都无需信任中心化实体。
+- Layer 2 生态具备独立性，最大化保障用户和开发者的权益。
+- *Sequencer 去中心化：允许多个 Sequencer 并行运行，解决单点故障问题。多个 Sequencer 通过共识机制协作排序交易。*
+
+**Optimism 当前所处阶段：Stage 0，Optimism 正在开发去中心化 Sequencer 和无许可验证机制，目标是逐步向 Stage 1 和 Stage 2 过渡。**
+**zkSync 已逐步接近 Stage 1，其 Validity Proof 系统允许无许可验证**
+**目前没有任何 Rollup 达到 Stage 2**
+
+**Rollup 如何依赖 Layer 1：**
+- Rollup 使用 Layer 1 作为最终的裁判。所有状态更新（如余额变化）都必须通过 Layer 1 的验证机制来确认。·
+- 如果 Rollup 层有任何问题（如 Sequencer 恶意操作），用户可以通过 Layer 1 上的数据恢复状态·
+
+**当前大多数 Rollup（如 Optimism 和 Arbitrum）使用单个中心化的 Sequencer。通常由一个公司或组织运行（例如 Optimism 的 Sequencer 是由 Optimism Foundation 控制的）。**
+
+**stage 0存在问题**
+- 验证交易和状态的机制（如Fault Proof）是由中心化团队维护，普通用户无法直接参与验证
+- Rollup 的治理（如升级智能合约或修改 Sequencer 配置）可能需要中心化团队进行人工操作，*但仍需要信任团队不会滥用权限。*
+
+### 2025.01.10
+
 ### 2025.02.07
 
 笔记内容
