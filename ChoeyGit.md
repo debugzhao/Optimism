@@ -73,4 +73,11 @@ Optimism 的核心是帮助来自世界各地的人在中心化经济背景下�
 
 Optimism “块” 的生产机制：Optimism 基金会是目前 OP Mainnet 上唯一的区块生产者，根据 Optimism 的 “Bedrock” 升级的内容，区块的生产由 sequencer 单一负责，完成交易的确认、状态的更新、L2 区块的构建与执行以及将用户交易数据提交到 L1。在 sequencer 设置了私有的内存池，以此规避 MEV 带来的问题。sequencer 没两秒生成一个区块，不管区块中是否包含交易。在 Optimism 中交易有两种提交的方式：1.直接提交：该方式成本较低，但缺乏抗审查性。2.提交到相应的 L2 区块中，这种方式提供了抗审查性。sequencer 必须同时要处理 L1 中的合法交易，以保持数据的一致性。
 
+### 2025.01.08
+
+Optimism 的区块执行引擎通过 op-geth 的组建实现的，主要通过两种机制接收：1.点对点的网络更新方式。2.节点的 Rollup。
+Optimism允许在L1和L2之间发送消息，实现ETH和ERC20代币的转移。标准桥功能支持从以太坊存入代币到OP Mainnet及提取回以太坊。
+从以太坊到OP Mainnet的交易称为存款，使用L1CrossDomainMessenger或L1StandardBridge。从OP Mainnet到以太坊的提款分为三个阶段，包括初始化提款、提交证明和完成提款。
+
+
 <!-- Content_END -->
