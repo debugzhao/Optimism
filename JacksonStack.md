@@ -118,8 +118,32 @@ This somewhat awkward phrasing (“IF the code does not have bugs, THEN no one c
 - Upgrades are allowed, but must have a delay of >= 30 days
 
 
-**L2Beat's work**
+**L2Beat's work**  
 directions explored: a simple three-stages rating, a letter rating with plus and minus signs to express finer details, a star system, and a numeric score system.  
+framework  
+#### Stage 0 requirements
+- Does the project call itself a rollup?
+- Are L2 state roots posted on L1?
+- Does the project provide Data Availability (DA) on L1
+- Is software capable of reconstructing the rollup’s state source available?
 
+#### Stage 1 requirements
+- Does the project use a proper proof system?
+- Are there at least 5 external actors that can submit a fraud proof?
+   - A fraud proof system requires at least one honest actor to verify the correctness of proposed state roots and potentially dispute them. For Stage 2 the proof system must be open to all participants, but for Stage 1 we allow an allowlist. The fraud proof system must allow a minimum of 5 external actors to perform this task.
+- Can the users exit without the operator’s coordination?
+   - The system should be designed so that user withdrawals cannot be blocked by the rollup operators. The rollup must implement mechanisms that allow users to exit independently, ensuring they can always access and control their assets.
+- Do users have at least 7 days to exit in case of unwanted upgrades (Security Council and governance excluded)?
+- Is the Security Council properly set up?
+
+#### Stage 2 requirements
+- Is the fraud proof system permissionless?
+    - In this stage, the fraud proof system should be fully decentralized and open to everyone. This means that anyone, not just a set of allowlisted actors, should be able to submit fraud proofs. This is a key requirement to ensure that the system is not controlled by a limited set of entities and instead is subject to the collective scrutiny of the entire community.
+
+- Do users have at least 30 days to exit in case of unwanted upgrades?
+Users should be provided with at least 30 days to exit the system in case of unwanted upgrades, including upgrades initiated by a DAO. This ample time frame allows users to react to significant changes in the system that they may not agree with and withdraw their assets if needed. One exception that we make is given the existence of a on chain bug detection system (e.g. two valid contradicting zk proofs) instant upgrades are allowed for detected bugs.
+
+- Is the Security Council restricted to act only due to errors detected on chain?
+In the final stage of rollup development, the power of the Security Council should be highly limited. It should only be able to intervene in the case of adjudicable soundness errors, which are serious flaws in the system that could cause significant harm if not addressed. By restricting the council’s actions to these types of errors, the system becomes more decentralized and the trust placed in the Security Council is reduced. This moves the rollup further towards the ideal of trust minimization, where the code itself is the ultimate authority. An example of this feature is present in the Polygon zkEVM contracts, where the rollup goes in “Emergency Mode” if two different valid proofs can be submitted using the same batches.
 
 <!-- Content_END -->
