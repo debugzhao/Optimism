@@ -188,6 +188,14 @@ OP Stack 目前依赖以太坊的 Layer 1 提供数据可用性
 
 ### 2025.01.10
 
+**治理理念旨在创建一个由社区、公司和公民共同参与的数字民主治理模式，称为 Optimism Collective**，**核心理念是Impact = Profit**
+
+**Optimism 采用双院制治理体系（Token House + Citizens' House）**
+- Token House：负责提交、讨论和投票各类治理提案。代币持有者可以直接投票，或将投票权委托给他人。
+- Citizens' House：基于声誉的“一人一票”治理实验。 负责追溯性公共产品资金（Retroactive Public Goods Funding，简称 Retro Funding）。该机制旨在奖励那些对集体和超级链（Superchain）产生积极影响的贡献者。
+
+- 
+
 ### 2025.01.11
 
 ### 2025.02.07
