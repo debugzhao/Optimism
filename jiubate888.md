@@ -137,4 +137,49 @@ Plasma若是加上，零知识证明，会解决什么问题，零知识证明�
 
 ### 2025.01.09
 
+
+学习第四天，今天学习有关零知识证明的知识
+
+1.ZK（或是ZKP）全称Zero-knowledge proof,即零知识证明，它是一种方法，目的呢是，通过该方法，证明者可以向另一方验证者证明一个事实，不需要透露该事实的具体信息。这个脑补了一下，感觉很有意思。相应的带来好处，是保护隐私，还有一个是解决验证难的问题。
+
+2.ZK-SNARK全写Zero-Knowledge Succinct Non-Interactive Argument of Knowledge，其中succinct是简洁的意思，Non-Interactive，其中Non,是非，不的意思，而Interactive是交互的意思，合起来是非交互式的。Argument是论证的意思，总体合起来就是，零知识证明里的一种简洁非交互式的知识论证。注意它只是其中一种，零知识证明构造的方法。
+
+3.ZK-SNAEKs到ZK-STARKs,这里的s代表可扩展的，ZK-STARKs是前面的升级版本，这里的字母T代表透明性，比起ZK-SNAEKs,效率更高，理论上强十倍，更加去中心化，还可以抗量子特性，但相应的有个缺点，就是技术相对来说新一点。实现难度比较大，做个简单类比，相当于欺诈证明，与有效证明的关系。ZK-SNAEKs是目前通用的证明算法，而ZK-STARKs目前技术不够成熟，是特用的证明算法，目前使用ZK-STARKs的项目有StarkWare ,POlygon Miden等。
+
+4.zkEVM其实是运行在L2层的类EVM虚拟机器，因此更为精确的说法是Zero Knowledge virtual Machine,Virtual 是虚拟的意思，zkvm,只不过大家强调其兼容以太坊而称为zkEVM,现有项目也在考虑逐渐放弃了为特定应用程序而做优化，而升级支持运行通运合约即zkEVM Rollup.因此ZKEVM Rollup虽然作为ZK Rollup的下位概念，在大部分情况下，提起ZK Rollup时变指zkEVM rollup.
+
+5.总结，好好理解吸收这些概念，才能知道这些项目方在干嘛。
+
+
+### 2025.01.10
+
+学习第五天，今天学习有关blob扩容与Flashblocks 。
+
+1.今天早上回看 OP Labs 产品主管 Sam McIngvale 将与 Token Relations 的 Jacquelyn Melinek 一起深入讨论 Optimism 的 2025 年产品路线图，里面提到blob扩容，我就好奇查了一下。
+blob 扩容是一种新的交易类型，这种交易类型，可以为以太坊提供一个额外的外挂数据库，这种交易是为rollup量身制定的，rollup的数据以Blob的形式上传至以太坊，额外的数据空间可以是rollup实现更高的tps和更低的成本，同时也将原本rollup占据的区块空间释放给更多的用户。由于Blob的数据是临时存储的，数量的暴增并不会对节点的储存性能造成越来约越重的负担。
+
+2.在最新的以太升级计划中，将三个块升级为六个，那么他的TPS会翻倍，目前二层的tps如下图。
+
+
+<img width="844" alt="截屏2025-01-10 16 52 24" src="https://github.com/user-attachments/assets/a07cedff-3933-4025-9666-38b8d5272d5b" />
+
+那么最高的base也就会达到143.28，在这场高性能竞争中，缓解了不少。
+
+3.Vitalik Buterin：确实需要在以太坊核心开发中更好地确定优先级，优先支持 blob 扩容。
+
+
+
+  <img width="685" alt="截屏2025-01-10 17 16 16" src="https://github.com/user-attachments/assets/4001a436-331d-4a41-9d91-93987bd376b2" />
+
+
+
+
+
+
+4.Flashblocks 该协议允许矿工和验证者透明地交易区块内的交易顺序，从而减少MEV导致的不公平性和乱象，250 毫秒的 Flashblocks：这一模块提供极快的确认时间，同时引入了原生的回退保护机制，防止由于交易失败引发的重复费用。同时，Flashblocks 还大幅提升了 Gas 吞吐量，使得用户在繁忙的网络环境中仍能以较低的成本完成交易；2）可验证的优先级排序：每个 Flashblock 内的交易将根据可验证的优先级进行排序。这不仅提供了更强的用户保障，还允许应用内部化 MEV，从而减少外部 MEV 提取对网络的冲击，进一步提升了整体的市场效率。若是uni链上线，将有十倍的升级体验。
+
+5.总结，明显的感觉到，市场的竞争激烈，我在想技术，有没有护城河，若是没有的话，那么到底什么是项目方的护城河呢？
+
+### 2025.01.11
+
 <!-- Content_END -->

@@ -152,4 +152,24 @@ Stage 2 - No ~, final stage, no council.
 - 30 days exit window
 - Security Council restricted to errors detected
 
+### 2025.01.09
+The learning material today I choose from, has head back to VB's original articles on scaling, which inspring the design of Optimism.
+
+Key takeaway: (mainly focus the aspect of VB's analytical framework)
+
+Some prior background - Blockchain scaling/decentralised/safety triangle dillema etc.
+
+Identify the problem 
+- the consensus architectures rely on every node processing every transaction
+
+When it comes to soluions, one particular thing that really stand out is, 
+VB has assessed many factors even potential growth model and how would these model choices could end up with.
+i.e. Batching vs. other solutions, in a sense of the comparison of a linea growth model solution vs. exponential growth model, but with a trade-off (i.e. ETH 2.0, a trade-off of the dev cycle).
+
+At the very last part of the article, VB has mentioned shadow chain, we can see the idea that inspired Optimism Rollups. From the analytical thinking side, he identified the trade-offs, and can also see how his analytical framework constructs the original version of L2 solution that temporarily compromises, but better for solving the trilemma in the long run.
+
+##### Biobiography:
+Buterin, V. (2014) 'Scalability, Part 1: Building on Top', Vitalik Buterin's Blog, 17 September 2014.
+https://blog.ethereum.org/2014/09/17/scalability-part-1-building-top
+
 <!-- Content_END -->
