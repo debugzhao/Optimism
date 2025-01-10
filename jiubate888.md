@@ -158,14 +158,14 @@ Plasma若是加上，零知识证明，会解决什么问题，零知识证明�
 1.今天早上回看 OP Labs 产品主管 Sam McIngvale 将与 Token Relations 的 Jacquelyn Melinek 一起深入讨论 Optimism 的 2025 年产品路线图，里面提到blob扩容，我就好奇查了一下。
 blob 扩容是一种新的交易类型，这种交易类型，可以为以太坊提供一个额外的外挂数据库，这种交易是为rollup量身制定的，rollup的数据以Blob的形式上传至以太坊，额外的数据空间可以是rollup实现更高的tps和更低的成本，同时也将原本rollup占据的区块空间释放给更多的用户。由于Blob的数据是临时存储的，数量的暴增并不会对节点的储存性能造成越来约越重的负担。
 
-2.在最新的以太升级计划中，将三个块升级为六个，那么他的TPS会翻倍，目前二层的tps如下图
+2.在最新的以太升级计划中，将三个块升级为六个，那么他的TPS会翻倍，目前二层的tps如下图。
 
 
 <img width="844" alt="截屏2025-01-10 16 52 24" src="https://github.com/user-attachments/assets/a07cedff-3933-4025-9666-38b8d5272d5b" />
 
 那么最高的base也就会达到143.28，在这场高性能竞争中，缓解了不少。
 
-3.Vitalik Buterin：确实需要在以太坊核心开发中更好地确定优先级，优先支持 blob 扩容
+3.Vitalik Buterin：确实需要在以太坊核心开发中更好地确定优先级，优先支持 blob 扩容。
 
 
 
