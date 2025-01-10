@@ -367,6 +367,51 @@ https://forum.l2beat.com/t/the-data-availability-risk-framework/318
 
 
 ### 2025.01.10
+学习目标：搞清楚数据可用性风险框架评估，然后精读 vitalik 2014 可扩展性文章
+
+### 什么是 DA (Data Availability)
+
+Data Availability（数据可用性）是指数据是否能够被链上的所有参与者访问和验证。在区块链中，数据的可用性至关重要，因为它确保了链上的交易和状态能够被节点和用户正确地访问、存储和验证。如果数据不可用，节点可能会无法验证交易，进而影响区块链的安全性和一致性。
+
+之前我们学习到 Plasma 和 rollup 其中一个明显区别是关于数据的完全可用上，rollup 对于发送到 L1 的数据是完全可用的，因为 Plasma 使用的是“退出机制”，即如果子链无法提供有效的数据（例如，如果数据丢失或不可用），用户可能无法退出 Plasma 子链并安全地转移资产。
+
+以下是 Rollup 和 Plasma 在数据可用性上的对比
+
+数据可用性：
+
+Rollup：Rollup 方案通常确保数据的可用性，即使某个节点没有直接存储交易数据，它也能从主链或其他来源访问这些数据。这意味着 Rollup 更加依赖于链上数据的可用性。
+Plasma：Plasma 中，数据可用性是一个较大的挑战。因为 Plasma 使用的是“退出机制”，即如果子链无法提供有效的数据（例如，如果数据丢失或不可用），用户可能无法退出 Plasma 子链并安全地转移资产。
+安全性：
+
+Rollup：通过将所有数据和计算的最终结果提交到主链，Rollup 方案可以利用主链的安全性，确保其高度可靠。
+Plasma：Plasma 子链的安全性相对较弱，因为 Plasma 侧重于通过链下计算来提高效率，这使得它更依赖于外部数据源的可用性。
+交易处理：
+
+Rollup：Rollup 将计算和数据存储迁移到 Layer 2，主链只负责验证交易的数据。由于数据可用性通常由主链保障，因此交易处理更高效且安全。
+Plasma：Plasma 将大部分的交易处理迁移到子链，而主链只负责提交关键数据。由于数据可用性不足，Plasma 在很多情况下不能确保所有参与者都能访问完整的数据。
+
+
+### 为什么 DA 非常重要
+我这里是把 DA 理解为一个 中转站 或 桥梁，它的作用是确保链上或链外的数据能够被有效地访问和验证。
+在 ZK Rollups 和 Optimistic Rollups 中，DA 层的角色就是确保 L2 的数据能够公开且可访问，以便用户、验证者和其他参与者能够验证交易并执行操作（例如提款、挑战不诚实的状态等）。
+
+DA 层的具体作用：
+ZK Rollups：ZK Rollups 会生成零知识证明并发布状态数据，DA 层保证这些数据能被参与者访问，以便重建和推进状态。
+
+Optimistic Rollups：Optimistic Rollups 假设交易是有效的，但允许有人质疑和挑战不诚实的状态。DA 层为这种挑战提供数据支持，确保能够访问完整的交易数据，以便进行挑战和验证。
+
+DA 桥：如果 L2 使用外部 DA 提供商，DA 桥会通过承诺验证来确保 L2 数据的完整性和可访问性。这就像是一个 “桥梁”，连接主链和外部数据源，充当数据可用性的保证。
+
+![image](https://github.com/user-attachments/assets/7108d2e0-75c4-4c35-99ab-e964ec2c78ee)
+
+
+### Reference
+https://forum.l2beat.com/t/data-availability-risk-framework-call-for-feedback/275
+
+### Next Step
+周六看要不要休息一天，如果不休息，那么就继续学习 DA 的风险化评估这个框架
+https://forum.l2beat.com/t/the-data-availability-risk-framework/318
+
 ### 2025.01.11
 ### 2025.01.12
 
