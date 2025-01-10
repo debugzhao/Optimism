@@ -155,7 +155,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | debugzhao | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | |
 | JacksonStack | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | |
 | jjeejj | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | |
-| luffythink | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | |
+| luffythink | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | |
 | iossocket | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | |
 | cherry-yl-sh | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | Dfbb7879 | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | |
 | 183Aaros | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
