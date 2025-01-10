@@ -204,6 +204,42 @@ OP Stack 是模块化的，允许开发者根据自己的需求选择和定制�
 * Superchain 使得开发者可以在一个共享的生态系统中构建和扩展，而无需担心跨链兼容性问题。
 ### 2025.01.10
 
+**Superchain Registry**
+
+Superchain Registry（超链注册表）是 Optimism 生态系统中的一个关键组件，用于维护整个 Superchain 网络 中链的完整索引。它为每条链的配置和对既定标准的遵循情况提供透明度。
+
+### 主要功能：
+
+成员索引：
+* 该注册表维护了一个完整的链列表，记录了所有属于 Superchain 生态系统的区块链网络及其详细配置和合规情况。
+
+合规级别 (Compliance Levels)：
+* 每条链都被分配了一个 superchain_level（超链合规等级），以指示其合规性。
+* superchain_level = 1：完全符合 标准 Rollup 宪章 的链，并被指定为标准 Rollup。
+* 其他级别可能表示不同程度的合规性或自定义化。
+
+验证检查：
+* 超链注册表会执行验证检查，以确保：
+* 标准链 完全遵守 标准 Rollup 宪章。
+* 非标准链 至少满足基本的技术和治理要求后，才能加入 Superchain 网络。
+
+### 如何加入 Superchain 注册表？
+
+想要加入 Superchain Registry 的链需要按照以下步骤进行：
+
+1. 设置与配置：
+* 根据 OP Stack 的指导，建立链的环境和配置。
+2. 验证：
+* 通过合规性验证检查，确保符合必要的技术与治理标准。
+3. 提交申请：
+* 向 Superchain Registry 仓库提交 Pull Request，并附上链的详细信息和配置文档。
+
+此流程旨在确保所有参与的链都符合 Superchain 生态系统的安全性和技术一致性。
+
+### 标准 Rollup 宪章 (Standard Rollup Charter)
+
+标准 Rollup 宪章 定义了链需要满足的技术与治理标准，以达到 “标准 Rollup” 状态。这些标准有助于在整个 Superchain 生态中保持一致性、高安全性和可靠性。
+
 ### 2025.01.11
 
 ### 2025.01.12
