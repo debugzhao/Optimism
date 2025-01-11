@@ -312,4 +312,21 @@ In our plan for how to get there, we need to avoid following known pitfalls:
 - Capture resistance
 - Resource allocation
 
+
+**Multisig vs Security Council**
+
+**Q:**
+
+If making the selection process for multisig signers like the Security Council and the number of signers the same as Security Council members, would it be sufficient not to set up the Security Council?
+
+**A:**
+
+A multisig-based system, even if improved, cannot fully replace the Security Council’s governance role because:
+- It lacks the institutional legitimacy and community trust that the Security Council provides.
+- It would remain a technical mechanism, unable to serve as a deliberative governance body.
+- It is not designed to support progressive decentralization or evolve into a more robust governance structure.
+
+
+
+
 <!-- Content_END -->
