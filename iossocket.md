@@ -224,4 +224,52 @@ In the rapidly evolving blockchain landscape, **Rollups** have emerged as a key 
 
 The three-stage framework offers a comprehensive approach to evaluating Rollup maturity, from centralized control (Stage 0) to full decentralization (Stage 2). By defining clear requirements for each stage, it guides Rollup projects toward achieving Ethereum-level security and trust minimization, while fostering informed discussions within the community.
 
+### 2025.01.11
+
+#### Optimism Tokenomics
+
+Optimism's Tokenomics primarily revolves around its governance token, OP. Below are the key points:
+
+#### 1. **Token Distribution**
+
+The OP token distribution plan is as follows:
+
+- **Ecosystem Fund**: 25% allocated to support ecosystem development.
+- **Core Contributors**: 19% allocated to the core development team.
+- **Investors**: 17% allocated to early investors.
+- **Airdrops**: 19% distributed to community members via airdrops.
+- **RetroPGF**: 20% allocated for Retroactive Public Goods Funding.
+
+#### 2. **Governance**
+
+OP tokens are used for governing the Optimism network. Holders can participate in proposals, voting, and other decision-making processes.
+
+#### 3. **Airdrops**
+
+Optimism rewards early users and community members through airdrops. The first airdrop distributed 5% of the total supply, with more airdrops planned in the future.
+
+#### 4. **RetroPGF**
+
+RetroPGF (Retroactive Public Goods Funding) aims to reward projects that contribute to the ecosystem. 20% of the tokens are allocated for this program.
+
+#### 5. **Inflation Mechanism**
+
+OP tokens have an inflation mechanism, though the specifics are not fully disclosed. It is expected that the inflation rate will gradually decrease over time.
+
+#### 6. **Use Cases**
+
+OP tokens are primarily used for:
+
+- **Governance**: Participating in network decision-making.
+- **Incentives**: Rewarding users and developers.
+- **Fee Payment**: Potentially used for transaction fees in the future.
+
+#### 7. **Total Supply**
+
+The total supply of OP tokens is 4.29 billion, with an initial circulating supply of approximately 274 million tokens.
+
+#### Summary
+
+Optimism's Tokenomics is designed to drive ecosystem growth and incentivize community participation through mechanisms such as token distribution, governance, airdrops, and RetroPGF.
+
 <!-- Content_END -->
