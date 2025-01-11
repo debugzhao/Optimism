@@ -149,7 +149,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | verygud-0 | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
 | MRzzz-cyber | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
 | punkcanyang | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
-| brucexu-eth | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
+| brucexu-eth | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | |
 | qiaopengjun5162 | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
 | StarryDesert | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | |
 | debugzhao | ✅ | ✅ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | |
@@ -179,7 +179,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | btcnice | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | amandakelake | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | |
 | chendafu2573 | ✅ | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | |
-| CJC824 | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
+| CJC824 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | |
 | yiwen4 | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | chenziyu-bxy | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | |
 | LunaWang5209 | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
 | 183Aaros | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
