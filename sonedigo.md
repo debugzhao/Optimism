@@ -191,4 +191,60 @@ The withdrawal process is similar to the deposit process, but instead of sending
 
 next day(2025.01.09) will learn about some new words/roles: Proposers, Game and OptimismPortal.
 
+### 2025.01.09
+
+Today's plan to take away the new words/roles: Proposers, Game and OptimismPortal.
+
+为了理解Proposers, 我们需要认识到Proposers在L2网络中角色所在的意义，以及Proposers在L2网络中如何与L1网络进行交互。
+
+Proposers:
+
+After processing one or more blocks the outputs will need to be synchronized with the settlement layer (L1) for trustless execution of L2-to-L1 messaging, such as withdrawals. These output proposals act as the bridge's view into the L2 state. **Actors called "Proposers" submit the output roots to the settlement layer (L1) and can be contested with a fault proof, with a bond at stake if the proof is wrong.**
+
+The proposer's role is to construct and submit output roots, which are commitments to the L2's state. To practice these submission operation, proposers will post through contract L2OutputOracle on L1. The L2OutputOracle contract is responsible for submitting output roots to the L1. 
+
+repo for optimism L2 proposers code: https://github.com/ethereum-optimism/optimism/tree/d48b45954c381f75a13e61312da68d84e9b41418/op-proposer
+
+L2 blocks are produced at a constant rate of L2_BLOCK_TIME (2 seconds). A new L2 output MUST be appended to the chain once per SUBMISSION_INTERVAL which is based on a number of blocks. The exact number is yet to be determined, and will depend on the design of the fault proving game.
+
+OptimismPortal:
+
+The OptimismPortal is a low-level contract responsible for passing messages between L1 and L2. Messages sent directly to the OptimismPortal have no form of replayability. Users are encouraged to use the L1CrossDomainMessenger for a higher-level interface.
+
+Next day(2025.01.10) will step into comparison between OP and other rollup proposals.
+
+### 2025.01.10
+
+Layer 2 rollup的四种技术方案：Optimistic Rollup、ZK Rollup、Plasma、Validium
+
+https://learnblockchain.cn/article/3703
+
+以下是计算gas费用降低的具体事例：
+普通转账eth需要字节数112左右，ZK压缩为12个字节，op系压缩为78.4（不固定，假设压缩了30%的空间），假设swap转账需要字节数约180左右，ZK压缩为14个字节，op系压缩为126个字节。
+
+在现有的以太坊链上，gas 上限为 3000 万，交易中每个非0字节的calldata数据需要 16 个 gas，0字节需要4个gas。如果ZK占领了以太坊所有的区块空间（在证明验证上花费 500k gas），忽略0字节的数量。
+
+那么该批次可以有（2950 万 / 16）= 1,843,750 字节的数据。如上所示，每次用户操作的 ETH 转账汇总只需要 12 个字节，这意味着该批次最多可以包含 153,645笔交易。在13 秒的平均出块时间下，这转化为 ~11,818 TPS（相比之下，直接在以太坊本身上传输的 ETH 传输为 1300 万 / 21000 / 13 ~= 101 TPS）。
+
+由上可知ZK Rollup 转账eth的可扩展性提高了100 + 倍，而zk最大优势不在于转账eth，相比转账erc20的合约代币，与uniswap交易来算，主网消耗的gaslimit的更多，ZK Rollup 压缩的性价比也越高，ZK Rollup相比主网的uniswap交易拓展可提高400+倍。
+
+计算其他如OP的rollup机制，也可以参考上述的计算方法
+
+以上rollup的机制主要聚焦于两个以太坊社区的提案：EIP-4488、EIP-4844
+
+其中EIP-4488针对的是L1的calldata费用过高的问题,于2021年末提出，它实现了压缩calldata的功能，压缩后calldata的gas费用降低，从而提高交易效率。
+具体包括：
+1.降低Calldata Gas费用：EIP-4488提议将每字节calldata的gas费用从16 gas显著降低到3 gas。
+2.引入最大Calldata限制：为了防止滥用和网络拥堵，该提案还建议对每个区块内可包含的calldata总量设置上限，即约1MB（具体数值可能会根据实际情况调整），这样可以避免因为过低的费用导致的数据膨胀问题。
+
+EIP-4844 是一个更为复杂的提案，旨在为以太坊带来一种新的交易类型，这种交易可以携带额外的数据块(blob)，用于支持Rollup技术而无需立即进行全面的分片升级，于2023年提出
+具体内容包括：
+1.携带Blob的交易：EIP-4844引入了一种新的交易格式，允许交易附带所谓的“blobs”。Blobs是大型、临时存储的数据块，专门设计用于满足Rollup的数据可用性需求。
+2.独立Gas价格和限制：与calldata不同，blob有自己的gas价格和限制，并且其定价模型更注重长期维护成本而非短期使用成本。
+3.数据生命周期管理：Blobs只会在共识层节点中保留一段时间（例如几周），之后会被删除，这与传统的永久存储机制形成对比，减少了长期存储的压力。
+4.通往完全Danksharding的桥梁：虽然EIP-4844本身不是完整的分片实现，但它为未来的完全分片（Danksharding）铺平了道路，提供了一个逐步过渡的方法。
+
+next day 2025.01.11 will learn about stages from https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe
+
+
 <!-- Content_END -->

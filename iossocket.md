@@ -161,4 +161,67 @@ Optimism, StarkNet, and Scroll are all Layer 2 solutions for Ethereum, each offe
 
 Each solution has its strengths and trade-offs, and the choice depends on the specific needs of developers and users, such as transaction speed, privacy, and ease of deployment.
 
+### 2025.01.10
+
+#### Rollup Maturity Framework: A Three-Stage Approach
+
+In the rapidly evolving blockchain landscape, **Rollups** have emerged as a key solution for scaling Ethereum while maintaining trust minimization. However, the development of Rollups often involves an initial phase of centralized control, referred to as "training wheels," which allows for system updates and bug fixes in a controlled environment. To guide the transition from centralized control to full decentralization, a **three-stage framework** has been introduced to evaluate the maturity of Rollups.
+
+#### **Background**
+
+- **Rollups** are Layer 2 scaling solutions that bundle transactions off-chain and post proofs on Ethereum to enhance scalability.
+- Early-stage Rollups rely on centralized components (training wheels) for flexibility and security, but these must eventually be removed to achieve full decentralization and inherit Ethereum's security properties.
+- The framework aims to provide a clear roadmap for Rollups to progress toward trust minimization and decentralization.
+
+#### **The Three Stages of Rollup Maturity**
+
+#### **Stage 0 — Full Training Wheels**
+
+- **Characteristics**: The Rollup is operated by centralized entities, but open-source software allows state reconstruction from Layer 1 (L1) data.
+- **Requirements**:
+  1. The project self-identifies as a Rollup.
+  2. L2 state roots are posted on L1.
+  3. Data Availability (DA) is ensured on L1.
+  4. Open-source software is available to reconstruct the L2 state from L1 data.
+
+#### **Stage 1 — Limited Training Wheels**
+
+- **Characteristics**: The Rollup transitions to smart contract governance, but a **Security Council** remains to address potential bugs.
+- **Requirements**:
+  1. A proper proof system (e.g., fraud proofs or validity proofs) is implemented.
+  2. At least 5 external actors can submit fraud proofs.
+  3. Users can exit without operator coordination.
+  4. Users have at least 7 days to exit in case of unwanted upgrades.
+  5. A Security Council is properly set up (e.g., multisig with 8+ members, 50% consensus threshold, and at least half external participants).
+
+#### **Stage 2 — No Training Wheels**
+
+- **Characteristics**: The Rollup is fully governed by smart contracts, with no centralized control.
+- **Requirements**:
+  1. The fraud proof system is permissionless (open to all participants).
+  2. Users have at least 30 days to exit in case of unwanted upgrades.
+  3. The Security Council can only act on adjudicable on-chain errors (e.g., soundness bugs).
+
+#### **Key Components of the Framework**
+
+- **Data Availability (DA)**: Ensures all necessary data for state reconstruction is available on L1.
+- **Fraud Proofs**: Mechanisms to dispute invalid state transitions (for Optimistic Rollups) or verify validity proofs (for ZK-Rollups).
+- **Security Council**: A multisig-based safeguard to address critical bugs, with power diminishing as the Rollup matures.
+- **Exit Mechanisms**: Guarantees that users can withdraw their assets independently, even in adverse scenarios.
+
+#### **Significance of the Framework**
+
+- **Clear Roadmap**: Provides Rollup projects with a structured path to achieve decentralization and trust minimization.
+- **Risk Assessment**: Helps users and developers evaluate the security and maturity of Rollups.
+- **Community Engagement**: Encourages discussions around Rollup development and incentivizes projects to prioritize security and decentralization.
+
+#### **Future Directions**
+
+- The framework will evolve based on community feedback and new technical developments.
+- It aims to serve as a reference point for Rollup projects to align their roadmaps with the goal of being "secured by Ethereum."
+
+#### **Conclusion**
+
+The three-stage framework offers a comprehensive approach to evaluating Rollup maturity, from centralized control (Stage 0) to full decentralization (Stage 2). By defining clear requirements for each stage, it guides Rollup projects toward achieving Ethereum-level security and trust minimization, while fostering informed discussions within the community.
+
 <!-- Content_END -->

@@ -153,6 +153,87 @@ Plasma若是加上，零知识证明，会解决什么问题，零知识证明�
 
 ### 2025.01.10
 
+学习第五天，今天学习有关blob扩容与Flashblocks 。
+
+1.今天早上回看 OP Labs 产品主管 Sam McIngvale 将与 Token Relations 的 Jacquelyn Melinek 一起深入讨论 Optimism 的 2025 年产品路线图，里面提到blob扩容，我就好奇查了一下。
+blob 扩容是一种新的交易类型，这种交易类型，可以为以太坊提供一个额外的外挂数据库，这种交易是为rollup量身制定的，rollup的数据以Blob的形式上传至以太坊，额外的数据空间可以是rollup实现更高的tps和更低的成本，同时也将原本rollup占据的区块空间释放给更多的用户。由于Blob的数据是临时存储的，数量的暴增并不会对节点的储存性能造成越来约越重的负担。
+
+2.在最新的以太升级计划中，将三个块升级为六个，那么他的TPS会翻倍，目前二层的tps如下图。
+
+
+<img width="844" alt="截屏2025-01-10 16 52 24" src="https://github.com/user-attachments/assets/a07cedff-3933-4025-9666-38b8d5272d5b" />
+
+那么最高的base也就会达到143.28，在这场高性能竞争中，缓解了不少。
+
+3.Vitalik Buterin：确实需要在以太坊核心开发中更好地确定优先级，优先支持 blob 扩容。
+
+
+
+  <img width="685" alt="截屏2025-01-10 17 16 16" src="https://github.com/user-attachments/assets/4001a436-331d-4a41-9d91-93987bd376b2" />
+
+
+
+
+
+
+4.Flashblocks 该协议允许矿工和验证者透明地交易区块内的交易顺序，从而减少MEV导致的不公平性和乱象，250 毫秒的 Flashblocks：这一模块提供极快的确认时间，同时引入了原生的回退保护机制，防止由于交易失败引发的重复费用。同时，Flashblocks 还大幅提升了 Gas 吞吐量，使得用户在繁忙的网络环境中仍能以较低的成本完成交易；2）可验证的优先级排序：每个 Flashblock 内的交易将根据可验证的优先级进行排序。这不仅提供了更强的用户保障，还允许应用内部化 MEV，从而减少外部 MEV 提取对网络的冲击，进一步提升了整体的市场效率。若是uni链上线，将有十倍的升级体验。
+
+5.总结，明显的感觉到，市场的竞争激烈，我在想技术，有没有护城河，若是没有的话，那么到底什么是项目方的护城河呢？
+
+### 2025.01.11
+
+
+学习第5天，今天想了解一下，二层 op arb zksync stark 创始人团队情况。
+
+
+1. Optimism： 由一组以太坊开发人员创建，创始人包括 Jinglan Wang、Ben Jones 和 Karl Floersch。
+   
+Jinglan Wang 拥有计算机科学背景，曾在谷歌和 Uber 工作过。她是经验丰富的区块链布道者。在 MIT 时期加入了学校的比特币俱乐部，开启了自己的加密之旅，后来又到纳斯达克担任区块链产品经理，并创立了贸易融资公司 Eximchain。之后，她又和 Jeremy Gardner 共同创立了区块链教育网络 The Blockchain Education Network，帮助全球各地的学校组建区块链俱乐部。
+
+Ben Jones 是一名软件工程师，拥有在以太坊上构建去中心化应用程序的经验。他在空闲时常以自己的艺名 Weird ETH Yankovic 制作一些基于以太坊的模仿歌曲，也是團隊中的艺术家。
+
+Karl Floersch目前是CEO，研究员和开发人员，曾参与过多个以太坊项目，包括以太坊 2.0。 是以太坊基金会的 OG 开发者，他爱好冥想和即兴饶舌，从小受到印度教的熏陶，通过冥想来思考和感悟一些事情，用饶舌表达自己当下的感受我。
+
+顺便在 youtube 找到了采访Jinglan Wang和 Karl Floersch 的视频，顺便截了个图。
+
+<img width="1185" alt="截屏2025-01-11 12 35 03" src="https://github.com/user-attachments/assets/f4f7b613-2dac-4d45-944a-276c6c4fba49" />
+
+2.Offchain Labs：
+Ed Felten 是 Offchain Labs 的联合创始人兼首席科学家。除了在 Offchain Labs 担任职务之外，Ed 也是普林斯顿大学的教授，近 30 年来他一直在普林斯顿大学为学生提供计算机科学和公共事务方面的教育.
+
+Steven Goldfeder 是 Offchain Labs 的联合创始人兼首席执行官，此前他在普林斯顿大学获得了博士学位后进入 Google 工作。
+
+Harry Kalodner 是 Arbitrum / Offchain Labs 的联合创始人兼首席技术官。他在美国普林斯顿大学获得计算机科学博士学位。
+
+
+<img width="800" alt="截屏2025-01-11 13 01 34" src="https://github.com/user-attachments/assets/a8374756-bf21-4a2f-a428-e438b374b457" />
+
+
+3.zksync ：Alex Gluchowski 是 Matter Labs 的联合创始人兼首席执行官，他正在使用零知识证明扩展以太坊。 在此之前，他是香港 Entropy Labs 的研发总监，专注于以太坊研发，Alex 拥有柏林工业大学的计算机科学硕士学位。
+
+Marcin Michalski目前是负责 ZKsync 首席协议架构师。在此之前，他在 NEAR Blockchain 负责协议开发。
+
+Meghan Hughes 是 Matter Labs 首席营销官，此前是 Solana 基金会市场副总裁。她毕业于西蒙斯大学。
+
+
+<img width="950" alt="截屏2025-01-11 16 27 38" src="https://github.com/user-attachments/assets/2e127e7e-47ad-45b0-ba75-775268f7ecf2" />
+
+
+4.StarkWare ：
+Eli Ben-Sasson：Co-Founder & 首席科学家，以色列理工学院计算机专业的教授。Zcash 的创始科学家，zkSNARKs 的发明者。
+
+Alessandro Chiesa：Co-Founder & 首席科学家，加州大学伯克利分校计算机专业的教授。Zcash 的创始科学家，zk-SNARKs 的联合发明者，libsnark 的核心开发者。
+Uri Kolodny：Co-Founder & CEO，Uri 是一个商业经验丰富、善于合作的连续创业者。
+
+Michael Riabzev：Co-Founder & 首席架构师。以色利理工学院的博士，曾在 Intel、IBM 工作。
+
+Oren Katz：工程副总裁。Hebrew 大学计算机专业毕业，Tel Aviv MBA，20 年经验的资深工程师。
+
+<img width="966" alt="截屏2025-01-11 16 35 58" src="https://github.com/user-attachments/assets/684f32eb-e76c-4327-8a23-e891d7125e37" />
+
+5.个人的感悟，他们都很优秀，目前的顶级大佬，都对加密改变这个世界着迷，为加密世界添砖加瓦，对于我个人，不太懂技术，我个人更偏向于年轻的创业者，觉着他们有更多充沛的精力，思想包袱少，带着羞涩的纯粹性，更能贴近这个时代。
+
+### 2025.01.11
 
 
 <!-- Content_END -->

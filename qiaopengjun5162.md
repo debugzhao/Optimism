@@ -87,7 +87,11 @@ op-proposer 服务：主要职责是负责将交易状态提交到 Layer1 的 L2
 
 ### 2025.01.10
 
-笔记内容
+信使合约的主要功能是跨链通信，核心方法位 sendMessage 与 relayMessage；
+sendMessage: 将包裹的消息从源链发送到目标链上，维护自增的 msgNonce, 确报跨链消息的唯一性和安全性
+relayMessage: 将源链发过来的消息在目标链上构建 MsgHash 对比，确保消息的一致性之后在目前链上调度执行该消息 在 op-stack 中在 L1 和 L2 层分别有
+L1CrossDomainMessenger
+L2CrossDomainMessenger 继承自 CrossDomainMessenger 合约，来承载跨链通信
 
 ### 2025.01.11
 
