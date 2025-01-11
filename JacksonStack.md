@@ -120,6 +120,7 @@ This somewhat awkward phrasing (“IF the code does not have bugs, THEN no one c
 
 **L2Beat's work**  
 directions explored: a simple three-stages rating, a letter rating with plus and minus signs to express finer details, a star system, and a numeric score system.  
+### 2025.01.10
 framework  
 #### Stage 0 requirements
 - Does the project call itself a rollup?
@@ -146,4 +147,38 @@ Users should be provided with at least 30 days to exit the system in case of unw
 - Is the Security Council restricted to act only due to errors detected on chain?
 In the final stage of rollup development, the power of the Security Council should be highly limited. It should only be able to intervene in the case of adjudicable soundness errors, which are serious flaws in the system that could cause significant harm if not addressed. By restricting the council’s actions to these types of errors, the system becomes more decentralized and the trust placed in the Security Council is reduced. This moves the rollup further towards the ideal of trust minimization, where the code itself is the ultimate authority. An example of this feature is present in the Polygon zkEVM contracts, where the rollup goes in “Emergency Mode” if two different valid proofs can be submitted using the same batches.
 
+### 2025.01.11
+link: https://www.cnblogs.com/linguanh/p/16535408.html 
+ Op 的程序组件
+- 合约，这些会被部署在 L1 公链上面，由 L2 组件或用户来调用，包含不限于有：
+   - L2 侧链，基于 geth 源码改造的链，运行在 Op 生态里；
+   - L1StandardBridge.sol 垮链桥合约，用来处理充值 Token 到 Op 地址或从 Op 地址提现到 L1 地址 所用；
+   - CanonicalTransactionChain.sol 规范处理 L2 --> L1 的交易，下面简称 CTC；
+   - L1CrossDomainMessenger.sol 跨链信使合约，里面主要编写进行了各种要触发跨链事件的函数。
+- DataTransportLayer，定时扫描 L1 区块，从中获取到 TransactionEnqueued 事件，并存储到 LevelDB 数据库；
+- Sequencer：
+   - 接受用户发来 L2 的交易；
+   - 定期从数据库中获取 DataTransportLayer 存储的 TransactionEnqueued 事件数据，并把交易在 L2 链中执行，使之正常被打包到 L2 区块中；
+- Batch-Submitter，定期从 L2 区块中将交易数据以打包的形式组装到交易：
+   - 打包批量交易 txBatch 提交到 L1 的 CTC 合约；
+   - 打包批量状态 stateBatch 提交到 L1 的StateCommitmentChain.sol
+   - 之后这些交易进入等待挑战窗口，挑战方式就是欺诈证明；
+- Relayer，定时从 L2 区块中过滤交易中的 SentMessage 事件数据：
+   - 判断当前交易是否过了挑战时间；
+   - 为此交易生成证明，调用 L1 上的 L1CrossDomainMessenger.relayMessage 函数，使之完成合约检查然后在内部调用目标合约，最终在 L1 完成 L2 交易的最终目的；
+它们的组合通讯流程图如下：
+![image](https://github.com/user-attachments/assets/fc9aa600-6072-44c6-8b67-e4fd8ca9dc9e)
+
+注:目前所有的 Op 组建，都由官方运行着，欺诈证明还在完善。用户必须要相信官方不会做恶。
+如何使用 Op
+使用 Op 网络分两种情况：
+- 直接使用原生 Token 进行交易，即以太坊，那么：
+需要先在 L1 访问 L1StandardBridge.sol 进行充值到 Op；  
+充值结束后，到账了，可以进行 Op 网络内的交易活动；  
+提现到 L1 的地址；  
+流程到这里闭环  
+- 其他协议，比如 ERC-20： 
+先去 Op 网络部署对应的合约；  
+在 L1 的 L1StandardBridge.sol 充值 Token 到 L2 地址；  
+到账后，便可自由交易。提现动作和 ETH 的一样。  
 <!-- Content_END -->
