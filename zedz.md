@@ -7,7 +7,7 @@ timezone: Asia/Shanghai
 # {Zedz}
 
 1. 自我介绍
-zedz，8月份参与过两次共学，区块链爱好者，重新回来学习。
+zedz，8月份参与过三次共学，区块链爱好者，重新回来学习。
 
 2. 你认为你会完成本次残酷学习吗？
 会
@@ -341,6 +341,55 @@ Sequencer 窗口 定义了批次提交并确认在 L1 上的最大时间。如�
 sequencerWindowSize 参数是在部署配置时设定的，并且一旦确定后可能很难更改。因此，链的运营者需要仔细考虑合适的窗口大小，以平衡网络性能和稳定性。
 
 ### 2025.01.11
+
+摘抄自共学同学的笔记：
+
+Bedrock 是什么？
+
+AI：Bedrock 是 OP Stack 的一次重大升级，于 2023 年 6 月推出。主要改进包括：
+
+重写了节点软件，提高了性能和可靠性
+降低了交易费用，通过优化数据压缩和批处理
+改进了与以太坊的兼容性，支持更多 EVM 操作码
+简化了系统架构，使得维护和升级更容易
+增强了模块化设计，便于其他项目复用代码
+TODO 看一下数据压缩规则以及原始数据 https://specs.optimism.io/protocol/derivation.html#batch-submission-wire-format
+
+AI：OP 的数据压缩主要通过以下方式实现：
+
+Channel 格式：将多个交易打包成 channel
+压缩算法：使用 zlib 进行数据压缩
+批处理提交：多个 channel 组合成 batch，再提交到 L1
+数据编码：使用高效的二进制格式，减少存储空间
+去重优化：相似交易数据会被优化存储
+OP Gas fee 的运转流程 https://docs.optimism.io/stack/transactions/fees：
+
+EVM 等效，类似以太坊的运行方式，但是有一些不同
+实际 gas = L2 执行 gas + L1 数据保存费用
+L2 执行 gas 的计算规则以太坊一样，所以执行的 gas 一样，也使用 EIP-1559 设置 base fee 等。但是 gas 的价格是非常低的
+OP 进行了一些小参数调整，所以有更短的区块时间
+The eth_maxPriorityFeePerGas RPC method can be used to estimate a priority fee that will get your transaction included quickly.
+商业模式就是赚 gas fee 的利差，自己的成本低，然后收取一定的 gas，把 L1 的 gas 成本扣掉就可以盈利了。所以交易和使用量就是最关键的指标和数据
+
+AI：OP 的节点网络包括：
+
+主要 Sequencer：由 OP 基金会运营的中心化节点
+验证节点：任何人都可以运行，目前约有数百个
+归档节点：存储完整历史数据的节点
+RPC 节点：提供 API 服务的节点
+TODO 具体活跃节点在哪里查看？
+
+AI：OP Sequencer 的运行情况：
+
+部署位置：在 AWS 云服务上运行，有多区域备份
+攻击应对：
+如果 Sequencer 被攻击，用户仍可通过 L1 提交交易
+基金会可以快速切换备用 Sequencer
+验证节点网络保证数据安全性
+风险缓解：
+正在推进 Sequencer 去中心化
+多重签名控制关键更新
+完善的灾难恢复机制
 
 ### 2025.01.12
 
