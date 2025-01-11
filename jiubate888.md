@@ -186,20 +186,22 @@ blob 扩容是一种新的交易类型，这种交易类型，可以为以太坊
 学习第5天，今天想了解一下，二层 op arb zksync stark 创始人团队情况。
 
 
-1. Optimism： 由一组以太坊开发人员创建，其中包括 Jinglan Wang、Ben Jones 和 Karl Floersch。Jinglan Wang 是 Optimism 的首席执行官，Ben Jones 是首席技术官。该团队还包括其他几位开发人员、工程师和顾问，他们致力于构建和发展 Optimism 生态系统。
+1. Optimism： 由一组以太坊开发人员创建，创始人包括 Jinglan Wang、Ben Jones 和 Karl Floersch。
    
 Jinglan Wang 拥有计算机科学背景，曾在谷歌和 Uber 工作过。她是经验丰富的区块链布道者。在 MIT 时期加入了学校的比特币俱乐部，开启了自己的加密之旅，后来又到纳斯达克担任区块链产品经理，并创立了贸易融资公司 Eximchain。之后，她又和 Jeremy Gardner 共同创立了区块链教育网络 The Blockchain Education Network，帮助全球各地的学校组建区块链俱乐部。
 
 Ben Jones 是一名软件工程师，拥有在以太坊上构建去中心化应用程序的经验。他在空闲时常以自己的艺名 Weird ETH Yankovic 制作一些基于以太坊的模仿歌曲，也是團隊中的艺术家。
 
-Karl Floersch 是一名 Optimism 联合创始人，研究员和开发人员，曾参与过多个以太坊项目，包括以太坊 2.0。 是以太坊基金会的 OG 开发者，他爱好冥想和即兴饶舌，从小受到印度教的熏陶，通过冥想来思考和感悟一些事情，用饶舌表达自己当下的感受我。
+Karl Floersch目前是CEO，研究员和开发人员，曾参与过多个以太坊项目，包括以太坊 2.0。 是以太坊基金会的 OG 开发者，他爱好冥想和即兴饶舌，从小受到印度教的熏陶，通过冥想来思考和感悟一些事情，用饶舌表达自己当下的感受我。
 
 顺便在 youtube 找到了采访Jinglan Wang和 Karl Floersch 的视频，顺便截了个图。
 
 <img width="1185" alt="截屏2025-01-11 12 35 03" src="https://github.com/user-attachments/assets/f4f7b613-2dac-4d45-944a-276c6c4fba49" />
 
-2.Ed Felten 是 Offchain Labs 的联合创始人兼首席科学家。除了在 Offchain Labs 担任职务之外，Ed 也是普林斯顿大学的教授，近 30 年来他一直在普林斯顿大学为学生提供计算机科学和公共事务方面的教育.
+2.Offchain Labs：Ed Felten 是 Offchain Labs 的联合创始人兼首席科学家。除了在 Offchain Labs 担任职务之外，Ed 也是普林斯顿大学的教授，近 30 年来他一直在普林斯顿大学为学生提供计算机科学和公共事务方面的教育.
+
 Steven Goldfeder 是 Offchain Labs 的联合创始人兼首席执行官，此前他在普林斯顿大学获得了博士学位后进入 Google 工作。
+
 Harry Kalodner 是 Arbitrum / Offchain Labs 的联合创始人兼首席技术官。他在美国普林斯顿大学获得计算机科学博士学位。
 顺便也找到一个图
 
@@ -207,16 +209,22 @@ Harry Kalodner 是 Arbitrum / Offchain Labs 的联合创始人兼首席技术官
 
 
 3.zksync ：Alex Gluchowski 是 Matter Labs 的联合创始人兼首席执行官，他正在使用零知识证明扩展以太坊。 在此之前，他是香港 Entropy Labs 的研发总监，专注于以太坊研发，Alex 拥有柏林工业大学的计算机科学硕士学位。
+
 Marcin Michalski目前是负责 ZKsync 首席协议架构师。在此之前，他在 NEAR Blockchain 负责协议开发。
+
 Meghan Hughes 是 Matter Labs 首席营销官，此前是 Solana 基金会市场副总裁。她毕业于西蒙斯大学。
 顺便也找到一个图 
+
 <img width="950" alt="截屏2025-01-11 16 27 38" src="https://github.com/user-attachments/assets/2e127e7e-47ad-45b0-ba75-775268f7ecf2" />
 
 
 4.stark Eli Ben-Sasson：Co-Founder & 首席科学家，以色列理工学院计算机专业的教授。Zcash 的创始科学家，zkSNARKs 的发明者。
+
 Alessandro Chiesa：Co-Founder & 首席科学家，加州大学伯克利分校计算机专业的教授。Zcash 的创始科学家，zk-SNARKs 的联合发明者，libsnark 的核心开发者。
 Uri Kolodny：Co-Founder & CEO，Uri 是一个商业经验丰富、善于合作的连续创业者。
+
 Michael Riabzev：Co-Founder & 首席架构师。以色利理工学院的博士，曾在 Intel、IBM 工作。
+
 Oren Katz：工程副总裁。Hebrew 大学计算机专业毕业，Tel Aviv MBA，20 年经验的资深工程师。
 
 <img width="966" alt="截屏2025-01-11 16 35 58" src="https://github.com/user-attachments/assets/684f32eb-e76c-4327-8a23-e891d7125e37" />
