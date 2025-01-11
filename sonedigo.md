@@ -246,5 +246,35 @@ EIP-4844 是一个更为复杂的提案，旨在为以太坊带来一种新的�
 
 next day 2025.01.11 will learn about stages from https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe
 
+### 2025.01.11
 
+According to the Vitalik’s proposed milestones, Ethereum rollup could be divided into 3 stages which having different assistance from centralized control, as known as, training wheels of rollup:
+1.stage 0:Full Training Wheels: At this stage, the rollup is effectively run by the operators. All data and operation relay on the L1.
+
+2.stage 1:Limited Training Wheels: At this stage, the rollup is run by smart contracts. However, a Security Council might remain in place to address potential bugs. The Security Council, comprised of a diverse set of participants, provides a safety net, but its power also poses a potential risk.
+
+3.stage 2:No Training Wheels: This is the final stage where the rollup becomes fully managed by smart contracts. At this point, the fraud proof system is permissionless, and users are given ample time to exit in the event of unwanted upgrades. The Security Council’s role is strictly confined to addressing soundness errors that can be adjudicated on-chain, and users are protected from governance attacks.
+
+The stages idea comes from Vitalik's blog and many discussion in the community to define the rollup boundaries, such as the minimum exit window, the Security Council thresholds, and fraud proof allowlist size.
+
+Each stage's requirement could be describe into several questions:
+For stage 0: we need to think about these 4 questions:
+- Does the project call itself a rollup?
+- Are L2 state roots posted on L1?
+- Does the project provide Data Availability (DA) on L1
+- Is software capable of reconstructing the rollup’s state source available?
+
+For stage 1: we need to think about these 5 questions:
+- Does the project use a proper proof system?
+- Are there at least 5 external actors that can submit a fraud proof?
+- Can the users exit without the operator’s coordination?
+- Do users have at least 7 days to exit in case of unwanted upgrades (Security Council and governance excluded)?
+- Is the Security Council properly set up?
+
+For stage 2:
+- Is the fraud proof system permissionless?
+- Do users have at least 30 days to exit in case of unwanted upgrades?
+- Is the Security Council restricted to act only due to errors detected on chain?
+
+next day 2025.01.12 will learn about rollup's and Optimism's protocal
 <!-- Content_END -->
