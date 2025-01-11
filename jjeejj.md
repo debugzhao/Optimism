@@ -97,4 +97,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
    2. Superchain 标准化，推进了链的发展
    3. 治理模型有 2 部分组成：Token house and Citizens’ House, 2 院治理体系
 
+### 2025.01.11
+
+1. 今天 看了下 Token house 和 Citizens’ House 2 院治理体 有什么区别， 分别刻意投票什么，没有特明白，希望可以解答一下
+
 <!-- Content_END -->
