@@ -179,6 +179,33 @@ Rollup 成熟度演变：stage 评级，已经学习。
 
 ### 2025.01.11
 今天重感冒了，蛋疼。只能重新复习一下之前的，暂时学不动了，明天我补一下继续学习的部分。
+问题2、Stage 0, Stage 1, Stgae 2
+这仨是啥？发展演变历史是啥？不是单纯名词，要弄明白为啥这个机制。
+答案：Stages 框架是Vitalik Buterin 和 Rollups 开发团队提出一种引导Rollups 发展的概念：
+
+    Stage 0: Minimal Rollup：
+
+    实行基础功能
+    数据可用
+    验证也可用
+
+Stage 1: Data Availability Independence
+
+    减少对以太坊主链的依赖，数据产生更大的扩展能力
+    提高处理能力
+
+Stage 2: Decentralized Sequencers
+
+    Sequencer 不再由单一实体控制，而是通过共识机制（如 PoS）或去中心化网络运行
+
+Stage 3: Interoperability
+
+    不同 Rollups 之间实现互操作性，支持跨 Rollup 资产和数据流转，也就是Superchain现在要做的事情
+
+Stage 4: Full Decentralization
+
+    Rollups 完全实现去中心化，所有核心组件（Sequencer、数据可用性、验证者）均由分布式网络管理。
+
 
 ### 2024.07.12
 
