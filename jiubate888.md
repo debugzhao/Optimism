@@ -198,12 +198,13 @@ Karl Floersch目前是CEO，研究员和开发人员，曾参与过多个以太�
 
 <img width="1185" alt="截屏2025-01-11 12 35 03" src="https://github.com/user-attachments/assets/f4f7b613-2dac-4d45-944a-276c6c4fba49" />
 
-2.Offchain Labs：Ed Felten 是 Offchain Labs 的联合创始人兼首席科学家。除了在 Offchain Labs 担任职务之外，Ed 也是普林斯顿大学的教授，近 30 年来他一直在普林斯顿大学为学生提供计算机科学和公共事务方面的教育.
+2.Offchain Labs：
+Ed Felten 是 Offchain Labs 的联合创始人兼首席科学家。除了在 Offchain Labs 担任职务之外，Ed 也是普林斯顿大学的教授，近 30 年来他一直在普林斯顿大学为学生提供计算机科学和公共事务方面的教育.
 
 Steven Goldfeder 是 Offchain Labs 的联合创始人兼首席执行官，此前他在普林斯顿大学获得了博士学位后进入 Google 工作。
 
 Harry Kalodner 是 Arbitrum / Offchain Labs 的联合创始人兼首席技术官。他在美国普林斯顿大学获得计算机科学博士学位。
-顺便也找到一个图
+
 
 <img width="800" alt="截屏2025-01-11 13 01 34" src="https://github.com/user-attachments/assets/a8374756-bf21-4a2f-a428-e438b374b457" />
 
@@ -213,12 +214,13 @@ Harry Kalodner 是 Arbitrum / Offchain Labs 的联合创始人兼首席技术官
 Marcin Michalski目前是负责 ZKsync 首席协议架构师。在此之前，他在 NEAR Blockchain 负责协议开发。
 
 Meghan Hughes 是 Matter Labs 首席营销官，此前是 Solana 基金会市场副总裁。她毕业于西蒙斯大学。
-顺便也找到一个图 
+
 
 <img width="950" alt="截屏2025-01-11 16 27 38" src="https://github.com/user-attachments/assets/2e127e7e-47ad-45b0-ba75-775268f7ecf2" />
 
 
-4.stark Eli Ben-Sasson：Co-Founder & 首席科学家，以色列理工学院计算机专业的教授。Zcash 的创始科学家，zkSNARKs 的发明者。
+4.StarkWare ：
+Eli Ben-Sasson：Co-Founder & 首席科学家，以色列理工学院计算机专业的教授。Zcash 的创始科学家，zkSNARKs 的发明者。
 
 Alessandro Chiesa：Co-Founder & 首席科学家，加州大学伯克利分校计算机专业的教授。Zcash 的创始科学家，zk-SNARKs 的联合发明者，libsnark 的核心开发者。
 Uri Kolodny：Co-Founder & CEO，Uri 是一个商业经验丰富、善于合作的连续创业者。
@@ -229,7 +231,7 @@ Oren Katz：工程副总裁。Hebrew 大学计算机专业毕业，Tel Aviv MBA�
 
 <img width="966" alt="截屏2025-01-11 16 35 58" src="https://github.com/user-attachments/assets/684f32eb-e76c-4327-8a23-e891d7125e37" />
 
-个人的感悟，他们都很优秀，都对加密改变这个世界着迷，为加密世界添砖加瓦，有学习教授，研究者，但我个人，更偏向于年轻的创业者，觉着他们有更多充沛的精力，思想包袱少，更加纯粹性。
+5.个人的感悟，他们都很优秀，目前的顶级大佬，都对加密改变这个世界着迷，为加密世界添砖加瓦，对于我个人，更偏向于年轻的创业者，觉着他们有更多充沛的精力，思想包袱少，带着羞涩的纯粹性。
 ### 2025.01.11
 
 
