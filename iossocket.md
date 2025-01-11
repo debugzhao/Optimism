@@ -244,7 +244,7 @@ The OP token distribution plan is as follows:
 
 OP tokens are used for governing the Optimism network. Holders can participate in proposals, voting, and other decision-making processes.
 
-### 3. **Airdrops**
+#### 3. **Airdrops**
 
 Optimism rewards early users and community members through airdrops. The first airdrop distributed 5% of the total supply, with more airdrops planned in the future.
 
