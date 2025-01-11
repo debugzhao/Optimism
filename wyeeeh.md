@@ -115,5 +115,27 @@ Optimistic Rollups 是一种基于乐观性验证的二层扩容方案，即默�
 - **Rollups**：Rollups 是将多笔交易打包成单个证明（zk-SNARKs 或 Optimistic Rollup 的欺诈证明），并提交到主链。这样，主链仅需验证证明而无需处理每笔交易，从而提高了吞吐量。典例是 zkSync（基于 zkRollup）和 Optimism（基于 Optimistic Rollup），Arbitrum 同样也是基于 OP 的 产品。
 Arbitrum 是一种基于 Optimistic Rollups 的二层扩容解决方案，它结合了 Optimistic Rollups 的优势，并对仲裁过程进行了创新和优化，在处理质疑和仲裁时采用了二分查找（Binary Search）技术，降低了仲裁过程的复杂性和成本。二分查找仲裁可以缩小错误范围，这个过程在链下执行，而链上只需要验证最后的争议部分，从而减少了链上的交易处理成本，但是这个过程也延长了处理时间，所以在发生仲裁的情况下 Arbitrum 比 Optimistic 更便宜，但也更慢。
 
+### 2025.01.11
+#### Stages：Rollup成熟度的三阶段评级框架
+根据 rollup 对这些训练轮的依赖将 rollup 分为三个不同的阶段
+##### Stage 0 — Full Training Wheels 第 0 阶段 — 全辅助
+At this stage, the rollup is effectively run by the operators. Still, there is an source-available software that allows for the reconstruction of the state from the data posted on L1, used to compare state roots with the proposed ones.
+在此阶段，rollup 由 Operator 有效地运行。尽管如此，仍然有一个源代码可用的软件，允许从 L1 上发布的数据中重建状态，用于将状态根与建议的根进行比较。
+##### Stage 1 — Limited Training Wheels 第 1 阶段 — 有限的辅助轮
+In this stage, the rollup transitions to being governed by smart contracts. However, a Security Council might remain in place to address potential bugs. This stage is characterized by the implementation of a fully functional proof system, decentralization of fraud proof submission, and provision for user exits without operator coordination. The Security Council, comprised of a diverse set of participants, provides a safety net, but its power also poses a potential risk.
+在此阶段，rollup 过渡到由智能合约管理。但是，安全理事会可能会继续存在以解决潜在的错误。此阶段的特点是实施功能齐全的证明系统、分散欺诈证明提交以及在没有操作员协调的情况下提供用户出口。安理会由不同的参与者组成，提供了一个安全网，但其权力也带来了潜在风险。
+##### Stage 2 — No Training Wheels 第 2 阶段 — 没有辅助轮
+This is the final stage where the rollup becomes fully managed by smart contracts. At this point, the fraud proof system is permissionless, and users are given ample time to exit in the event of unwanted upgrades. The Security Council’s role is strictly confined to addressing soundness errors that can be adjudicated on-chain, and users are protected from governance attacks.
+这是 rollup 完全由智能合约管理的最后阶段。此时，防作弊系统无需许可，用户有充足的时间退出，以防发生不必要的升级。安全理事会的作用严格限于解决可以在链上裁决的健全性错误，并保护用户免受治理攻击。
 
+##### 框架
+|项目|Stage 0 要求|Stage 1 要求|Stage 2 要求|
+|----|----|----|----|
+|自我标识|需自我标识为rollup| - | - |
+|L2 状态根发布|在L1上发布L2状态根| - | - |
+|数据可用性（DA）|在L1上提供数据可用性，要保证重建 L2 状态的数据在 L1 上可用| - | - |
+|重建状态源软件|提供能从L1数据重建L2状态的rollup node软件| - | - |
+|证明系统| - |使用适当的证明系统，如欺诈证明或zk rollups的证明系统，至少5个外部行为者可提交欺诈证明（可白名单）|欺诈证明系统应完全去中心化，无需许可，任何人可提交欺诈证明|
+|用户退出机制| - |用户可在无操作员协调下退出，至少有7天时间退出（不包括安全理事会和治理相关升级）|用户至少有30天时间退出（包括DAO发起的升级，有链上错误检测系统时对检测到的错误除外）|
+|安全理事会设置| - |由至少8个参与者组成的多重签名设置，50%共识阈值，至少一半参与者为外部人员，身份公开披露|安理会权力应高度受限，仅在链上检测到可裁决的健全性错误时能干预| 
 <!-- Content_END -->
