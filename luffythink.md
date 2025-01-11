@@ -61,7 +61,10 @@ timezone: Asia/Shanghai
 
   **阶段 2——无辅助轮：**这是最终阶段，Rollup 完全由智能合约管理。此时，欺诈证明系统是无需许可的，并且在发生意外升级的情况下，用户有充足的时间退出。安全委员会的角色严格限于处理可在链上裁决的健全性错误，并且用户受到保护，免受治理攻击。
 
+### 2025.01.11
 
+学习主题：https://learnblockchain.cn/article/3703
 
+- 目前主要有四种技术方案：Optimistic Rollup、ZK Rollup、Plasma、Validium。每种方案都在安全、可扩展性、开发复杂性和去中心化之间进行权衡。“最佳”方案取决于项目的具体需求和优先级。ZK Rollup通常以其高安全性和快速最终确认而闻名，而Optimistic Rollup则被认为更易于开发。Plasma提供灵活性，但安全性更复杂。Validium为了提高速度牺牲了完全的去中心化。
 
 <!-- Content_END -->
