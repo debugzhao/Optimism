@@ -187,7 +187,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | jiubate888 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | |
 | Coooder-Crypto | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | |
 | yoow4536 | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
-| Marcus-Chen98 | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
+| Marcus-Chen98 | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | |
 | foresteru | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | |
 | YiShengYouNi | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | |
 | Thogsloc | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | |
 | 183Aaros | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
