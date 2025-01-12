@@ -272,4 +272,69 @@ The total supply of OP tokens is 4.29 billion, with an initial circulating suppl
 
 Optimism's Tokenomics is designed to drive ecosystem growth and incentivize community participation through mechanisms such as token distribution, governance, airdrops, and RetroPGF.
 
+### 2025.01.12
+
+#### Layer 2 Scaling Solutions
+
+Layer 2 scaling solutions are designed to address the scalability issues of blockchain networks like Ethereum. Below are some mature Layer 2 scaling solutions:
+
+#### 1. **Rollups**
+
+Rollups are currently the most popular Layer 2 scaling solutions, divided into two types:
+
+- **Optimistic Rollups**
+
+  - **Principle**: Assume all transactions are valid by default but allow validators to challenge and submit fraud proofs during a dispute period.
+  - **Advantages**: High compatibility, supports general-purpose smart contracts.
+  - **Representative Projects**: Optimism, Arbitrum.
+
+- **ZK-Rollups (Zero-Knowledge Rollups)**
+  - **Principle**: Use zero-knowledge proofs (ZK Proofs) to verify transaction validity, with compressed data submitted to the main chain.
+  - **Advantages**: High security, no waiting period for withdrawals.
+  - **Representative Projects**: zkSync, StarkNet, Loopring.
+
+#### 2. **State Channels**
+
+- **Principle**: Users conduct multiple transactions off-chain and submit the final result to the main chain.
+- **Advantages**: Ideal for high-frequency, low-value transactions with minimal latency.
+- **Disadvantages**: Not suitable for complex smart contract scenarios.
+- **Representative Projects**: Lightning Network (Bitcoin), Raiden Network (Ethereum).
+
+#### 3. **Plasma**
+
+- **Principle**: Create child chains to handle transactions, with periodic state commitments to the main chain.
+- **Advantages**: Suitable for specific use cases (e.g., payments).
+- **Disadvantages**: Data availability issues and complex exit mechanisms.
+- **Representative Projects**: OMG Network.
+
+#### 4. **Validium**
+
+- **Principle**: Similar to ZK-Rollups but stores data off-chain.
+- **Advantages**: Higher throughput and lower costs.
+- **Disadvantages**: Relies on data availability, slightly lower security than ZK-Rollups.
+- **Representative Projects**: Immutable X.
+
+#### 5. **Sidechains**
+
+- **Principle**: Independent blockchains connected to the main chain via two-way bridges.
+- **Advantages**: High flexibility and customizability.
+- **Disadvantages**: Security depends on the sidechain's consensus mechanism.
+- **Representative Projects**: Polygon PoS (formerly Matic Network), Skale.
+
+#### 6. **Hybrid Solutions**
+
+Some projects combine multiple Layer 2 technologies to optimize performance:
+
+- **Polygon**: Supports various scaling solutions, including Polygon PoS, Polygon Hermez (ZK-Rollup), and Polygon Miden (STARK-based).
+- **Arbitrum Nitro**: Combines Optimistic Rollup with WASM technology to enhance performance.
+
+#### 7. **Optimistic Chains**
+
+- **Principle**: Similar to Optimistic Rollups but uses an independent consensus mechanism.
+- **Representative Projects**: Boba Network.
+
+#### Summary
+
+The most mature Layer 2 scaling solutions are **Rollups**, particularly **Optimistic Rollups** and **ZK-Rollups**. Other solutions like state channels, Plasma, and sidechains also play a role in specific scenarios. As technology evolves, more hybrid solutions and innovative approaches are expected to emerge.
+
 <!-- Content_END -->
