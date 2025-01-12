@@ -90,4 +90,112 @@ Optimism 上的用户必须支付向以太坊提交交易的费用。称之为L1
 一种动态的间接费用，按固定数字支付的 L1 费用。  
 公式： L1_data_fee = L1_gas_price * (tx_data_gas + fixed_overhead) * dynamic_overhead  
 
+### 2025.01.09
+trainning wheels: a phase of central control during the development of rollup systems, which should be eventually removed to fully inherit the security properties of the base layer.    
+**Vitalik's proposed milestones**   
+link:https://ethereum-magicians.org/t/proposed-milestones-for-rollups-taking-off-training-wheels/11571  
+#### Stage 0: full training wheels
+Requirements:
+- The project should call itself a rollup.
+- All rollup transactions should go on-chain.
+- There should exist a “rollup full node”: an independently runnable software package that can read the L1 chain, extract and the rollup chain, and compute the current state of the rollup chain. If it disagrees with a rollup state root posted into the contract, it should give an alarm.
+- There should be machinery that allows users to either post rollup transactions or at least ensure a withdrawal of their assets with no cooperation from the operator. That is, the operator cannot freeze or steal users’ assets by censoring users; their only possible tool for doing so must be to post a false state root.
+- It’s okay if the on-chain mechanism for posting new state roots is simply a multisig, with no active fraud proof or validity proof whatsoever.
+#### Stage 1: limited training wheels
+Requirements:
+- There must be a running fraud proof or validity proof scheme, which has the practical authority to accept or reject which state roots get accepted by the rollup contract.
+- There can exist a multisig-based override mechanism (“security council”) that can override the fraud proof or validity proof system’s outputs and post state roots, to be used in case the proof system code is bugged. However:
+      - The multisig must be 6 of 8 or stricter (that is, >= 8 participants AND >= 75% threshold)
+      - At least a quorum-blocking group (that is, enough participants to prevent the multisig from acting) must be outside the organization that is running the rollup.
+- There can exist an upgrade mechanism, but if it has a lower threshold than the multisig, upgrades must have a mandatory activation delay of at least 7 days or the maximum length of the fraud proof game, whichever is longer. The goal of this rule is to ensure that the upgrade mechanism cannot be used to intervene in real-time disputes.
+#### Stage 2: no training wheels
+Requirements:  
+- In the event that code does not have bugs, there must not be any group of actors that can, even unanimously, post a state root other than the output of the code  
+This somewhat awkward phrasing (“IF the code does not have bugs, THEN no one can override it”) is meant to permit use of security councils in ways that are clearly limited to adjudicating undeniable bugs, such as the following:
+- The rollup uses two or more independent implementations of its state transition function (eg. two distinct fraud provers, two distinct validity provers, or one of each), and the security council can adjudicate only if they disagree - which would only happen if there is a bug
+- If someone submits a transaction or series of transactions that contains two valid proofs for two distinct state roots after processing the same data (ie. “the prover disagrees with itself”), control temporarily turns over to the security council
+- If no valid proof is submitted for >= 7 days (ie. “the prover is stuck”), control temporarily turns over to the security council
+- Upgrades are allowed, but must have a delay of >= 30 days
+
+
+**L2Beat's work**  
+directions explored: a simple three-stages rating, a letter rating with plus and minus signs to express finer details, a star system, and a numeric score system.  
+### 2025.01.10
+framework  
+#### Stage 0 requirements
+- Does the project call itself a rollup?
+- Are L2 state roots posted on L1?
+- Does the project provide Data Availability (DA) on L1
+- Is software capable of reconstructing the rollup’s state source available?
+
+#### Stage 1 requirements
+- Does the project use a proper proof system?
+- Are there at least 5 external actors that can submit a fraud proof?
+   - A fraud proof system requires at least one honest actor to verify the correctness of proposed state roots and potentially dispute them. For Stage 2 the proof system must be open to all participants, but for Stage 1 we allow an allowlist. The fraud proof system must allow a minimum of 5 external actors to perform this task.
+- Can the users exit without the operator’s coordination?
+   - The system should be designed so that user withdrawals cannot be blocked by the rollup operators. The rollup must implement mechanisms that allow users to exit independently, ensuring they can always access and control their assets.
+- Do users have at least 7 days to exit in case of unwanted upgrades (Security Council and governance excluded)?
+- Is the Security Council properly set up?
+
+#### Stage 2 requirements
+- Is the fraud proof system permissionless?
+    - In this stage, the fraud proof system should be fully decentralized and open to everyone. This means that anyone, not just a set of allowlisted actors, should be able to submit fraud proofs. This is a key requirement to ensure that the system is not controlled by a limited set of entities and instead is subject to the collective scrutiny of the entire community.
+
+- Do users have at least 30 days to exit in case of unwanted upgrades?
+Users should be provided with at least 30 days to exit the system in case of unwanted upgrades, including upgrades initiated by a DAO. This ample time frame allows users to react to significant changes in the system that they may not agree with and withdraw their assets if needed. One exception that we make is given the existence of a on chain bug detection system (e.g. two valid contradicting zk proofs) instant upgrades are allowed for detected bugs.
+
+- Is the Security Council restricted to act only due to errors detected on chain?
+In the final stage of rollup development, the power of the Security Council should be highly limited. It should only be able to intervene in the case of adjudicable soundness errors, which are serious flaws in the system that could cause significant harm if not addressed. By restricting the council’s actions to these types of errors, the system becomes more decentralized and the trust placed in the Security Council is reduced. This moves the rollup further towards the ideal of trust minimization, where the code itself is the ultimate authority. An example of this feature is present in the Polygon zkEVM contracts, where the rollup goes in “Emergency Mode” if two different valid proofs can be submitted using the same batches.
+
+### 2025.01.11
+link: https://www.cnblogs.com/linguanh/p/16535408.html 
+ Op 的程序组件
+- 合约，这些会被部署在 L1 公链上面，由 L2 组件或用户来调用，包含不限于有：
+   - L2 侧链，基于 geth 源码改造的链，运行在 Op 生态里；
+   - L1StandardBridge.sol 垮链桥合约，用来处理充值 Token 到 Op 地址或从 Op 地址提现到 L1 地址 所用；
+   - CanonicalTransactionChain.sol 规范处理 L2 --> L1 的交易，下面简称 CTC；
+   - L1CrossDomainMessenger.sol 跨链信使合约，里面主要编写进行了各种要触发跨链事件的函数。
+- DataTransportLayer，定时扫描 L1 区块，从中获取到 TransactionEnqueued 事件，并存储到 LevelDB 数据库；
+- Sequencer：
+   - 接受用户发来 L2 的交易；
+   - 定期从数据库中获取 DataTransportLayer 存储的 TransactionEnqueued 事件数据，并把交易在 L2 链中执行，使之正常被打包到 L2 区块中；
+- Batch-Submitter，定期从 L2 区块中将交易数据以打包的形式组装到交易：
+   - 打包批量交易 txBatch 提交到 L1 的 CTC 合约；
+   - 打包批量状态 stateBatch 提交到 L1 的StateCommitmentChain.sol
+   - 之后这些交易进入等待挑战窗口，挑战方式就是欺诈证明；
+- Relayer，定时从 L2 区块中过滤交易中的 SentMessage 事件数据：
+   - 判断当前交易是否过了挑战时间；
+   - 为此交易生成证明，调用 L1 上的 L1CrossDomainMessenger.relayMessage 函数，使之完成合约检查然后在内部调用目标合约，最终在 L1 完成 L2 交易的最终目的；
+它们的组合通讯流程图如下：
+![image](https://github.com/user-attachments/assets/fc9aa600-6072-44c6-8b67-e4fd8ca9dc9e)
+
+注:目前所有的 Op 组建，都由官方运行着，欺诈证明还在完善。用户必须要相信官方不会做恶。
+如何使用 Op
+使用 Op 网络分两种情况：
+- 直接使用原生 Token 进行交易，即以太坊，那么：
+需要先在 L1 访问 L1StandardBridge.sol 进行充值到 Op；  
+充值结束后，到账了，可以进行 Op 网络内的交易活动；  
+提现到 L1 的地址；  
+流程到这里闭环  
+- 其他协议，比如 ERC-20： 
+先去 Op 网络部署对应的合约；  
+在 L1 的 L1StandardBridge.sol 充值 Token 到 L2 地址；  
+到账后，便可自由交易。提现动作和 ETH 的一样。
+
+### 2025.01.12
+link https://www.cnblogs.com/linguanh/p/16621521.html  
+OP 本质是个大型的 DApp，我们要使用它，就要先从以太坊的主网充值 Token 进去。  
+用户在 OP 里面进行了系列的交易动作后，需要把 Token 转回到主网，才能与其他的 DApp 的交互或主网转账。因此对应地，OP 提供了提现 Token 到主网的功能。  
+提现的原子性  
+虽然在 OP 中的交易都直接发生在 OP 的网络中，比如转账的地址是 OP 网络中的以太坊地址。  
+但是所有的交易都会被同步到以太坊主网中，与 OP 的合约发生实际的主网交互。这就意味着，地址所在 OP 中 Token 余额的变化也会导致主网上的余额变化。  
+提现的调用链
+用户是提现发起的对象，提现遵循下面的步骤：
+- 用户向 OP 的 Sequencer 发起提现交易；
+- 这笔交易是一次合约调用交易，指向 L2StanderBridger.sol 中的 withdraw 函数；
+- withdraw 函数中会构造最后在主网合约中发起真正提现的函数数据；
+- 交易被 OP 网络正常打包；
+- 交易被Batch-Submitter 提交到主网 CTC 合约，走正常的挑战机制；
+- 挑战期过后，Relayer 为此交易生成证明，调用 L1 上的 L1CrossDomainMessenger.relayMessage 函数，使之完成合约检查然后在内部调用目标合约，最终在 L1 完成 L2 交易的最终目的，用户的 Token 在 L1 地址上得到了提现；
+- 提现闭环。
 <!-- Content_END -->

@@ -137,6 +137,22 @@ Op 上的用户必须支付向以太坊提交交易的费用。称之为L1 数�
  4. 一种动态的间接费用，按固定数字支付的 L1 费用。当前设置为 1.24。
 公式：L1_data_fee = L1_gas_price * (tx_data_gas + fixed_overhead) * dynamic_overhead
 
+### 2025.01.09
+
+<!-- 尝试从 L1 入金到 L2，暂未成功，在找原因。 -->
+借助官方桥，自己用 viem 入金 L2 成功。
+
+### 2025.01.10
+
+尝试erc20 入金 op，暂未成功，
+
+### 2025.01.11
+
+仔细看了文档，使用相对应的版本，approve 还没成功， 后续步骤无法成功。
+报错 Unexpected error when checking bridge Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+但是 chainId 是对的。
+
+也看了 viem 的相关文档，有入金 eth 的例子，还未找到发送 ERC20 相关的例子。
 
 ### 2024.07.12
 

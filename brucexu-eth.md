@@ -454,4 +454,85 @@ TODO 研究下跨链这个 0.1 ETH 背后发生了什么，然后看看怎么 wi
 
 TODO 有没有简单的 evm explorer？不需要 etherscan 这样的，可以慢一点，但是可以帮忙调用相关的参数和功能
 
+### 2025.01.10
+
+## L2 扩容方案对比 https://learnblockchain.cn/article/3703
+
+感觉这篇文章质量一般，建议拿掉。
+
+![alt text](brucexu-eth_assets/image-3.png)
+
+普通转账 eth 需要字节数 112 左右，ZK 压缩为 12 个字节，op 系压缩为 78.4（不固定，假设压缩了 30%的空间），假设 swap 转账需要字节数约 180 左右，ZK 压缩为 14 个字节，op 系压缩为 126 个字节。
+
+ZK 的压缩是通过 proof 实现的，而不是基于内容，所以体积更小。而 OP 则对交易进行了相应的内容压缩。所以从技术分析来看，ZK Rollup 是最终的主流。
+
+### ZK Rollup
+
+交易成本由两部分组成：
+
+- 链下：状态存储和 SNARK 的证明生成，这部分会依赖硬件，生成 ZK 成本越低越好
+- 链上：发布状态和提交 proof 需要 gas
+
+## Stages https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe
+
+简单总结：
+
+- Stage 0 - 完全辅助轮: 开源、能从 L1 重建状态等，可以由运营者维护
+- Stage 1 - 部分辅助轮：rollup 使用智能合约进行治理，允许保留安全委员会进行紧急处理。实现一个全功能证明系统、去中心化的欺诈证明提交功能、用户可以自己退出 L2。
+- Stage 2 - 去掉辅助轮：rollup 完全基于智能合约运行。欺诈证明系统是无许可运行的，用户可以有充足时间在不喜欢的升级之前退出。缩减安全委员会的能力。
+
+安全委员会的目前要求：
+
+- At least of 8 participants.
+- At least 50% of the members outside of the core organization.
+- At least 50% threshold.
+- At least 2 outsiders are needed to reach consensus.
+- The members are publicly announced.
+
+The Security Council can perform two actions:
+
+- Accept the proof system’s decisions by not overriding it.
+- Override the proof system’s decisions by pushing an instant upgrade.
+
+TODO 暂时没看完
+
+### 2025.01.12
+
+## Stages https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe
+
+Let’s consider the minimum Security Council given those requirements: 8 members, 50% threshold, 6 outsiders, and 2 from the organization.
+
+With the given Security Council setup, it takes 50% of the members to both follow the proof system (by rejecting an override) and to override it, which is at minimum composed of 2 outsiders and 2 insiders.
+
+Imagine a multisig with 87.5% threshold (7/8): it takes at least 7 members to override the proof system, but just 2 members to prevent such override from being confirmed.
+
+这样的话，少数成员就可以阻止某些执行。
+
+Until now, we required at least 50% of the Security Council members to be outside of the organization and at least 2 outsiders to reach consensus. This requirement implies that it is sufficient to corrupt those 2 people to push a malicious upgrade, regardless of the size of the multisig.
+
+For this reason, it may be beneficial to implement a lower threshold to pause the L2, which can then be overridden by the higher threshold if necessary. In addition to this, we suggest conducting periodic but unexpected emergency drills to practice signing messages in a timely manner.
+
+This change in requirements for Stage 1 affects only Arbitrum. Arbitrum has, in addition to the 9/12 threshold for the Security Council, a lower threshold of 7/12 within the same multisig. This threshold allows for upgrades with a 13-day delay, providing an approximate 6-day exit window. Since this lower threshold does not meet the requirements to be recognized as a Security Council (the threshold being ≤75%), the criteria for simple multisigs apply, necessitating at least a 7-day exit window for users. To retain its Stage 1 status, Arbitrum must either remove the lower threshold entirely or extend the timelock delay on L1, L2, or both. Additionally, the Arbitrum Security Council currently includes 2 members from Offchain Labs.
+
+如果 Rollup 达不到标准，就会被移除 Stage 1。
+
+## OP GOV https://community.optimism.io/welcome/welcome-overview
+
+Superchain 愿景：标准化、几十个链形同一体、治理保护安全、治理创建一个可持续飞轮。
+
+以太坊凤凰：OP 使命是创建一个惠及所有人但是不属于任何人的互联网。讲究 Impact = Profit 的概念。
+
+- Token House：负责提交、审议和投票各类治理提案，可以直接投票或者 delegate 给其他人
+- Citizens’ House：一个基于声誉的实验，一人一票，负责 retro pgf 的投票
+
+追溯性资助是 OP 生态最重要的经济引擎。
+
+两个 house 的协作方式：
+
+![alt text](brucexu-eth_assets/image-4.png)
+
+简单的说，OP 链本身的工作或者大的预算审批和支出，由 OP holder 投票，然后 citizens 是选出来的社区比较有声誉的代表，他们可以负责 RetroPGF 和作为社区的反馈来补充。
+
+TODO OP 的去中心化 milestone 很重要，可以解码下一步 OP 要做的 https://docs.google.com/spreadsheets/d/1IpL0oTd3AgNBu_eWdjP9EjbQfZjq-_Nd3yU1H2ke3vY/edit?gid=1115302678#gid=1115302678
+
 <!-- Content_END -->

@@ -111,7 +111,7 @@ Cannon Fault Proof VM：用于验证交易的虚拟机。
 治理代币（Governance Token）
 描述 Optimism 的治理机制，用户如何参与决策。
 
-### 2024.01.08
+### 2025.01.08
 
 Optimism OP Stack 的 L2 链衍生规范
 
@@ -209,6 +209,216 @@ Finalized L2 块: 可从最终确定的 L1 部分衍生
 通过特殊的自动化交易实现网络升级
 在特定区块插入必要的合约变更交易
 
-### 2024.07.12
+### 2025.01.09
+
+交易列表推导
+对于每个 L2 区块的创建，都遵循严格的交易列表构建规则：
+
+交易类型及顺序
+交易必须按照以下顺序包含：
+
+存款交易 (Deposited Transactions)
+L1 属性存款交易：从 L1 区块头读取
+用户存款交易：从 L1 区块的收据中读取（仅在 epoch 的第一个 L2 区块）
+
+网络升级自动化交易
+在特定区块插入特殊交易
+用于自动执行网络升级
+
+排序交易 (Sequenced Transactions)
+常规的 L2 用户签名交易
+来自 sequencer 批次
+网络升级自动化交易示例
+
+以 Ecotone 升级为例：
+Ecotone 升级交易详细信息
+目标地址：0x420000000000000000000000000000000000000F（Gas Price Oracle 代理）
+Mint 金额：0
+交易值：0
+Gas 限制：50,000
+特殊数据：包含升级合约地址的调用
+
+关键设计原则
+确定性
+交易列表完全由 L1 数据确定性推导
+保证 L2 链的一致性和可验证性
+
+严格顺序
+交易必须按照预定义顺序排列
+确保网络升级和状态转换的可预测性
+
+灵活性
+支持动态网络升级
+允许在不修改执行层的情况下进行协议升级
+
+网络升级机制
+Optimism 设计了一个灵活的网络升级框架：
+通过特殊交易自动执行升级
+最小化对现有系统的侵入
+支持渐进式协议演进
+
+升级流程
+识别升级时机
+准备自动化交易
+在特定区块插入升级交易
+执行合约代理更新或部署
+
+### 2025.01.09
+
+OP Stack 的安全机制基于多层防御策略。
+
+1. 信任最小化 (Trust Minimization)
+通过 L1 锚定实现最小化信任
+所有 L2 状态都可以在 L1 上验证
+用户资产始终可以通过 L1 提取
+
+2. 欺诈证明机制 (Fraud Proof Mechanism)
+允许任何人挑战不正确的 L2 状态根
+提供经济激励来维护系统诚实性
+欺诈证明窗口通常为 7 天
+
+关键安全组件 (Key Security Components)
+
+挑战窗口 (Challenge Window)
+7 天时间让任何人验证和挑战状态
+经济博弈理论确保诚实行为
+
+保证金机制 (Deposit Mechanism)
+挑战者和防御者都需要质押保证金
+错误的挑战将导致保证金被没收
+
+多重签名管理 (Multi-Signature Management)
+关键系统合约使用多签治理
+降低单点失败风险
+
+安全威胁防御 (Security Threat Defense)
+
+L1 锚定防御 (L1 Anchoring Defense)
+所有 L2 状态根发布到 L1
+确保状态可追溯和可验证
+任何不一致都可被快速发现和纠正
+
+排序器安全 (Sequencer Security)
+去中心化排序器集合
+轮换机制防止单点攻击
+经济激励确保诚实行为
+
+风险缓解策略 (Risk Mitigation Strategies)
+
+紧急暂停机制 (Emergency Pause Mechanism)
+发现严重漏洞可立即暂停系统
+管理员多签可触发
+
+渐进式升级 (Incremental Upgrade)
+分阶段部署新功能
+每个阶段都有充分的安全审计
+
+经济博弈 (Economic Game)
+攻击成本高于收益
+通过保证金和激励机制确保系统安全
+
+技术防御细节 (Technical Defense Details)
+
+状态根验证 (State Root Verification)
+每个区块状态根都需要严格验证
+不匹配将触发挑战流程
+
+交易重放保护 (Transaction Replay Protection)
+防止重放攻击
+使用唯一随机数和签名验证
+
+合约升级安全 (Contract Upgrade Security)
+代理合约模式
+升级需要多重签名批准
+
+### 2025.01.11
+
+OP Stack 标准桥接
+核心功能概述 (Core Function Overview)
+标准桥接是 OP Stack 中实现跨域资产转移的关键组件。
+
+主要职责 (Primary Responsibilities)
+允许 ETH 和 ERC20 代币在不同域间转移
+提供统一的跨域资产桥接标准接口
+支持 L1 原生和 L2 原生代币转移
+
+关键合约地址 (Key Contract Addresses)
+L2 标准桥接合约地址：0x4200000000000000000000000000000000000010
+
+接口定义 (Interface Definition)
+
+关键事件 (Key Events)
+solidity
+
+// ERC20 桥接完成事件 (ERC20 Bridge Finalization Event)  
+event ERC20BridgeFinalized(  
+    address indexed localToken,     // 本地代币地址 (Local Token Address)  
+    address indexed remoteToken,    // 远程代币地址 (Remote Token Address)  
+    address indexed from,            // 发送地址 (Sender Address)  
+    address to,                      // 接收地址 (Recipient Address)  
+    uint256 amount,                  // 转移金额 (Transfer Amount)  
+    bytes extraData                  // 额外数据 (Extra Data)  
+);  
+
+// ETH 桥接发起事件 (ETH Bridge Initiation Event)  
+event ETHBridgeInitiated(  
+    address indexed from,            // 发送地址 (Sender Address)  
+    address indexed to,              // 接收地址 (Recipient Address)  
+    uint256 amount,                  // 转移金额 (Transfer Amount)  
+    bytes extraData                  // 额外数据 (Extra Data)  
+);  
+
+核心方法 (Core Methods)
+solidity
+
+// ERC20 代币桥接方法 (ERC20 Token Bridge Method)  
+function bridgeERC20(  
+    address _localToken,     // 本地代币地址 (Local Token Address)  
+    address _remoteToken,    // 远程代币地址 (Remote Token Address)  
+    uint256 _amount,         // 转移金额 (Transfer Amount)  
+    uint32 _minGasLimit,     // 最小 Gas 限制 (Minimum Gas Limit)  
+    bytes memory _extraData  // 额外数据 (Extra Data)  
+) external;  
+
+// ETH 桥接方法 (ETH Bridge Method)  
+function bridgeETH(  
+    uint32 _minGasLimit,     // 最小 Gas 限制 (Minimum Gas Limit)  
+    bytes memory _extraData  // 额外数据 (Extra Data)  
+) payable external;  
+
+跨域转移流程 (Cross-Domain Transfer Process)
+
+ERC20 代币转移步骤 (ERC20 Token Transfer Steps)
+确保目标域存在对应的可铸造代币合约
+调用 bridgeERC20 方法
+触发跨域资产转移事件
+目标域合约完成资产铸造
+
+ETH 转移流程 (ETH Transfer Process)
+调用 bridgeETH 方法
+锁定源域资产
+在目标域解锁或铸造等量资产
+
+升级能力 (Upgrade Capabilities)
+L1 和 L2 标准桥接合约支持代理升级
+使用可升级代理模式
+确保协议可平滑演进
+
+安全性考虑 (Security Considerations)
+使用标准化接口减少安全风险
+支持最小 Gas 限制，防止 DoS 攻击
+额外数据提供灵活性
+事件日志提供完整转移追踪
+
+兼容性 (Compatibility)
+保留向后兼容的 Legacy API
+确保现有应用无缝迁移
+支持多种代币标准
+
+关键限制 (Key Limitations)
+需要目标域存在对应的可铸造代币合约
+转移受 Gas 限制和桥接合约规则约束
+
+### 2025.07.12
 
 <!-- Content_END -->
