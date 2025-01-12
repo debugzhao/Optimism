@@ -180,5 +180,22 @@ link: https://www.cnblogs.com/linguanh/p/16535408.html
 - 其他协议，比如 ERC-20： 
 先去 Op 网络部署对应的合约；  
 在 L1 的 L1StandardBridge.sol 充值 Token 到 L2 地址；  
-到账后，便可自由交易。提现动作和 ETH 的一样。  
+到账后，便可自由交易。提现动作和 ETH 的一样。
+
+### 2025.01.12
+link https://www.cnblogs.com/linguanh/p/16621521.html  
+OP 本质是个大型的 DApp，我们要使用它，就要先从以太坊的主网充值 Token 进去。  
+用户在 OP 里面进行了系列的交易动作后，需要把 Token 转回到主网，才能与其他的 DApp 的交互或主网转账。因此对应地，OP 提供了提现 Token 到主网的功能。  
+提现的原子性  
+虽然在 OP 中的交易都直接发生在 OP 的网络中，比如转账的地址是 OP 网络中的以太坊地址。  
+但是所有的交易都会被同步到以太坊主网中，与 OP 的合约发生实际的主网交互。这就意味着，地址所在 OP 中 Token 余额的变化也会导致主网上的余额变化。  
+提现的调用链
+用户是提现发起的对象，提现遵循下面的步骤：
+- 用户向 OP 的 Sequencer 发起提现交易；
+- 这笔交易是一次合约调用交易，指向 L2StanderBridger.sol 中的 withdraw 函数；
+- withdraw 函数中会构造最后在主网合约中发起真正提现的函数数据；
+- 交易被 OP 网络正常打包；
+- 交易被Batch-Submitter 提交到主网 CTC 合约，走正常的挑战机制；
+- 挑战期过后，Relayer 为此交易生成证明，调用 L1 上的 L1CrossDomainMessenger.relayMessage 函数，使之完成合约检查然后在内部调用目标合约，最终在 L1 完成 L2 交易的最终目的，用户的 Token 在 L1 地址上得到了提现；
+- 提现闭环。
 <!-- Content_END -->
