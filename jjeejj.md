@@ -90,4 +90,15 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 1. 阅读外部文章：Op 完全兼容 EVM ,严格执行 以太坊黄皮书，任何基于 Geth 编写的代码 都可以无需修改运行再 OP 上
 2. 当运行验证节点，验证器在发现欺诈时会自动提交欺诈证明
 
+### 2025.01.10
+
+1. 阅读 https://community.optimism.io/welcome/welcome-overview 治理理念
+   1. 由 company 、communities、citizens 组成 的 collective
+   2. Superchain 标准化，推进了链的发展
+   3. 治理模型有 2 部分组成：Token house and Citizens’ House, 2 院治理体系
+
+### 2025.01.11
+
+1. 今天 看了下 Token house 和 Citizens’ House 2 院治理体 有什么区别， 分别刻意投票什么，没有特明白，希望可以解答一下
+
 <!-- Content_END -->

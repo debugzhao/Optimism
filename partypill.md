@@ -166,6 +166,47 @@ L2 不改变 L1 的共识机制，而是通过批量处理交易或链下计算�
 
 4、学习steps“了解一下 Vitalik 提出 Stage 阶段的历程，以前发生过那些不合规的情况，以及目前达到 stage 阶段的一些 L2”。
 Rollup 成熟度演变：stage 评级，已经学习。
+
+
+### 2025.01.10
+今天累麻了，先记录下昨天不懂的东西打卡。
+问题1、运行欺诈证明系统/有效性证明系统（无计划、正在建设中、部署在测试网上、部署在主网上但位于白名单之后、部署在主网上且无需许可） 可升级性（通过 EOA 立即升级、通过社区 MultiSig / 安全委员会立即升级、通过内置覆盖机制在时间锁后升级等...） 去中心化/逃生舱的存在等... - 中央序列器、无需许可的序列器、L1 强制队列的存在、逃生舱等...
+这些名词完全不认识，一个个去找出啥意思。
+问题2、Stage 0, Stage 1, Stgae 2
+这仨是啥？发展演变历史是啥？不是单纯名词，要弄明白为啥这个机制。
+问题3、目前达到了 Stage 1 的 Rollup 的 L2 也就 2 个，arb 和 OP
+为啥是这俩，arb是怎么做到的？
+
+### 2025.01.11
+今天重感冒了，蛋疼。只能重新复习一下之前的，暂时学不动了，明天我补一下继续学习的部分。
+问题2、Stage 0, Stage 1, Stgae 2
+这仨是啥？发展演变历史是啥？不是单纯名词，要弄明白为啥这个机制。
+答案：Stages 框架是Vitalik Buterin 和 Rollups 开发团队提出一种引导Rollups 发展的概念：
+
+    Stage 0: Minimal Rollup：
+
+    实行基础功能
+    数据可用
+    验证也可用
+
+Stage 1: Data Availability Independence
+
+    减少对以太坊主链的依赖，数据产生更大的扩展能力
+    提高处理能力
+
+Stage 2: Decentralized Sequencers
+
+    Sequencer 不再由单一实体控制，而是通过共识机制（如 PoS）或去中心化网络运行
+
+Stage 3: Interoperability
+
+    不同 Rollups 之间实现互操作性，支持跨 Rollup 资产和数据流转，也就是Superchain现在要做的事情
+
+Stage 4: Full Decentralization
+
+    Rollups 完全实现去中心化，所有核心组件（Sequencer、数据可用性、验证者）均由分布式网络管理。
+
+
 ### 2024.07.12
 
 <!-- Content_END -->
