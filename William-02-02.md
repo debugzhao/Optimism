@@ -226,10 +226,7 @@ Gas
 
 休息
 
-​	zkSync zkPorter
-
-1. **合约实现的详解** 
-2. 分片sharding withEIP4844
+1. 分片sharding withEIP4844
 
 ### 2025.01.10
 
@@ -258,9 +255,23 @@ Gas
 >
 > ![image-20250110224052958](./.William-02-02.assets/image-20250110224052958.png)
 
+### 2025.01.12
+
+zk整体架构: 见assets/https://www.aicoin.com/zh-Hant/article/279743
+
+简单来说：L2提交零知识证明至L1对应contract
+
+![image-20250112183357908](./.William-02-02.assets/image-20250112183357908.png)、
+
+![image-20250112183546766](./.William-02-02.assets/image-20250112183546766.png)
+
+​	zkSync zkPorter
+
+1. **合约实现的详解** 
 
 
-zk整体架构
+
+### 2025.01.13
 
 
 
