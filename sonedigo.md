@@ -277,4 +277,27 @@ For stage 2:
 - Is the Security Council restricted to act only due to errors detected on chain?
 
 next day 2025.01.12 will learn about rollup's and Optimism's protocal
+
+### 2025.01.12
+
+Today‘s work will learn through  https://specs.optimism.io/protocol/overview.html
+
+对于Layer 2的总体架构来说，需要根据Layer 1的情况去诠释它的意义
+在Execution-level实现等效以太坊虚拟机，要求有：
+1.不需要特殊的编译器运行
+2.无意外的gas费用
+3.交易跟踪不需要额外的配置
+4.所有以太坊的工具和特性均可使用
+在此基础上，所有的节点要兼容以太坊layer 1，并且L2的实现要尽可能地减小和vanila Geth node的差异，并且充分利用L1的特性
+
+首先，这个L2区块链将与一个基本的Geth节点交互，并尽可能地利用现有的第一层（L1）标准。这意味着该L2链将在某些方面遵循以太坊协议规范，以便更好地与其他以太坊节点通信。
+
+其次，执行引擎/rollup节点将使用ETH2引擎API来构建主链上的L2链。ETH2引擎是以太坊2.0的核心组件之一，用于处理网络中的所有交易和状态更新。通过使用ETH2引擎API，L2链可以更好地集成到以太坊网络中，并获得更好的性能和安全性。
+
+最后，执行引擎还将利用Geth节点现有的内存池和同步实现，包括快照同步。内存池是保存待确认交易的地方，而同步则是指将新的区块添加到本地区块链中。通过利用这些现有功能，L2链可以更快地处理交易并保持与主链的一致性。
+
+Geth是一个用Go语言编写的以太坊客户端，可以用来连接或创建私有的以太坊网络，而关于L2链的部署，Geth提供的是基础支持，具体实施依赖于额外的协议和工具。
+
+next day 2025.01.13 will learn about Core L1 Smart Contracts
+
 <!-- Content_END -->
