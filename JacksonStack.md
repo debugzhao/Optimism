@@ -198,4 +198,40 @@ OP 本质是个大型的 DApp，我们要使用它，就要先从以太坊的主
 - 交易被Batch-Submitter 提交到主网 CTC 合约，走正常的挑战机制；
 - 挑战期过后，Relayer 为此交易生成证明，调用 L1 上的 L1CrossDomainMessenger.relayMessage 函数，使之完成合约检查然后在内部调用目标合约，最终在 L1 完成 L2 交易的最终目的，用户的 Token 在 L1 地址上得到了提现；
 - 提现闭环。
+
+### 2025.01.13
+**Optimism Collective 概述**  
+Optimism Collective 是由企业、社区和公民组成的合作组织，致力于奖励公共物品并为以太坊构建可持续未来。其目标是通过建立 Superchain 实现标准化和可扩展的去中心化体系。  
+**Superchain 产品愿景**  
+1. **链的标准化**：支持大规模去中心化与可组合性。  
+2. **初始规模**：从 15-50 条链扩展到 1000+ 条链，实现“一链化体验”。  
+3. **治理保障**：通过治理保护 Superchain 的安全性。  
+4. **可持续增长**：治理驱动创新与发展的良性循环。  
+
+**影响 = 利润**  
+Optimism Collective 提倡一种新经济模式：**Impact = Profit**。它的使命是创造一个惠及所有人但不属于任何人的互联网。通过奖励对 Collective 和 Superchain 产生积极影响的行为，实现以太坊生态系统的可持续发展（称为 Ether’s Phoenix）。  
+
+**治理架构**  
+Collective 的治理采用双议院制，由 **Token House** 和 **Citizens' House** 构成，实验性地构建民主治理体系。  
+
+#### **Token House**  
+- 基于 OP Token 的治理系统。  
+- 成员职责包括提交、讨论和投票治理提案。  
+- 支持直接投票或委托投票权。  
+- 提案类型依据 **Operating Manual** 中的规则。  
+
+#### **Citizens' House**  
+- 基于声誉的“一人一票”治理实验。  
+- 核心职能是**追溯性公共物品资助（Retro Funding）**，奖励对 Collective 和 Superchain 有积极影响的行为。  
+- Retro Funding 的理念是“回顾过去的有用性比预测未来更容易达成一致”。  
+
+**双议院协作**  
+Token House 和 Citizens' House 共同努力，通过分工与协作推进 Collective 的愿景。  
+
+**治理文件**  
+1. **工作宪法（Working Constitution）**：自 2022 年 4 月生效，阐明 Collective 的核心原则与治理规定。  
+2. **操作手册（Operating Manual）**：描述 Token House 的治理流程，并随着 Collective 发展不断更新。  
+3. **去中心化里程碑模型**：指导 Collective 的去中心化进程与阶段性目标。  
+4. **决策模型图**：展示治理决策的全貌及其相互关系，为实现自治提供框架参考。  
+
 <!-- Content_END -->
