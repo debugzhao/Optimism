@@ -337,6 +337,26 @@ Process TLDR
 - If your proposal is passed, the Optimism Foundation will facilitate its administration, including by distributing any approved OP grants. The Foundation will be in touch to collect additional information from your project in order to execute the proposal or grant, including information to perform KYC.
 - If your proposal fails, you can make a new proposal in the next cycle specifying how you have incorporated significant changes from your first proposal.
 
+**Q:**
+
+**Why Do Veto Votes Use OP Token Power in the Citizen House?**
+
+**A:**
+
+The Citizen House’s veto threshold is tied to votable OP tokens, even though the Citizen House itself is identity-based, for the following reasons:
+
+Checks and Balances:
+
+Token House proposals often impact OP token holders directly (e.g., token distribution, funding allocations).
+Using OP token power in the veto process ensures that the opposition reflects the weight of economic stakeholders.
+Preventing Overreach:
+
+If the Citizen House could veto proposals purely based on Citizen votes, it might introduce a risk of disproportionate influence by a smaller group of Citizens.
+Tying veto thresholds to OP token power ensures vetoes reflect broad, ecosystem-wide opposition.
+
+
+
+
 
 
 <!-- Content_END -->
