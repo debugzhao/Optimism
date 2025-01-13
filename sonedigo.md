@@ -246,5 +246,58 @@ EIP-4844 是一个更为复杂的提案，旨在为以太坊带来一种新的�
 
 next day 2025.01.11 will learn about stages from https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe
 
+### 2025.01.11
+
+According to the Vitalik’s proposed milestones, Ethereum rollup could be divided into 3 stages which having different assistance from centralized control, as known as, training wheels of rollup:
+1.stage 0:Full Training Wheels: At this stage, the rollup is effectively run by the operators. All data and operation relay on the L1.
+
+2.stage 1:Limited Training Wheels: At this stage, the rollup is run by smart contracts. However, a Security Council might remain in place to address potential bugs. The Security Council, comprised of a diverse set of participants, provides a safety net, but its power also poses a potential risk.
+
+3.stage 2:No Training Wheels: This is the final stage where the rollup becomes fully managed by smart contracts. At this point, the fraud proof system is permissionless, and users are given ample time to exit in the event of unwanted upgrades. The Security Council’s role is strictly confined to addressing soundness errors that can be adjudicated on-chain, and users are protected from governance attacks.
+
+The stages idea comes from Vitalik's blog and many discussion in the community to define the rollup boundaries, such as the minimum exit window, the Security Council thresholds, and fraud proof allowlist size.
+
+Each stage's requirement could be describe into several questions:
+For stage 0: we need to think about these 4 questions:
+- Does the project call itself a rollup?
+- Are L2 state roots posted on L1?
+- Does the project provide Data Availability (DA) on L1
+- Is software capable of reconstructing the rollup’s state source available?
+
+For stage 1: we need to think about these 5 questions:
+- Does the project use a proper proof system?
+- Are there at least 5 external actors that can submit a fraud proof?
+- Can the users exit without the operator’s coordination?
+- Do users have at least 7 days to exit in case of unwanted upgrades (Security Council and governance excluded)?
+- Is the Security Council properly set up?
+
+For stage 2:
+- Is the fraud proof system permissionless?
+- Do users have at least 30 days to exit in case of unwanted upgrades?
+- Is the Security Council restricted to act only due to errors detected on chain?
+
+next day 2025.01.12 will learn about rollup's and Optimism's protocal
+
+### 2025.01.12
+
+Today‘s work will learn through  https://specs.optimism.io/protocol/overview.html
+
+对于Layer 2的总体架构来说，需要根据Layer 1的情况去诠释它的意义
+在Execution-level实现等效以太坊虚拟机，要求有：
+1.不需要特殊的编译器运行
+2.无意外的gas费用
+3.交易跟踪不需要额外的配置
+4.所有以太坊的工具和特性均可使用
+在此基础上，所有的节点要兼容以太坊layer 1，并且L2的实现要尽可能地减小和vanila Geth node的差异，并且充分利用L1的特性
+
+首先，这个L2区块链将与一个基本的Geth节点交互，并尽可能地利用现有的第一层（L1）标准。这意味着该L2链将在某些方面遵循以太坊协议规范，以便更好地与其他以太坊节点通信。
+
+其次，执行引擎/rollup节点将使用ETH2引擎API来构建主链上的L2链。ETH2引擎是以太坊2.0的核心组件之一，用于处理网络中的所有交易和状态更新。通过使用ETH2引擎API，L2链可以更好地集成到以太坊网络中，并获得更好的性能和安全性。
+
+最后，执行引擎还将利用Geth节点现有的内存池和同步实现，包括快照同步。内存池是保存待确认交易的地方，而同步则是指将新的区块添加到本地区块链中。通过利用这些现有功能，L2链可以更快地处理交易并保持与主链的一致性。
+
+Geth是一个用Go语言编写的以太坊客户端，可以用来连接或创建私有的以太坊网络，而关于L2链的部署，Geth提供的是基础支持，具体实施依赖于额外的协议和工具。
+
+next day 2025.01.13 will learn about Core L1 Smart Contracts
 
 <!-- Content_END -->

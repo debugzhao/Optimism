@@ -331,6 +331,176 @@ L1 锚定防御 (L1 Anchoring Defense)
 代理合约模式
 升级需要多重签名批准
 
+### 2025.01.11
+
+OP Stack 标准桥接
+核心功能概述 (Core Function Overview)
+标准桥接是 OP Stack 中实现跨域资产转移的关键组件。
+
+主要职责 (Primary Responsibilities)
+允许 ETH 和 ERC20 代币在不同域间转移
+提供统一的跨域资产桥接标准接口
+支持 L1 原生和 L2 原生代币转移
+
+关键合约地址 (Key Contract Addresses)
+L2 标准桥接合约地址：0x4200000000000000000000000000000000000010
+
+接口定义 (Interface Definition)
+
+关键事件 (Key Events)
+solidity
+
+// ERC20 桥接完成事件 (ERC20 Bridge Finalization Event)  
+event ERC20BridgeFinalized(  
+    address indexed localToken,     // 本地代币地址 (Local Token Address)  
+    address indexed remoteToken,    // 远程代币地址 (Remote Token Address)  
+    address indexed from,            // 发送地址 (Sender Address)  
+    address to,                      // 接收地址 (Recipient Address)  
+    uint256 amount,                  // 转移金额 (Transfer Amount)  
+    bytes extraData                  // 额外数据 (Extra Data)  
+);  
+
+// ETH 桥接发起事件 (ETH Bridge Initiation Event)  
+event ETHBridgeInitiated(  
+    address indexed from,            // 发送地址 (Sender Address)  
+    address indexed to,              // 接收地址 (Recipient Address)  
+    uint256 amount,                  // 转移金额 (Transfer Amount)  
+    bytes extraData                  // 额外数据 (Extra Data)  
+);  
+
+核心方法 (Core Methods)
+solidity
+
+// ERC20 代币桥接方法 (ERC20 Token Bridge Method)  
+function bridgeERC20(  
+    address _localToken,     // 本地代币地址 (Local Token Address)  
+    address _remoteToken,    // 远程代币地址 (Remote Token Address)  
+    uint256 _amount,         // 转移金额 (Transfer Amount)  
+    uint32 _minGasLimit,     // 最小 Gas 限制 (Minimum Gas Limit)  
+    bytes memory _extraData  // 额外数据 (Extra Data)  
+) external;  
+
+// ETH 桥接方法 (ETH Bridge Method)  
+function bridgeETH(  
+    uint32 _minGasLimit,     // 最小 Gas 限制 (Minimum Gas Limit)  
+    bytes memory _extraData  // 额外数据 (Extra Data)  
+) payable external;  
+
+跨域转移流程 (Cross-Domain Transfer Process)
+
+ERC20 代币转移步骤 (ERC20 Token Transfer Steps)
+确保目标域存在对应的可铸造代币合约
+调用 bridgeERC20 方法
+触发跨域资产转移事件
+目标域合约完成资产铸造
+
+ETH 转移流程 (ETH Transfer Process)
+调用 bridgeETH 方法
+锁定源域资产
+在目标域解锁或铸造等量资产
+
+升级能力 (Upgrade Capabilities)
+L1 和 L2 标准桥接合约支持代理升级
+使用可升级代理模式
+确保协议可平滑演进
+
+安全性考虑 (Security Considerations)
+使用标准化接口减少安全风险
+支持最小 Gas 限制，防止 DoS 攻击
+额外数据提供灵活性
+事件日志提供完整转移追踪
+
+兼容性 (Compatibility)
+保留向后兼容的 Legacy API
+确保现有应用无缝迁移
+支持多种代币标准
+
+关键限制 (Key Limitations)
+需要目标域存在对应的可铸造代币合约
+转移受 Gas 限制和桥接合约规则约束
+
+### 2025.01.12
+
+跨域消息传递（Cross Domain Messengers）
+跨域消息传递是 OP Stack 中实现不同域（L1 和 L2）间通信的关键机制。
+
+核心合约 (Core Contracts)
+L1CrossDomainMessenger
+L2CrossDomainMessenger
+预部署地址：0x4200000000000000000000000000000000000007
+
+消息传递流程 (Message Passing Process)
+发送消息 (Sending Messages)
+solidity
+function sendMessage(  
+    address _target,     // 目标地址 (Target Address)  
+    bytes memory _message, // 消息内容 (Message Content)  
+    uint32 _minGasLimit   // 最小 Gas 限制 (Minimum Gas Limit)  
+) external payable;  
+中继消息 (Relaying Messages)
+solidity
+function relayMessage(  
+    uint256 _nonce,        // 消息随机数 (Message Nonce)  
+    address _sender,       // 发送者地址 (Sender Address)  
+    address _target,       // 目标地址 (Target Address)  
+    uint256 _value,        // 转账金额 (Transfer Value)  
+    uint256 _minGasLimit,  // 最小 Gas 限制 (Minimum Gas Limit)  
+    bytes memory _message  // 消息内容 (Message Content)  
+) external payable;  
+
+消息版本管理 (Message Version Management)
+版本 0
+编码方式：abi.encodeWithSignature("relayMessage(address,address,bytes,uint256)")
+包含：目标地址、发送者、消息、随机数
+版本 1
+编码方式：abi.encodeWithSignature("relayMessage(uint256,address,address,uint256,uint256,bytes)")
+包含：随机数、发送者、目标地址、转账值、Gas限制、消息数据
+
+关键事件 (Key Events)
+solidity
+event SentMessage(  
+    address indexed target,    // 目标地址 (Target Address)  
+    address sender,            // 发送者 (Sender)  
+    bytes message,             // 消息内容 (Message Content)  
+    uint256 messageNonce,      // 消息随机数 (Message Nonce)  
+    uint256 gasLimit           // Gas 限制 (Gas Limit)  
+);  
+
+event RelayedMessage(  
+    bytes32 indexed msgHash    // 消息哈希 (Message Hash)  
+);  
+
+安全与升级 (Security and Upgradability)
+升级机制 (Upgrade Mechanism)
+使用可升级代理合约
+支持消息版本动态更新
+
+安全特性 (Security Features)
+成功/失败消息哈希追踪
+消息重放保护
+最小 Gas 开销计算
+
+跨域通信流程 (Cross-Domain Communication Process)
+
+L1 到 L2
+    
+用户在 L1 发送消息
+自动中继到 L2
+用户在 L1 支付 Gas
+
+L2 到 L1
+
+用户在 L2 发起提现
+证明提现
+等待最终确认窗口
+在 OptimismPortal 上完成提现
+
+最佳实践 (Best Practices)
+始终指定足够的 Gas 限制
+验证消息发送和中继状态
+处理可能的失败场景
+遵循版本兼容性
+
 ### 2025.07.12
 
 <!-- Content_END -->
