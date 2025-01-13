@@ -160,7 +160,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | cherry-yl-sh | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | Dfbb7879 | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ |   | | | | | | | | | | | | | |
 | DasNarrenschiff | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | |
-| ChinesePaladin61 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | |
+| ChinesePaladin61 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | |
 | sonedigo | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | |
 | wyeeeh | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | |
 | gpteth | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | |
 | 183Aaros | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
