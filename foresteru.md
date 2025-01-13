@@ -326,6 +326,16 @@ A multisig-based system, even if improved, cannot fully replace the Security Cou
 - It would remain a technical mechanism, unable to serve as a deliberative governance body.
 - It is not designed to support progressive decentralization or evolve into a more robust governance structure.
 
+Process TLDR
+
+- Proposals are reviewed over a three week voting cycle.
+- If you’re submitting a grant application, you’ll need to submit your application as outlined on each individual Mission Request in github.
+- For all other proposal types, you may draft a proposal based on this template and post it on the Forum with [Draft] in the title for feedback. Delegates and/or Citizens will provide feedback on your proposal in the forum. Use your judgment to incorporate feedback.
+- Once your non-grant proposal has been approved by four top 100 delegates or four Citizens add a link to your proposal to the Voting Cycle Roundup thread by the last day of Week 2 and update the title from [Draft] to [Final]. These proposals will move on to Week 3 voting. Proposals initiated by the Foundation do not require approvals.
+- Protocol or Governor Upgrades approved by the Token House, must also pass the Citizens’ House Veto Procedure, as outlined in the Veto Procedure section above, before they are considered officially approved.
+- The Security Council will enact officially approved Protocol or Governor Upgrades. The Optimism Foundation will facilitate the administration of all other approved proposals, including by distributing any approved OP grants. The Foundation will be in touch to collect additional information from your project in order to execute the proposal or grant, including information to perform KYC.
+- If your proposal is passed, the Optimism Foundation will facilitate its administration, including by distributing any approved OP grants. The Foundation will be in touch to collect additional information from your project in order to execute the proposal or grant, including information to perform KYC.
+- If your proposal fails, you can make a new proposal in the next cycle specifying how you have incorporated significant changes from your first proposal.
 
 
 
