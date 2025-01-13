@@ -535,4 +535,139 @@ Superchain 愿景：标准化、几十个链形同一体、治理保护安全、
 
 TODO OP 的去中心化 milestone 很重要，可以解码下一步 OP 要做的 https://docs.google.com/spreadsheets/d/1IpL0oTd3AgNBu_eWdjP9EjbQfZjq-_Nd3yU1H2ke3vY/edit?gid=1115302678#gid=1115302678
 
+### 2025.01.13
+
+## https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
+
+[Optimism Governance Portal](https://vote.optimism.io/): A front-end interface that enables Token House members to delegate and vote their OP on-chain.
+
+主要的 OP 运行相关提案。
+
+[The Citizens’ House Snapshot Space](https://snapshot.org/#/s:citizenshouse.eth): A front-end interface that enables Citizens’ House members to veto Token House proposals.
+
+TODO 不是很活跃，不知道是做什么用的。
+
+[Github](https://github.com/ethereum-optimism/ecosystem-contributions/issues): Grants (Mission Requests) are managed via issues in this public github repo
+
+TODO Mission Requests 是什么？似乎是比较大的计划的讨论的地方。
+
+Applications to Token House Mission Requests will be reviewed and selected by the Grants Council. Applications to Foundation Mission Requests will be reviewed and selected by the Foundation. All applications should follow the submission process outlined on each Mission Request in github.
+
+[Charmverse](https://app.charmverse.io/op-grants/season-4-701220845245208): Home of the community-led Optimism Grants Council
+
+研究下 https://charmverse.io/ 似乎跟 WhatToBuild 有点像。跟进 application 申请和 milestones 完成情况。
+
+All governance proposals go through a three week cycle. Each “week” runs from Thursday at 19:00p GMT (12p PST) until Wednesday at 19:00 GMT (12p PST).
+
+All non-grant proposal types should be posted to the Forum for review by anyone in the Optimism community. Proposal authors are expected to be responsive to delegate and Citizen feedback.
+
+```
+Standard Proposal Template – Optimism Token House
+
+Proposal Title: _____________________________________
+What your proposal is called?
+
+Proposal Type: _____________________________________
+Governance proposals must fall under a valid proposal type.
+
+Executive Summary
+A high level overview of the proposal’s substance.
+Please include:
+
+Short summary of the proposal
+Impacted stakeholders & expected outcomes
+Motivation
+The why.
+Please include:
+
+Why you are submitting the proposal
+Any conflicts of actual or anticipated conflicts of interest that you (as an individual, group or entity) may have with respect to the proposal
+Why the Collective should adopt the proposal
+Specifications
+The details of the proposal.
+Please include:
+
+Technical details (a comprehensive description of the proposed changes).**
+If applicable, please include:
+
+Links to all protocol/ API/ tech specifications
+Overview of ongoing security considerations, including all audits and findings*
+Impact summary (a comprehensive description of the consequences of adopting the proposed changes).
+If applicable, please include:
+
+Changes in performance characteristics
+Time-of-upgrade considerations (downtime, etc.)
+Links to exhaustive upgrade documentation for impacted stakeholders
+Action Plan
+How the proposal would be implemented.
+If applicable, please include:
+
+Anticipated implementation/upgrade/execution timing
+Contingency plans in case of last-minute bugs or issues
+Plan for communication and education to the community
+Conclusion
+Tying it all together.
+Please include:
+
+Recap of main points
+Request for approval from the Collective
+
+```
+
+Before the end of Week 2, a governance administrator will create a Voting Cycle Roundup thread in the forum to collect all proposals that meet the requirements for voting in Week 3. This Roundup will not include Mission grant applications, which will be processed by the Foundation or Grants Council.
+
+For a non-grant proposal proposed in the Token House to proceed to Week 3, four of the top 100 delegates must give explicit approval on the discussion thread.
+
+定期来捞取提案然后进行讨论和执行，有严格的时间限制，需要 top 100 的 delegator 进行支持。
+
+A Token House governance proposal is approved if it satisfies the following minimum vote thresholds:
+
+- Quorum: The minimum number of total OP votes, including abstain votes, required to be cast in connection with a proposal. Here, a quorum is measured as a % of the total votable OP supply, as of the start of the voting period. “Votable supply” is the total amount of OP that has been delegated, and therefore can participate in voting. An illustrative chart of the total votable OP supply can be found here.
+- Approval threshold: The minimum number of OP votes required to be cast in favor of approving a proposal. The approval threshold for each proposal is measured as % of votes cast to approve relative to the total number of yes/no votes cast in connection with a proposal. This does not include abstain votes.
+
+Casting a veto is a serious decision. If a proposal approved in the Token House is vetoed by the Citizens' House, the proposal will not be enacted. In the case of Protocol Upgrades, vetoing may have serious consequences on engineering timelines and milestones. Proposals that may be vetoed by the Citizens' House have already been evaluated and approved by the Token House, which has been entrusted with primary responsibility over that proposal type. A Citizens' House veto may be appropriate if a proposal is believed to be malicious or to have been passed by a compromised Token House (either captured or acting out of self-interest rather than the Collective interest.)
+
+veto 是一个紧急否决的流程，可以在某些时刻帮助到 OP。
+
+### Valid Proposal Types
+
+- Governance Fund
+- Protocol or Governor Upgrade
+- Inflation Adjustment
+- Director Removal
+- Treasury Appropriations
+- Code of Conduct Violations
+- Representative Removal
+- Representative Structure Dissolution
+- Rights Protections
+- Elections
+- Ratification
+- Reflection Period (Metagovernance)
+
+TODO Director Removal 是什么？去掉的是什么 Director？
+
+Retro rounds are run according to the following process:
+
+- Scoping: The overall amount of rewards to be allocated and scope of impact are defined at the outset of the round.
+- Application creation: Projects are invited to create an Application in the Retro Funding Application Manager.
+- Application Review: Applications are reviewed for adherence to the application rules.
+- Voting: Votes are collected from the Citizens with the requisite AttestationStation entries and tallied.
+- Disbursement: Based on the simple weighted average of the Citizens’ House vote, the overall reward amount for the round is divided among the winning projects.
+- Compliance: The Foundation will collect information from projects in order to distribute the grant in a legally compliant manner (including completing KYC).
+
+Additional information on the process for 2024 Retro Funding is available here.
+
+The Optimism Foundation will facilitate the administration of the governance procedures described in this Operating Manual with the aim of ensuring that members of the Collective may participate thoughtfully in governance.
+
+OP 基金会来监督整个治理流程的顺利完成，比如推进提案进展、监督投票结果、管理维护网络等等。
+
+公共治理的前提是有资源进行治理，这个资源最直接的就是金钱，其次还有一些人力。
+
+### Process TLDR
+
+- 三周一个 proposal cycle
+- If you’re submitting a grant application, you’ll need to submit your application as outlined on each individual Mission Request in [github](https://github.com/ethereum-optimism/ecosystem-contributions/issues?q=is%3Aissue).
+- 对于非 grants 的提案，按照模板发在论坛，其他人提供建议想法
+- 4 个 top 100 的人来支持，就可以 Voting Cycle Roundup，进入投票环节
+
 <!-- Content_END -->

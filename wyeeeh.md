@@ -138,4 +138,21 @@ This is the final stage where the rollup becomes fully managed by smart contract
 |证明系统| - |使用适当的证明系统，如欺诈证明或zk rollups的证明系统，至少5个外部行为者可提交欺诈证明（可白名单）|欺诈证明系统应完全去中心化，无需许可，任何人可提交欺诈证明|
 |用户退出机制| - |用户可在无操作员协调下退出，至少有7天时间退出（不包括安全理事会和治理相关升级）|用户至少有30天时间退出（包括DAO发起的升级，有链上错误检测系统时对检测到的错误除外）|
 |安全理事会设置| - |由至少8个参与者组成的多重签名设置，50%共识阈值，至少一半参与者为外部人员，身份公开披露|安理会权力应高度受限，仅在链上检测到可裁决的健全性错误时能干预| 
+
+### 2025.01.12
+#### Optimism治理机制
+今天先列一下框架，明天查一下资料对比：
+- Token House V.S. Citizen House
+- Mission Grants V.S. RetroPGF
+
+**Token House**
+- 基于token持有量分配vote权重
+- 可以delegate token给其他代表 (delegates)
+- 负责Mission Grants
+
+**Citizen House**
+- 基于声誉的，由链上投票选出
+- 负责RetroPGF
+
+
 <!-- Content_END -->

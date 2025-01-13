@@ -222,7 +222,8 @@ seed gov
 
 ### 2025.01.12
 
-
+Optimism Retro Funding 投票机制对恶意行为的抵抗能力：
+https://mirror.xyz/optimismcn.eth/xfffo45OHL955PvtKRzBzUhHoKJ0uQAbs_mh-qqkGR4
 
 ### 2025.01.13
 
