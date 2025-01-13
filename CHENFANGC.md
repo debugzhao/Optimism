@@ -82,4 +82,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 阅读文档内容[投票机制](https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md)
 
+### 2025.01.13
+
+阅读文档内容[委员会](https://gov.optimism.io/search?q=council)
+
 <!-- Content_END -->
