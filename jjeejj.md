@@ -110,4 +110,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
    4. 去中心化的需要，目前还不能完全满足，但是是可以实现的
    5. Superchain 可以水平扩展多个链
 
+### 2025.01.13
+
+1. 阅读 https://docs.optimism.io/stack/getting-started
+   1. OP Stack 的基本概念：当前的核心是运行 L2 区块链的基础设施
+   2. OP Stack 是可持续发展的
+
 <!-- Content_END -->
