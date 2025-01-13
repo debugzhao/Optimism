@@ -271,6 +271,9 @@ Superchain Registry（超链注册表）是 Optimism 生态系统中的一个关
 
 Optimism 的 故障证明（Fault Proofs） 是其乐观式汇总（Optimistic Rollup）系统的关键组成部分，旨在确保 Layer 2（L2）链的状态提交到 Layer 1（L1）以太坊时的准确性和安全性。
 
+![image](https://github.com/user-attachments/assets/fab66990-ac41-470d-92e5-1fd8207787c2)
+
+
 故障证明的功能
 
 在 Optimism 的架构中，用户可以通过提交提现证明（withdrawal proof）从 OP Stack 链（如 OP 主网）提取 ETH 和代币。 这些证明显示了提现操作已包含在 OP Stack 链中。 故障证明允许用户无需许可地提交和质疑关于 OP Stack 链状态的提议，这些提议用于验证提现操作。 ￼
@@ -285,6 +288,22 @@ Optimism 的 故障证明（Fault Proofs） 是其乐观式汇总（Optimistic R
 * 延迟窗口：在根通过游戏最终确定后，增加了一个称为“气隙窗口”的额外延迟，在此期间，守护者角色可以拒绝该根。 ￼
 * 延迟支付：一个名为 DelayedWETH 的合约被设置用于持有保证金，并仅在延迟期后允许支付，以便在游戏错误解决的情况下，将保证金重新定向给正确的接收者。
 
+
+Cannon 是 Optimism 的默认故障证明虚拟机（Fault Proof Virtual Machine，FPVM），用于在争议游戏（Dispute Game）中验证 OP Stack 区块链的状态。 ￼
+
+Cannon 由两个主要组件组成：
+1. 链上部分（MIPS.sol）：这是在以太坊虚拟机（EVM）中实现的 MIPS 指令模拟器，负责在链上验证单个 MIPS 指令的执行。 ￼
+2. 链下部分（mipsevm）：这是用 Go 语言实现的 MIPS 模拟器，用于生成每个 MIPS 指令的证明，以供链上验证。 ￼
+
+在争议过程中，Cannon 的链下部分（mipsevm）会模拟执行 MIPS 指令，并生成相应的证明。
+
+这些证明随后由链上的 MIPS.sol 合约验证，以确保 Layer 2 状态转换的正确性。
+
+这种设计使得 Optimism 的故障证明系统具有模块化特性，允许在争议中使用不同的 FPVM。
+
+然而，目前 Cannon 是唯一实现的 FPVM，因此在所有争议中都会使用它。 ￼
+
+通过这种链上和链下相结合的机制，Cannon 提供了一个高效且安全的方式来验证 Layer 2 的状态转换，确保 Optimism 网络的完整性和可信度。
 
 ### 2025.01.14
 
