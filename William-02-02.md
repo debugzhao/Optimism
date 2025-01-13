@@ -226,10 +226,7 @@ Gas
 
 休息
 
-​	zkSync zkPorter
-
-1. **合约实现的详解** 
-2. 分片sharding withEIP4844
+1. 分片sharding withEIP4844
 
 ### 2025.01.10
 
@@ -258,9 +255,84 @@ Gas
 >
 > ![image-20250110224052958](./.William-02-02.assets/image-20250110224052958.png)
 
+### 2025.01.12
+
+zk整体架构: 见assets/https://www.aicoin.com/zh-Hant/article/279743
+
+简单来说：L2提交零知识证明至L1对应contract
+
+![image-20250112183357908](./.William-02-02.assets/image-20250112183357908.png)、
+
+![image-20250112183546766](./.William-02-02.assets/image-20250112183546766.png)
+
+​	zkSync zkPorter
+
+1. **合约实现的详解** 
 
 
-zk整体架构
+
+### 2025.01.13
+
+OP治理理念
+
+1. Token House: 对提案进行提交 审议 投票等。可以把投票权委托给别人
+
+2. Citizens' House:公民之家是一个基于声誉的一人一票治理的大规模实验，负责追溯性公共物品资助（Retro Funding）。
+
+什么是Retro Funding?https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c
+
+> 就是给开源项目提供的一种以token的价值增长为基础的获利途径。就是不需要上市也可以进入市场融资了。
+
+
+
+![High Level Collective Houses](https://community.optimism.io/_next/static/media/high-level-gov-houses.b50196f4.svg)
+
+> Funding by setting a price floor (as opposed to a one-time settlement) allows the oracle to reward the same project multiple times. It also allows a project token to get rewards both from the results oracle and from other sources (eg. other grant mechanisms, NFT-like collectible value, the project’s own economic model if it later gets one). Making multiple rewards can be done by withdrawing the funds from the pre-existing order, and making a new order setting a higher price floor using the combined funds.
+> 通过设定价格下限（而不是一次性结算）来提供资金，使得预言机能够多次奖励同一个项目。这也允许项目代币从结果预言机和其他来源（例如，其他资助机制、类似 NFT 的收藏价值、项目自身的经济模型，如果以后有的话）获得奖励。可以通过从预先存在的订单中提取资金，并使用合并后的资金设定更高的价格下限来创建新订单，从而实现多次奖励。
+>
+> ![img](./.William-02-02.assets/0-1BXeSvoajrHNAD_.png)
+
+为什么说A DAO, which we can call “the Results Oracle”, funds public good projects.
+
+> Oracle就是给web3网络提供现实世界信息的。
+>
+> Dao衡量开源项目是否到达里程碑的标准。
+>
+> 长期来看，结果预言机可以通过协议费用（就是项目的交易手续费/合约执行费用之类的）获得资金。
+>
+> #### **DAO 作为结果预言机**
+>
+> 当一个DAO充当结果预言机时，它承担了以下几个角色：
+>
+> - **数据收集**：DAO成员或社区通过各种方式收集项目或事件的结果数据。这些数据可以是项目完成的进度、用户满意度调查结果、技术指标等。
+> - **数据验证**：DAO成员对收集到的数据进行验证，确保数据的真实性和准确性。这通常通过社区投票、专家评审或自动化验证机制来完成。
+> - **结果反馈**：将验证后的结果数据传输到智能合约中，智能合约根据这些结果执行相应的操作。例如，如果一个开源项目达到了预定的开发里程碑，DAO作为结果预言机可以确认这一点，并触发智能合约向项目团队支付奖励。
+
+pre-existing order是什么？--就是开源项目到达什么什么程度我就给你reward。 但是这个标准怎么定的？
+
+the Results Oracle funds projects *retroactively* 
+
+结果预言机追溯资助项目!!!
+
+懂了，这个翻译真的难以理解。就是货到付款，事后补偿嘛。
+
+
+
+### 2025.01.14
+
+这个price floor是如何规定的？合约吗？能不受人为干扰吗？
+
+dao不会腐败 衡量项目是否到达里程碑的标准吗
+
+![image-20250113222030006](./.William-02-02.assets/image-20250113222030006.png)
+
+
+
+### 2025.01.15
+
+
+
+### 2025.01.16
 
 
 

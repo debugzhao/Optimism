@@ -101,4 +101,19 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. 今天 看了下 Token house 和 Citizens’ House 2 院治理体 有什么区别， 分别刻意投票什么，没有特明白，希望可以解答一下
 
+### 2025.01.12
+
+1. 阅读 Superchain 基本介绍：https://docs.optimism.io/stack/explainer
+   1. Superchain 本质上是一个由多个采用 Optimism 的 OP Stack 构建的第二层（L2）区块链网络组成的集合
+   2. 把 OP 主网 和 其他链 合并到一个 统一的 OP 链中 (chains within the Superchain)
+   3. 相互之间是可以通信，标准的通信协议，共享的通信基础设置
+   4. 去中心化的需要，目前还不能完全满足，但是是可以实现的
+   5. Superchain 可以水平扩展多个链
+
+### 2025.01.13
+
+1. 阅读 https://docs.optimism.io/stack/getting-started
+   1. OP Stack 的基本概念：当前的核心是运行 L2 区块链的基础设施
+   2. OP Stack 是可持续发展的
+
 <!-- Content_END -->

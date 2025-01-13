@@ -419,6 +419,88 @@ L1 和 L2 标准桥接合约支持代理升级
 需要目标域存在对应的可铸造代币合约
 转移受 Gas 限制和桥接合约规则约束
 
+### 2025.01.12
+
+跨域消息传递（Cross Domain Messengers）
+跨域消息传递是 OP Stack 中实现不同域（L1 和 L2）间通信的关键机制。
+
+核心合约 (Core Contracts)
+L1CrossDomainMessenger
+L2CrossDomainMessenger
+预部署地址：0x4200000000000000000000000000000000000007
+
+消息传递流程 (Message Passing Process)
+发送消息 (Sending Messages)
+solidity
+function sendMessage(  
+    address _target,     // 目标地址 (Target Address)  
+    bytes memory _message, // 消息内容 (Message Content)  
+    uint32 _minGasLimit   // 最小 Gas 限制 (Minimum Gas Limit)  
+) external payable;  
+中继消息 (Relaying Messages)
+solidity
+function relayMessage(  
+    uint256 _nonce,        // 消息随机数 (Message Nonce)  
+    address _sender,       // 发送者地址 (Sender Address)  
+    address _target,       // 目标地址 (Target Address)  
+    uint256 _value,        // 转账金额 (Transfer Value)  
+    uint256 _minGasLimit,  // 最小 Gas 限制 (Minimum Gas Limit)  
+    bytes memory _message  // 消息内容 (Message Content)  
+) external payable;  
+
+消息版本管理 (Message Version Management)
+版本 0
+编码方式：abi.encodeWithSignature("relayMessage(address,address,bytes,uint256)")
+包含：目标地址、发送者、消息、随机数
+版本 1
+编码方式：abi.encodeWithSignature("relayMessage(uint256,address,address,uint256,uint256,bytes)")
+包含：随机数、发送者、目标地址、转账值、Gas限制、消息数据
+
+关键事件 (Key Events)
+solidity
+event SentMessage(  
+    address indexed target,    // 目标地址 (Target Address)  
+    address sender,            // 发送者 (Sender)  
+    bytes message,             // 消息内容 (Message Content)  
+    uint256 messageNonce,      // 消息随机数 (Message Nonce)  
+    uint256 gasLimit           // Gas 限制 (Gas Limit)  
+);  
+
+event RelayedMessage(  
+    bytes32 indexed msgHash    // 消息哈希 (Message Hash)  
+);  
+
+安全与升级 (Security and Upgradability)
+升级机制 (Upgrade Mechanism)
+使用可升级代理合约
+支持消息版本动态更新
+
+安全特性 (Security Features)
+成功/失败消息哈希追踪
+消息重放保护
+最小 Gas 开销计算
+
+跨域通信流程 (Cross-Domain Communication Process)
+
+L1 到 L2
+    
+用户在 L1 发送消息
+自动中继到 L2
+用户在 L1 支付 Gas
+
+L2 到 L1
+
+用户在 L2 发起提现
+证明提现
+等待最终确认窗口
+在 OptimismPortal 上完成提现
+
+最佳实践 (Best Practices)
+始终指定足够的 Gas 限制
+验证消息发送和中继状态
+处理可能的失败场景
+遵循版本兼容性
+
 ### 2025.07.12
 
 <!-- Content_END -->

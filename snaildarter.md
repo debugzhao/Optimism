@@ -154,6 +154,32 @@ Op 上的用户必须支付向以太坊提交交易的费用。称之为L1 数�
 
 也看了 viem 的相关文档，有入金 eth 的例子，还未找到发送 ERC20 相关的例子。
 
-### 2024.07.12
+### 2025.01.13
+#### 基金会对超级链的产品愿景概述了整个 Op Collective 正在共同构建的产品的核心特征。
+
+- 链的标准化实现了大规模的去中心化和可组合性
+- 超级链从 15-50 条感觉像一条链开始，然后扩展到 1000+
+- 治理保护超级链的安全
+- 治理创造了可持续增长和发展的飞轮
+
+#### 影响 = 利润
+
+Op Collective 受到一个互惠互利的协议的约束，该协议可以用公理 Impact=Profit 来概括。
+Op Collective 的使命是创造一个惠及所有人且不归任何人拥有的互联网。为此，Collective 正在创造一种新的经济范式，其中影响力得到回报。Collective 称这个未来的以太凤凰。
+
+ #### 治理
+
+Collective 的数字民主治理模型由两个殿堂组成：Token House 和 Citizens' House。这两个形成了一个两院制的治理体系，旨在帮助 Collective 做出更好的决策，避免基于代币的治理系统中的常见陷阱，并进行制衡。
+
+##### Token House
+
+<!-- Op Collective 的治理始于 OP 代币和 Token House 的推出。 -->
+作为 Token House 成员，OP 持有者负责提交、审议和投票各种类型的治理提案。 在执行这些功能时，OP 持有者可以直接投票，也可以将其 OP 投票权委托给其他人。
+Token House 对操作手册中概述的提案类型进行投票。
+
+##### Citizens' House
+
+Citizens' House 是以声誉为基础、一人 = 一票治理的大规模实验，负责追溯性公共产品资助（Retro Funding）。
+Retro Funding 是 Collective 的主要经济引擎，奖励那些在 Collective 和超级链上产生积极影响的人。Retro Funding 基于一个简单的想法，即就过去有用的内容比将来可能有用的内容更容易达成一致。
 
 <!-- Content_END -->
