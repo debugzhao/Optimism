@@ -670,4 +670,51 @@ OP 基金会来监督整个治理流程的顺利完成，比如推进提案进�
 - 对于非 grants 的提案，按照模板发在论坛，其他人提供建议想法
 - 4 个 top 100 的人来支持，就可以 Voting Cycle Roundup，进入投票环节
 
+### 2025.01.14
+
+## https://gov.optimism.io/search?q=council
+
+https://gov.optimism.io/t/security-council-season-6-retrospective/9301
+
+安全理事会的近期主要工作目标是去中心化，升级相关技术和协议，完成治理去中心化等。目前 SC 需要依赖 OP Labs 的资助，影响独立性，然后要钱的时候可能有点摩擦。希望管理自己的预算，然后独立性的工具和资源，减少对 OP Labs 的依赖。
+
+SC 在 OP 进入 Stage 1 中扮演了重要的作用。所以主要工作可能是推动其进入 Stage 2。这里可以去分析 OP 距离 Stage 2 的距离，整理出来 SC 还有哪些工作可以做？
+
+这是一个参与社区治理很不错的样板 https://gov.optimism.io/t/security-council-season-6-retrospective/9301/4?u=brucexu 可以让 OPCN、LXDAO 和 ETHPanda 治理组参考。深度参与内容，并且进行讨论，反馈自己的想法。
+
+SC 需要自己运行系统监控工具。比如构建监控和通知报警的基础设施，让 SC 及时进入进行操作。每次升级，SC 都需要模拟验证提议升级内容，目前都是 EOA 暂时不支持多签，正在进行立项和开发。
+
+TODO 可以研究安全理事会的工作，并围绕做一些工具。
+
+[S7 安全委员会预算提案](https://gov.optimism.io/t/security-council-operating-budget-season-7/9358)：
+
+- 295000 OP，大概 50WU 半年？？！！S6 的预算是 57,843.00、S5 是 56,386.00。
+- 13 名成员负责签名，安全密钥管理，及时验证升级，作为挑战者等，时刻应对紧急情况并且定期参加活跃度检查。每个人半年 20000 OP，大概 34400U，月均 5700U 好高啊
+- Leader 是 7083U
+
+TODO 安全理事会运行章程 https://github.com/ethereum-optimism/OPerating-manual/blob/main/Security%20Council%20Charter%20v0.1.md
+
+[S7 Grants 委员会提案](https://gov.optimism.io/t/grants-council-operating-budget-s7/9357)：
+
+- 400000 OP，大概 68WU，外加额外的不固定的，一共 9 - 11 个人
+- 5w OP 用于 retroactive compensation 追溯性奖励，基于可衡量贡献（FairSharing？）
+- Lead 5833 OP 大概 9916U。统筹管理
+- 运营专员 2500OP 4250U。协助处理一些运营工作
+- GrantNerds x 3，3333OP 5666U。寻找好的项目，帮助他们申请 grants
+- Final reviewers x4，5000OP 8500U。DeFi 专家，理解 TVL 等，审核项目是否可以完成 DeFi 和 TVL 目标
+
+TODO Grants 委员会运行章程 https://github.com/ethereum-optimism/OPerating-manual/blob/main/Grants%20Council%20Charter%20v0.1.md
+
+怎么招募选拔？
+
+看起来都是半年一个周期，然后进行选举和换届。
+
+In Season 5, there were 548 applications, and in Season 6, based on what we gathered from the forum, the Grants Council reviewed 557 proposals. Of these, 221 were declined, 336 were voted on, and 133 successfully passed governance (you can check the details here). https://docs.google.com/spreadsheets/d/1Ul8iMTsOFUKUmqz6MK0zpgt8Ki8tFtoWKGlwXj-Op34/edit?gid=1179446718#gid=1179446718 TODO WhatToBuild source。
+
+For Season 7, I plan to return to open-ended grants with a single focus on increasing the TVL of the Superchain.
+
+S7 的 grants 主要专注于 TVL 的增长。KPI 目标也是 TVL 增长。
+
+TODO Developer Advisory Board 是什么？
+
 <!-- Content_END -->
