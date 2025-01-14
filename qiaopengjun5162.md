@@ -107,11 +107,14 @@ Optimism 现旨在通过一个名为 Superchain 的平台进一步增强其可�
 
 ### 2025.01.13
 
-笔记内容
+充值交易会调用到 depositTransaction; depositTransaction 会抛出 TransactionDeposited 事件，事件里面携带信息如下 emit TransactionDeposited(from, _to, DEPOSIT_VERSION, opaqueData); op-node 监听到该合约事件之后，会在二层去执行充值交易
 
 ### 2025.01.14
 
-笔记内容
+Rollup :
+
+1. 提交交易数据到DA
+2. 提交交易状态到L1
 
 ### 2025.01.15
 

@@ -337,4 +337,143 @@ Some projects combine multiple Layer 2 technologies to optimize performance:
 
 The most mature Layer 2 scaling solutions are **Rollups**, particularly **Optimistic Rollups** and **ZK-Rollups**. Other solutions like state channels, Plasma, and sidechains also play a role in specific scenarios. As technology evolves, more hybrid solutions and innovative approaches are expected to emerge.
 
+### 2025.01.13
+
+#### Optimism Collective Summary
+
+#### Mission and Vision
+
+- **Mission**:
+  - To reward public goods and build a sustainable future for Ethereum.
+  - Create an internet that benefits all and is owned by none.
+- **Vision**:
+  - Establish a new economic paradigm where **Impact = Profit**.
+  - Build a decentralized, scalable, and interoperable ecosystem through the **Superchain**.
+
+#### Superchain Product Vision
+
+- **Core Characteristics**:
+  - **Standardization**: Enables decentralization and composability at scale.
+  - **Scalability**: Starts with 15-50 chains, scaling to 1,000+ chains that feel like one.
+  - **Governance**: Protects security and creates a flywheel for sustainable growth.
+- **Goal**: To create a network of interconnected chains (Superchain) that share security and interoperability.
+
+#### Economic Model: Impact = Profit
+
+- **Principle**:
+  - Contributions to the ecosystem (impact) are directly rewarded (profit).
+- **Future Vision**:
+  - **Ether’s Phoenix**: A reborn and thriving Ethereum ecosystem driven by this new economic model.
+
+#### Governance Model
+
+- **Approach**:
+  - Experimental and agile, with continuous iteration to build a lasting system.
+- **Structure**:
+  - **Bicameral System**:
+    - **Token House**: Represents token-based governance.
+    - **Citizens' House**: Represents broader community governance.
+  - Designed to ensure checks and balances, avoid pitfalls of token-based governance, and make better decisions.
+- **Evolution**:
+  - The governance model is an initial experiment and will evolve as the Collective grows.
+
+#### Key Values
+
+- **Collaboration**: Companies, communities, and citizens working together.
+- **Decentralization**: Through standardized and scalable chains.
+- **Innovation**: Experimental governance and economic models.
+- **Sustainability**: Focus on long-term growth and ecosystem health.
+
+#### Future Outlook
+
+- Optimism Collective aims to create a decentralized, sustainable, and inclusive ecosystem through the Superchain and its unique governance and economic models.
+
+### 2025.01.14
+
+#### Summary of Optimism Collective Governance Process
+
+This document outlines the governance proposal process for the Optimism Collective, which is governed by two houses: the **Token House** and the **Citizens’ House**. The process is designed to evolve over time, with the authoritative version maintained on the [ethereum-optimism GitHub](https://github.com/ethereum-optimism/Operating-manual).
+
+#### **Token House and Citizens’ House**
+
+- **Token House**: Composed of OP token holders, responsible for submitting, deliberating, and voting on governance proposals. OP holders can vote directly or delegate their voting power to a third party.
+- **Citizens’ House**: Composed of Optimism Citizens, responsible for allocating rewards to public goods builders through **Retroactive Public Goods Funding (Retro Funding)**. Citizens also vote on vetoes for upgrade proposals.
+
+#### **Governance Toolkit**
+
+The primary tools for governance include:
+
+- **Token House Governance Contract**: On-chain voting for Token House proposals.
+- **Optimism Governance Portal**: Front-end interface for delegating and voting.
+- **Citizens’ House Snapshot Space**: Interface for Citizens’ House vetoes.
+- **Optimism Forum**: Platform for proposal discussion and deliberation.
+- **Discord**: Informal governance discussions.
+- **Github**: Management of grant applications (Mission Requests).
+- **Charmverse**: Home of the community-led Optimism Grants Council.
+
+#### **Proposal Process**
+
+Governance proposals follow a three-week cycle, with each week running from Thursday 19:00 GMT to Wednesday 19:00 GMT.
+
+#### **Weeks 1-2: Feedback and Review (Draft Phase)**
+
+- Non-grant proposals are posted on the Forum for community feedback.
+- Proposals must be marked with `[Draft]` and follow the [standard proposal template](https://gov.optimism.io/t/standard-proposal-template-optimism-token-house/5443).
+- By the end of Week 2, a governance administrator creates a Voting Cycle Roundup thread to collect proposals ready for voting.
+
+#### **Week 3: Voting**
+
+- Token House and Citizens’ House members vote on proposals.
+- Proposals must meet minimum voting thresholds (quorum and approval threshold) to pass.
+
+#### **Veto Procedure**
+
+The Citizens’ House has veto rights over Token House-approved protocol or governor upgrades. Vetoes require specific voting thresholds.
+
+#### **Proposal Types**
+
+Governance proposals fall into the following categories:
+
+1. **Governance Fund (Mission Requests)**: Supports ecosystem growth.
+2. **Protocol or Governor Upgrade**: Changes to Optimism’s smart contracts.
+3. **Inflation Adjustment**: Adjusts the inflation rate of newly minted OP.
+4. **Director Removal**: Removes a director of the Optimism Foundation.
+5. **Treasury Appropriations**: Determines annual OP spending by the Foundation.
+6. **Rights Protections**: Ensures OP holders’ rights are not reduced.
+7. **Code of Conduct Violations**: Addresses violations of the Code of Conduct.
+8. **Representative Removal**: Removes representatives failing their duties.
+9. **Persistent Structure Dissolution**: Dissolves structures no longer fulfilling their charters.
+10. **Ratification**: Ratifies governance documents.
+11. **Reflection Period Proposals (Metagovernance)**: Experiments with new governance structures.
+
+#### **Retro Funding**
+
+The Citizens’ House manages **Retroactive Public Goods Funding (Retro Funding)**, which rewards projects that have provided substantial impact. The process includes:
+
+1. **Scoping**: Define the reward amount and impact scope.
+2. **Application Creation**: Projects submit applications.
+3. **Application Review**: Applications are reviewed for compliance.
+4. **Voting**: Citizens vote on funding allocation.
+5. **Disbursement**: Rewards are distributed based on voting results.
+6. **Compliance**: The Foundation collects KYC information for legal compliance.
+
+#### **Implementation and Administration**
+
+The Optimism Foundation facilitates the administration and implementation of governance proposals. It ensures proposals are safe, secure, and legally compliant. The Foundation aims to decentralize its role over time.
+
+#### **Change Process**
+
+Updates to this Operating Manual are published on GitHub. Major changes are made in connection with governance experiments ("Seasons").
+
+#### **Process TLDR**
+
+- Proposals undergo a three-week review and voting cycle.
+- Grant applications follow the process outlined in GitHub.
+- Non-grant proposals are drafted on the Forum, reviewed, and approved by delegates or Citizens before moving to voting.
+- Protocol or governor upgrades must pass the Citizens’ House veto procedure.
+- Approved proposals are implemented by the Optimism Foundation, including grant distribution.
+- Failed proposals can be resubmitted in the next cycle with significant changes.
+
+The Citizens’ House also manages Retro Funding, which includes application, review, voting, and disbursement phases. The Foundation ensures compliance, including KYC.
+
 <!-- Content_END -->

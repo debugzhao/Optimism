@@ -273,6 +273,99 @@ zk整体架构: 见assets/https://www.aicoin.com/zh-Hant/article/279743
 
 ### 2025.01.13
 
+OP治理理念
+
+1. Token House: 对提案进行提交 审议 投票等。可以把投票权委托给别人
+
+2. Citizens' House:公民之家是一个基于声誉的一人一票治理的大规模实验，负责追溯性公共物品资助（Retro Funding）。
+
+什么是Retro Funding?https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c
+
+> 就是给开源项目提供的一种以token的价值增长为基础的获利途径。就是不需要上市也可以进入市场融资了。
+
+
+
+![High Level Collective Houses](https://community.optimism.io/_next/static/media/high-level-gov-houses.b50196f4.svg)
+
+> Funding by setting a price floor (as opposed to a one-time settlement) allows the oracle to reward the same project multiple times. It also allows a project token to get rewards both from the results oracle and from other sources (eg. other grant mechanisms, NFT-like collectible value, the project’s own economic model if it later gets one). Making multiple rewards can be done by withdrawing the funds from the pre-existing order, and making a new order setting a higher price floor using the combined funds.
+> 通过设定价格下限（而不是一次性结算）来提供资金，使得预言机能够多次奖励同一个项目。这也允许项目代币从结果预言机和其他来源（例如，其他资助机制、类似 NFT 的收藏价值、项目自身的经济模型，如果以后有的话）获得奖励。可以通过从预先存在的订单中提取资金，并使用合并后的资金设定更高的价格下限来创建新订单，从而实现多次奖励。
+>
+> ![img](./.William-02-02.assets/0-1BXeSvoajrHNAD_.png)
+
+为什么说A DAO, which we can call “the Results Oracle”, funds public good projects.
+
+> Oracle就是给web3网络提供现实世界信息的。
+>
+> Dao衡量开源项目是否到达里程碑的标准。
+>
+> 长期来看，结果预言机可以通过协议费用（就是项目的交易手续费/合约执行费用之类的）获得资金。
+>
+> #### **DAO 作为结果预言机**
+>
+> 当一个DAO充当结果预言机时，它承担了以下几个角色：
+>
+> - **数据收集**：DAO成员或社区通过各种方式收集项目或事件的结果数据。这些数据可以是项目完成的进度、用户满意度调查结果、技术指标等。
+> - **数据验证**：DAO成员对收集到的数据进行验证，确保数据的真实性和准确性。这通常通过社区投票、专家评审或自动化验证机制来完成。
+> - **结果反馈**：将验证后的结果数据传输到智能合约中，智能合约根据这些结果执行相应的操作。例如，如果一个开源项目达到了预定的开发里程碑，DAO作为结果预言机可以确认这一点，并触发智能合约向项目团队支付奖励。
+
+pre-existing order是什么？--就是开源项目到达什么什么程度我就给你reward。 但是这个标准怎么定的？
+
+the Results Oracle funds projects *retroactively* 
+
+结果预言机追溯资助项目!!!
+
+懂了，这个翻译真的难以理解。就是货到付款，事后补偿嘛。
+
+
+
+### 2025.01.14
+
+这个price floor是如何规定的？合约吗？能不受人为干扰吗？
+
+> 在DAO中，**Price Floor（价格底线）**通常是指在奖励或资金分配中设定的最低资金要求。这个价格底线可以通过以下几种方式进行规定：
+>
+> - **预设的资金门槛**：DAO会根据项目的需求、目标和规模设定一个资金门槛。例如，某个阶段的奖励或资金支持不会低于一定金额，这个金额会作为项目是否获得资金支持的底线。
+> - **基于贡献的奖励机制**：Price floor也可以和贡献挂钩，比如项目的某一阶段必须达到一定的贡献量（例如提交的代码量、社区成员的参与度等），才能触发追加奖励。
+> - **市场价值或市价基准**：如果DAO的奖励与某种加密货币（如ETH、DAI）挂钩，Price floor可能基于该货币的市场价值来设定，保证奖励的最低价值。
+> - **算法调整**：DAO可以通过智能合约设置动态的Price floor，根据资金池的变化、市场需求以及项目进展调整奖励的最低标准。
+
+如何衡量项目里程碑
+
+> **项目阶段进展**：根据项目的里程碑，项目从初期阶段到稳定阶段的进展情况来评定奖励。例如，完成某个关键功能或发布稳定版本，都会作为奖励追加的参考标准。
+>
+> **社区贡献度**：在DAO治理中，社区成员的贡献（例如代码贡献、文档撰写、bug修复等）往往会影响奖励的决定。贡献者的贡献可以通过投票、智能合约的执行情况或评分系统来衡量。
+>
+> **资金需求**：开源项目在不同阶段可能需要不同的资金支持。DAO会根据项目的资金需求、资金使用情况以及项目的实际需要进行奖励追加。
+>
+> **长期影响**：如果一个开源项目对公共利益的贡献很大，尤其是其在生态系统中产生了积极的影响，DAO可能会基于这个项目的长期潜力来增加奖励。
+>
+> **社区治理和透明度**：DAO通常依赖去中心化的决策机制，这意味着奖励的分配会经过社区投票或协议的自动执行。透明的治理结构和公平的奖励分配机制会对奖励的追加产生重要影响。
+
+![Retro Funding Flywheel](./.William-02-02.assets/imageurl=%252F_next%252Fstatic%252Fmedia%252Fhow-retro-funding-works.9368ab75.png)
+
+dao如何从中获得收益？
+
+> DAO通过参与开源项目的资金追溯和奖励追加，可以获得以下几种收益：
+>
+> - **长期投资回报**：开源项目在成功后，DAO不仅能获得资金的回报，还可能会因项目的成功获得某些利益（例如项目的代币、股份等）。
+> - **社区声誉与影响力**：通过资助并参与项目的成长，DAO能够提升自身的声誉，并对开源项目产生积极的影响，从而增强其在生态系统中的话语权和影响力。
+> - **治理权与决策权**：DAO的成员可以通过参与开源项目的资金分配和奖励机制，获得更高的治理权和决策权，对项目的发展方向产生影响。
+> - **生态建设**：DAO的资金投入和奖励机制推动了项目的发展，增强了DAO在生态系统中的作用，吸引更多的开发者、贡献者和用户参与，从而推动DAO生态的发展。
+
+![image-20250113222030006](./.William-02-02.assets/image-20250113222030006.png)
+
+
+
+### 2025.01.15
+
+投票机制：https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
+
+
+
+
+
+### 2025.01.16
+
 
 
 <!-- Content_END -->

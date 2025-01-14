@@ -154,5 +154,12 @@ This is the final stage where the rollup becomes fully managed by smart contract
 - 基于声誉的，由链上投票选出
 - 负责RetroPGF
 
+### 2025.01.03
+**治理平台**
+- governance forum
+- charmverse
+- agora
+- snapshot
+
 
 <!-- Content_END -->
