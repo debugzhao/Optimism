@@ -501,6 +501,83 @@ L2 到 L1
 处理可能的失败场景
 遵循版本兼容性
 
+### 2025.01.13
+
+OP Stack 存款（Deposits）
+存款交易定义 (Deposit Transaction Definition)
+
+基本特征 (Basic Characteristics)
+从 L1 发起，在 L2 执行的特殊交易类型
+使用唯一的交易类型前缀 0x7E
+不需要签名验证
+
+关键字段 (Key Fields)
+sourceHash：唯一标识存款来源
+from：发送账户地址
+to：接收账户地址
+mint：L2 铸造的 ETH 数量
+value：发送的 ETH 数量
+gas：L2 交易 Gas 限制
+isSystemTx：是否为系统交易
+
+存款交易类型 (Deposit Transaction Types)
+
+两种主要类型 (Two Main Types)
+
+L1 属性存款交易 (L1 Attributes Deposited Transaction)
+固定地址：0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001
+目标地址：0x4200000000000000000000000000000000000015
+存储 L1 区块关键属性
+
+用户存款交易 (User-Deposited Transactions)
+由用户在 L1 发起
+通过 OptimismPortal 合约处理
+
+存款处理流程 (Deposit Processing Workflow)
+
+执行步骤 (Execution Steps)
+增加 from 账户余额（mint 金额）
+初始化执行环境
+特殊 Gas 处理
+不验证 Gas 费字段
+不退还 Gas
+不收取优先费
+错误处理 (Error Handling)
+将非 EVM 状态转换错误转换为 EVM 错误
+回滚世界状态
+增加 from 账户 Nonce
+
+地址别名机制 (Address Aliasing)
+
+安全转换规则 (Security Transformation Rules)
+合约地址通过添加 0x1111000000000000000000000000000000001111 进行转换
+防止 L1 和 L2 合约地址攻击
+确保用户可与 L2 合约交互
+
+不同升级版本变化 (Upgrade Version Changes)
+
+Regolith 升级 (Regolith Upgrade)
+isSystemTx 强制为 false
+调整 Gas 限制
+引入 depositNonce 字段
+
+Canyon 升级 (Canyon Upgrade)
+强制包含 depositNonce 和 depositNonceVersion 字段
+
+安全性机制 (Security Mechanisms)
+
+验证方法 (Validation Methods)
+通过 L2 链衍生过程验证
+仅接受 L1 存款合约日志中的地址
+不依赖传统签名验证
+
+关键合约 (Key Contracts)
+OptimismPortal
+L1 存款合约
+管理存款 Gas 市场
+处理地址别名
+确保存款 Gas 限制
+
 ### 2025.07.12
 
 <!-- Content_END -->

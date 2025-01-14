@@ -300,4 +300,20 @@ Geth是一个用Go语言编写的以太坊客户端，可以用来连接或创�
 
 next day 2025.01.13 will learn about Core L1 Smart Contracts
 
+### 2025.01.13
+
+today bring up some new word for Core L1 Smart Contracts
+
+batchers, SuperchainConfig, Batch Inbox Address, L1CrossDomainMessenger, DisputeGameFactory, FaultDisputeGame
+
+note that batchers and guradian are two different roles, batchers are the ones who submit batches to the L1, while guardians are the ones who verify the batches and submit the results to the L1.
+
+Batchers 是负责将多个交易打包成一个批次（batch），然后将这些批次提交到Layer 1（以太坊主链）的角色。这个过程有助于减少直接在主链上执行的交易数量，从而节省费用并提高效率。
+Guardians 被描述为负责验证这些批次的有效性，并将验证结果提交回Layer 1的角色。这种机制确保了提交到主链上的批次是有效的，防止欺诈行为。
+
+通过图片和流程，展示了deposit和withdrawal的流程，关键节点还是在OptimismPortal作为user和L1的交互点
+
+next day 2025.01.14 will step into the Optimism Collective https://community.optimism.io/welcome/welcome-overview
+
+
 <!-- Content_END -->
