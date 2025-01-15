@@ -341,7 +341,7 @@ Charmverse：社区主导的乐观资助委员会所在地。
 
 逛了一下OP主体治理论坛：
 
-看到了OP中文力量社区
+看到了OP中文力量社区：
 
 <img width="753" alt="截屏2025-01-15 15 23 20" src="https://github.com/user-attachments/assets/608687ed-8119-4f1c-8963-0449a2221352" />
 
@@ -356,6 +356,7 @@ Charmverse：社区主导的乐观资助委员会所在地。
 
 
 3.安全理事会：安全理事会的目标是将 OP 主网的管理密钥，以及最终将超级链中的所有 OP 链，移交给对 Optimism 治理负责的一组公共的、分散的个人参与者。
+
 安全理事会自我提名：L2BEAT
 
 <img width="826" alt="截屏2025-01-15 15 47 15" src="https://github.com/user-attachments/assets/7e5064ad-4f9c-4414-95aa-391148e4c8b1" />
