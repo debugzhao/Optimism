@@ -654,6 +654,89 @@ OptimismPortal 合约
     不提供重放机制
     可通过外部实用合约实现额外逻辑
 
+### 2025.01.15
+
+1. 核心概念 (Core Concepts)
+   
+1.1 定义 (Definition)
+保证 Gas 是指在 L1 发起的存款交易（Deposited Transactions）在 L2 上使用的特殊 Gas 机制。
+
+1.2 关键特征 (Key Characteristics)
+不可退还的 Gas
+在 L1 购买
+独特的定价模型
+防止网络滥用的 Sybil 抵抗机制
+
+2. Gas 购买机制 (Gas Purchasing Mechanism)
+   
+2.1 购买流程 (Purchasing Process)
+    计算 L2 Gas 价格（使用 EIP-1559 风格算法）
+    计算总 ETH 成本：guaranteed gas * L2 deposit base fee
+    两种支付方式：
+        燃烧 L1 Gas
+        直接支付 ETH（未来支持）
+        
+2.2 Gas 定价算法 (Gas Pricing Algorithm)
+python
+    def calculate_base_fee(prev_base_fee, prev_bought_gas):  
+        # 计算与目标资源使用量的偏差  
+        gas_used_delta = int128(prev_bought_gas) - int128(TARGET_RESOURCE_LIMIT)  
+    
+        # 根据偏差调整基础费用  
+        base_fee_delta = prev_base_fee * gas_used_delta / TARGET_RESOURCE_LIMIT /             BASE_FEE_MAX_CHANGE_DENOMINATOR  
+    
+        # 限制基础费用范围  
+        now_base_fee = clamp(  
+            prev_base_fee + base_fee_delta,   
+            min=MINIMUM_BASE_FEE,   
+            max=MAXIMUM_BASE_FEE  
+        )  
+    
+        return now_base_fee  
+        
+3. 资源限制 (Resource Limitations)
+   
+3.1 关键参数 (Key Parameters)
+MAX_RESOURCE_LIMIT：20,000,000
+ELASTICITY_MULTIPLIER：10
+TARGET_RESOURCE_LIMIT：2,000,000
+
+3.2 限制目的 (Limitation Purposes)
+防止 L2 拒绝服务攻击
+确保总 Gas 使用不超过 L2 区块 Gas 限制
+实现 EIP-1559 风格的拥塞控制
+
+4. Sybil 抵抗机制 (Sybil Resistance Mechanism)
+
+4.1 Gas 燃烧策略 (Gas Burning Strategy)
+    随需求动态调整 L1 Gas 燃烧成本
+    随网络使用强度提高准入门槛
+    增加攻击者的经济成本
+
+4.2 防御攻击方法 (Attack Prevention Methods)
+    大资源限制
+    大弹性因子
+    保持目标资源使用率较低
+    允许基础费用快速调整
+
+5. 安全性考虑 (Security Considerations)
+
+5.1 防御前运攻击 (Frontrunning Prevention)
+    攻击者无法轻易购买所有区块的 Gas
+    基础费用动态调整增加攻击成本
+    大资源限制和弹性因子提供缓冲
+5.2 长期防御策略 (Long-term Defense Strategy)
+    持续监控网络攻击模式
+    动态调整参数
+    必要时调整协议设计
+
+6. 未来发展 (Future Development)
+
+6.1 计划支持的特性
+    直接 ETH 支付
+    可能提供 Gas 购买折扣
+    更灵活的 Gas 市场机制
+
 ### 2025.07.12
 
 <!-- Content_END -->
