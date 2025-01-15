@@ -233,10 +233,15 @@ https://lxdao.notion.site/OP-Retro-Funding-fe83c6e1ed9e448bae0916b389154cea?pvs=
 
 ### 2025.01.14
 
+今天把 OP Delegate 的操作流程梳理了一下：
 
+https://lxdao.notion.site/Delegate-c32df61a41eb4ab6839fcacbf3a61d2f?pvs=4
 
 ### 2025.01.15
 
+https://mirror.xyz/optimismcn.eth/xfffo45OHL955PvtKRzBzUhHoKJ0uQAbs_mh-qqkGR4
+
+https://fullydoxxed.com/deep-funding-will-transform-open-source-from-donation-based-to-fully-paid/
 
 
 ### 2025.01.16

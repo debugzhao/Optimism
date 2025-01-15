@@ -75,6 +75,32 @@ Optimism Collective 旨在通过构建一个由标准化链组成的可扩展超
 - 《工作宪法》([Working Constitution](https://gov.optimism.io/t/working-constitution-of-the-optimism-collective/55)): 概述 Collective 的治理条款和原则。
 - 《运作手册》([Operating Manual](https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md)): 描述 Token House 的当前治理流程，会随着 Collective 的发展而演变。
 
+### 2025.01.14
+
+学习主题：投票机制 https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
+
+Optimism Collective 的治理由两院组成：代币持有者议院 (Token House) 和公民议院 (Citizens’ House)。
+
+- 在代币持有者议院中，OP 持有者负责提交、审议和投票各种 Optimism Collective 治理提案。他们可以通过直接投票（在将其 OP 投票权委托给自己地址后）或将其 OP 投票权委托给符合条件的第三方来进行投票。拥有委托 OP 投票权的地址被称为“代表”。
+
+- 在公民议院中，Optimism 公民负责通过名为“追溯性公共产品资助”（Retro Funding）的流程向公共产品建设者分配奖励。参与 Retro Funding 3 并通过 AttestationStation 智能合约中的条目进行标记的徽章持有者现在是公民。公民身份目前是临时的。公民还负责对升级提案的否决进行投票。
+
+所有代币持有者议院和公民议院的代表都应负责任地行使权力，并遵守 [Rules of Engagement](https://gov.optimism.io/t/rules-of-engagement-2-0/5728) and [Optimist Expectations](https://gov.optimism.io/t/optimist-expectations/7241).
+
+
+
+代币持有者议院治理的主要工具目前包括：
+
+- **代币持有者议院治理合约 (Token House Governance Contract):** 代币持有者议院治理提案的链上投票合约。所有符合条件的代币持有者议院治理提案都将在此提交投票。
+- **Optimism 治理门户网站 (Optimism Governance Portal):** 一个前端界面，使代币持有者议院成员能够委托和投票他们的 OP。
+- **公民议院 Snapshot 空间 (The Citizens’ House Snapshot Space):** 一个前端界面，使公民议院成员能够否决代币持有者议院的提案。
+- **Optimism 论坛 (The Optimism Forum):** 一个讨论和审议治理提案的平台。
+- **Discord:** 用于非正式的治理讨论和反馈。
+- **Github:** 拨款（使命请求）通过此公共 github 存储库中的问题进行管理。
+- **Charmverse:** 社区主导的 Optimism 拨款委员会的所在地。
+
+随着治理的演变，这些工具或其用途可能会随着时间而改变。例如，将来可能会开发专门用于治理委员会的其他用户界面。同样，虽然投票目前通过治理合约在链上进行，但成功的投票目前由 Optimism 基金会管理和实施，这种情况不应无限期持续下去。
+
 
 
 <!-- Content_END -->

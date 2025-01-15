@@ -161,5 +161,8 @@ This is the final stage where the rollup becomes fully managed by smart contract
 - agora
 - snapshot
 
+### 2025.01.04
+今天有点忙，登录了Governance Forum看了一下最新的讨论。明天补上笔记。
+
 
 <!-- Content_END -->
