@@ -362,7 +362,7 @@ Charmverse：社区主导的乐观资助委员会所在地。
 <img width="826" alt="截屏2025-01-15 15 47 15" src="https://github.com/user-attachments/assets/7e5064ad-4f9c-4414-95aa-391148e4c8b1" />
 
 
-### 2025.01.15
+### 2025.01.16
 
 <!-- Content_END -->
 
