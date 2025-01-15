@@ -222,7 +222,7 @@ https://docs.google.com/spreadsheets/d/1IpL0oTd3AgNBu_eWdjP9EjbQfZjq-_Nd3yU1H2ke
 5. Decision Diagram Working Model
 https://www.figma.com/board/iXqyKmLJeBeplKpJBHDI7G/PUBLIC%3A-Optimism-Decision-Diagram-Working-Model?node-id=0-1&node-type=canvas&t=QLiz1uM1DepwYyHy-0
 
-#### 2025.01.06
+#### 2025.01.15
 
 - Key Governance Structure
 The Optimism Collective employs a unique two-house governance system:
