@@ -717,4 +717,21 @@ S7 的 grants 主要专注于 TVL 的增长。KPI 目标也是 TVL 增长。
 
 TODO Developer Advisory Board 是什么？
 
+### 2025.01.15
+
+## https://community.optimism.io/citizens-house/how-retro-funding-works
+
+Retro Funding also provides possible exit liquidity for public goods projects, which opens up a market for early investment in those projects. This means builders can:
+
+- Be rewarded for their positive contributions without generating direct revenue
+- Raise capital to bootstrap based on the early potential and promise of their project
+
+这一点其实有点牵强，主要在于：1. 没有启动资金，可能项目无法启动。2. 不能保证拿到 retro 的资金，VC 不一定愿意支持。
+
+Retro Funding has three core components, each with substantial surface area for experimentation.
+
+- Impact scoping: what should the Collective fund? How is it defined and decided on?
+- Impact scoring: how does the Citizens’ House evaluate impact? What units, process, or tools do we use?
+- Impact settlement: how does voting work?
+
 <!-- Content_END -->
