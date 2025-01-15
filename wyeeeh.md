@@ -154,15 +154,23 @@ This is the final stage where the rollup becomes fully managed by smart contract
 - 基于声誉的，由链上投票选出
 - 负责RetroPGF
 
-### 2025.01.03
+### 2025.01.13
 **治理平台**
 - governance forum
 - charmverse
 - agora
 - snapshot
 
-### 2025.01.04
+### 2025.01.14
 今天有点忙，登录了Governance Forum看了一下最新的讨论。明天补上笔记。
 
+### 2025.01.15
+#### OP Token House
+参考文档：https://community.optimism.io/token-house/token-house-overview
+- Token House 与 Citizens' House 一起管理 Optimism Collective，并负责 Superchain 协议的治理。
+- 成员组成：OP Holders
+- 负责对治理基金的分配进行投票，对所有protocol和governor upgrade proposals进行投票，并提出对 OP 代币inflation rate的更改，以及[操作手册](https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md)中概述的各种其他提案类型。
+- OP 代币的投票权委托给明确自愿在 Token House 治理中活跃的社区成员。这些人被称为"delegates"
+- Token House 治理按季节性时间表运行。Season大约每 6 个月一次。每一个Voting Cycle是3周。目前是Season 7.
 
 <!-- Content_END -->
