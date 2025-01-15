@@ -335,6 +335,7 @@ Charmverse：社区主导的乐观资助委员会所在地。
 
 ### 2025.01.15
 
+
 今日第9天学习：
 
 1.委员会：https://gov.optimism.io/search?q=council
