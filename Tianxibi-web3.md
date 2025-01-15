@@ -95,10 +95,11 @@ OP 主网迁移至以太坊：提款过程确保了用户在 OP 主网和以太�
 ZK Rollup：具有链上数据可用性。
 zkPorter：具有链下数据可用性。
 这两部分可组合和互操作，ZK Rollup 端的合约和账户可以与 zkPorter 端的账户无缝交互。
-
+zkPorter 账户的数据可用性由 zkSync 代币持有者（监护人）保护。zkSync 的 PoS 比其他系统更安全，监护人无法窃取资金，只能冻结 zkPorter 状态。
 用户角度：zkPorter 账户的费用减少了 100 倍。例如：zkPorter 账户可以以低于 0.03 美元的费用进行交换。
 
-zkPorter 账户的数据可用性由 zkSync 代币持有者（监护人）保护。zkSync 的 PoS 比其他系统更安全，监护人无法窃取资金，只能冻结 zkPorter 状态。
-
+### 2025.01.14
+用户在 Optimism 上的交易需要支付与计算和存储相关的 gas 费用。
+所有 Optimism 上的交易都需要发布到以太坊，称为 L1 数据费用，Optimism 的交易成本主要由 L2 执行费和 L1 数据费组成，这是 Optimism 与以太坊之间的主要差异，以太坊的 gas 成本较高，L1 数据费用通常占交易总成本的主要部分。
 
 <!-- Content_END -->

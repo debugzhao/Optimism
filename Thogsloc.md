@@ -578,6 +578,82 @@ L1 存款合约
 处理地址别名
 确保存款 Gas 限制
 
+### 2025.01.14
+
+提款概念定义 (Withdrawal Concept)
+
+1. 基本定义 (Basic Definition)
+提款是一种跨域事务，由 L2 发起，并在 L1 上最终确认的特殊交易类型。
+
+关键术语 (Key Terminology)
+提款发起交易：L2 上发送到 Withdrawals 预部署合约的交易
+提款证明交易：在 L1 上证明提款正确性的交易
+提款最终确认交易：在 L1 上完成和中继提款的交易
+
+2. 提款流程详解 (Withdrawal Flow)
+
+L2 阶段 (On L2)
+
+L2 账户向 L2ToL1MessagePasser 预部署合约发送提款消息
+合约存储提款数据的哈希值
+使用 initiateWithdrawal 函数触发提款
+
+L1 阶段 (On L1)
+
+中继者提交提款证明交易
+    包含提款交易数据
+    提供包含证明
+    指定区块号
+OptimismPortal 合约验证流程
+    从 L2OutputOracle 检索输出根
+    验证提款证明
+    记录哈希以防重复证明
+挑战期（7 天）
+    允许网络参与者挑战输出根的完整性
+最终确认
+    中继者提交最终确认交易
+    验证提款已被证明且通过挑战期
+
+3. 关键合约 (Key Contracts)
+   
+L2ToL1MessagePasser 合约
+地址：0x4200000000000000000000000000000000000016
+关键方法：
+    initiateWithdrawal：发起提款
+    messageNonce：获取消息随机数
+    
+OptimismPortal 合约
+提供提款入口和出口
+关键方法：
+    proveWithdrawalTransaction：证明提款
+    finalizeWithdrawalTransaction：最终确认提款
+    l2Sender()：获取 L2 发送者地址
+    
+4. 地址处理 (Address Handling)
+与存款的关键区别
+    存款：地址别名处理
+    提款：地址不进行别名处理
+    L1 上通过 l2Sender() 明确来源域
+   
+5. 安全考虑 (Security Considerations)
+关键安全属性
+    防止双重支出
+    每个提款仅能：
+        证明一次
+        最终确认一次
+    防止消息字段被篡改
+   
+潜在风险
+    OptimismPortal 可发送任意 L1 消息
+    用户需谨慎授予权限
+    错误发送的代币可能无法找回
+    
+6. 错误处理 (Error Handling)
+中继失败场景
+    无法确定执行失败是否"应该"失败
+    不提供重放机制
+    可通过外部实用合约实现额外逻辑
+
 ### 2025.07.12
 
 <!-- Content_END -->

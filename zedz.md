@@ -392,9 +392,41 @@ AI：OP Sequencer 的运行情况：
 
 ### 2025.01.12
 
+**Optimism Collective 概述**  
+Optimism Collective 是一个由公司、社区和个人组成的合作组织，致力于奖励公共事业，并为以太坊构建一个可持续的未来。其核心目标是创建一个公平且不被任何人拥有的互联网，通过“Impact=Profit”（影响力等于利润）的理念，推动创造有意义的影响并获得奖励。
+
+**Superchain 产品愿景**  
+Superchain 是 Optimism Collective 正在共同构建的网络，它的特点包括：  
+- 链的标准化，确保去中心化和可组合性。  
+- 起初由15到50条链组成，未来可扩展到1000多条链。  
+- 政府结构保护 Superchain 的安全性，并促进可持续发展。
+
+**Governance（治理）概述**  
+Optimism Collective 在治理上采取实验性和灵活的方式，逐步完善治理系统。治理模型由两个主要部分组成：**Token House** 和 **Citizens' House**。
+
+1. **Token House**（代币治理）  
+   OP 代币持有者组成 Token House，负责提交、讨论和投票治理提案。代币持有者可以直接投票，或将投票权委托给别人。
+
+2. **Citizens' House**（公民治理）  
+   Citizens' House 是一种基于声誉的治理系统，每个成员拥有一票。这部分的主要任务是进行 **Retroactive Public Goods Funding（Retro Funding）**，即根据过去对社区的贡献奖励积极影响者。
+
+**如何协同工作？**  
+- **Token House** 和 **Citizens' House** 相互配合，共同推动 Optimism Collective 实现其愿景。  
+- 代币持有者通过 Token House 提出和审议提案，而 Citizens' House 则通过奖励过去贡献的方式促进社区发展。
+
+**治理文件和模型**  
+- **Collective's Working Constitution**：集体工作宪法，定义了集体的治理原则，2022年4月通过。  
+- **Operating Manual**：运营手册，描述了代币治理的流程，并会随着集体发展而变化。  
+- **Decentralization Models**：去中心化模型，展示了 Optimism 从中心化到去中心化的阶段性目标及其依赖关系。
+
+**总结**  
+Optimism Collective 是一个致力于去中心化和奖励公共事业的组织，采用双院制治理模型（Token House 和 Citizens' House），通过代币持有者和公民治理相结合，推动社区可持续发展，并奖励那些对社区产生积极影响的人。
+
 ### 2025.01.13
+今天是试探玩BTC FUTURE CONTRACT的一天，还没摸清楚，有点容易上瘾，太费时了。
 
 ### 2025.01.14
+今天是试探玩BTC FUTURE CONTRACT的一天，好像摸清楚了，有一点点信心，虽然没赚啥钱。太费时了。或许还不太会玩这个游戏。
 
 ### 2025.01.15
 
