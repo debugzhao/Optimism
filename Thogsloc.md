@@ -725,6 +725,7 @@ TARGET_RESOURCE_LIMIT：2,000,000
     攻击者无法轻易购买所有区块的 Gas
     基础费用动态调整增加攻击成本
     大资源限制和弹性因子提供缓冲
+
 5.2 长期防御策略 (Long-term Defense Strategy)
     持续监控网络攻击模式
     动态调整参数
