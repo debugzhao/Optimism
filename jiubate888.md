@@ -348,7 +348,7 @@ Charmverse：社区主导的乐观资助委员会所在地。
  <img width="782" alt="截屏2025-01-15 15 23 41" src="https://github.com/user-attachments/assets/57415afc-b5bf-423d-95e2-f10a19a5c006" />
 
 
-2. Soneium 愿景
+2. Soneium 愿景：
  <img width="784" alt="截屏2025-01-15 15 29 14" src="https://github.com/user-attachments/assets/334c51bd-860f-4ff8-9adb-7eb3037d2b63" />
 
  里面有句话，乐观地扩展以太坊：与超级链的使命一致，Soneium 为以太坊的可扩展性、互操作性和可访问性做出了贡献，继承了以太坊的正当性。
@@ -356,7 +356,7 @@ Charmverse：社区主导的乐观资助委员会所在地。
 
 
 3.安全理事会：安全理事会的目标是将 OP 主网的管理密钥，以及最终将超级链中的所有 OP 链，移交给对 Optimism 治理负责的一组公共的、分散的个人参与者。
-
+安全理事会自我提名：L2BEAT
 
 <img width="826" alt="截屏2025-01-15 15 47 15" src="https://github.com/user-attachments/assets/7e5064ad-4f9c-4414-95aa-391148e4c8b1" />
 
