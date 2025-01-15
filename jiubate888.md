@@ -1,53 +1,3 @@
----
-timezone: Asia/Shanghai
----
-
-> 请在上边的 timezone 添加你的当地时区，这会有助于你的打卡状态的自动化更新，如果没有添加，默认为北京时间 UTC+8 时区
-> 时区请参考以下列表，请移除 # 以后的内容
-
-timezone: Pacific/Honolulu # 夏威夷-阿留申标准时间 (UTC-10)
-
-timezone: America/Anchorage # 阿拉斯加标准时间 (UTC-9)
-
-timezone: America/Los_Angeles # 太平洋标准时间 (UTC-8)
-
-timezone: America/Denver # 山地标准时间 (UTC-7)
-
-timezone: America/Chicago # 中部标准时间 (UTC-6)
-
-timezone: America/New_York # 东部标准时间 (UTC-5)
-
-timezone: America/Halifax # 大西洋标准时间 (UTC-4)
-
-timezone: America/St_Johns # 纽芬兰标准时间 (UTC-3:30)
-
-timezone: America/Sao_Paulo # 巴西利亚时间 (UTC-3)
-
-timezone: Atlantic/Azores # 亚速尔群岛时间 (UTC-1)
-
-timezone: Europe/London # 格林威治标准时间 (UTC+0)
-
-timezone: Europe/Berlin # 中欧标准时间 (UTC+1)
-
-timezone: Europe/Helsinki # 东欧标准时间 (UTC+2)
-
-timezone: Europe/Moscow # 莫斯科标准时间 (UTC+3)
-
-timezone: Asia/Dubai # 海湾标准时间 (UTC+4)
-
-timezone: Asia/Kolkata # 印度标准时间 (UTC+5:30)
-
-timezone: Asia/Dhaka # 孟加拉国标准时间 (UTC+6)
-
-timezone: Asia/Bangkok # 中南半岛时间 (UTC+7)
-
-timezone: Asia/Shanghai # 中国标准时间 (UTC+8)
-
-timezone: Asia/Tokyo # 日本标准时间 (UTC+9)
-
-timezone: Australia/Sydney # 澳大利亚东部标准时间 (UTC+10)
-
-timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
@@ -291,6 +241,83 @@ b.公民之家：公民之家是一项基于声誉的一人一票治理的大规
 
 5.追求利润之上的追求，在以太坊.OP这看到了。
  
-### 2025.01.13
+### 2025.01.14
+
+今日学习第8天：
+
+投票机制：https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
+
+1.乐观主义集体由两个院系管理，即象征院和公民院。两院均通过治理提案做出决定。提案通过投票程序接受或拒绝。任何人都可以向治理提交提案。提案必须是下列有效提案类型之一，并且必须遵循此处描述的投票程序。
+
+2.Token House 治理的主要工具目前是：
+
+Token House 治理合约： Token House 治理提案的链上投票合约。所有符合条件的 Token House 治理提案均在此提交投票。
+Optimism 治理门户：一个前端界面，使 Token House 成员能够在链上委托和投票他们的 OP。
+公民院快照空间：一个前端界面，使公民院成员能够否决象征性议院提案。
+乐观论坛：讨论和审议治理建议的平台。
+Discord：用于非正式治理讨论和反馈。
+Github：资助（任务请求）通过这个公共 Github 仓库中的问题进行管理。
+Charmverse：社区主导的乐观资助委员会所在地。
+
+3.提案流程——投票流程——任务补助金——反馈和审查——投票——否决程序。
+
+4.有效提案类型
+所有 v0.3 治理提案必须属于以下类别之一：
+
+治理基金
+协议或州长升级
+通货膨胀调整
+董事罢免
+财政拨款
+违反行为准则
+代表罢免
+代表性结构溶解
+权利保护
+选举
+批准
+反思期（元治理）
+
+5.公民院治理包括追溯公共物品资助（追溯资助），其涉及一系列“轮次”的投票和支出。在每一轮追溯中，公民院都会投票追溯奖励那些产生重大影响的公共物品项目。
+
+6.在学习这一环节，对治理缺乏感觉，有种生疏感。
+
+
+### 2025.01.15
+
+- 今日第9天学习：
+
+1.委员会：https://gov.optimism.io/search?q=council
+
+逛了一下OP主体治理论坛：
+
+看到了OP中文力量社区：
+
+<img width="753" alt="截屏2025-01-15 15 23 20" src="https://github.com/user-attachments/assets/608687ed-8119-4f1c-8963-0449a2221352" />
+
+ <img width="782" alt="截屏2025-01-15 15 23 41" src="https://github.com/user-attachments/assets/57415afc-b5bf-423d-95e2-f10a19a5c006" />
+
+
+2. Soneium 愿景：
+ <img width="784" alt="截屏2025-01-15 15 29 14" src="https://github.com/user-attachments/assets/334c51bd-860f-4ff8-9adb-7eb3037d2b63" />
+
+ 里面有句话，乐观地扩展以太坊：与超级链的使命一致，Soneium 为以太坊的可扩展性、互操作性和可访问性做出了贡献，继承了以太坊的正当性。
+
+
+
+3.安全理事会：安全理事会的目标是将 OP 主网的管理密钥，以及最终将超级链中的所有 OP 链，移交给对 Optimism 治理负责的一组公共的、分散的个人参与者。
+
+
+
+<img width="826" alt="截屏2025-01-15 15 47 15" src="https://github.com/user-attachments/assets/7e5064ad-4f9c-4414-95aa-391148e4c8b1" />
+
+- 安全理事会自我提名：L2BEAT
+
+### 2025.01.16
+
+### 2025.01.17
+
+
 
 <!-- Content_END -->
+
+

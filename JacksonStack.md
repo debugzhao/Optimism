@@ -234,4 +234,28 @@ Token House 和 Citizens' House 共同努力，通过分工与协作推进 Colle
 3. **去中心化里程碑模型**：指导 Collective 的去中心化进程与阶段性目标。  
 4. **决策模型图**：展示治理决策的全貌及其相互关系，为实现自治提供框架参考。  
 
+### 2025.01.14
+在 Token House 中，OP 持有者负责提交、审议和投票各类 Optimism Collective 治理提案。他们可以通过直接投票给他们的 OP（在将他们的 OP 投票权委托给他们自己的地址之后），或者通过将他们的 OP 投票权委托给符合条件的第三方来实现。具有委托 OP 投票权的地址称为“代表”(“delegates”)。   
+在Citizens’ House, Optimism Citizens 负责通过一个名为“追溯性公共物品资助”（Retro Funding）的流程向公共物品建设者分配奖励。参与 Retro Funding 3 的徽章持有者（通过 AttestationStation 智能合约中的条目划分）现在是公民。目前，公民身份是暂时的。公民还负责投票否决升级提案。   
+所有 Token 和 Citizens' House 代表都应根据the Rules of Engagement和 Optimist Expectations负责任地行使其权力。  
+Proposal Process  提案流程  
+两院通过治理提案做出决策。通过投票程序接受或拒绝提案。任何人都可以向治理提交提案。该提案必须是下面列出的有效提案类型之一，并且必须遵循此处描述的投票流程。  
+Valid Proposal Types 有效提案类型
+所有 v0.3 治理提案必须属于以下类别之一：  
+Governance Fund  
+Protocol or Governor Upgrade  
+Inflation Adjustment  
+Director Removal  
+Treasury Appropriations  
+Code of Conduct Violations  
+Representative Removal 
+Representative Structure Dissolution  
+Rights Protections  
+Elections  
+Ratification 
+Reflection Period (Metagovernance)  
+
+Mission Grants  使命补助金  
+Applications to Token House Mission Requests将由拨款委员会审查和选择。基金会任务请求的申请将由基金会审查和选择。所有应用程序都应遵循(github)[https://github.com/ethereum-optimism/ecosystem-contributions/issues?q=is%3Aissue]中每个任务请求中概述的提交流程。  
+
 <!-- Content_END -->
