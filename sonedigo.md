@@ -319,4 +319,17 @@ next day 2025.01.14 will step into the Optimism Collective https://community.opt
 Optimism targeting to be a superchain which including public support resource, benefit for all but not the owner. And it is focusing on long term eco-system
 
 OP 生态不仅有token house和citizen house分别决议不同的内容，这一治理具有多个成功案例可以参考，但是侧重点要放在去中心化上
+
+### 2025.01.15
+
+OP的投票机制
+OP的管理工具主要有token house governance contract，用于提案的提交与投票
+
+OP Governance Portal作为投票的前端界面
+
+以及相关的snapshot space，discord， github分属不同的社群
+
+对于提案的提交与投票都有详细的流程和时间处理周期，像是一个去中心化的社团组织，遵循各类民主程序，主要围绕着如何审批，修改，投票通过相关的proposal解决问题
+
+
 <!-- Content_END -->
