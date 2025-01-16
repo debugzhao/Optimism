@@ -159,7 +159,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | iossocket | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | |
 | cherry-yl-sh | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | Dfbb7879 | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | |
-| DasNarrenschiff | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | |
+| DasNarrenschiff | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | |
 | ChinesePaladin61 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | |
 | sonedigo | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | |
 | wyeeeh | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | |
 | 183Aaros | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ⭕️ | ⭕️ | ✅ | ✅ | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
