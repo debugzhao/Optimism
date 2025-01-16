@@ -445,6 +445,54 @@ Stages 框架的三个阶段
 
 ### 2025.01.16
 
+**Optimism Collective 的双院治理结构**
+
+### 治理机构
+
+1. Token House:
+* 由持有 OP 代币的用户组成，负责基于代币持有量进行投票的治理结构。
+* 关注资金分配和协议调整，具有更强的经济导向性。
+
+2. Citizens’ House:
+* 由被选定为公民的成员组成，强调身份认证而非代币持有。
+* 关注公共物品资助和社区权益保护，具有社会导向性。
+
+3. Both Houses (两个院共同参与):
+* 某些职责需要两个院协作完成。
+
+### 职责分工
+	
+1. Resource Allocation（资源分配）
+	
+**Token House：**
+* Treasury: Gov Fund：负责管理治理资金库。
+* Foundation Budget Approvals：批准 Optimism 基金会的预算。
+* Protocol Revenue Allocation：决定协议收入的分配。
+* Inflation Adjustments：调整代币的通胀政策。
+
+**Citizens’ House：**
+* Treasury: RetroPGF Fund：管理 RetroPGF（Retroactive Public Goods Funding）的资金池。
+* RetroPGF Funding：对公共物品的资助进行决策。
+
+**Both Houses：**
+* Director Removal：共同决定是否罢免治理结构中的董事。
+* Treasury: Unallocated Fund：共同管理未分配资金。
+
+2. Capture Resistance（抗捕获性）
+
+**Token House：**
+* Rights Protections：保护代币持有者的权利。
+* Protocol Upgrades：对协议升级的提案进行投票。
+* Sequencer Selection：选择 Sequencer（排序器）的管理者。
+
+**Citizens’ House：**
+* Citizenship Eligibility：决定谁有资格成为公民。
+
+**Both Houses：**
+* Code of Conduct Enforcement：共同执行行为准则，确保治理过程的公平性。
+
+
+
 ### 2025.01.17
 
 ### 2025.01.18
