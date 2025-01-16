@@ -243,7 +243,7 @@ b.公民之家：公民之家是一项基于声誉的一人一票治理的大规
  
 ### 2025.01.14
 
-今日学习第8天：
+今日学习第9天：
 
 投票机制：https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
 
@@ -284,7 +284,7 @@ Charmverse：社区主导的乐观资助委员会所在地。
 
 ### 2025.01.15
 
-- 今日第9天学习：
+- 今日第10天学习：
 
 1.委员会：https://gov.optimism.io/search?q=council
 
@@ -313,6 +313,24 @@ Charmverse：社区主导的乐观资助委员会所在地。
 - 安全理事会自我提名：L2BEAT
 
 ### 2025.01.16
+
+今日第11天学习：
+
+RetroPGF：https://community.optimism.io/citizens-house/how-retro-funding-works
+
+1.理念：过去有用的东西达成一致，就比未来有用的东西达成一致更容易，“影响=利润”的核心。对集体的积极影响应该按比例奖励给个人利润。
+
+影响力：表示贡献者为 Optimism 集体创造的价值。
+
+利润：表示贡献者从 Optimism 集体中提取的价值。
+
+差距：表示贡献者的影响力与利润之间的差异。
+
+（例如：影响力 - 利润 = 差距）
+
+RetroPGF 填补了贡献者的影响力与利润之间的差距，从而实现「影响力 = 利润」的状态。
+
+
 
 ### 2025.01.17
 
