@@ -258,4 +258,21 @@ Reflection Period (Metagovernance)
 Mission Grants  使命补助金  
 Applications to Token House Mission Requests将由拨款委员会审查和选择。基金会任务请求的申请将由基金会审查和选择。所有应用程序都应遵循(github)[https://github.com/ethereum-optimism/ecosystem-contributions/issues?q=is%3Aissue]中每个任务请求中概述的提交流程。  
 
+### 2025.01.16
+追溯性公共物品资助（Retro Funding）的理念是，就过去有用的内容比对未来可能有用的内容达成一致更容易。  
+这是一系列实验，Citizens’ House成员将剩余协议收入或部分复古融资代币分配给他们认为对 Optimism Collective 和整个超级链产生积极影响的项目。  
+这是乐观主义价值观 impact=profit “影响=利润”的核心：对集体的积极影响应该与个人的利润成比例地得到回报。  
+![image](https://github.com/user-attachments/assets/250ac1f9-ab5e-4415-9f3c-b5023ff98190)
+
+Retro Funding also provides possible exit liquidity for public goods projects, which opens up a market for early investment in those projects. This means builders can:  
+- Be rewarded for their positive contributions without generating direct revenue  
+- Raise capital to bootstrap based on the early potential and promise of their project  
+
+Retro Funding has three core components, each with substantial surface area for experimentation.
+
+- Impact scoping: what should the Collective fund? How is it defined and decided on?
+- Impact scoring: how does the Citizens’ House evaluate impact? What units, process, or tools do we use?
+- Impact settlement: how does voting work?
+
+For the first several rounds of Retro Funding, the Optimism Foundation will decide on scope and voting mechanics with input from the community. Eventually the set of variables around what to fund, how much to fund, and how to vote will be up to the Citizens’ House, with checks and balances from the Token House.  
 <!-- Content_END -->
