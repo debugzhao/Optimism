@@ -116,4 +116,48 @@ Retro Funding 的实验框架包括三个核心部分：
 
 RetroPGF 获奖项目，查看了 top1 项目，该项目是一个基于 Polygon 区块链的 NFT 项目。该项目旨在通过发行独特的非同质化代币（NFT），为用户提供特定的数字资产或权益。用户可以通过参与该项目，获取这些独特的 NFT，进而享有相应的数字权益或收藏价值。
 
+### 2025.01.16
+
+Optimism 的 Superchain 是一个由多个 Layer 2（L2）链组成的网络，这些链被称为 OP 链（OP Chains），它们共享安全性、通信层和开源技术栈（OP Stack）。与传统的多链设计不同，Superchain 中的这些链是标准化的，旨在作为可互换的资源使用。这使得开发者能够构建针对整个 Superchain 的应用程序，而无需关注底层运行的具体链。
+
+**Superchain 的主要特性：**
+
+1. **共享的 Layer 1（L1）区块链**：提供所有 OP 链交易的全局排序，确保一致性和协调性。
+
+2. **共享的桥接机制**：为所有 OP 链提供标准化的安全属性，简化跨链交互。
+
+3. **低成本的 OP 链部署**：使得在 OP 链上的部署和交易无需承担在 L1 上进行交易的高额费用。
+
+4. **可配置的 OP 链选项**：允许 OP 链配置其数据可用性提供者、排序者地址等，提供灵活性。
+
+5. **安全的交易和跨链消息传递**：确保用户能够在 OP 链之间安全地迁移状态。
+
+**从 Optimism 到 Superchain 的升级路径：**
+
+在 Bedrock 版本之后，为实现 Superchain 的初步形态，需要进行以下更改：
+
+1. **将 Bedrock 桥接升级为链工厂**：通过在 L1 上引入 SystemConfig 合约，将 L2 链的配置信息上链，包括生成唯一的链 ID、关键配置值（如区块 Gas 限制）等。这使得可以通过链工厂部署配置和所需的合约，甚至通过 CREATE2 实现确定性的合约地址，从而实现虚拟免费的链部署，并使链继承标准的安全属性。
+
+2. **引入共享的通信层**：为了实现 OP 链之间的无缝交互，需要一个共享的通信层，允许跨链消息传递和状态迁移。这将进一步增强 Superchain 的互操作性和用户体验。
+
+3. **实施去中心化治理**：Superchain 的成功依赖于去中心化的治理结构，确保所有参与者都有发言权，并共同维护网络的安全和发展。这可以通过引入公民议会（Citizens' House）和代币持有者议会（Token House）等机制来实现。
+
+**Superchain 的愿景：**
+
+Superchain 的目标是将 OP 主网（OP Mainnet）和其他链合并为一个统一的 OP 链网络，提供可扩展且去中心化的计算资源。通过将链视为可互换的计算资源，开发者可以构建跨链应用程序，而无需引入系统性风险或承担新链部署的高昂成本。这种链的抽象化使得可以将这个互操作的链网络视为一个整体，即 Superchain。
+
+目前，Superchain 仍处于概念和开发阶段，其实际实现将取决于 Optimism Collective 的广泛贡献。随着技术的进步和社区的参与，Superchain 有望成为实现可扩展、去中心化计算的关键一步。
+
+**参考资料：**
+
+- Superchain 解释：https://docs.optimism.io/superchain/superchain-explainer
+
+- OP Stack 入门：https://docs.optimism.io/stack/getting-started
+
+- Optimism 文档：https://docs.optimism.io/
+
+- Optimism 官网：https://www.optimism.io/
+
+- Optimism 社区：https://community.optimism.io/
+
 <!-- Content_END -->
