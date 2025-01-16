@@ -360,7 +360,25 @@ dao如何从中获得收益？
 
 投票机制：https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
 
+TokenHouse:OP 持有者负责提交、审议和投票治理提案，可通过直接投票或委托投票权给第三方。 使用token投票或者delegate vote。
 
+CitizenHouse: Optimism Citizens are responsible for allocating rewards to builders of public goods through a process called “retroactive public goods funding” (Retro Funding) 
+
+Optimism 公民负责分配公共物品建设者的奖励及对升级提案行使否决权，公民身份目前是临时的。
+
+什么意思？CitizenHouse不参与投票？
+
+> 就是二者负责的投票类型不同。
+>
+> 一个投票提案，一个投票住宿公共物品资助。 特定提案Citizen House也会投票
+
+投票过程： 
+
+Token House 提案->审查->投票->执行
+
+Citizen House 范围界定 -> 创建 -> 审查 -> 投票 -> 分配
+
+> 范围界定是需要确定追溯公共物品资助的范围。
 
 
 

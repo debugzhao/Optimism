@@ -116,4 +116,13 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
    1. OP Stack 的基本概念：当前的核心是运行 L2 区块链的基础设施
    2. OP Stack 是可持续发展的
 
+### 2025.01.14
+
+1. 看了 这个地址 https://www.superchain.eco/projects 有 100 个 superchain 项目，正好 100，是只收录这么多吗？
+2. 比较看好 Name Service,未来的基础设施。 找到了一个 SPACE ID Mode Name Service 项目，但是官网打不开 遗憾
+
+### 2025.01.15
+
+1. 推荐一个 玩转以太坊 L2 之 Op Stack https://www.bilibili.com/video/BV1vW4y1F75Z
+
 <!-- Content_END -->

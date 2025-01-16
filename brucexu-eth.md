@@ -717,4 +717,60 @@ S7 的 grants 主要专注于 TVL 的增长。KPI 目标也是 TVL 增长。
 
 TODO Developer Advisory Board 是什么？
 
+### 2025.01.15
+
+## https://community.optimism.io/citizens-house/how-retro-funding-works
+
+Retro Funding also provides possible exit liquidity for public goods projects, which opens up a market for early investment in those projects. This means builders can:
+
+- Be rewarded for their positive contributions without generating direct revenue
+- Raise capital to bootstrap based on the early potential and promise of their project
+
+这一点其实有点牵强，主要在于：1. 没有启动资金，可能项目无法启动。2. 不能保证拿到 retro 的资金，VC 不一定愿意支持。
+
+Retro Funding has three core components, each with substantial surface area for experimentation.
+
+- Impact scoping: what should the Collective fund? How is it defined and decided on?
+- Impact scoring: how does the Citizens’ House evaluate impact? What units, process, or tools do we use?
+- Impact settlement: how does voting work?
+
+### 2025.01.16
+
+## RetroPGF
+
+### [最初的愿景和设计](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)
+
+第一期是 2021 年 Q4 做的，最初 OP 跟 VB 一起探索制作的 RetroPGF 机制。
+
+要解决的问题：没有 business model 的好项目，但是很难获得资金去雇佣最好的，然后持续下去。
+
+创业公司驱动早期成员疯狂投入的一个重要因素是 exit，可以通过上市或者出售给早期贡献者退出的机会和激励。但是在非盈利、开源和公共物品层面，没有 exit 的机制。所以比较沮丧的是产生大量利润的 free software 无法得到相应的激励，对于这些想要建设的人是一种阻碍。
+
+如果我们有了这个退出机制之后，可以看到更多非营利组织蓬勃发展而不是勉强维生。OP Team 承诺将所有 sequencer 的收益捐赠给公共物品 funding 的实验。
+
+VB：RetroPGF 的核心理念就是判断什么目前有用比推断什么未来有用更容易。所以可以创建一个 the Results Oracle，根据事后的成果对项目进行追溯性奖励。
+
+构建这个系统比较复杂，可以逐步去中心化。
+
+其中发放的 retro 奖励，可以发给个人、组织以及协助分配的智能合约，还有一种创新的方法是发给 project token。这些 project token 已经分发给了相关有贡献的人，实际上为 results oracle 将要资助的项目创造了一个预测市场，通过 retro 分配的奖励，构建了一个代币的价格底线。如果分配 100 刀，而有 10000 个 token，就相当于以 0.01 刀买入全部的 token。
+
+这样的话，每次发放 retro 的奖励，都会为这个 project token 构建一个底价。
+
+![alt text](brucexu-eth_assets/image-5.png)
+
+[VB 对第一期 retro 的 review](https://vitalik.eth.limo/general/2021/11/16/retro1.html)：
+
+- 整个过程非常公开透明
+- retro 的轮次，分配的资金差异性不如 QF 大，毕竟没有平方加持
+- retro 的赢家，主要是知名项目，QF 则投向有前途的新项目，期待未来价值（其实是撸空投目的）
+- retro 侧重基础设施，QF 侧重面向用户的，因为 QF 是社区参与
+
+VB 个人认为 retro 选出来的项目比 QF 的质量高。其实是符合预期的，因为实际产出了影响，而且是由行业 OG 的 badge holders 选择出来的。通过结果，是否可以说：行业专家更聪明，大众更具备多样性？
+
+Retro 里面的 ECN 投票比较少但是很重要，主要由于 badge holders 不太了解中国以太坊社区。即便是增加多样性和多一些当地的 badge holders，也无济于事。可能的解决方案：
+
+TODO 没看完
+
+1.
+
 <!-- Content_END -->

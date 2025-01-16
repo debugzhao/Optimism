@@ -87,8 +87,6 @@ Optimism Collective 的治理由两院组成：代币持有者议院 (Token Hous
 
 所有代币持有者议院和公民议院的代表都应负责任地行使权力，并遵守 [Rules of Engagement](https://gov.optimism.io/t/rules-of-engagement-2-0/5728) and [Optimist Expectations](https://gov.optimism.io/t/optimist-expectations/7241).
 
-
-
 代币持有者议院治理的主要工具目前包括：
 
 - **代币持有者议院治理合约 (Token House Governance Contract):** 代币持有者议院治理提案的链上投票合约。所有符合条件的代币持有者议院治理提案都将在此提交投票。
@@ -100,6 +98,62 @@ Optimism Collective 的治理由两院组成：代币持有者议院 (Token Hous
 - **Charmverse:** 社区主导的 Optimism 拨款委员会的所在地。
 
 随着治理的演变，这些工具或其用途可能会随着时间而改变。例如，将来可能会开发专门用于治理委员会的其他用户界面。同样，虽然投票目前通过治理合约在链上进行，但成功的投票目前由 Optimism 基金会管理和实施，这种情况不应无限期持续下去。
+
+### 2025.01.15
+
+学习主题：投票机制 https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
+
+了解委员会 https://gov.optimism.io/search?q=council
+
+- [Code of Conduct Council](https://gov.optimism.io/t/code-of-conduct-council-season-6-retrospective/9286)
+- [Security Council ](https://gov.optimism.io/t/security-council-communication-thread/7726)
+- [Grants **Council**](https://gov.optimism.io/t/grants-council-season-3-launch/4833)
+
+**Process TLDR**
+
+- Proposals are reviewed over a three week voting cycle.
+- If you’re submitting a grant application, you’ll need to submit your application as outlined on each individual Mission Request in [github.](https://github.com/ethereum-optimism/ecosystem-contributions/issues?q=is%3Aissue)
+- For all other proposal types, you may draft a proposal based on [this](https://gov.optimism.io/t/standard-proposal-template-optimism-token-house/5443) template and post it on the Forum with [Draft] in the title for feedback. Delegates and/or Citizens will provide feedback on your proposal in the forum. Use your judgment to incorporate feedback.
+- Once your non-grant proposal has been approved by four top 100 delegates or four Citizens add a link to your proposal to the Voting Cycle Roundup thread by the last day of Week 2 and update the title from [Draft] to [Final]. These proposals will move on to Week 3 voting. Proposals initiated by the Foundation do not require approvals.
+- Protocol or Governor Upgrades approved by the Token House, must also pass the Citizens’ House Veto Procedure, as outlined in the Veto Procedure section above, before they are considered officially approved.
+- The Security Council will enact officially approved Protocol or Governor Upgrades. The Optimism Foundation will facilitate the administration of all other approved proposals, including by distributing any approved OP grants. The Foundation will be in touch to collect additional information from your project in order to execute the proposal or grant, including information to perform KYC.
+- If your proposal is passed, the Optimism Foundation will facilitate its administration, including by distributing any approved OP grants. The Foundation will be in touch to collect additional information from your project in order to execute the proposal or grant, including information to perform KYC.
+- If your proposal fails, you can make a new proposal in the next cycle specifying how you have incorporated significant changes from your first proposal.
+
+**The Citizens’ House also manages the allocation of Retro Funding:**
+
+- Citizenship is currently temporary, with the Retro Funding 3 Citizens recorded via entries in the AttestationStation.
+- Retro Funding rounds occur in intervals and according to a predefined process, which currently includes phases for scoping, application creation, application review, voting, and disbursements. The Foundation will collect information from projects in order to distribute the grant, including information to perform KYC.
+
+### 2025.01.16
+
+学习主题：RetroPGF https://community.optimism.io/citizens-house/how-retro-funding-works
+
+回溯式公共产品资助（Retro Funding）基于这样一个理念：相较于预测未来哪些项目有用，评估过去哪些项目有用更容易达成共识。这是一系列实验，Optimism Collective 的公民议会成员将剩余协议收入或 Retro Funding 代币分配的一部分，分配给那些他们认为对 Optimism Collective 和整个超级链产生了积极影响的项目。这是 Optimism “影响=利润”价值观的核心：对集体产生积极影响应该与个人获得的利润成比例地奖励。
+
+这些奖励为人们构建有益于 Optimism Collective 的公共产品创造了强大的激励。其累积效应是一个更容易构建、学习和连接的生态系统，进而推动应用程序的使用并产生对区块空间的更多需求。通过可持续地资助公共产品，集体可以创建一个丰富的生态系统和更好的经济。
+
+![](https://community.optimism.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhow-retro-funding-works.9368ab75.png&w=3840&q=75)
+
+**对实验的承诺：奖励影响**
+
+回溯式资助是对构建未来乐观主义者想要看到的未来的长期押注。集体将定期进行回溯式资助，每一轮都与上一轮不同。这是一个新兴的过程，需要社区参与才能发展和完善。
+
+- 回溯式资助第一轮于 2021 年底进行，向 58 个项目分配了 100 万美元。
+- 回溯式资助第二轮于 2023 年第一季度进行，向 195 个项目分配了 1000 万个 OP 代币。
+- 回溯式资助第三轮于 2023 年第四季度进行，向 501 个项目分配了 3000 万个 OP 代币。
+- 回溯式资助第四轮将于 2024 年第二/三季度进行，将奖励为 Optimism 的成功做出贡献的链上建设者。
+- 可在 [retrofunding.optimism.io](http://retrofunding.optimism.io/) 注册参与未来的轮次。
+
+**实验框架**
+
+回溯式资助具有三个核心组成部分，每个部分都有大量的实验空间：
+
+- **影响范围界定：**集体应该资助什么？如何定义和决定？
+- **影响评分：**公民议院如何评估影响？我们使用什么单位、流程或工具？
+- **影响结算：**投票如何运作？
+
+在最初几轮回溯式资助中，Optimism 基金会将根据社区的意见决定范围和投票机制。最终，关于资助什么、资助多少以及如何投票的变量将由公民议院决定，并由代币议院进行制衡。您可以在此处阅读有关开放元治理路径的更多信息。随着时间的推移，集体旨在扩大回溯式资助的范围，以支持在 Optimism 生态系统之外生产公共产品。为了实现这一目标，我们必须根据定期的实验来改进回溯式资助中使用的工具和流程。
 
 
 
