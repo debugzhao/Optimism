@@ -495,6 +495,35 @@ Stages 框架的三个阶段
 
 ### 2025.01.17
 
+2024 年，Optimism Collective 在多个方面取得了显著进展，推动了以太坊的扩展性和去中心化。
+
+**Superchain 的显著增长**
+
+2024 年，Superchain 生态系统超出了预期的增长：
+* 新增链条：30 多条 OP 链加入生态系统，包括 Kraken（Ink）、Sony（Soneium）、Uniswap（Unichain）和 World（World Chain）等主要参与者，以及 Base、Metal、Mode 和 Zora 等早期先驱。
+* 交易量：2024 年 12 月，日交易量从 2023 年 12 月的 65 万笔激增至 1110 万笔，增长了 1600%。
+* 应用程序：Superchain 上的应用程序数量从 2023 年 12 月的 319 个增长到 2024 年 12 月的 464 个，其中 145 个是在 2024 年推出的。
+
+**OP Stack 的进展**
+
+作为 Superchain 生态系统的核心，OP Stack 在 2024 年取得了以下进展：
+* 故障证明与 Stage 1 去中心化：推出了无许可的故障证明系统，为 OP Stack 链实现 Stage 1 去中心化奠定了基础。
+* 互操作性：Superchain 和以太坊全网的互操作性成为 2024 年的核心焦点。
+
+核心贡献者的更多成果
+
+OP Stack 的核心贡献者在 2024 年推出了多个重要功能，惠及 Superchain 和以太坊：
+* EIP-4844：经过两年的研发，EIP-4844 为所有 L2 带来了显著的成本降低，Gas 费用下降了超过 10 倍。
+* Span 批次：Sunnyside Labs 推出了 Span 批次，将运行 OP 链的开销降低了 90%，提高了可负担性和效率。
+* RIP-7212：RIP-7212 在 Superchain 上上线，实现了原生密码验证，降低了成本，使开发者能够构建更流畅的智能钱包体验。
+* 事件响应能力：Superchain 的事件响应能力得到了升级，利用整个 Superchain 的集体安全情报。
+* 开发者控制台：推出了开发者控制台，作为开发者在 Superchain 上构建的综合平台。
+* Superchain 注册表和 BloXroute：推出了 Superchain 注册表和 BloXroute，进一步增强了生态系统的功能和互操作性。
+
+2024 年，Optimism Collective 在扩展性、去中心化和生态系统增长方面取得了显著进展，推动了以太坊和用户拥有的互联网的发展。
+
+
+
 ### 2025.01.18
 
 ### 2025.01.19
