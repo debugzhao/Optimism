@@ -769,8 +769,40 @@ VB 个人认为 retro 选出来的项目比 QF 的质量高。其实是符合预
 
 Retro 里面的 ECN 投票比较少但是很重要，主要由于 badge holders 不太了解中国以太坊社区。即便是增加多样性和多一些当地的 badge holders，也无济于事。可能的解决方案：
 
-TODO 没看完
+### 2025.01.17
 
-1.
+[VB 对第一期 retro 的 review](https://vitalik.eth.limo/general/2021/11/16/retro1.html)：
+
+可能的解决方案：
+
+1. 调整二次方投票。
+2. 将 Voting 拆分到 category 和 sub-committees，然后类别内的 badge holders 继续投票
+3. 增加讨论和专家的建议
+
+Badge holders 是否应该考虑当前项目是否急需资金？并且降低那些已经获得充足资金的项目的优先级？是否根据经济状况进行审查？
+
+追溯性资助的目标不是基于未来工作预期给予人们资金，以期望他们可以完成工作，而是奖励已经完成的工作，改变未来人们从事工作的激励方式。
+
+通过 Mean Testing 做了一个推演，得到的结论是 Retro 应该尽量奖励没有通过其他途径获得成功的项目，这样获得 nothing 的概率最低，鼓励人们投入高风险不赚钱的项目。
+
+TODO，如何判断项目是否有其他途径获得了资助？需要 Public Goods Directory 来展示和管理聚合。
+
+但是目前有一些难度，可能会增加工作，同时让 project 去隐藏自己获取的财富来获得更多，因此增加了更多争论。所以目前可以轻度的做一些判断，不应该太多。然后重点关注项目的质量和对世界的影响。
+
+提名环节目前是任何人都可以在 Google 上面提名，未来的话可能会因为数量过多，需要 Pass pre-filtering 才可以。可能的一些想法：
+
+1. Badge holders pre-approval，例如必须大于 3 个 pre-approve 了才可以继续
+2. 要求提供详尽的信息
+3. 提案必须放在一个 category
+4. deposit 0.02 ETH，如果得到了 0 votes 或者被视为 spam，收走 deposit
+5. 提供 proof-of-humanity ID，如果是 0 votes 或者 spam，一年不能发布提案
+
+利益冲突部分，Badge holder 不能参与跟自己有利益相关的项目，就是资金会有一部分流向自己的提案。但是这个规则和描述有一些比较宽松或者不好确定的地方，比如如何确定利益相关、跟朋友的亲近程度等。可以借鉴的解决方案：
+
+1. 增加 badge holders 数量，稀释串谋的可能
+2. 减少只有少数 badge holders 支持的项目的 rewards
+3. 出现明显的滥用行为，可以进行反制
+
+投票是否应该隐藏？不隐藏投票的问题会导致：1. 贿选。2. 不愿意投反对票，因为一些朋友关系。现实世界中有不少场景使用了 secret ballots，但是也非常复杂。在 OP 的场景，如果隐藏投票会导致 badge holders 无法反击一些串谋。
 
 <!-- Content_END -->
