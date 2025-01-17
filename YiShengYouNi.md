@@ -1410,21 +1410,29 @@ Superchain 提供了一个解决方案，通过统一的技术架构实现生态
 
 #### Superchain 生态
 
-- OP Mainnet
+- **OP Mainnet**
 
-  特点：作为 Optimism 的主网，OP Mainnet 是一个基于以太坊的 Layer 2 扩展解决方案，旨在提供高吞吐量和低延迟的交易体验。
+  特点：Optimism 的主网，OP Mainnet 是一个基于以太坊的 Layer 2 扩展解决方案，旨在提供高吞吐量和低延迟的交易体验。
 
-- Base
+- **Base**
 
   特点：由 Coinbase 推出的 Layer 2 网络，Base 利用 OP Stack 构建，旨在为去中心化应用提供安全、低成本的开发平台。
 
-- Mode Network
+- **Mode Network**
 
-  特点：Mode Network 是一个基于 OP Stack 的区块链网络，专注于提供高性能和可扩展的基础设施，支持多种去中心化应用的部署。
+  特点：Mode 是一个基于 DeFi 的模块化 Layer 2 网络，采用 OP Stack 构建，旨在为世界级应用程序生态系统提供支持。通过 Bedrock 升级优化，Mode 提供的项目费用比以太坊低95%
+
+- **Zora**
+
+  特点：Zora 是一个去中心化的 NFT 市场，利用 OP Stack 构建，提供高效的数字资产交易平台
 
 - Lisk
 
   特点：Lisk 是一个区块链应用平台，致力于通过 JavaScript 和 TypeScript 使区块链技术更易于访问和开发。
+
+- **Kroma**
+
+  特点：Kroma 是一个以游戏为中心的 Layer 2 扩展解决方案，服务于新一代游戏行业，提供高度可扩展、安全且高效的平台
 
 - Cyber
 
@@ -1438,8 +1446,13 @@ Superchain 提供了一个解决方案，通过统一的技术架构实现生态
 
   特点：Redstone 提供去中心化的预言机服务，确保智能合约能够获取可靠的外部数据，增强区块链应用的功能性。
 
-- Ancient8
+- **Ancient8**
 
   特点：Ancient8 是一个区块链游戏公会，致力于通过教育和工具支持，帮助玩家和开发者在区块链游戏领域取得成功
 
+- **GameSwift**
+
+  特点：GameSwift 是一个模块化游戏 Layer 2 链，旨在为游戏项目提供支持，满足游戏开发者的特定需求和挑战
+
+>> 粗体标注：使用了Bedrock升级优化的项目
 <!-- Content_END -->
