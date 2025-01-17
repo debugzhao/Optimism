@@ -1348,4 +1348,39 @@ Superchain 提供了一个解决方案，通过统一的技术架构实现生态
 
   将经济决策（Token House）与公共物品分配（Citizen House）分离，提高了治理的包容性和效率
 
+### 2025.01.18
+
+#### Superchain 生态
+
+- OP Mainnet
+
+  特点：作为 Optimism 的主网，OP Mainnet 是一个基于以太坊的 Layer 2 扩展解决方案，旨在提供高吞吐量和低延迟的交易体验。
+
+- Base
+
+  特点：由 Coinbase 推出的 Layer 2 网络，Base 利用 OP Stack 构建，旨在为去中心化应用提供安全、低成本的开发平台。
+
+- Mode Network
+
+  特点：Mode Network 是一个基于 OP Stack 的区块链网络，专注于提供高性能和可扩展的基础设施，支持多种去中心化应用的部署。
+
+- Lisk
+
+  特点：Lisk 是一个区块链应用平台，致力于通过 JavaScript 和 TypeScript 使区块链技术更易于访问和开发。
+
+- Cyber
+
+  特点：Cyber 是一个去中心化的搜索协议，旨在为 Web3 提供高效的搜索功能，增强用户在去中心化网络中的体验。
+
+- Mint
+
+  特点：Mint 是一个去中心化的铸币平台，允许用户轻松创建和管理他们的数字资产，支持多种代币标准。
+
+- Redstone
+
+  特点：Redstone 提供去中心化的预言机服务，确保智能合约能够获取可靠的外部数据，增强区块链应用的功能性。
+
+- Ancient8
+
+  特点：Ancient8 是一个区块链游戏公会，致力于通过教育和工具支持，帮助玩家和开发者在区块链游戏领域取得成功
 <!-- Content_END -->
