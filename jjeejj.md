@@ -129,4 +129,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. deploy you app get start https://docs.optimism.io/builders/app-developers/quick-start
 
+### 2025.01.17
+
+1. 今天想在 Superchain Faucet: https://console.optimism.io/faucet?utm_source=scaffoldop 领点水 部署合约，使用邮箱登录的时候, 一直提示 检查是否是真人，登录好久登不不上去。
+
+![alt text](https://pic.wenjunjiang.com/202501172157416.png)
+
 <!-- Content_END -->
