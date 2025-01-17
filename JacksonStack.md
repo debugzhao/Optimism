@@ -275,4 +275,29 @@ Retro Funding has three core components, each with substantial surface area for 
 - Impact settlement: how does voting work?
 
 For the first several rounds of Retro Funding, the Optimism Foundation will decide on scope and voting mechanics with input from the community. Eventually the set of variables around what to fund, how much to fund, and how to vote will be up to the Citizens’ House, with checks and balances from the Token House.  
+
+### 2025.01.17
+继 Bedrock 之后，OP Stack 的下一个重大可扩展性改进是引入超级链的概念：共享桥接、去中心化治理、升级、通信层等的链网络，所有这些都构建在 OP Stack 上。
+The scalability vision  可扩展性愿景  
+- 可扩展的去中心化计算的价值是巨大的……如今的区块链技术不足以满足去中心化网络的需求  
+| We very, very much need such a system, but the way I understand your proposal, it does not seem to scale to the required size.  
+
+- 可扩展的去中心化计算的价值是巨大的……
+   - 如果链上交易与与中心化后端交互一样便宜
+      -  使编写高度可扩展的 Web 应用程序成为可能，而无需接触传统的后端软件堆栈。
+      -  在这个大多数应用程序都上链的世界中，更多数据变得可以加密验证。
+- …and the decentralized web can still be realized 去中心化网络仍然可以实现
+
+ 基本的Superchain概念  
+ - Horizontal scalability requires multiple chains… 水平可扩展性需要多个链……
+ - …but traditional multi-chain architectures are insufficient …但传统的多链架构还不够
+    - 多链”架构的传统方法存在两个基本问题：
+       - 每条链都引入了新的安全模型，随着新链被引入生态系统，系统性风险会加剧。
+       - 新链的启动成本很高，因为它们需要新的验证器集和区块生产者。
+   - 这些问题来自于缺乏单一共享区块链（“L1”链）作为多链系统中所有链（“L2”链）的共享事实来源。
+   - 通过使用共享的事实来源，可以：
+      -  a) 在所有链上实施标准安全模型；
+      -  b) 删除链部署需要一组新验证器的要求，因为每个 L2 链都使用 L1 共识。
+- Not multi-chain, not mono-chain… Superchain 不是多链，不是单链……超级链
+  
 <!-- Content_END -->
