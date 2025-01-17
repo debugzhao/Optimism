@@ -125,4 +125,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. 推荐一个 玩转以太坊 L2 之 Op Stack https://www.bilibili.com/video/BV1vW4y1F75Z
 
+### 2025.01.16
+
+1. deploy you app get start https://docs.optimism.io/builders/app-developers/quick-start
+
 <!-- Content_END -->

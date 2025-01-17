@@ -266,4 +266,39 @@ Valid Proposal Types
 Retroactive Public Goods Funding (Retro Funding)
 A unique mechanism where Citizens vote to reward impactful public goods projects through:
 
+#### 2025.01.16
+Revised and re-orgnised notes for
+https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
+
+Key takeaway
+
+Governance Architecture
+- Two-House System: Token House and Citizens' House
+- Purpose: Decentralized, democratic blockchain governance
+- Unique Feature: Bicameral structure with mutual oversight
+
+Token House
+- Composition: OP token holders
+- Responsibilities:
+   Submit governance proposals
+   Vote on protocol upgrades
+   Manage treasury decisions
+   Voting Mechanism: Direct voting or delegation
+
+Citizens' House
+- Core Function: Retroactive Public Goods Funding
+- Key Characteristics:
+   Temporary citizenship
+   Veto power over Token House proposals
+   Rewards impactful public goods projects
+  
+Governance Process
+- Cycle: Three-week structured approach
+   Weeks 1-2: Community feedback
+   Week 3: Formal voting
+- Approval Requirements:
+   Delegate/Citizen endorsements
+   Specific quorum thresholds
+   Transparent review process
+  
 <!-- Content_END -->
