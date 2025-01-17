@@ -565,6 +565,32 @@ https://gov.optimism.io/t/optimism-community-call-recaps-recordings-thread/6937/
 
 
 
+### 2025.01.16
+今天当选了 OP S7 GovNERDs，很开心，在系统学习 GovNERDs 需要做的事情
+
+govNERDs
+
+必需上下文
+所有背景均来自先前的角色。
+保持对治理发展的最新了解。
+收集并传达社区反馈给 govNERD 团队。
+
+可用贡献
+出席并参与社区电话会议。
+加入新的代表和治理参与者。
+收集和验证数据，例如代表认可和奖励分配。
+确保提案符合标准并指导代表了解季节之间的变化。
+講師新人 govNERDs-in-training。
+向乐观治理团队汇报潜在问题或误解。
+监控并报告治理论坛中不适当或不相关的内容。
+
+活动最低要求
+每个投票周期至少完成三项贡献。
+加入社区电话会议并参与 govNERDs 电话会议（实时或异步）。
+govNERDs-in-training 有空时指导新人。
+
+一些过往的 GovNERDs 任务，我正在梳理
+https://www.notion.so/e6e73d8af8324622b41a426ad91a3d4e?v=114e1926b96e41ce80db47f990148ab1
 
 
 <!-- Content_END -->
