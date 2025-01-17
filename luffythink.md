@@ -155,6 +155,38 @@ Optimism Collective 的治理由两院组成：代币持有者议院 (Token Hous
 
 在最初几轮回溯式资助中，Optimism 基金会将根据社区的意见决定范围和投票机制。最终，关于资助什么、资助多少以及如何投票的变量将由公民议院决定，并由代币议院进行制衡。您可以在此处阅读有关开放元治理路径的更多信息。随着时间的推移，集体旨在扩大回溯式资助的范围，以支持在 Optimism 生态系统之外生产公共产品。为了实现这一目标，我们必须根据定期的实验来改进回溯式资助中使用的工具和流程。
 
+### 2025.01.17
+
+学习主题：RetroPGF 获奖项目https://round6.retrolist.app/ 
+
+Positive impact to the community should be rewarded with profit to the builder.
+
+- Governance Infra & Tooling 46 
+- Governance Analytics 22 
+- Leadership 20
+
+乐观治理词汇表：[Optimism Governance Glossary - Get Started 🌱 - Optimism Collective](https://gov.optimism.io/t/optimism-governance-glossary/9407)
+
+- **反捕获委员会 (Anticapture Commission)**：反捕获委员会的职责是防止 Token House 被任何单一利益相关方或利益相关群体所控制。该委员会由具有重大影响力的个人代表组成，当发现利益相关群体之间的权力失衡时，它会向 Citizens’ House 发出警告。反捕获委员会使用来自治理基金的 1000 万 OP 进行投票，适用于所有可能受到 Citizens’ House 否决的提案。[了解更多](https://github.com/ethereum-optimism/OPerating-manual/blob/main/Anticapture Commission Charter v2.0.md)
+
+- **公民 (Citizen)**：公民是 Collective 的个人人类利益相关者，包括建设者、用户和社区成员。这些人群与项目价值观保持一致，并关注 Collective 的长期利益。公民拥有对协议升级的否决权，并将逐渐负责更多的治理决策。[了解更多](https://community.optimism.io/citizens-house/citizen-house-overview)
+
+- **Collective 反馈委员会 (Collective Feedback Commission)**：Collective 反馈委员会是一个实验性计划，旨在促进基金会与高背景贡献者之间在治理系统设计上的协作。目标是开发一个“核心治理计划 (Core Governance Program)”，以便 Collective 能够在未来承担元治理职责。委员会由活跃的公民和代表组成，受邀者基于其在相关领域的贡献和专业知识，通过基金会签发的认证证明。[了解更多](https://gov.optimism.io/t/the-collective-feedback-commission-the-next-iteration/9113)
+
+- **代表 (Delegate)**：代表构成了 Token House，他们负责对影响 Collective 的提案（如 OP Stack 升级、委员会成员选举、目标预算等）进行投票。他们由 OP 代币持有者委任，代表持有者做出治理决策。[查看代表](https://vote.optimism.io/delegates)
+
+- **开发者顾问委员会 (Developer Advisory Board)**：开发者顾问委员会由一群开发者组成，负责为技术提案提供反馈和指导。他们确保技术专业知识为治理决策提供依据，特别是在技术去中心化方面。委员会成员由 Token House 代表选举产生。[了解更多](https://github.com/ethereum-optimism/OPerating-manual/blob/main/Developer Advisory Board Charter v1.1.md)
+
+- **拨款委员会 (Grants Council)**：拨款委员会负责提议拨款预算、审核拨款申请并选择拨款接收者。成员对治理基金拨款流程拥有完整的决策权。委员会成员由 Token House 代表选举产生。[了解更多](https://github.com/ethereum-optimism/OPerating-manual/blob/main/Grants Council Charter v0.1.md)
+
+- **OP Stack 接近度排名 (OP Stack Proximity Ranking)**：这一实验性排名基于开发者和代码库与 OP Stack 代码库的接近程度进行评估。通过 GitHub 事件数据和双向信任图，应用 EigenTrust 和 Hubs & Authorities 算法的变体。信任通过用户行为（如星标、分叉）和贡献（如合并的 PR）构建。评分涵盖超过 3 万个代码库和 2000 个组织。OP Stack 接近度排名是与 OpenRank 和 Open Source Observer 合作开发的。[查看 OpenRank 文档](https://docs.openrank.com/integrations/github-developers-and-repo-ranking)
+
+- **安全委员会 (Security Council)**：安全委员会是一个去中心化的个人行动者小组，负责执行 Superchain 的共享升级。主要职能包括实施治理批准的协议升级和角色变更，并在紧急情况下独立行动以维护网络安全。委员会成员由 Token House 代表选举产生，并根据技术能力、声誉、地域多样性以及与 Optimistic Vision 的一致性进行评估。[了解更多](https://github.com/ethereum-optimism/OPerating-manual/blob/main/Security Council Charter v0.1.md)
+
+- **前 100 代表 (Top 100 Delegate)**：前 100 代表是拥有最多投票权的 Token House 前 100 名代表。[查看代表](https://vote.optimism.io/delegates)
+
+- **里程碑与指标委员会 (Milestones and Metrics Council)**：里程碑与指标委员会负责衡量获得拨款的项目是否完成里程碑任务，并向拨款委员会选出的接收者发放拨款。委员会成员由 Token House 代表选举产生。[了解更多](https://github.com/ethereum-optimism/OPerating-manual/blob/main/Milestones and Metrics Council Charter v0.1.md)
+
 
 
 <!-- Content_END -->
