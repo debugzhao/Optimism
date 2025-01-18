@@ -181,5 +181,17 @@ This is the final stage where the rollup becomes fully managed by smart contract
    - 未来可能与 Token House 合作管理**超额收入**的分配
 - 成员组成：每一轮RetroPGF有不同的badge holder，通过“Web of Trust”机制选择
 
+### 2025.01.17
+#### OP Grants
+参考文档：https://community.optimism.io/grant/grant-overview
+- Season 7只有一个 [Season 7 Intent](https://gov.optimism.io/t/season-7-intent/9292)
+##### Foundation Missions
+- Github申请: https://github.com/orgs/ethereum-optimism/projects/31/views/1
+##### RetroPGF Missions
+- https://atlas.optimism.io/rounds
+- 由Citizen House负责，每一轮有对应的scope和eligibility，需要项目报名或提名，再由Citizen House进行投票决定资格和分配
+##### Governance Fund Missions
+- https://app.charmverse.io/op-grants/
+- Grants Council负责，需要项目自行提名，再由Grants Council成员根据每一轮的eligibility对项目进行投票决定资格和分配，符合条件的项目将最后经过Token House投票获得分配
 
 <!-- Content_END -->

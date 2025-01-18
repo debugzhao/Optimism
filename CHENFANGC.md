@@ -160,4 +160,8 @@ Superchain 的目标是将 OP 主网（OP Mainnet）和其他链合并为一个�
 
 - Optimism 社区：https://community.optimism.io/
 
+### 2025.01.17
+
+听 ZhouQi 老师的分享：https://www.youtube.com/watch?v=VGxzUxryiqE
+
 <!-- Content_END -->
