@@ -147,7 +147,7 @@ This is the final stage where the rollup becomes fully managed by smart contract
 
 **Token House**
 - 基于token持有量分配vote权重
-- 可以delegate token给其他代表 (delegates)
+- OP 持有者可以直接投票，也可以将其 OP 投票权委托给其他人代表 (delegates)投票
 - 负责Mission Grants
 
 **Citizen House**
@@ -193,5 +193,17 @@ This is the final stage where the rollup becomes fully managed by smart contract
 ##### Governance Fund Missions
 - https://app.charmverse.io/op-grants/
 - Grants Council负责，需要项目自行提名，再由Grants Council成员根据每一轮的eligibility对项目进行投票决定资格和分配，符合条件的项目将最后经过Token House投票获得分配
+
+### 2025.01.18
+#### OP Grant Council
+- https://app.charmverse.io/op-grants/optimism-grants-council-8323028890716944
+- 由1个lead和15个reviewers组成的4个sub-committees (review teams)
+   - Superchain Sub-Committee
+   - Optimism Mission Review Sub-Committee
+   - Milestones and Metrics Sub-Committee
+   - Audits and Special Missions Sub-Committee
+- Season 5有2个Lead
+   - Communications Lead
+   - Milestone and Metrics Lead
 
 <!-- Content_END -->
