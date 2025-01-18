@@ -135,4 +135,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ![alt text](https://pic.wenjunjiang.com/202501172157416.png)
 
+### 2025.01.18
+
+1. 学习视频: 【OP 残酷共学：OP 建设之路】 https://www.youtube.com/watch?v=VGxzUxryiqE&ab_channel=LXDAO
+   1. 维护一个链比构建一个链难得多
+   2. 构建一个链，需要考虑很多方面，比如：有不同且有实际使用的功能、bridge security 等等
+
 <!-- Content_END -->
