@@ -299,5 +299,21 @@ The scalability vision  可扩展性愿景
       -  a) 在所有链上实施标准安全模型；
       -  b) 删除链部署需要一组新验证器的要求，因为每个 L2 链都使用 L1 共识。
 - Not multi-chain, not mono-chain… Superchain 不是多链，不是单链……超级链
-  
+
+### 2025.01.18
+Superchain概述  
+Superchain是一个 L2 链网络，共享安全性、通信层和开源技术堆栈。然而，与多链设计不同，这些链是标准化的，旨在用作可互换的资源。这使得开发人员能够构建以整个超级链为目标的应用程序，并抽象出应用程序运行的底层链。  
+![image](https://github.com/user-attachments/assets/af8dca97-d596-45cb-bbb9-b30b25506d53)
+Superchain 的属性  
+为了让 Optimism 升级为Superchain，它必须具备以下属性：    
+
+---
+Property 属性  |	Purpose  目的  
+Shared L1 blockchain  共享L1区块链	| Provides a total ordering of transactions across all OP Chains.提供所有 OP 链上交易的总排序。  
+Shared bridge for all OP Chains 所有 OP 链的共享桥	| Enables OP Chains to have standardized security properties.使OP链具有标准化的安全属性。  
+Cheap OP Chain deployment 廉价的OP链部署 | Enables deploying and transacting on OP Chains without the high fees of transacting on L1.允许在 OP 链上部署和交易，而无需支付 L1 交易的高额费用。  
+ Configuration options for OP Chains OP 链的配置选项 | Enables OP Chains to configure their data availability provider, sequencer address, etc. 使 OP Chain 能够配置其数据可用性提供者、定序器地址等。
+Secure transactions and cross-chain messages 安全交易和跨链消息| Enables users to safely migrate state between OP Chains.使用户能够在 OP 链之间安全地迁移状态。
+---  
+
 <!-- Content_END -->
