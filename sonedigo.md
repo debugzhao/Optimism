@@ -337,5 +337,9 @@ OP Governance Portal作为投票的前端界面
 
 社区资金有哪些retrofund支持，有哪些项目得到了支持
 
+### 2025.01.18
+
+今日学习的是OP相关的一些项目，主要了解了governance tools系列做了哪些项目，哪些web3的治理投票工具以及metrics
+
 
 <!-- Content_END -->
