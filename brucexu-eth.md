@@ -805,4 +805,27 @@ TODO，如何判断项目是否有其他途径获得了资助？需要 Public Go
 
 投票是否应该隐藏？不隐藏投票的问题会导致：1. 贿选。2. 不愿意投反对票，因为一些朋友关系。现实世界中有不少场景使用了 secret ballots，但是也非常复杂。在 OP 的场景，如果隐藏投票会导致 badge holders 无法反击一些串谋。
 
+### 2025.01.18
+
+TODO 可以深度研究每一轮 RetroPGF 的资料和数据，产出一个 RetroPGF 的报告，包括变更、资金利用率、实际效果、投票情况、治理机制变更等。
+
+## RetroPGF 6 https://round6.retrolist.app/
+
+主要是治理主题，所以大都是跟治理相关的。一些想法：
+
+- 治理必须想办法跟 OP 挂钩，比如协助 RetroPGF 做分析和决策
+- 好多都是 OP 自己的生态和团队，他们自己也是按照这个模式走的，例如：NumbaNERDs、
+- EAS 一直在建设，可以继续跟进一下相关的项目合作等
+- https://www.growthepie.xyz/ 是个不错的数据分析的来源，可以用于写一些 report，此外我们也可以做一些相关的数据整合平台
+- Developer Advisory Board Onboarding Hub 有点类似之前的专家组。TODO 需要调研所有 OP 生态的组结构和职能，不过参考性有限，他们毕竟有比较大的生态
+- superchain.eco 原来是非官方的，其实是有点像 xxbeat 这样的，这类是比较重要的公共物品
+- charmverse.io 研究和体验一下相关功能和设计
+- DAOstar 也可以联系回访一下，看看新年的计划
+- OPCN 可以学习 SEED Gov 提供专业治理，也可以拿到不少
+- https://www.karibalabs.co/ 是一个衡量公共物品影响力的研究组织，可以学习看看如何衡量，然后协作开发公共物品名录等
+
+如果工作组按照这个模式走，应该是在底薪的基础之上，然后增加额外的激励？否则会产生积极性的问题？导致整个组无法继续下去，慢慢的没有人做了？
+
+按照 Public Goods 的投票和 RetroPGF 的理念，其实有一个 Public Goods 的 https://www.producthunt.com/ 是很重要的，因为这是来自大众的评分，可以作为重要的参考依据。
+
 <!-- Content_END -->
