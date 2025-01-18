@@ -357,7 +357,14 @@ RetroPGF 获奖项目：https://round6.retrolist.app/
 
 1.有个感受，影响力=利润，那么这个影响力，换算成钱，那也有一定的相应价值，meme币，就是这个影响力所折算出来的价值，当然这个价值，是动态变化的。
 
+2.万物皆可发币
 
+<img width="1454" alt="截屏2025-01-18 21 37 01" src="https://github.com/user-attachments/assets/c21d978f-732e-4814-abcf-c6013e76c72d" />
+
+
+<img width="1460" alt="截屏2025-01-18 21 36 43" src="https://github.com/user-attachments/assets/892075b4-9824-47ce-9f5e-3630cd15d38c" />
+
+3.这个真的很有趣
 
 ### 2025.01.19
 
