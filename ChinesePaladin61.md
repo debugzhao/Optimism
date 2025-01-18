@@ -451,4 +451,44 @@ Optimism Retroactive Funding：Optimism 在其 Layer 2 生态系统中使用逆�
 总结
 逆向融资是一种创新的资助方式，它通过回溯性奖励机制，确保资金用于真正产生影响的项目或贡献。它强调实际贡献和影响，而非依赖传统的前期资金和承诺。这种机制能够激励创新、降低风险，并推动去中心化治理，但同时也面临着评估、可持续性等挑战。
 
+### 2025.01.17
+
+介绍几个Optimism RetroPGF 资助的项目
+
+ Hardhat
+🔹 简介：Hardhat 是一个流行的 以太坊智能合约开发工具，提供本地测试环境、调试工具、插件等。
+🔹 贡献：提升开发者体验，让 Solidity 开发更高效、安全。
+🔹 资助原因：被广泛用于 L2 生态，帮助 Optimism 生态开发者快速构建 dApp。
+
+ 官网：https://hardhat.org/
+
+ OpenZeppelin
+🔹 简介：提供开源 智能合约安全库，包括 ERC-20、ERC-721（NFT）、访问控制、代理合约等。
+🔹 贡献：大幅提高了 L2 生态中智能合约的安全性，减少漏洞风险。
+🔹 资助原因：几乎所有 L2 dApp 都依赖 OpenZeppelin 进行合约安全开发。
+
+ 官网：https://openzeppelin.com/
+
+ Ethers.js
+🔹 简介：一个轻量级 以太坊 JavaScript/TypeScript 库，广泛用于 dApp 开发。
+🔹 贡献：帮助开发者轻松与 L2 网络交互（如 Optimism RPC 调用）。
+🔹 资助原因：在 L2 dApp 生态中广泛使用，提升开发者效率。
+
+ 官网：https://ethers.org/
+
+ Velodrome
+🔹 简介：Optimism 上最受欢迎的 DEX（去中心化交易所），提供低滑点交易、流动性激励。
+🔹 贡献：帮助 OP 生态形成高效的 DeFi 资金流动，吸引用户迁移到 L2。
+🔹 资助原因：成为 Optimism 主要 DeFi 基础设施，提高了 OP 代币的应用价值。
+
+ 官网：https://velodrome.finance/
+ 
+Velodrome
+🔹 简介：Optimism 上最受欢迎的 DEX（去中心化交易所），提供低滑点交易、流动性激励。
+🔹 贡献：帮助 OP 生态形成高效的 DeFi 资金流动，吸引用户迁移到 L2。
+🔹 资助原因：成为 Optimism 主要 DeFi 基础设施，提高了 OP 代币的应用价值。
+
+ 官网：https://velodrome.finance/
+
+
 <!-- Content_END -->
