@@ -125,4 +125,20 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. 推荐一个 玩转以太坊 L2 之 Op Stack https://www.bilibili.com/video/BV1vW4y1F75Z
 
+### 2025.01.16
+
+1. deploy you app get start https://docs.optimism.io/builders/app-developers/quick-start
+
+### 2025.01.17
+
+1. 今天想在 Superchain Faucet: https://console.optimism.io/faucet?utm_source=scaffoldop 领点水 部署合约，使用邮箱登录的时候, 一直提示 检查是否是真人，登录好久登不不上去。
+
+![alt text](https://pic.wenjunjiang.com/202501172157416.png)
+
+### 2025.01.18
+
+1. 学习视频: 【OP 残酷共学：OP 建设之路】 https://www.youtube.com/watch?v=VGxzUxryiqE&ab_channel=LXDAO
+   1. 维护一个链比构建一个链难得多
+   2. 构建一个链，需要考虑很多方面，比如：有不同且有实际使用的功能、bridge security 等等
+
 <!-- Content_END -->

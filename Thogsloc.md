@@ -738,6 +738,88 @@ TARGET_RESOURCE_LIMIT：2,000,000
     可能提供 Gas 购买折扣
     更灵活的 Gas 市场机制
 
+### 2025.01.17
+
+OP Stack L2 输出根提案（L2 Output Root Proposals）
+
+1. 核心概念 (Core Concepts)
+
+1.1 定义 (Definition)
+L2 输出根提案是一种将 L2 状态同步到结算层（L1）的机制，用于：
+跨域消息传递
+提款操作
+状态证明
+
+1.2 关键参与者 (Key Actors)
+提案者（Proposer）：提交 L2 状态输出根
+挑战者（Challenger）：可以删除错误的输出根提案
+
+2. 输出根构建机制 (Output Root Construction)
+
+2.1 输出根格式 (Output Root Format)
+
+ini
+output_root = keccak256(version_byte || payload)  
+
+2.2 有效载荷组成 (Payload Composition)
+
+state_root：执行层账户的 Merkle-Patricia-Trie 根
+withdrawal_storage_root：消息传递合约存储根
+latest_block_hash：最新 L2 区块哈希
+
+3. 提案流程 (Proposal Process)
+
+3.1 提交间隔 (Submission Interval)
+基于区块数量的确定性间隔
+平衡 L1 交易成本和提款延迟
+
+3.2 提案算法 (Proposal Algorithm)
+
+python
+while True:  
+    # 获取下一个检查点区块号  
+    next_checkpoint_block = L2OutputOracle.nextBlockNumber()  
+    
+    # 获取同步状态  
+    rollup_status = op_node_client.sync_status()  
+    
+    # 检查是否可以提交输出根  
+    if rollup_status.finalized_l2.number >= next_checkpoint_block:  
+        # 获取指定区块的输出根  
+        output = op_node_client.output_at_block(next_checkpoint_block)  
+        
+        # 提交交易  
+        tx = send_transaction(output)  
+
+4. 安全性考虑 (Security Considerations)
+
+4.1 L1 重组防御 (L1 Reorg Protection)
+提交时包含 L1 区块哈希
+如果区块哈希不匹配，交易将回滚
+
+4.2 挑战机制 (Challenge Mechanism)
+挑战者可删除错误的输出根提案
+通过 deleteL2Outputs() 函数实现
+
+5. 关键合约接口 (Key Contract Interface)
+
+5.1 核心方法 (Core Methods)
+
+solidity
+// 提交 L2 输出根  
+function proposeL2Output(  
+    bytes32 _l2Output,  
+    uint256 _l2BlockNumber,  
+    bytes32 _l1Blockhash,  
+    uint256 _l1BlockNumber  
+)  
+
+// 删除错误的输出根  
+function deleteL2Outputs(uint256 _l2OutputIndex)  
+
+// 获取下一个需要检查点的区块号  
+function nextBlockNumber() public view returns (uint256)  
+
 ### 2025.07.12
 
 <!-- Content_END -->

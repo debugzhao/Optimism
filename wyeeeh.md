@@ -147,7 +147,7 @@ This is the final stage where the rollup becomes fully managed by smart contract
 
 **Token House**
 - 基于token持有量分配vote权重
-- 可以delegate token给其他代表 (delegates)
+- OP 持有者可以直接投票，也可以将其 OP 投票权委托给其他人代表 (delegates)投票
 - 负责Mission Grants
 
 **Citizen House**
@@ -181,5 +181,29 @@ This is the final stage where the rollup becomes fully managed by smart contract
    - 未来可能与 Token House 合作管理**超额收入**的分配
 - 成员组成：每一轮RetroPGF有不同的badge holder，通过“Web of Trust”机制选择
 
+### 2025.01.17
+#### OP Grants
+参考文档：https://community.optimism.io/grant/grant-overview
+- Season 7只有一个 [Season 7 Intent](https://gov.optimism.io/t/season-7-intent/9292)
+##### Foundation Missions
+- Github申请: https://github.com/orgs/ethereum-optimism/projects/31/views/1
+##### RetroPGF Missions
+- https://atlas.optimism.io/rounds
+- 由Citizen House负责，每一轮有对应的scope和eligibility，需要项目报名或提名，再由Citizen House进行投票决定资格和分配
+##### Governance Fund Missions
+- https://app.charmverse.io/op-grants/
+- Grants Council负责，需要项目自行提名，再由Grants Council成员根据每一轮的eligibility对项目进行投票决定资格和分配，符合条件的项目将最后经过Token House投票获得分配
+
+### 2025.01.18
+#### OP Grant Council
+- https://app.charmverse.io/op-grants/optimism-grants-council-8323028890716944
+- 由1个lead和15个reviewers组成的4个sub-committees (review teams)
+   - Superchain Sub-Committee
+   - Optimism Mission Review Sub-Committee
+   - Milestones and Metrics Sub-Committee
+   - Audits and Special Missions Sub-Committee
+- Season 5有2个Lead
+   - Communications Lead
+   - Milestone and Metrics Lead
 
 <!-- Content_END -->
