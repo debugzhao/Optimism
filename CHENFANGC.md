@@ -164,4 +164,34 @@ Superchain 的目标是将 OP 主网（OP Mainnet）和其他链合并为一个�
 
 听 ZhouQi 老师的分享：https://www.youtube.com/watch?v=VGxzUxryiqE
 
+### 2025.01.18
+
+Optimism 是一个极大地促进 Ethereum 可范围性和用户体验的 Layer 2 可扩展解决方案。它基于 Optimistic Rollup 技术构建。通过将大量交易紧凑地合并并在 Ethereum 上查证一些关键信息，Optimism 可以大大降低运营成本。本笔记将总结 Optimism 的起步指南，以便创建者和应用开发者快速上手。
+
+基础概念
+
+1. 介绍 Optimism
+
+Optimism 是屏蔽上下文构造和进行警告确认的最终安全方案。其重要特性包括：
+
+高度兼容现有 Ethereum 应用和工具，包括智能合约。
+
+以优化结构和减少 Layer 1 输入为目标，达到运行成本的最大化优化。
+
+支持公共利益的开放性。
+
+2. 优势
+
+Optimism 拥有以下优势：
+
+以用户为核心：与 Ethereum 高度兼容，充分利用现有应用和工具。
+
+应用带来体验优化：大量减少涉及成本，为应用和用户提供性价比更高的服务。
+
+适用的加密和检验机制：通过涉及成本和核心警告，确保安全性和选择权。
+
+3. Optimistic Rollup
+
+Optimistic Rollup 依赖于“想信举警”，即比较应用之间不透明性和代理局限。它通过保存带有检验机制的存货，确保安全与放垂功能。
+
 <!-- Content_END -->
