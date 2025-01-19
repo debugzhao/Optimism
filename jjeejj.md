@@ -141,4 +141,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
    1. 维护一个链比构建一个链难得多
    2. 构建一个链，需要考虑很多方面，比如：有不同且有实际使用的功能、bridge security 等等
 
+### 2025.01.19
+
+1. 今天了解到 依托 coinbase 的 Base 链 ，竟然是使用 OP Stack 来构建的，而且已经加入的 Superchain 中了，牛
+
 <!-- Content_END -->
