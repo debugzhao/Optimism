@@ -437,4 +437,24 @@ Voting results from a total of 643 projects participating in Optimism’s RetroP
 
 
 
+### 2025.01.18
+
+为什么有需要超级链？
+
+1. 随着链的不断延申，节点硬件需求线性增加 
+
+2. 采用传统多链 -->每一个链都采用不同的安全模型、启动链成本高、无共识安全模型
+3. 采用L2构建使链间可交换计算资源
+4. 引入超级链，抽象出底层连。使所有使用了op stack的链可以互换资源
+
+> The Superchain is a network of L2 chains, known as OP Chains, which share security, a communication layer, and an open-source technology stack. However, unlike multi-chain designs, these chains are standardized and intended to be used as interchangeable resources. This enables developers to build applications which target the Superchain as a whole, and abstract away the underlying chains the apps are running on.
+>
+> 超级链是一个由 L2 链组成的网络，称为 OP 链，它们共享安全性、通信层和开源技术栈。然而，与多链设计不同，这些链是标准化的，旨在作为可互换的资源使用。这使得开发者能够构建针对整个超级链的应用程序，并抽象出应用程序运行的底层链。
+
+![Superchain Explainer Diagram.](./.William-02-02.assets/imageurl=%252F_next%252Fstatic%252Fmedia%252Fsuperchain-diag.7fc0979f.png)
+
+
+
+
+
 <!-- Content_END -->
