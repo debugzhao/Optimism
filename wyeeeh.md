@@ -206,4 +206,33 @@ This is the final stage where the rollup becomes fully managed by smart contract
    - Communications Lead
    - Milestone and Metrics Lead
 
+### 2025.01.19
+#### Concentration of Power
+- https://gov.optimism.io/t/measuring-the-concentration-of-power-in-the-collective/8956
+- Concentration of Power Index (CPI)
+
+
+|Governance Body|Percentage (%)|
+|----|----|
+|Token House (Th)|32.33%|
+|Citizens’ House (Ch)|34.59%|
+|Grants Council Builders & Growth Experiments Sub-committee (Gc)|10.15%|
+|Grants Council Milestone & Metrics Sub-committee (Gc(M&M))|2.82%|
+|Security Council (Sc)|13.17%|
+|Code of Conduct Council (CoC)|4.32%|
+|Developer Advisory Board (DAB)|3.01%|
+
+- CPI趋势
+   - Token House 的初始 CPI 为 329.25。加入RetroPGF Round 2的Citizen House和Season 3的Council数据后， Token House 的CPI 大幅下降至 140.13，并在S4保持稳定。加上S5的数据，Token House的CPI进一步下降至91.81
+   ![CPI](https://europe1.discourse-cdn.com/bc41dd/original/2X/0/04efb59df754583ef0fb0755628777db08ce694d.png)
+
+- Appendix: https://www.papermark.io/view/cm1j49mya0001rjn3cmsboya9
+- 不同DAO的权力集中度
+![DAO-CPI](https://europe1.discourse-cdn.com/bc41dd/original/2X/f/f4e9cb873216ed9c80270550e752326c5141b35f.png)
+- 根据Nakamoto Coefficient（控制超过 51% 投票权所需的最低成员数量）
+   - Optimism: 21
+   - Compound: 13
+   - Aave: 8
+   - Uniswap: 17
+- 一个很好玩的影响力集中度计算器 Influence Calculator：https://optimism-cop-analyzer.vercel.app/
 <!-- Content_END -->
