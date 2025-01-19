@@ -131,10 +131,10 @@ This is the final stage where the rollup becomes fully managed by smart contract
 ##### 框架
 |项目|Stage 0 要求|Stage 1 要求|Stage 2 要求|
 |----|----|----|----|
-|自我标识|需自我标识为rollup| - | - |
-|L2 状态根发布|在L1上发布L2状态根| - | - |
-|数据可用性（DA）|在L1上提供数据可用性，要保证重建 L2 状态的数据在 L1 上可用| - | - |
-|重建状态源软件|提供能从L1数据重建L2状态的rollup node软件| - | - |
+|自我标识|需自我标识为rollup| -|- |
+|L2 状态根发布|在L1上发布L2状态根| -|- |
+|数据可用性（DA）|在L1上提供数据可用性，要保证重建 L2 状态的数据在 L1 上可用| -|- |
+|重建状态源软件|提供能从L1数据重建L2状态的rollup node软件| -|- |
 |证明系统| - |使用适当的证明系统，如欺诈证明或zk rollups的证明系统，至少5个外部行为者可提交欺诈证明（可白名单）|欺诈证明系统应完全去中心化，无需许可，任何人可提交欺诈证明|
 |用户退出机制| - |用户可在无操作员协调下退出，至少有7天时间退出（不包括安全理事会和治理相关升级）|用户至少有30天时间退出（包括DAO发起的升级，有链上错误检测系统时对检测到的错误除外）|
 |安全理事会设置| - |由至少8个参与者组成的多重签名设置，50%共识阈值，至少一半参与者为外部人员，身份公开披露|安理会权力应高度受限，仅在链上检测到可裁决的健全性错误时能干预| 
@@ -206,4 +206,33 @@ This is the final stage where the rollup becomes fully managed by smart contract
    - Communications Lead
    - Milestone and Metrics Lead
 
+### 2025.01.19
+#### Concentration of Power
+- https://gov.optimism.io/t/measuring-the-concentration-of-power-in-the-collective/8956
+- Concentration of Power Index (CPI)
+
+
+|Governance Body|Percentage (%)|
+|----|----|
+|Token House (Th)|32.33%|
+|Citizens’ House (Ch)|34.59%|
+|Grants Council Builders & Growth Experiments Sub-committee (Gc)|10.15%|
+|Grants Council Milestone & Metrics Sub-committee (Gc(M&M))|2.82%|
+|Security Council (Sc)|13.17%|
+|Code of Conduct Council (CoC)|4.32%|
+|Developer Advisory Board (DAB)|3.01%|
+
+- CPI趋势
+   - Token House 的初始 CPI 为 329.25。加入RetroPGF Round 2的Citizen House和Season 3的Council数据后， Token House 的CPI 大幅下降至 140.13，并在S4保持稳定。加上S5的数据，Token House的CPI进一步下降至91.81
+   ![CPI](https://europe1.discourse-cdn.com/bc41dd/original/2X/0/04efb59df754583ef0fb0755628777db08ce694d.png)
+
+- Appendix: https://www.papermark.io/view/cm1j49mya0001rjn3cmsboya9
+- 不同DAO的权力集中度
+![DAO-CPI](https://europe1.discourse-cdn.com/bc41dd/original/2X/f/f4e9cb873216ed9c80270550e752326c5141b35f.png)
+- 根据Nakamoto Coefficient（控制超过 51% 投票权所需的最低成员数量）
+   - Optimism: 21
+   - Compound: 13
+   - Aave: 8
+   - Uniswap: 17
+- 一个很好玩的影响力集中度计算器 Influence Calculator：https://optimism-cop-analyzer.vercel.app/
 <!-- Content_END -->
