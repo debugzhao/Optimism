@@ -522,66 +522,7 @@ superchain是我觉得OP生态中非常有趣的一个设计
 
 就可以下载op-node op-geth op-batcher op-proposer
 
-git clone https://github.com/ethereum-optimism/optimism.git
-cd optimism
-pnpm install
-make op-node op-geth op-batcher op-proposer
-
-把这些都移到你的工作目录后
-
-op-node \
-  --l1=<你的L1节点RPC URL> \
-  --l2=http://localhost:8551 \
-  --l1.trustrpc \
-  --l2.genesis=.deployer/genesis.json \
-  --rollup.config=.deployer/rollup.json \
-  --rpc.addr=0.0.0.0 \
-  --rpc.port=8547 \
-  --p2p.disable \
-  --l1.rpckind=basic
 
 
-op-geth \
-  --datadir data \
-  --http \
-  --http.port=8545 \
-  --http.addr=0.0.0.0 \
-  --http.vhosts=* \
-  --http.corsdomain=* \
-  --ws \
-  --ws.port=8546 \
-  --ws.addr=0.0.0.0 \
-  --ws.origins=* \
-  --authrpc.addr=0.0.0.0 \
-  --authrpc.port=8551 \
-  --authrpc.vhosts=* \
-  --syncmode=full \
-  --gcmode=archive \
-  --nodiscover \
-  --maxpeers=0 \
-  --networkid=<你的L2链ID> \
-  --rollup.disabletxpoolgossip=true
-
-
-
-op-batcher \
-  --l1-eth-rpc=<你的L1节点RPC URL> \
-  --l2-eth-rpc=http://localhost:8545 \
-  --rollup-rpc=http://localhost:8547 \
-  --sub-safety-margin=100 \
-  --num-confirmations=1 \
-  --private-key=<batcher私钥> \
-  --max-channel-duration=1
-
-
-op-proposer \
-  --l1-eth-rpc=<你的L1节点RPC URL> \
-  --l2-eth-rpc=http://localhost:8545 \
-  --rollup-rpc=http://localhost:8547 \
-  --poll-interval=10s \
-  --num-confirmations=1 \
-  --private-key=<proposer私钥>
-
-根据这几个设定，基本上就启动了
 
 <!-- Content_END -->
