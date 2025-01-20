@@ -187,6 +187,16 @@ Positive impact to the community should be rewarded with profit to the builder.
 
 - **里程碑与指标委员会 (Milestones and Metrics Council)**：里程碑与指标委员会负责衡量获得拨款的项目是否完成里程碑任务，并向拨款委员会选出的接收者发放拨款。委员会成员由 Token House 代表选举产生。[了解更多](https://github.com/ethereum-optimism/OPerating-manual/blob/main/Milestones and Metrics Council Charter v0.1.md)
 
+### 2025.01.20
+
+学习主题：Superchain 基本介绍 https://docs.optimism.io/stack/explainer
+
+在Bedrock之后，OP Stack的下一个重大可扩展性改进是引入超级链的概念：一个共享桥接、去中心化治理、升级、通信层等等的链网络——所有这些都构建在OP Stack之上。超级链的启动将把OP主网和其他链合并成一个统一的OP链网络（即超级链中的链），标志着向为世界带来可扩展和去中心化计算迈出的重要一步。
+
+Optimism 的超级链旨在通过创建一个共享安全、通信层和开源技术栈的 L2 链网络来解决区块链的可扩展性问题。 虽然超级链的发布将是一个重要的里程碑，但仍需解决一些关键痛点，例如依赖可信证明者、跨链交易速度慢和异步性、L1 的容量限制、缺乏易于使用的开发和钱包工具等。 解决这些问题将使构建复杂 Web2 应用的去中心化替代方案成为可能，最终实现完全可扩展的区块链愿景。
+
+
+
 
 
 <!-- Content_END -->
