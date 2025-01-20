@@ -398,15 +398,21 @@ RetroPGF 获奖项目：https://round6.retrolist.app/
 
 今日学习第15天：
 
-  [
-](https://docs.optimism.io/superchain/superchain-explainer)
-
-
 1.超级链的概念：一个共享桥接、去中心化治理、升级、通信层等的链网络——全部建立在 OP Stack 上。
 
-2.扩展性愿景：今天看到一篇文章，
-[
-](https://www.theblockbeats.info/news/56624)
+2.扩展性愿景：今天看到一篇文章，Blob空间不足，以太坊L2也在崩溃边缘？作者是gauthamzzz，polynomialfi 联合创始人，里面的观点是：
+
+. Blob 空间即将达到极限
+
+• 6 个月内将迎来下一个危机
+
+• 迫切需要扩展解决方案
+
+• 每个 L2 用户都受到影响
+
+
+
+如果你希望以太坊扩展，这就是需要关注的战斗。
 
 提到目前的现状，主要矛盾是性能问题，有种火烧眉毛的感觉，这是一场攻坚战。sol的存在，缓解了用户，对这种刚性需求。长期来看，也算是一种临时缓解手段。
 
