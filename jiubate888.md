@@ -401,10 +401,13 @@ RetroPGF 获奖项目：https://round6.retrolist.app/
   [
 ](https://docs.optimism.io/superchain/superchain-explainer)
 
+
 1.超级链的概念：一个共享桥接、去中心化治理、升级、通信层等的链网络——全部建立在 OP Stack 上。
 
-2.扩展性愿景：今天看到一篇文章，[
+2.扩展性愿景：今天看到一篇文章，
+[
 ](https://www.theblockbeats.info/news/56624)
+
 提到目前的现状，主要矛盾是性能问题，有种火烧眉毛的感觉，这是一场攻坚战。sol的存在，缓解了用户，对这种刚性需求。长期来看，也算是一种临时缓解手段。
 
 3.区块链的可扩展性将从根本上实现互联网的去中心化，并使创建横向可扩展、安全且去中心化的 Web 应用程序变得容易。我在细细理解这句话，横向扩展，那么什么算是好的项目呢？
@@ -412,7 +415,7 @@ RetroPGF 获奖项目：https://round6.retrolist.app/
 
 4.存在即合理，不可否认，抛弃偏见。
 
-
+### 2025.01.21
 
 <!-- Content_END -->
 
