@@ -235,4 +235,26 @@ This is the final stage where the rollup becomes fully managed by smart contract
    - Aave: 8
    - Uniswap: 17
 - 一个很好玩的影响力集中度计算器 Influence Calculator：https://optimism-cop-analyzer.vercel.app/
+
+### 2025.01.20
+#### Optimism Superchain
+- 参考文档
+   - https://docs.optimism.io/superchain/superchain-explainer
+
+**Superchain是什么？**
+Superchain的愿景是一个去中心化区块链平台，由众多 L2 链集合在一起，这些链共用一套安全机制和 OP Stack 技术，也被称为 OP 链。这些OP链之间实现了标准化，就像积木一样能互相替换使用。这样一来，开发者做应用的时候，不用操心下面具体是哪条链，直接把 Superchain 当成一个整体来开发就可以。它的目标是解决区块链扩容难题，让网络又能**横向扩展**又**去中心化**，目前相关项目正在推进。
+- 共享的机制：跨链桥、DAO、协议升级、通信层(Communication Layer)
+
+**传统的多链架构难题**
+- 每条链都引入了新的安全模型，随着新链被引入生态系统，系统性风险会加剧。
+- 新链的启动成本很高，因为它们需要新的validator和builder。
+
+**超级链的必要属性**
+- 共享的 L1 区块链，用来为所有 OP 链提供交易总排序；
+- 所有 OP 链共享的跨链桥，实现标准化安全属性；
+- 便宜的 OP 链部署，可以在 OP 链上部署和交易而无需支付 L1 交易的高额费用
+- OP 链的配置，可以自行决定data availability的提供者和sequencer地址
+- 安全的交易和跨链消息。
+
+
 <!-- Content_END -->
