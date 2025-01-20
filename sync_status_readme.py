@@ -8,9 +8,9 @@ import logging
 
 # Constants
 START_DATE = datetime.fromisoformat(os.environ.get(
-    'START_DATE', '2024-06-24T00:00:00+00:00')).replace(tzinfo=pytz.UTC)
+    'START_DATE', '2025-01-06T00:00:00+00:00')).replace(tzinfo=pytz.UTC)
 END_DATE = datetime.fromisoformat(os.environ.get(
-    'END_DATE', '2024-07-14T23:59:59+00:00')).replace(tzinfo=pytz.UTC)
+    'END_DATE', '2025-01-26T23:59:59+00:00')).replace(tzinfo=pytz.UTC)
 DEFAULT_TIMEZONE = 'Asia/Shanghai'
 FILE_SUFFIX = os.environ.get('FILE_SUFFIX', '.md')
 README_FILE = 'README.md'
@@ -91,13 +91,25 @@ def extract_content_between_markers(file_content):
 
 def find_date_in_content(content, local_date):
     date_patterns = [
+        r'#\s*' + local_date.strftime("%Y.%m.%d"),
+        r'##\s*' + local_date.strftime("%Y.%m.%d"),
         r'###\s*' + local_date.strftime("%Y.%m.%d"),
+        r'#\s*' + local_date.strftime("%Y.%m.%d").replace('.0', '.'),
+        r'##\s*' + local_date.strftime("%Y.%m.%d").replace('.0', '.'),
         r'###\s*' + local_date.strftime("%Y.%m.%d").replace('.0', '.'),
+        r'#\s*' + local_date.strftime("%m.%d").lstrip('0').replace('.0', '.'),
+        r'##\s*' + local_date.strftime("%m.%d").lstrip('0').replace('.0', '.'),
         r'###\s*' +
         local_date.strftime("%m.%d").lstrip('0').replace('.0', '.'),
+        r'#\s*' + local_date.strftime("%Y/%m/%d"),
+        r'##\s*' + local_date.strftime("%Y/%m/%d"),
         r'###\s*' + local_date.strftime("%Y/%m/%d"),
+        r'#\s*' + local_date.strftime("%m/%d").lstrip('0').replace('/0', '/'),
+        r'##\s*' + local_date.strftime("%m/%d").lstrip('0').replace('/0', '/'),
         r'###\s*' +
         local_date.strftime("%m/%d").lstrip('0').replace('/0', '/'),
+        r'#\s*' + local_date.strftime("%m.%d").zfill(5),
+        r'##\s*' + local_date.strftime("%m.%d").zfill(5),
         r'###\s*' + local_date.strftime("%m.%d").zfill(5)
     ]
     combined_pattern = '|'.join(date_patterns)
@@ -200,7 +212,7 @@ def check_weekly_status(user_status, date, user_tz):
 def get_all_user_files():
     exclude_prefixes = ('template', 'readme')
     return [f[:-len(FILE_SUFFIX)] for f in os.listdir('.')
-            if f.lower().endswith(FILE_SUFFIX.lower()) 
+            if f.lower().endswith(FILE_SUFFIX.lower())
             and not f.lower().startswith(exclude_prefixes)]
 
 
@@ -381,6 +393,7 @@ def calculate_statistics(content):
         'perfect_attendance_users': perfect_attendance_users,
         'completed_users': completed_users
     }
+
 
 def main():
     try:

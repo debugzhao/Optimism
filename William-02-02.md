@@ -386,4 +386,75 @@ Citizen House 范围界定 -> 创建 -> 审查 -> 投票 -> 分配
 
 
 
+### 2025.01.17
+
+https://mirror.xyz/optimismcn.eth/uJcBF6kl9UwUFOjCt6SnmkZBz_CUsK-W8debwVUnv6g
+
+委员会构成https://forum.lxdao.io/t/optimism-governance-glossary/2543
+
+**GrowthePie**-OP RetroPGF
+
+Voting results from a total of 643 projects participating in Optimism’s RetroPGF3. Results were announced on January 11th and will be distributed in the coming weeks/months.
+
+就是对op RetroPGF结果有一个更加直观的展示board。
+
+观察到类别有看不懂的东西
+
+![image-20250117165038619](./.William-02-02.assets/image-20250117165038619.png)
+
+> The OP Stack is the set of software that powers Optimism — currently in the form of the software behind OP Mainnet and eventually in the form of the Optimism Superchain and its governance.
+> OP Stack 是驱动 Optimism 的软件集合——目前以 OP 主网的软件形式存在，最终将以 Optimism 超级链及其治理的形式呈现。 
+>
+> Optimism Bedrock 是 OP Stack 的当前迭代版本。Bedrock 发布版提供了启动生产级 Optimistic Rollup 区块链的工具。
+>
+> ### **Coll Gov（Collaborative Governance）**
+>
+> - **含义：** 这一分类涉及 **协作治理** 相关的工具和机制，用于支持去中心化治理、社区决策、投票系统等。
+>
+> ### **Dev Eco（Developer Ecosystem）**
+>
+> - **含义：** 这一分类指的是 **开发者生态系统**，包括为开发者提供工具、文档、SDK、开发框架等，以便更容易地在区块链上构建项目。
+>
+> ### **End UX（End-User Experience）**
+>
+> - **含义：** 专注于提升 **终端用户体验**，包括钱包、前端界面、DApp（去中心化应用）的设计与可用性。
+>
+> ### **Op Stack（Optimism Stack）**
+>
+> - **含义：** 与 **Optimism 技术栈** 相关的项目，通常指优化以太坊扩展性的工具和技术（例如 Layer 2 扩展解决方案）。
+
+#### superchain
+
+> The launch of the Superchain would merge OP Mainnet and other chains into a single unified network of OP Chains (i.e., chains within the Superchain), and mark a major step towards bringing scalable and decentralized compute to the world. The goal of this document is to describe the scalability vision, the Superchain concept, and some changes to the OP Stack required to make this vision a reality.
+> Superchain 的启动将把 OP 主网和其他链合并为一个统一的 OP 链网络（即 Superchain 内的链），并标志着向世界提供可扩展和去中心化计算迈出的重要一步。本文档的目标是描述可扩展性愿景、Superchain 概念以及为实现这一愿景所需的 OP Stack 的一些变更。
+
+这里说的其他链是什么
+
+> 就是将其他同样使用op stack开发的链连接起来。统一规范标准 然后通过superchain连接起来。
+>
+> - **Superchain**：通过标准化和互操作性，使得工具和钱包可以将各个链视为相同的实体，开发人员能够构建跨链应用程序，而无需引入系统性风险[^1^]。其主要通过OP Stack来实现不同链之间的无缝通信和交互。
+> - **Polkadot**：其主要创新在于促进不同区块链之间的互操作性，通过Cross-Consensus Messaging Format（XCM）允许平行链之间自由交换消息，实现数据和价值的无缝交换。此外，Polkadot还提供桥梁，以实现与外部网络的双向兼容
+
+
+
+### 2025.01.18
+
+为什么有需要超级链？
+
+1. 随着链的不断延申，节点硬件需求线性增加 
+
+2. 采用传统多链 -->每一个链都采用不同的安全模型、启动链成本高、无共识安全模型
+3. 采用L2构建使链间可交换计算资源
+4. 引入超级链，抽象出底层连。使所有使用了op stack的链可以互换资源
+
+> The Superchain is a network of L2 chains, known as OP Chains, which share security, a communication layer, and an open-source technology stack. However, unlike multi-chain designs, these chains are standardized and intended to be used as interchangeable resources. This enables developers to build applications which target the Superchain as a whole, and abstract away the underlying chains the apps are running on.
+>
+> 超级链是一个由 L2 链组成的网络，称为 OP 链，它们共享安全性、通信层和开源技术栈。然而，与多链设计不同，这些链是标准化的，旨在作为可互换的资源使用。这使得开发者能够构建针对整个超级链的应用程序，并抽象出应用程序运行的底层链。
+
+![Superchain Explainer Diagram.](./.William-02-02.assets/imageurl=%252F_next%252Fstatic%252Fmedia%252Fsuperchain-diag.7fc0979f.png)
+
+
+
+
+
 <!-- Content_END -->

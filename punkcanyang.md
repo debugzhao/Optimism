@@ -450,4 +450,138 @@ Retro Funding 包括三个核心组件
 
 事多，累了，今天到这里
 
+
+### 2025.01.17
+### Superchain
+superchain是我觉得OP生态中非常有趣的一个设计
+
+他主要强调几个点：
+- 只要是在Superchain上的链可以有相当高的互操作性，也就是不同链之间的资源可以互相连接又或者是遵循一个架构，可以快速耦合
+- Superchain采用的是OP Stack架构，有相当程度的模组化，开发者可以根据自己需求，调整链能提供的功能，例如以游戏开发为目标的RedStone，他Index的效率就非常高，Gas非常低，这样可以有效提高游戏物件载入的效率，并允许更高的并发量（不过即便如此还是有很多细节要克服，例如连续并发时，Nonce是跟不上的，所以得要提高Gas才能让连续并发的要求发出去，但比起很多L2，RedStone已经可以瞬间发出十几个Request，而不会被RPC给踹了）
+- 因为扩展性更高，因此在不同领域的需求，可以尽可能贴近用户的需求，提升友善度
+
+因为他的优势，采用的项目也越来越多，包括本身已经有BNB链的币安，也建设了一条opBNB的相容公链。
+
+### OP Stack 的主要模块
+
+以下是对**OP Stack 组件**的重点分析，帮助你理解其模块化设计和关键部分。根据学习报告的需求，以下提供了分层介绍和每一部分的核心内容。
+
+- 数据可用性层（Data Availability Layer）：定义链的原始输入数据存储位置，使用以太坊的 calldata、事件或 EIP-4844 数据 blobs。
+- 排序层（Sequencing Layer）：决定用户交易如何被收集并发布到数据可用性层，可以由单一实体处理交易排序，从多个预定义的排序器中选取一个作为当前的排序器。
+- 派生层（Derivation Layer）：处理数据可用性层的原始数据，形成供执行层使用的输入，与数据可用性层高度相关，因为需要解析原始数据，分成两大模块：
+	- Rollup 模块：从以太坊区块数据、排序器交易批次和交易事件中派生输入。
+	- Indexer 模块：派生与特定智能合约相关的数据，如交易、事件和存储修改。
+- 执行层（Execution Layer）：定义链的状态结构和状态转换函数，例如EVM的功能等等都是在这里，这个抽离有另一种好处，可支持未来的其他虚拟机（如 zkEVM 或 WASM）。
+- 结算层（Settlement Layer）：将 OP Stack 链的状态与外部链（包括其他 OP Stack 链）的状态进行同步，包括乐观故障证明（Fault Proof Optimistic Settlement）跟有效性证明（Validity Proof Settlement）
+- 治理层（Governance Layer）：管理系统配置、升级和设计决策的工具与流程集合，例如多签合约（MultiSig Contracts），治理代币（Governance Tokens）等等
+
+### 2025.01.20
+
+尝试假设一个测试网的OP Stack，还搞不太懂
+我尝试用Podman的环境建置
+参考： https://docs.optimism.io/builders/chain-operators/tools/op-deployer
+
+利用op-deployer，先在L1的测试网布署一个对应合约
+
+首先要初始化
+`./bin/op-deployer init --l1-chain-id 11155111 --l2-chain-ids <l2-chain-id> --workdir .deployer`
+
+产生初始档案后，可以自己进去改
+
+
+`configType = "standard"`
+`l1ChainID = 11155111`
+`fundDevAccounts = false`
+`useInterop = false`
+`l1ContractsLocator = "tag://op-contracts/v1.8.0-rc.4"`
+`l2ContractsLocator = "tag://op-contracts/v1.7.0-beta.1+l2-contracts"`
+
+`[superchainRoles]`
+  `proxyAdminOwner = "0x1eb2ffc903729a0f03966b917003800b145f56e2"`
+  `protocolVersionsOwner = "0x79add5713b383daa0a138d3c4780c7a1804a8090"`
+  `guardian = "0x7a50f00e8d05b95f98fe38d8bee366a7324dcf7e"`
+
+`[[chains]]`
+  `id = "0x0000000000000000000000000000000000000000000000000000000005f5e0fe"`
+  `baseFeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `l1FeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `sequencerFeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `eip1559DenominatorCanyon = 250`
+  `eip1559Denominator = 50`
+  `eip1559Elasticity = 6`
+  `[chains.roles]`
+    `l1ProxyAdminOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `l2ProxyAdminOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `systemConfigOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `unsafeBlockSigner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `batcher = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `proposer = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `challenger = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+
+总之按照步骤将环境设定好了之后
+
+就可以下载op-node op-geth op-batcher op-proposer
+
+git clone https://github.com/ethereum-optimism/optimism.git
+cd optimism
+pnpm install
+make op-node op-geth op-batcher op-proposer
+
+把这些都移到你的工作目录后
+
+op-node \
+  --l1=<你的L1节点RPC URL> \
+  --l2=http://localhost:8551 \
+  --l1.trustrpc \
+  --l2.genesis=.deployer/genesis.json \
+  --rollup.config=.deployer/rollup.json \
+  --rpc.addr=0.0.0.0 \
+  --rpc.port=8547 \
+  --p2p.disable \
+  --l1.rpckind=basic
+
+
+op-geth \
+  --datadir data \
+  --http \
+  --http.port=8545 \
+  --http.addr=0.0.0.0 \
+  --http.vhosts=* \
+  --http.corsdomain=* \
+  --ws \
+  --ws.port=8546 \
+  --ws.addr=0.0.0.0 \
+  --ws.origins=* \
+  --authrpc.addr=0.0.0.0 \
+  --authrpc.port=8551 \
+  --authrpc.vhosts=* \
+  --syncmode=full \
+  --gcmode=archive \
+  --nodiscover \
+  --maxpeers=0 \
+  --networkid=<你的L2链ID> \
+  --rollup.disabletxpoolgossip=true
+
+
+
+op-batcher \
+  --l1-eth-rpc=<你的L1节点RPC URL> \
+  --l2-eth-rpc=http://localhost:8545 \
+  --rollup-rpc=http://localhost:8547 \
+  --sub-safety-margin=100 \
+  --num-confirmations=1 \
+  --private-key=<batcher私钥> \
+  --max-channel-duration=1
+
+
+op-proposer \
+  --l1-eth-rpc=<你的L1节点RPC URL> \
+  --l2-eth-rpc=http://localhost:8545 \
+  --rollup-rpc=http://localhost:8547 \
+  --poll-interval=10s \
+  --num-confirmations=1 \
+  --private-key=<proposer私钥>
+
+根据这几个设定，基本上就启动了
+
 <!-- Content_END -->

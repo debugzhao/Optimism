@@ -275,4 +275,63 @@ Retro Funding has three core components, each with substantial surface area for 
 - Impact settlement: how does voting work?
 
 For the first several rounds of Retro Funding, the Optimism Foundation will decide on scope and voting mechanics with input from the community. Eventually the set of variables around what to fund, how much to fund, and how to vote will be up to the Citizens’ House, with checks and balances from the Token House.  
+
+### 2025.01.17
+继 Bedrock 之后，OP Stack 的下一个重大可扩展性改进是引入超级链的概念：共享桥接、去中心化治理、升级、通信层等的链网络，所有这些都构建在 OP Stack 上。
+The scalability vision  可扩展性愿景  
+- 可扩展的去中心化计算的价值是巨大的……如今的区块链技术不足以满足去中心化网络的需求  
+| We very, very much need such a system, but the way I understand your proposal, it does not seem to scale to the required size.  
+
+- 可扩展的去中心化计算的价值是巨大的……
+   - 如果链上交易与与中心化后端交互一样便宜
+      -  使编写高度可扩展的 Web 应用程序成为可能，而无需接触传统的后端软件堆栈。
+      -  在这个大多数应用程序都上链的世界中，更多数据变得可以加密验证。
+- …and the decentralized web can still be realized 去中心化网络仍然可以实现
+
+ 基本的Superchain概念  
+ - Horizontal scalability requires multiple chains… 水平可扩展性需要多个链……
+ - …but traditional multi-chain architectures are insufficient …但传统的多链架构还不够
+    - 多链”架构的传统方法存在两个基本问题：
+       - 每条链都引入了新的安全模型，随着新链被引入生态系统，系统性风险会加剧。
+       - 新链的启动成本很高，因为它们需要新的验证器集和区块生产者。
+   - 这些问题来自于缺乏单一共享区块链（“L1”链）作为多链系统中所有链（“L2”链）的共享事实来源。
+   - 通过使用共享的事实来源，可以：
+      -  a) 在所有链上实施标准安全模型；
+      -  b) 删除链部署需要一组新验证器的要求，因为每个 L2 链都使用 L1 共识。
+- Not multi-chain, not mono-chain… Superchain 不是多链，不是单链……超级链
+
+### 2025.01.18
+Superchain概述  
+Superchain是一个 L2 链网络，共享安全性、通信层和开源技术堆栈。然而，与多链设计不同，这些链是标准化的，旨在用作可互换的资源。这使得开发人员能够构建以整个超级链为目标的应用程序，并抽象出应用程序运行的底层链。  
+![image](https://github.com/user-attachments/assets/af8dca97-d596-45cb-bbb9-b30b25506d53)
+Superchain 的属性  
+为了让 Optimism 升级为Superchain，它必须具备以下属性：    
+
+
+|Property 属性  |	Purpose  目的  |
+|---|---|
+|Shared L1 blockchain  共享L1区块链	| Provides a total ordering of transactions across all OP Chains.提供所有 OP 链上交易的总排序。  |
+|Shared bridge for all OP Chains 所有 OP 链的共享桥	| Enables OP Chains to have standardized security properties.使OP链具有标准化的安全属性。  |
+|Cheap OP Chain deployment 廉价的OP链部署 | Enables deploying and transacting on OP Chains without the high fees of transacting on L1.允许在 OP 链上部署和交易，而无需支付 L1 交易的高额费用。 | 
+|Configuration options for OP Chains OP 链的配置选项 | Enables OP Chains to configure their data availability provider, sequencer address, etc. 使 OP Chain 能够配置其数据可用性提供者、定序器地址等。|
+|Secure transactions and cross-chain messages 安全交易和跨链消息| Enables users to safely migrate state between OP Chains.使用户能够在 OP 链之间安全地迁移状态。|
+
+### 2025.01.19  
+升级Optimism，成为Superchain
+- 将Bedrock bridge升级为链工厂
+   Bedrock引入了SystemConfig合约，开始直接用L1智能合约定义一些L2链。这可以扩展为将定义 L2 的所有信息放在 L1 上。包括生成唯一的链ID、区块gas limit等关键配置值等。
+  一旦链数据完全在链上，就可以创建一个工厂，为每个链部署配置和所有其他所需的合约。这可以通过使用 CREATE2 使合约地址具有确定性来进一步扩展，这意味着给定链配置，可以确定与该链关联的所有桥地址。这也使得链能够进行交互，而无需部署桥接合约，使（反事实）链部署几乎免费，并允许链继承标准安全属性。
+- 使用链工厂导出OP Chain数据
+Bedrock引入了L1链衍生的L2链，所有链数据都可以基于L1区块进行同步。随着 L1 链工厂扩展此功能以将所有配置放在链上，Optimism节点应该可以在给定单个 L1 地址和到 L1 的连接的情况下确定性地同步任何OP 链。  
+- 无需许可的证明系统即可提款
+  在 Bedrock 中，用户提交提款需要一个许可角色（“提议者”角色）。此外，提案者必须按照设定的时间间隔向 L1 提交提案。随着超级链中链数量的增加，这会引入线性开销，甚至由于 L1 资源有限而引入链数量上限。
+  为了解决这些问题，可以引入两个功能：
+  - 提款声明（又名无许可提案）——允许任何人提交提款（又名提案），而不仅仅是指定的提案者。这将从系统中删除许可角色，使用户能够提交自己的提款消息。
+  - 无提交间隔的按需提案——仅当用户需要撤回时才提出撤回声明。这消除了部署新 OP 链时产生的开销。
+
+- 每个 OP 链可配置的定序器
+ Bedrock 引入了在 SystemConfig 合约中设置定序器地址的功能。当引入具有自己的 SystemConfig 合约的多个链时，可以启用 OP Chain 部署者配置定序器地址。
+  这种可配置的定序器设计称为模块化定序。这使得 OP 链能够由不同的实体进行排序，同时保留标准的安全模型——这是实现排序器去中心化的关键一步。
+
+  
 <!-- Content_END -->

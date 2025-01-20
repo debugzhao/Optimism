@@ -337,5 +337,22 @@ OP Governance Portal作为投票的前端界面
 
 社区资金有哪些retrofund支持，有哪些项目得到了支持
 
+### 2025.01.18
+
+今日学习的是OP相关的一些项目，主要了解了governance tools系列做了哪些项目，哪些web3的治理投票工具以及metrics
+
+### 2025.01.19
+
+今日学习主要关注的是OP Council 的组成内容
+通过观察https://gov.optimism.io/search?q=council，我们可以发现包括了以下常见的council记录
+1. code of conduct council
+2. security council
+3. grants council
+
+通过记录可以看到security council会讨论遇到的一些诸如盗号丢失，transaction问题的解决方案偏技术的具体事务处理的讨论
+
+对于code of conduct council 会谈论一些投票流程的细项，以及社群的一些政治守则，偏向于思想上的统一
+
+对于grants council，根据里面的内容会审议一些项目竞标，以及像season 6 superchain grants programs推出第六季超级链补助金计划的审查过程。为了确保拨款有效地促进超级链的增长和成功，我们已经建立了一个严格评估程序。该程序将涉及一系列针对每个申请的有针对性的问题。这表示所有申请者都必须回答这些问题，并且只有在他们能够提供令人信服的答案时才能获得资助。通过这种方式，我们可以确保资助分配给最有前途的项目，从而为超级链的成功做出最大的贡献。更具体到技术方案升级讨论以及具体的项目计划讨论，最为务实
 
 <!-- Content_END -->
