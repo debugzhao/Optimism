@@ -103,35 +103,51 @@ Optimism 现旨在通过一个名为 Superchain 的平台进一步增强其可�
 
 ### 2025.01.12
 
-笔记内容
+用户调用 SDK 获取提现交易的状态，若状态为 READY_TO_PROVE, 说明交易可以进行证明； 用户可以调用 SDK 的 proveMessage 去进行交易的证明，或者直接 call OptimismPortal 合约 proveWithdrawalTransaction 方法进行交易的证明，当证明交易产生之后，等到交易过了挑战期，交易状态会变成 READY_FOR_RELAY；这个时候用户可以调用 SDK 的 finalizeMessage 方法进行资金的 Claim, 也可以直接调用 OptimismPortal 合约的 finalizeWithdrawalTransaction 方法进行资金的 Claim。
 
 ### 2025.01.13
 
-笔记内容
+充值交易会调用到 depositTransaction; depositTransaction 会抛出 TransactionDeposited 事件，事件里面携带信息如下 emit TransactionDeposited(from, _to, DEPOSIT_VERSION, opaqueData); op-node 监听到该合约事件之后，会在二层去执行充值交易
 
 ### 2025.01.14
 
-笔记内容
+Rollup :
+
+1. 提交交易数据到DA
+2. 提交交易状态到L1
 
 ### 2025.01.15
 
-笔记内容
+排序器（Sequencer）是以太坊扩容方案 Rollup 中的核心组件之一，负责对交易进行排序，并执行区块创建、交易接受、交易排序、交易执行以及交易数据提交等相关任务。
+Sequencer：交易排序器
+交易落块
+第一笔交易是充值的交易
+verifier：交易验证器
 
 ### 2025.01.16
 
-笔记内容
+verifier：交易验证器
+根据交易生成证明，验证交易是否有效，如果无效则提交到以太坊上验证
 
 ### 2025.01.17
 
-笔记内容
+RPC: 转发用户发送的交易，提供对外的服务
+ZK Prover：零知识证明器，生成证明 op-code 电路 链下交易证明生成器
 
 ### 2025.01.18
 
-笔记内容
+Sequencer：交易排序器 提交交易数据到DA, 提交交易状态到L1
+verifier：交易验证器 链下交易证明生成器
 
 ### 2025.01.19
 
-笔记内容
+ZK Prover：零知识证明器，生成证明 op-code 电路 链下交易证明生成器
+DA: 数据 availability layer
+纠删码：纠删码是一种数据编码技术，用于对数据进行编码，以减少数据丢失的概率。
+bls 签名：bls 签名是一种签名算法，它使用一对密钥对（公钥和私钥）来对数据进行签名。聚合签名是一种签名技术，它允许多个签名者对同一数据进行签名，并使用这些签名来验证数据的完整性和真实性。
+共识：共识是一种协议，它定义了如何确定一个网络中的成员是否一致。
+重新质押：重新质押是一种机制，它允许用户在网络中重新质押其质押的代币，以获得更多的奖励。
+kzg 证明：kzg 证明是一种零知识证明技术，它允许用户对数据进行签名，而不需要公开数据。
 
 ### 2025.01.20
 

@@ -138,4 +138,101 @@ This is the final stage where the rollup becomes fully managed by smart contract
 |证明系统| - |使用适当的证明系统，如欺诈证明或zk rollups的证明系统，至少5个外部行为者可提交欺诈证明（可白名单）|欺诈证明系统应完全去中心化，无需许可，任何人可提交欺诈证明|
 |用户退出机制| - |用户可在无操作员协调下退出，至少有7天时间退出（不包括安全理事会和治理相关升级）|用户至少有30天时间退出（包括DAO发起的升级，有链上错误检测系统时对检测到的错误除外）|
 |安全理事会设置| - |由至少8个参与者组成的多重签名设置，50%共识阈值，至少一半参与者为外部人员，身份公开披露|安理会权力应高度受限，仅在链上检测到可裁决的健全性错误时能干预| 
+
+### 2025.01.12
+#### Optimism治理机制
+今天先列一下框架，明天查一下资料对比：
+- Token House V.S. Citizen House
+- Mission Grants V.S. RetroPGF
+
+**Token House**
+- 基于token持有量分配vote权重
+- OP 持有者可以直接投票，也可以将其 OP 投票权委托给其他人代表 (delegates)投票
+- 负责Mission Grants
+
+**Citizen House**
+- 基于声誉的，由链上投票选出
+- 负责RetroPGF
+
+### 2025.01.13
+**治理平台**
+- governance forum
+- charmverse
+- agora
+- snapshot
+
+### 2025.01.14
+今天有点忙，登录了Governance Forum看了一下最新的讨论。明天补上笔记。
+
+### 2025.01.15
+#### OP Token House
+参考文档：https://community.optimism.io/token-house/token-house-overview
+- Token House 与 Citizens' House 一起管理 Optimism Collective，并负责 Superchain 协议的治理。
+- 成员组成：OP Holders
+- 负责对治理基金的分配进行投票，对所有protocol和governor upgrade proposals进行投票，并提出对 OP 代币inflation rate的更改，以及[操作手册](https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md)中概述的各种其他提案类型。
+- OP 代币的投票权委托给明确自愿在 Token House 治理中活跃的社区成员。这些人被称为"delegates"
+- Token House 治理按季节性时间表运行。Season大约每 6 个月一次。每一个Voting Cycle是3周。目前是Season 7。
+
+### 2025.01.16
+#### OP Citizen House
+参考文档：https://community.optimism.io/citizens-house/citizen-house-overview
+- 和Token House的投票权重 1 OP = 1 Vote不同，Citizen House的投票是1 Person = 1 Vote。
+- 负责RetroPGF资金的分配，有权否决Token House提出的协议升级proposal
+   - 未来可能与 Token House 合作管理**超额收入**的分配
+- 成员组成：每一轮RetroPGF有不同的badge holder，通过“Web of Trust”机制选择
+
+### 2025.01.17
+#### OP Grants
+参考文档：https://community.optimism.io/grant/grant-overview
+- Season 7只有一个 [Season 7 Intent](https://gov.optimism.io/t/season-7-intent/9292)
+##### Foundation Missions
+- Github申请: https://github.com/orgs/ethereum-optimism/projects/31/views/1
+##### RetroPGF Missions
+- https://atlas.optimism.io/rounds
+- 由Citizen House负责，每一轮有对应的scope和eligibility，需要项目报名或提名，再由Citizen House进行投票决定资格和分配
+##### Governance Fund Missions
+- https://app.charmverse.io/op-grants/
+- Grants Council负责，需要项目自行提名，再由Grants Council成员根据每一轮的eligibility对项目进行投票决定资格和分配，符合条件的项目将最后经过Token House投票获得分配
+
+### 2025.01.18
+#### OP Grant Council
+- https://app.charmverse.io/op-grants/optimism-grants-council-8323028890716944
+- 由1个lead和15个reviewers组成的4个sub-committees (review teams)
+   - Superchain Sub-Committee
+   - Optimism Mission Review Sub-Committee
+   - Milestones and Metrics Sub-Committee
+   - Audits and Special Missions Sub-Committee
+- Season 5有2个Lead
+   - Communications Lead
+   - Milestone and Metrics Lead
+
+### 2025.01.19
+#### Concentration of Power
+- https://gov.optimism.io/t/measuring-the-concentration-of-power-in-the-collective/8956
+- Concentration of Power Index (CPI)
+
+
+|Governance Body|Percentage (%)|
+|----|----|
+|Token House (Th)|32.33%|
+|Citizens’ House (Ch)|34.59%|
+|Grants Council Builders & Growth Experiments Sub-committee (Gc)|10.15%|
+|Grants Council Milestone & Metrics Sub-committee (Gc(M&M))|2.82%|
+|Security Council (Sc)|13.17%|
+|Code of Conduct Council (CoC)|4.32%|
+|Developer Advisory Board (DAB)|3.01%|
+
+- CPI趋势
+   - Token House 的初始 CPI 为 329.25。加入RetroPGF Round 2的Citizen House和Season 3的Council数据后， Token House 的CPI 大幅下降至 140.13，并在S4保持稳定。加上S5的数据，Token House的CPI进一步下降至91.81
+   ![CPI](https://europe1.discourse-cdn.com/bc41dd/original/2X/0/04efb59df754583ef0fb0755628777db08ce694d.png)
+
+- Appendix: https://www.papermark.io/view/cm1j49mya0001rjn3cmsboya9
+- 不同DAO的权力集中度
+![DAO-CPI](https://europe1.discourse-cdn.com/bc41dd/original/2X/f/f4e9cb873216ed9c80270550e752326c5141b35f.png)
+- 根据Nakamoto Coefficient（控制超过 51% 投票权所需的最低成员数量）
+   - Optimism: 21
+   - Compound: 13
+   - Aave: 8
+   - Uniswap: 17
+- 一个很好玩的影响力集中度计算器 Influence Calculator：https://optimism-cop-analyzer.vercel.app/
 <!-- Content_END -->

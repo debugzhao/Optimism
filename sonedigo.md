@@ -277,4 +277,82 @@ For stage 2:
 - Is the Security Council restricted to act only due to errors detected on chain?
 
 next day 2025.01.12 will learn about rollup's and Optimism's protocal
+
+### 2025.01.12
+
+Today‘s work will learn through  https://specs.optimism.io/protocol/overview.html
+
+对于Layer 2的总体架构来说，需要根据Layer 1的情况去诠释它的意义
+在Execution-level实现等效以太坊虚拟机，要求有：
+1.不需要特殊的编译器运行
+2.无意外的gas费用
+3.交易跟踪不需要额外的配置
+4.所有以太坊的工具和特性均可使用
+在此基础上，所有的节点要兼容以太坊layer 1，并且L2的实现要尽可能地减小和vanila Geth node的差异，并且充分利用L1的特性
+
+首先，这个L2区块链将与一个基本的Geth节点交互，并尽可能地利用现有的第一层（L1）标准。这意味着该L2链将在某些方面遵循以太坊协议规范，以便更好地与其他以太坊节点通信。
+
+其次，执行引擎/rollup节点将使用ETH2引擎API来构建主链上的L2链。ETH2引擎是以太坊2.0的核心组件之一，用于处理网络中的所有交易和状态更新。通过使用ETH2引擎API，L2链可以更好地集成到以太坊网络中，并获得更好的性能和安全性。
+
+最后，执行引擎还将利用Geth节点现有的内存池和同步实现，包括快照同步。内存池是保存待确认交易的地方，而同步则是指将新的区块添加到本地区块链中。通过利用这些现有功能，L2链可以更快地处理交易并保持与主链的一致性。
+
+Geth是一个用Go语言编写的以太坊客户端，可以用来连接或创建私有的以太坊网络，而关于L2链的部署，Geth提供的是基础支持，具体实施依赖于额外的协议和工具。
+
+next day 2025.01.13 will learn about Core L1 Smart Contracts
+
+### 2025.01.13
+
+today bring up some new word for Core L1 Smart Contracts
+
+batchers, SuperchainConfig, Batch Inbox Address, L1CrossDomainMessenger, DisputeGameFactory, FaultDisputeGame
+
+note that batchers and guradian are two different roles, batchers are the ones who submit batches to the L1, while guardians are the ones who verify the batches and submit the results to the L1.
+
+Batchers 是负责将多个交易打包成一个批次（batch），然后将这些批次提交到Layer 1（以太坊主链）的角色。这个过程有助于减少直接在主链上执行的交易数量，从而节省费用并提高效率。
+Guardians 被描述为负责验证这些批次的有效性，并将验证结果提交回Layer 1的角色。这种机制确保了提交到主链上的批次是有效的，防止欺诈行为。
+
+通过图片和流程，展示了deposit和withdrawal的流程，关键节点还是在OptimismPortal作为user和L1的交互点
+
+next day 2025.01.14 will step into the Optimism Collective https://community.optimism.io/welcome/welcome-overview
+
+### 2025.01.14
+Optimism targeting to be a superchain which including public support resource, benefit for all but not the owner. And it is focusing on long term eco-system
+
+OP 生态不仅有token house和citizen house分别决议不同的内容，这一治理具有多个成功案例可以参考，但是侧重点要放在去中心化上
+
+### 2025.01.15
+
+OP的投票机制
+OP的管理工具主要有token house governance contract，用于提案的提交与投票
+
+OP Governance Portal作为投票的前端界面
+
+以及相关的snapshot space，discord， github分属不同的社群
+
+对于提案的提交与投票都有详细的流程和时间处理周期，像是一个去中心化的社团组织，遵循各类民主程序，主要围绕着如何审批，修改，投票通过相关的proposal解决问题
+
+### 2025.01.16
+
+今日学习的是OP的创业启动资金如何获取
+
+社区资金有哪些retrofund支持，有哪些项目得到了支持
+
+### 2025.01.18
+
+今日学习的是OP相关的一些项目，主要了解了governance tools系列做了哪些项目，哪些web3的治理投票工具以及metrics
+
+### 2025.01.19
+
+今日学习主要关注的是OP Council 的组成内容
+通过观察https://gov.optimism.io/search?q=council，我们可以发现包括了以下常见的council记录
+1. code of conduct council
+2. security council
+3. grants council
+
+通过记录可以看到security council会讨论遇到的一些诸如盗号丢失，transaction问题的解决方案偏技术的具体事务处理的讨论
+
+对于code of conduct council 会谈论一些投票流程的细项，以及社群的一些政治守则，偏向于思想上的统一
+
+对于grants council，根据里面的内容会审议一些项目竞标，以及像season 6 superchain grants programs推出第六季超级链补助金计划的审查过程。为了确保拨款有效地促进超级链的增长和成功，我们已经建立了一个严格评估程序。该程序将涉及一系列针对每个申请的有针对性的问题。这表示所有申请者都必须回答这些问题，并且只有在他们能够提供令人信服的答案时才能获得资助。通过这种方式，我们可以确保资助分配给最有前途的项目，从而为超级链的成功做出最大的贡献。更具体到技术方案升级讨论以及具体的项目计划讨论，最为务实
+
 <!-- Content_END -->

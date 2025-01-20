@@ -222,4 +222,83 @@ https://docs.google.com/spreadsheets/d/1IpL0oTd3AgNBu_eWdjP9EjbQfZjq-_Nd3yU1H2ke
 5. Decision Diagram Working Model
 https://www.figma.com/board/iXqyKmLJeBeplKpJBHDI7G/PUBLIC%3A-Optimism-Decision-Diagram-Working-Model?node-id=0-1&node-type=canvas&t=QLiz1uM1DepwYyHy-0
 
+#### 2025.01.15
+
+- Key Governance Structure
+The Optimism Collective employs a unique two-house governance system:
+
+Token House: Comprised of OP token holders
+Responsible for:
+Submitting governance proposals
+Deliberating on proposals
+Voting on various governance matters
+
+Citizens' House: Composed of Optimism Citizens
+Primary functions:
+- Allocating retroactive public goods funding
+- Voting on proposal vetoes
+- Providing a check-and-balance mechanism
+- Governance Process
+- Proposal Lifecycle
+-Three-week cycle for most proposals
+-Weeks 1-2: Feedback and review period
+-Week 3: Voting period
+
+Key Requirements
+
+Proposals must be:
+Submitted to the Governance Forum
+- Marked with [Draft] initially
+Require approval from:
+- 4 top 100 delegates (Token House)
+- 4 Citizens (Citizens' House)
+
+Voting Mechanics
+Token House Voting
+Quorum: 30% of votable OP supply
+Approval Threshold: 51-76% of votes (varies by proposal type)
+
+Citizens' House Voting
+Based on percentage of total Citizens
+Includes veto rights for certain proposals
+Valid Proposal Types
+
+Retroactive Public Goods Funding (Retro Funding)
+A unique mechanism where Citizens vote to reward impactful public goods projects through:
+
+#### 2025.01.16
+Revised and re-orgnised notes for
+https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
+
+Key takeaway
+
+Governance Architecture
+- Two-House System: Token House and Citizens' House
+- Purpose: Decentralized, democratic blockchain governance
+- Unique Feature: Bicameral structure with mutual oversight
+
+Token House
+- Composition: OP token holders
+- Responsibilities:
+   Submit governance proposals
+   Vote on protocol upgrades
+   Manage treasury decisions
+   Voting Mechanism: Direct voting or delegation
+
+Citizens' House
+- Core Function: Retroactive Public Goods Funding
+- Key Characteristics:
+   Temporary citizenship
+   Veto power over Token House proposals
+   Rewards impactful public goods projects
+  
+Governance Process
+- Cycle: Three-week structured approach
+   Weeks 1-2: Community feedback
+   Week 3: Formal voting
+- Approval Requirements:
+   Delegate/Citizen endorsements
+   Specific quorum thresholds
+   Transparent review process
+  
 <!-- Content_END -->

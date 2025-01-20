@@ -535,4 +535,344 @@ Superchain 愿景：标准化、几十个链形同一体、治理保护安全、
 
 TODO OP 的去中心化 milestone 很重要，可以解码下一步 OP 要做的 https://docs.google.com/spreadsheets/d/1IpL0oTd3AgNBu_eWdjP9EjbQfZjq-_Nd3yU1H2ke3vY/edit?gid=1115302678#gid=1115302678
 
+### 2025.01.13
+
+## https://github.com/ethereum-optimism/OPerating-manual/blob/main/manual.md
+
+[Optimism Governance Portal](https://vote.optimism.io/): A front-end interface that enables Token House members to delegate and vote their OP on-chain.
+
+主要的 OP 运行相关提案。
+
+[The Citizens’ House Snapshot Space](https://snapshot.org/#/s:citizenshouse.eth): A front-end interface that enables Citizens’ House members to veto Token House proposals.
+
+TODO 不是很活跃，不知道是做什么用的。
+
+[Github](https://github.com/ethereum-optimism/ecosystem-contributions/issues): Grants (Mission Requests) are managed via issues in this public github repo
+
+TODO Mission Requests 是什么？似乎是比较大的计划的讨论的地方。
+
+Applications to Token House Mission Requests will be reviewed and selected by the Grants Council. Applications to Foundation Mission Requests will be reviewed and selected by the Foundation. All applications should follow the submission process outlined on each Mission Request in github.
+
+[Charmverse](https://app.charmverse.io/op-grants/season-4-701220845245208): Home of the community-led Optimism Grants Council
+
+研究下 https://charmverse.io/ 似乎跟 WhatToBuild 有点像。跟进 application 申请和 milestones 完成情况。
+
+All governance proposals go through a three week cycle. Each “week” runs from Thursday at 19:00p GMT (12p PST) until Wednesday at 19:00 GMT (12p PST).
+
+All non-grant proposal types should be posted to the Forum for review by anyone in the Optimism community. Proposal authors are expected to be responsive to delegate and Citizen feedback.
+
+```
+Standard Proposal Template – Optimism Token House
+
+Proposal Title: _____________________________________
+What your proposal is called?
+
+Proposal Type: _____________________________________
+Governance proposals must fall under a valid proposal type.
+
+Executive Summary
+A high level overview of the proposal’s substance.
+Please include:
+
+Short summary of the proposal
+Impacted stakeholders & expected outcomes
+Motivation
+The why.
+Please include:
+
+Why you are submitting the proposal
+Any conflicts of actual or anticipated conflicts of interest that you (as an individual, group or entity) may have with respect to the proposal
+Why the Collective should adopt the proposal
+Specifications
+The details of the proposal.
+Please include:
+
+Technical details (a comprehensive description of the proposed changes).**
+If applicable, please include:
+
+Links to all protocol/ API/ tech specifications
+Overview of ongoing security considerations, including all audits and findings*
+Impact summary (a comprehensive description of the consequences of adopting the proposed changes).
+If applicable, please include:
+
+Changes in performance characteristics
+Time-of-upgrade considerations (downtime, etc.)
+Links to exhaustive upgrade documentation for impacted stakeholders
+Action Plan
+How the proposal would be implemented.
+If applicable, please include:
+
+Anticipated implementation/upgrade/execution timing
+Contingency plans in case of last-minute bugs or issues
+Plan for communication and education to the community
+Conclusion
+Tying it all together.
+Please include:
+
+Recap of main points
+Request for approval from the Collective
+
+```
+
+Before the end of Week 2, a governance administrator will create a Voting Cycle Roundup thread in the forum to collect all proposals that meet the requirements for voting in Week 3. This Roundup will not include Mission grant applications, which will be processed by the Foundation or Grants Council.
+
+For a non-grant proposal proposed in the Token House to proceed to Week 3, four of the top 100 delegates must give explicit approval on the discussion thread.
+
+定期来捞取提案然后进行讨论和执行，有严格的时间限制，需要 top 100 的 delegator 进行支持。
+
+A Token House governance proposal is approved if it satisfies the following minimum vote thresholds:
+
+- Quorum: The minimum number of total OP votes, including abstain votes, required to be cast in connection with a proposal. Here, a quorum is measured as a % of the total votable OP supply, as of the start of the voting period. “Votable supply” is the total amount of OP that has been delegated, and therefore can participate in voting. An illustrative chart of the total votable OP supply can be found here.
+- Approval threshold: The minimum number of OP votes required to be cast in favor of approving a proposal. The approval threshold for each proposal is measured as % of votes cast to approve relative to the total number of yes/no votes cast in connection with a proposal. This does not include abstain votes.
+
+Casting a veto is a serious decision. If a proposal approved in the Token House is vetoed by the Citizens' House, the proposal will not be enacted. In the case of Protocol Upgrades, vetoing may have serious consequences on engineering timelines and milestones. Proposals that may be vetoed by the Citizens' House have already been evaluated and approved by the Token House, which has been entrusted with primary responsibility over that proposal type. A Citizens' House veto may be appropriate if a proposal is believed to be malicious or to have been passed by a compromised Token House (either captured or acting out of self-interest rather than the Collective interest.)
+
+veto 是一个紧急否决的流程，可以在某些时刻帮助到 OP。
+
+### Valid Proposal Types
+
+- Governance Fund
+- Protocol or Governor Upgrade
+- Inflation Adjustment
+- Director Removal
+- Treasury Appropriations
+- Code of Conduct Violations
+- Representative Removal
+- Representative Structure Dissolution
+- Rights Protections
+- Elections
+- Ratification
+- Reflection Period (Metagovernance)
+
+TODO Director Removal 是什么？去掉的是什么 Director？
+
+Retro rounds are run according to the following process:
+
+- Scoping: The overall amount of rewards to be allocated and scope of impact are defined at the outset of the round.
+- Application creation: Projects are invited to create an Application in the Retro Funding Application Manager.
+- Application Review: Applications are reviewed for adherence to the application rules.
+- Voting: Votes are collected from the Citizens with the requisite AttestationStation entries and tallied.
+- Disbursement: Based on the simple weighted average of the Citizens’ House vote, the overall reward amount for the round is divided among the winning projects.
+- Compliance: The Foundation will collect information from projects in order to distribute the grant in a legally compliant manner (including completing KYC).
+
+Additional information on the process for 2024 Retro Funding is available here.
+
+The Optimism Foundation will facilitate the administration of the governance procedures described in this Operating Manual with the aim of ensuring that members of the Collective may participate thoughtfully in governance.
+
+OP 基金会来监督整个治理流程的顺利完成，比如推进提案进展、监督投票结果、管理维护网络等等。
+
+公共治理的前提是有资源进行治理，这个资源最直接的就是金钱，其次还有一些人力。
+
+### Process TLDR
+
+- 三周一个 proposal cycle
+- If you’re submitting a grant application, you’ll need to submit your application as outlined on each individual Mission Request in [github](https://github.com/ethereum-optimism/ecosystem-contributions/issues?q=is%3Aissue).
+- 对于非 grants 的提案，按照模板发在论坛，其他人提供建议想法
+- 4 个 top 100 的人来支持，就可以 Voting Cycle Roundup，进入投票环节
+
+### 2025.01.14
+
+## https://gov.optimism.io/search?q=council
+
+https://gov.optimism.io/t/security-council-season-6-retrospective/9301
+
+安全理事会的近期主要工作目标是去中心化，升级相关技术和协议，完成治理去中心化等。目前 SC 需要依赖 OP Labs 的资助，影响独立性，然后要钱的时候可能有点摩擦。希望管理自己的预算，然后独立性的工具和资源，减少对 OP Labs 的依赖。
+
+SC 在 OP 进入 Stage 1 中扮演了重要的作用。所以主要工作可能是推动其进入 Stage 2。这里可以去分析 OP 距离 Stage 2 的距离，整理出来 SC 还有哪些工作可以做？
+
+这是一个参与社区治理很不错的样板 https://gov.optimism.io/t/security-council-season-6-retrospective/9301/4?u=brucexu 可以让 OPCN、LXDAO 和 ETHPanda 治理组参考。深度参与内容，并且进行讨论，反馈自己的想法。
+
+SC 需要自己运行系统监控工具。比如构建监控和通知报警的基础设施，让 SC 及时进入进行操作。每次升级，SC 都需要模拟验证提议升级内容，目前都是 EOA 暂时不支持多签，正在进行立项和开发。
+
+TODO 可以研究安全理事会的工作，并围绕做一些工具。
+
+[S7 安全委员会预算提案](https://gov.optimism.io/t/security-council-operating-budget-season-7/9358)：
+
+- 295000 OP，大概 50WU 半年？？！！S6 的预算是 57,843.00、S5 是 56,386.00。
+- 13 名成员负责签名，安全密钥管理，及时验证升级，作为挑战者等，时刻应对紧急情况并且定期参加活跃度检查。每个人半年 20000 OP，大概 34400U，月均 5700U 好高啊
+- Leader 是 7083U
+
+TODO 安全理事会运行章程 https://github.com/ethereum-optimism/OPerating-manual/blob/main/Security%20Council%20Charter%20v0.1.md
+
+[S7 Grants 委员会提案](https://gov.optimism.io/t/grants-council-operating-budget-s7/9357)：
+
+- 400000 OP，大概 68WU，外加额外的不固定的，一共 9 - 11 个人
+- 5w OP 用于 retroactive compensation 追溯性奖励，基于可衡量贡献（FairSharing？）
+- Lead 5833 OP 大概 9916U。统筹管理
+- 运营专员 2500OP 4250U。协助处理一些运营工作
+- GrantNerds x 3，3333OP 5666U。寻找好的项目，帮助他们申请 grants
+- Final reviewers x4，5000OP 8500U。DeFi 专家，理解 TVL 等，审核项目是否可以完成 DeFi 和 TVL 目标
+
+TODO Grants 委员会运行章程 https://github.com/ethereum-optimism/OPerating-manual/blob/main/Grants%20Council%20Charter%20v0.1.md
+
+怎么招募选拔？
+
+看起来都是半年一个周期，然后进行选举和换届。
+
+In Season 5, there were 548 applications, and in Season 6, based on what we gathered from the forum, the Grants Council reviewed 557 proposals. Of these, 221 were declined, 336 were voted on, and 133 successfully passed governance (you can check the details here). https://docs.google.com/spreadsheets/d/1Ul8iMTsOFUKUmqz6MK0zpgt8Ki8tFtoWKGlwXj-Op34/edit?gid=1179446718#gid=1179446718 TODO WhatToBuild source。
+
+For Season 7, I plan to return to open-ended grants with a single focus on increasing the TVL of the Superchain.
+
+S7 的 grants 主要专注于 TVL 的增长。KPI 目标也是 TVL 增长。
+
+TODO Developer Advisory Board 是什么？
+
+### 2025.01.15
+
+## https://community.optimism.io/citizens-house/how-retro-funding-works
+
+Retro Funding also provides possible exit liquidity for public goods projects, which opens up a market for early investment in those projects. This means builders can:
+
+- Be rewarded for their positive contributions without generating direct revenue
+- Raise capital to bootstrap based on the early potential and promise of their project
+
+这一点其实有点牵强，主要在于：1. 没有启动资金，可能项目无法启动。2. 不能保证拿到 retro 的资金，VC 不一定愿意支持。
+
+Retro Funding has three core components, each with substantial surface area for experimentation.
+
+- Impact scoping: what should the Collective fund? How is it defined and decided on?
+- Impact scoring: how does the Citizens’ House evaluate impact? What units, process, or tools do we use?
+- Impact settlement: how does voting work?
+
+### 2025.01.16
+
+## RetroPGF
+
+### [最初的愿景和设计](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)
+
+第一期是 2021 年 Q4 做的，最初 OP 跟 VB 一起探索制作的 RetroPGF 机制。
+
+要解决的问题：没有 business model 的好项目，但是很难获得资金去雇佣最好的，然后持续下去。
+
+创业公司驱动早期成员疯狂投入的一个重要因素是 exit，可以通过上市或者出售给早期贡献者退出的机会和激励。但是在非盈利、开源和公共物品层面，没有 exit 的机制。所以比较沮丧的是产生大量利润的 free software 无法得到相应的激励，对于这些想要建设的人是一种阻碍。
+
+如果我们有了这个退出机制之后，可以看到更多非营利组织蓬勃发展而不是勉强维生。OP Team 承诺将所有 sequencer 的收益捐赠给公共物品 funding 的实验。
+
+VB：RetroPGF 的核心理念就是判断什么目前有用比推断什么未来有用更容易。所以可以创建一个 the Results Oracle，根据事后的成果对项目进行追溯性奖励。
+
+构建这个系统比较复杂，可以逐步去中心化。
+
+其中发放的 retro 奖励，可以发给个人、组织以及协助分配的智能合约，还有一种创新的方法是发给 project token。这些 project token 已经分发给了相关有贡献的人，实际上为 results oracle 将要资助的项目创造了一个预测市场，通过 retro 分配的奖励，构建了一个代币的价格底线。如果分配 100 刀，而有 10000 个 token，就相当于以 0.01 刀买入全部的 token。
+
+这样的话，每次发放 retro 的奖励，都会为这个 project token 构建一个底价。
+
+![alt text](brucexu-eth_assets/image-5.png)
+
+[VB 对第一期 retro 的 review](https://vitalik.eth.limo/general/2021/11/16/retro1.html)：
+
+- 整个过程非常公开透明
+- retro 的轮次，分配的资金差异性不如 QF 大，毕竟没有平方加持
+- retro 的赢家，主要是知名项目，QF 则投向有前途的新项目，期待未来价值（其实是撸空投目的）
+- retro 侧重基础设施，QF 侧重面向用户的，因为 QF 是社区参与
+
+VB 个人认为 retro 选出来的项目比 QF 的质量高。其实是符合预期的，因为实际产出了影响，而且是由行业 OG 的 badge holders 选择出来的。通过结果，是否可以说：行业专家更聪明，大众更具备多样性？
+
+Retro 里面的 ECN 投票比较少但是很重要，主要由于 badge holders 不太了解中国以太坊社区。即便是增加多样性和多一些当地的 badge holders，也无济于事。可能的解决方案：
+
+### 2025.01.17
+
+[VB 对第一期 retro 的 review](https://vitalik.eth.limo/general/2021/11/16/retro1.html)：
+
+可能的解决方案：
+
+1. 调整二次方投票。
+2. 将 Voting 拆分到 category 和 sub-committees，然后类别内的 badge holders 继续投票
+3. 增加讨论和专家的建议
+
+Badge holders 是否应该考虑当前项目是否急需资金？并且降低那些已经获得充足资金的项目的优先级？是否根据经济状况进行审查？
+
+追溯性资助的目标不是基于未来工作预期给予人们资金，以期望他们可以完成工作，而是奖励已经完成的工作，改变未来人们从事工作的激励方式。
+
+通过 Mean Testing 做了一个推演，得到的结论是 Retro 应该尽量奖励没有通过其他途径获得成功的项目，这样获得 nothing 的概率最低，鼓励人们投入高风险不赚钱的项目。
+
+TODO，如何判断项目是否有其他途径获得了资助？需要 Public Goods Directory 来展示和管理聚合。
+
+但是目前有一些难度，可能会增加工作，同时让 project 去隐藏自己获取的财富来获得更多，因此增加了更多争论。所以目前可以轻度的做一些判断，不应该太多。然后重点关注项目的质量和对世界的影响。
+
+提名环节目前是任何人都可以在 Google 上面提名，未来的话可能会因为数量过多，需要 Pass pre-filtering 才可以。可能的一些想法：
+
+1. Badge holders pre-approval，例如必须大于 3 个 pre-approve 了才可以继续
+2. 要求提供详尽的信息
+3. 提案必须放在一个 category
+4. deposit 0.02 ETH，如果得到了 0 votes 或者被视为 spam，收走 deposit
+5. 提供 proof-of-humanity ID，如果是 0 votes 或者 spam，一年不能发布提案
+
+利益冲突部分，Badge holder 不能参与跟自己有利益相关的项目，就是资金会有一部分流向自己的提案。但是这个规则和描述有一些比较宽松或者不好确定的地方，比如如何确定利益相关、跟朋友的亲近程度等。可以借鉴的解决方案：
+
+1. 增加 badge holders 数量，稀释串谋的可能
+2. 减少只有少数 badge holders 支持的项目的 rewards
+3. 出现明显的滥用行为，可以进行反制
+
+投票是否应该隐藏？不隐藏投票的问题会导致：1. 贿选。2. 不愿意投反对票，因为一些朋友关系。现实世界中有不少场景使用了 secret ballots，但是也非常复杂。在 OP 的场景，如果隐藏投票会导致 badge holders 无法反击一些串谋。
+
+### 2025.01.18
+
+TODO 可以深度研究每一轮 RetroPGF 的资料和数据，产出一个 RetroPGF 的报告，包括变更、资金利用率、实际效果、投票情况、治理机制变更等。
+
+## RetroPGF 6 https://round6.retrolist.app/
+
+主要是治理主题，所以大都是跟治理相关的。一些想法：
+
+- 治理必须想办法跟 OP 挂钩，比如协助 RetroPGF 做分析和决策
+- 好多都是 OP 自己的生态和团队，他们自己也是按照这个模式走的，例如：NumbaNERDs、
+- EAS 一直在建设，可以继续跟进一下相关的项目合作等
+- https://www.growthepie.xyz/ 是个不错的数据分析的来源，可以用于写一些 report，此外我们也可以做一些相关的数据整合平台
+- Developer Advisory Board Onboarding Hub 有点类似之前的专家组。TODO 需要调研所有 OP 生态的组结构和职能，不过参考性有限，他们毕竟有比较大的生态
+- superchain.eco 原来是非官方的，其实是有点像 xxbeat 这样的，这类是比较重要的公共物品
+- charmverse.io 研究和体验一下相关功能和设计
+- DAOstar 也可以联系回访一下，看看新年的计划
+- OPCN 可以学习 SEED Gov 提供专业治理，也可以拿到不少
+- https://www.karibalabs.co/ 是一个衡量公共物品影响力的研究组织，可以学习看看如何衡量，然后协作开发公共物品名录等
+
+如果工作组按照这个模式走，应该是在底薪的基础之上，然后增加额外的激励？否则会产生积极性的问题？导致整个组无法继续下去，慢慢的没有人做了？
+
+按照 Public Goods 的投票和 RetroPGF 的理念，其实有一个 Public Goods 的 https://www.producthunt.com/ 是很重要的，因为这是来自大众的评分，可以作为重要的参考依据。
+
+### 2025.01.20
+
+## Superchain explainer https://docs.optimism.io/superchain/superchain-explainer
+
+Superchain = OP Mainnet + OP Chains
+
+Superchain 的设计逻辑推演：
+
+- 水平扩张需要并行链
+- 并行链的问题：每个有自己的安全模型，每个启动都需要新的 validator 等基础设施
+- 因此 Superchain 解决方案：1. 所有链的安全模型一致。2 不用 validator，都用 L1 的
+
+Superchain 是一个 L2 chains 的 network，包括 OP Chains（安全、通信、开源技术栈）。
+
+Bedrock 使用了 SystemConfig contract 来配置 L2 的各种参数的定义，包括 chain ID、block gas limit 等。
+
+```
+/// @notice Initializer.
+///         The resource config must be set before the require check.
+/// @param _owner             Initial owner of the contract.
+/// @param _basefeeScalar     Initial basefee scalar value.
+/// @param _blobbasefeeScalar Initial blobbasefee scalar value.
+/// @param _batcherHash       Initial batcher hash. 用于验证批量交易提交者
+/// @param _gasLimit          Initial gas limit.
+/// @param _unsafeBlockSigner Initial unsafe block signer address.
+/// @param _config            Initial ResourceConfig.
+/// @param _batchInbox        Batch inbox address. An identifier for the op-node to find
+///                           canonical data.
+/// @param _addresses         Set of L1 contract addresses. These should be the proxies.
+
+
+/// @notice Internal setter for the gas paying token address, includes validation.
+///         The token must not already be set and must be non zero and not the ether address
+///         to set the token address. This prevents the token address from being changed
+///         and makes it explicitly opt-in to use custom gas token.
+/// @param _token Address of the gas paying token.
+function _setGasPayingToken(address _token) internal virtual {
+
+可以支持自定义 gas token，包括 contract 和 decimals。
+```
+
+通过 CREATE2 和 config，可以推测出 bridge addresses 等。
+
+OP Chain data 可以在给定 L1 address + connection 之后，进行整个链的恢复。
+
+每个人都可以提交 withdrawal proposal。
+
 <!-- Content_END -->

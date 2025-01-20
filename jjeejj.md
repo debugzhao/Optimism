@@ -101,4 +101,48 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. 今天 看了下 Token house 和 Citizens’ House 2 院治理体 有什么区别， 分别刻意投票什么，没有特明白，希望可以解答一下
 
+### 2025.01.12
+
+1. 阅读 Superchain 基本介绍：https://docs.optimism.io/stack/explainer
+   1. Superchain 本质上是一个由多个采用 Optimism 的 OP Stack 构建的第二层（L2）区块链网络组成的集合
+   2. 把 OP 主网 和 其他链 合并到一个 统一的 OP 链中 (chains within the Superchain)
+   3. 相互之间是可以通信，标准的通信协议，共享的通信基础设置
+   4. 去中心化的需要，目前还不能完全满足，但是是可以实现的
+   5. Superchain 可以水平扩展多个链
+
+### 2025.01.13
+
+1. 阅读 https://docs.optimism.io/stack/getting-started
+   1. OP Stack 的基本概念：当前的核心是运行 L2 区块链的基础设施
+   2. OP Stack 是可持续发展的
+
+### 2025.01.14
+
+1. 看了 这个地址 https://www.superchain.eco/projects 有 100 个 superchain 项目，正好 100，是只收录这么多吗？
+2. 比较看好 Name Service,未来的基础设施。 找到了一个 SPACE ID Mode Name Service 项目，但是官网打不开 遗憾
+
+### 2025.01.15
+
+1. 推荐一个 玩转以太坊 L2 之 Op Stack https://www.bilibili.com/video/BV1vW4y1F75Z
+
+### 2025.01.16
+
+1. deploy you app get start https://docs.optimism.io/builders/app-developers/quick-start
+
+### 2025.01.17
+
+1. 今天想在 Superchain Faucet: https://console.optimism.io/faucet?utm_source=scaffoldop 领点水 部署合约，使用邮箱登录的时候, 一直提示 检查是否是真人，登录好久登不不上去。
+
+![alt text](https://pic.wenjunjiang.com/202501172157416.png)
+
+### 2025.01.18
+
+1. 学习视频: 【OP 残酷共学：OP 建设之路】 https://www.youtube.com/watch?v=VGxzUxryiqE&ab_channel=LXDAO
+   1. 维护一个链比构建一个链难得多
+   2. 构建一个链，需要考虑很多方面，比如：有不同且有实际使用的功能、bridge security 等等
+
+### 2025.01.19
+
+1. 今天了解到 依托 coinbase 的 Base 链 ，竟然是使用 OP Stack 来构建的，而且已经加入的 Superchain 中了，牛
+
 <!-- Content_END -->

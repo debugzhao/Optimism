@@ -419,6 +419,407 @@ L1 和 L2 标准桥接合约支持代理升级
 需要目标域存在对应的可铸造代币合约
 转移受 Gas 限制和桥接合约规则约束
 
+### 2025.01.12
+
+跨域消息传递（Cross Domain Messengers）
+跨域消息传递是 OP Stack 中实现不同域（L1 和 L2）间通信的关键机制。
+
+核心合约 (Core Contracts)
+L1CrossDomainMessenger
+L2CrossDomainMessenger
+预部署地址：0x4200000000000000000000000000000000000007
+
+消息传递流程 (Message Passing Process)
+发送消息 (Sending Messages)
+solidity
+function sendMessage(  
+    address _target,     // 目标地址 (Target Address)  
+    bytes memory _message, // 消息内容 (Message Content)  
+    uint32 _minGasLimit   // 最小 Gas 限制 (Minimum Gas Limit)  
+) external payable;  
+中继消息 (Relaying Messages)
+solidity
+function relayMessage(  
+    uint256 _nonce,        // 消息随机数 (Message Nonce)  
+    address _sender,       // 发送者地址 (Sender Address)  
+    address _target,       // 目标地址 (Target Address)  
+    uint256 _value,        // 转账金额 (Transfer Value)  
+    uint256 _minGasLimit,  // 最小 Gas 限制 (Minimum Gas Limit)  
+    bytes memory _message  // 消息内容 (Message Content)  
+) external payable;  
+
+消息版本管理 (Message Version Management)
+版本 0
+编码方式：abi.encodeWithSignature("relayMessage(address,address,bytes,uint256)")
+包含：目标地址、发送者、消息、随机数
+版本 1
+编码方式：abi.encodeWithSignature("relayMessage(uint256,address,address,uint256,uint256,bytes)")
+包含：随机数、发送者、目标地址、转账值、Gas限制、消息数据
+
+关键事件 (Key Events)
+solidity
+event SentMessage(  
+    address indexed target,    // 目标地址 (Target Address)  
+    address sender,            // 发送者 (Sender)  
+    bytes message,             // 消息内容 (Message Content)  
+    uint256 messageNonce,      // 消息随机数 (Message Nonce)  
+    uint256 gasLimit           // Gas 限制 (Gas Limit)  
+);  
+
+event RelayedMessage(  
+    bytes32 indexed msgHash    // 消息哈希 (Message Hash)  
+);  
+
+安全与升级 (Security and Upgradability)
+升级机制 (Upgrade Mechanism)
+使用可升级代理合约
+支持消息版本动态更新
+
+安全特性 (Security Features)
+成功/失败消息哈希追踪
+消息重放保护
+最小 Gas 开销计算
+
+跨域通信流程 (Cross-Domain Communication Process)
+
+L1 到 L2
+    
+用户在 L1 发送消息
+自动中继到 L2
+用户在 L1 支付 Gas
+
+L2 到 L1
+
+用户在 L2 发起提现
+证明提现
+等待最终确认窗口
+在 OptimismPortal 上完成提现
+
+最佳实践 (Best Practices)
+始终指定足够的 Gas 限制
+验证消息发送和中继状态
+处理可能的失败场景
+遵循版本兼容性
+
+### 2025.01.13
+
+OP Stack 存款（Deposits）
+存款交易定义 (Deposit Transaction Definition)
+
+基本特征 (Basic Characteristics)
+从 L1 发起，在 L2 执行的特殊交易类型
+使用唯一的交易类型前缀 0x7E
+不需要签名验证
+
+关键字段 (Key Fields)
+sourceHash：唯一标识存款来源
+from：发送账户地址
+to：接收账户地址
+mint：L2 铸造的 ETH 数量
+value：发送的 ETH 数量
+gas：L2 交易 Gas 限制
+isSystemTx：是否为系统交易
+
+存款交易类型 (Deposit Transaction Types)
+
+两种主要类型 (Two Main Types)
+
+L1 属性存款交易 (L1 Attributes Deposited Transaction)
+固定地址：0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001
+目标地址：0x4200000000000000000000000000000000000015
+存储 L1 区块关键属性
+
+用户存款交易 (User-Deposited Transactions)
+由用户在 L1 发起
+通过 OptimismPortal 合约处理
+
+存款处理流程 (Deposit Processing Workflow)
+
+执行步骤 (Execution Steps)
+增加 from 账户余额（mint 金额）
+初始化执行环境
+特殊 Gas 处理
+不验证 Gas 费字段
+不退还 Gas
+不收取优先费
+错误处理 (Error Handling)
+将非 EVM 状态转换错误转换为 EVM 错误
+回滚世界状态
+增加 from 账户 Nonce
+
+地址别名机制 (Address Aliasing)
+
+安全转换规则 (Security Transformation Rules)
+合约地址通过添加 0x1111000000000000000000000000000000001111 进行转换
+防止 L1 和 L2 合约地址攻击
+确保用户可与 L2 合约交互
+
+不同升级版本变化 (Upgrade Version Changes)
+
+Regolith 升级 (Regolith Upgrade)
+isSystemTx 强制为 false
+调整 Gas 限制
+引入 depositNonce 字段
+
+Canyon 升级 (Canyon Upgrade)
+强制包含 depositNonce 和 depositNonceVersion 字段
+
+安全性机制 (Security Mechanisms)
+
+验证方法 (Validation Methods)
+通过 L2 链衍生过程验证
+仅接受 L1 存款合约日志中的地址
+不依赖传统签名验证
+
+关键合约 (Key Contracts)
+OptimismPortal
+L1 存款合约
+管理存款 Gas 市场
+处理地址别名
+确保存款 Gas 限制
+
+### 2025.01.14
+
+提款概念定义 (Withdrawal Concept)
+
+1. 基本定义 (Basic Definition)
+提款是一种跨域事务，由 L2 发起，并在 L1 上最终确认的特殊交易类型。
+
+关键术语 (Key Terminology)
+提款发起交易：L2 上发送到 Withdrawals 预部署合约的交易
+提款证明交易：在 L1 上证明提款正确性的交易
+提款最终确认交易：在 L1 上完成和中继提款的交易
+
+2. 提款流程详解 (Withdrawal Flow)
+
+L2 阶段 (On L2)
+
+L2 账户向 L2ToL1MessagePasser 预部署合约发送提款消息
+合约存储提款数据的哈希值
+使用 initiateWithdrawal 函数触发提款
+
+L1 阶段 (On L1)
+
+中继者提交提款证明交易
+    包含提款交易数据
+    提供包含证明
+    指定区块号
+OptimismPortal 合约验证流程
+    从 L2OutputOracle 检索输出根
+    验证提款证明
+    记录哈希以防重复证明
+挑战期（7 天）
+    允许网络参与者挑战输出根的完整性
+最终确认
+    中继者提交最终确认交易
+    验证提款已被证明且通过挑战期
+
+3. 关键合约 (Key Contracts)
+   
+L2ToL1MessagePasser 合约
+地址：0x4200000000000000000000000000000000000016
+关键方法：
+    initiateWithdrawal：发起提款
+    messageNonce：获取消息随机数
+    
+OptimismPortal 合约
+提供提款入口和出口
+关键方法：
+    proveWithdrawalTransaction：证明提款
+    finalizeWithdrawalTransaction：最终确认提款
+    l2Sender()：获取 L2 发送者地址
+    
+4. 地址处理 (Address Handling)
+与存款的关键区别
+    存款：地址别名处理
+    提款：地址不进行别名处理
+    L1 上通过 l2Sender() 明确来源域
+   
+5. 安全考虑 (Security Considerations)
+关键安全属性
+    防止双重支出
+    每个提款仅能：
+        证明一次
+        最终确认一次
+    防止消息字段被篡改
+   
+潜在风险
+    OptimismPortal 可发送任意 L1 消息
+    用户需谨慎授予权限
+    错误发送的代币可能无法找回
+    
+6. 错误处理 (Error Handling)
+中继失败场景
+    无法确定执行失败是否"应该"失败
+    不提供重放机制
+    可通过外部实用合约实现额外逻辑
+
+### 2025.01.15
+
+1. 核心概念 (Core Concepts)
+   
+1.1 定义 (Definition)
+保证 Gas 是指在 L1 发起的存款交易（Deposited Transactions）在 L2 上使用的特殊 Gas 机制。
+
+1.2 关键特征 (Key Characteristics)
+不可退还的 Gas
+在 L1 购买
+独特的定价模型
+防止网络滥用的 Sybil 抵抗机制
+
+2. Gas 购买机制 (Gas Purchasing Mechanism)
+   
+2.1 购买流程 (Purchasing Process)
+    计算 L2 Gas 价格（使用 EIP-1559 风格算法）
+    计算总 ETH 成本：guaranteed gas * L2 deposit base fee
+    两种支付方式：
+        燃烧 L1 Gas
+        直接支付 ETH（未来支持）
+        
+2.2 Gas 定价算法 (Gas Pricing Algorithm)
+python
+    def calculate_base_fee(prev_base_fee, prev_bought_gas):  
+        # 计算与目标资源使用量的偏差  
+        gas_used_delta = int128(prev_bought_gas) - int128(TARGET_RESOURCE_LIMIT)  
+    
+        # 根据偏差调整基础费用  
+        base_fee_delta = prev_base_fee * gas_used_delta / TARGET_RESOURCE_LIMIT /             BASE_FEE_MAX_CHANGE_DENOMINATOR  
+    
+        # 限制基础费用范围  
+        now_base_fee = clamp(  
+            prev_base_fee + base_fee_delta,   
+            min=MINIMUM_BASE_FEE,   
+            max=MAXIMUM_BASE_FEE  
+        )  
+    
+        return now_base_fee  
+        
+3. 资源限制 (Resource Limitations)
+   
+3.1 关键参数 (Key Parameters)
+MAX_RESOURCE_LIMIT：20,000,000
+ELASTICITY_MULTIPLIER：10
+TARGET_RESOURCE_LIMIT：2,000,000
+
+3.2 限制目的 (Limitation Purposes)
+防止 L2 拒绝服务攻击
+确保总 Gas 使用不超过 L2 区块 Gas 限制
+实现 EIP-1559 风格的拥塞控制
+
+4. Sybil 抵抗机制 (Sybil Resistance Mechanism)
+
+4.1 Gas 燃烧策略 (Gas Burning Strategy)
+    随需求动态调整 L1 Gas 燃烧成本
+    随网络使用强度提高准入门槛
+    增加攻击者的经济成本
+
+4.2 防御攻击方法 (Attack Prevention Methods)
+    大资源限制
+    大弹性因子
+    保持目标资源使用率较低
+    允许基础费用快速调整
+
+5. 安全性考虑 (Security Considerations)
+
+5.1 防御前运攻击 (Frontrunning Prevention)
+    攻击者无法轻易购买所有区块的 Gas
+    基础费用动态调整增加攻击成本
+    大资源限制和弹性因子提供缓冲
+
+5.2 长期防御策略 (Long-term Defense Strategy)
+    持续监控网络攻击模式
+    动态调整参数
+    必要时调整协议设计
+
+6. 未来发展 (Future Development)
+
+6.1 计划支持的特性
+    直接 ETH 支付
+    可能提供 Gas 购买折扣
+    更灵活的 Gas 市场机制
+
+### 2025.01.17
+
+OP Stack L2 输出根提案（L2 Output Root Proposals）
+
+1. 核心概念 (Core Concepts)
+
+1.1 定义 (Definition)
+L2 输出根提案是一种将 L2 状态同步到结算层（L1）的机制，用于：
+跨域消息传递
+提款操作
+状态证明
+
+1.2 关键参与者 (Key Actors)
+提案者（Proposer）：提交 L2 状态输出根
+挑战者（Challenger）：可以删除错误的输出根提案
+
+2. 输出根构建机制 (Output Root Construction)
+
+2.1 输出根格式 (Output Root Format)
+
+ini
+output_root = keccak256(version_byte || payload)  
+
+2.2 有效载荷组成 (Payload Composition)
+
+state_root：执行层账户的 Merkle-Patricia-Trie 根
+withdrawal_storage_root：消息传递合约存储根
+latest_block_hash：最新 L2 区块哈希
+
+3. 提案流程 (Proposal Process)
+
+3.1 提交间隔 (Submission Interval)
+基于区块数量的确定性间隔
+平衡 L1 交易成本和提款延迟
+
+3.2 提案算法 (Proposal Algorithm)
+
+python
+while True:  
+    # 获取下一个检查点区块号  
+    next_checkpoint_block = L2OutputOracle.nextBlockNumber()  
+    
+    # 获取同步状态  
+    rollup_status = op_node_client.sync_status()  
+    
+    # 检查是否可以提交输出根  
+    if rollup_status.finalized_l2.number >= next_checkpoint_block:  
+        # 获取指定区块的输出根  
+        output = op_node_client.output_at_block(next_checkpoint_block)  
+        
+        # 提交交易  
+        tx = send_transaction(output)  
+
+4. 安全性考虑 (Security Considerations)
+
+4.1 L1 重组防御 (L1 Reorg Protection)
+提交时包含 L1 区块哈希
+如果区块哈希不匹配，交易将回滚
+
+4.2 挑战机制 (Challenge Mechanism)
+挑战者可删除错误的输出根提案
+通过 deleteL2Outputs() 函数实现
+
+5. 关键合约接口 (Key Contract Interface)
+
+5.1 核心方法 (Core Methods)
+
+solidity
+// 提交 L2 输出根  
+function proposeL2Output(  
+    bytes32 _l2Output,  
+    uint256 _l2BlockNumber,  
+    bytes32 _l1Blockhash,  
+    uint256 _l1BlockNumber  
+)  
+
+// 删除错误的输出根  
+function deleteL2Outputs(uint256 _l2OutputIndex)  
+
+// 获取下一个需要检查点的区块号  
+function nextBlockNumber() public view returns (uint256)  
+
 ### 2025.07.12
 
 <!-- Content_END -->
