@@ -284,7 +284,7 @@ https://mirror.xyz/optimismcn.eth/xfffo45OHL955PvtKRzBzUhHoKJ0uQAbs_mh-qqkGR4
 
 ### 2025.01.20
 
-
+https://gov.optimism.io/t/season-7-cfc-membership/9131
 
 ### 2025.01.21
 
