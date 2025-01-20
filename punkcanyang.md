@@ -475,4 +475,113 @@ superchain是我觉得OP生态中非常有趣的一个设计
 - 结算层（Settlement Layer）：将 OP Stack 链的状态与外部链（包括其他 OP Stack 链）的状态进行同步，包括乐观故障证明（Fault Proof Optimistic Settlement）跟有效性证明（Validity Proof Settlement）
 - 治理层（Governance Layer）：管理系统配置、升级和设计决策的工具与流程集合，例如多签合约（MultiSig Contracts），治理代币（Governance Tokens）等等
 
+### 2025.01.20
+
+尝试假设一个测试网的OP Stack，还搞不太懂
+我尝试用Podman的环境建置
+参考： https://docs.optimism.io/builders/chain-operators/tools/op-deployer
+
+利用op-deployer，先在L1的测试网布署一个对应合约
+
+首先要初始化
+`./bin/op-deployer init --l1-chain-id 11155111 --l2-chain-ids <l2-chain-id> --workdir .deployer`
+
+产生初始档案后，可以自己进去改
+
+
+`configType = "standard"`
+`l1ChainID = 11155111`
+`fundDevAccounts = false`
+`useInterop = false`
+`l1ContractsLocator = "tag://op-contracts/v1.8.0-rc.4"`
+`l2ContractsLocator = "tag://op-contracts/v1.7.0-beta.1+l2-contracts"`
+
+`[superchainRoles]`
+  `proxyAdminOwner = "0x1eb2ffc903729a0f03966b917003800b145f56e2"`
+  `protocolVersionsOwner = "0x79add5713b383daa0a138d3c4780c7a1804a8090"`
+  `guardian = "0x7a50f00e8d05b95f98fe38d8bee366a7324dcf7e"`
+
+`[[chains]]`
+  `id = "0x0000000000000000000000000000000000000000000000000000000005f5e0fe"`
+  `baseFeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `l1FeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `sequencerFeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `eip1559DenominatorCanyon = 250`
+  `eip1559Denominator = 50`
+  `eip1559Elasticity = 6`
+  `[chains.roles]`
+    `l1ProxyAdminOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `l2ProxyAdminOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `systemConfigOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `unsafeBlockSigner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `batcher = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `proposer = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `challenger = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+
+总之按照步骤将环境设定好了之后
+
+就可以下载op-node op-geth op-batcher op-proposer
+
+git clone https://github.com/ethereum-optimism/optimism.git
+cd optimism
+pnpm install
+make op-node op-geth op-batcher op-proposer
+
+把这些都移到你的工作目录后
+
+op-node \
+  --l1=<你的L1节点RPC URL> \
+  --l2=http://localhost:8551 \
+  --l1.trustrpc \
+  --l2.genesis=.deployer/genesis.json \
+  --rollup.config=.deployer/rollup.json \
+  --rpc.addr=0.0.0.0 \
+  --rpc.port=8547 \
+  --p2p.disable \
+  --l1.rpckind=basic
+
+
+op-geth \
+  --datadir data \
+  --http \
+  --http.port=8545 \
+  --http.addr=0.0.0.0 \
+  --http.vhosts=* \
+  --http.corsdomain=* \
+  --ws \
+  --ws.port=8546 \
+  --ws.addr=0.0.0.0 \
+  --ws.origins=* \
+  --authrpc.addr=0.0.0.0 \
+  --authrpc.port=8551 \
+  --authrpc.vhosts=* \
+  --syncmode=full \
+  --gcmode=archive \
+  --nodiscover \
+  --maxpeers=0 \
+  --networkid=<你的L2链ID> \
+  --rollup.disabletxpoolgossip=true
+
+
+
+op-batcher \
+  --l1-eth-rpc=<你的L1节点RPC URL> \
+  --l2-eth-rpc=http://localhost:8545 \
+  --rollup-rpc=http://localhost:8547 \
+  --sub-safety-margin=100 \
+  --num-confirmations=1 \
+  --private-key=<batcher私钥> \
+  --max-channel-duration=1
+
+
+op-proposer \
+  --l1-eth-rpc=<你的L1节点RPC URL> \
+  --l2-eth-rpc=http://localhost:8545 \
+  --rollup-rpc=http://localhost:8547 \
+  --poll-interval=10s \
+  --num-confirmations=1 \
+  --private-key=<proposer私钥>
+
+根据这几个设定，基本上就启动了
+
 <!-- Content_END -->
