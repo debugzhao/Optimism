@@ -437,4 +437,48 @@ Voting results from a total of 643 projects participating in Optimism’s RetroP
 
 
 
+### 2025.01.18
+
+为什么有需要超级链？
+
+1. 随着链的不断延申，节点硬件需求线性增加 
+
+2. 采用传统多链 -->每一个链都采用不同的安全模型、启动链成本高、无共识安全模型
+3. 采用L2构建使链间可交换计算资源
+4. 引入超级链，抽象出底层连。使所有使用了op stack的链可以互换资源
+
+> The Superchain is a network of L2 chains, known as OP Chains, which share security, a communication layer, and an open-source technology stack. However, unlike multi-chain designs, these chains are standardized and intended to be used as interchangeable resources. This enables developers to build applications which target the Superchain as a whole, and abstract away the underlying chains the apps are running on.
+>
+> 超级链是一个由 L2 链组成的网络，称为 OP 链，它们共享安全性、通信层和开源技术栈。然而，与多链设计不同，这些链是标准化的，旨在作为可互换的资源使用。这使得开发者能够构建针对整个超级链的应用程序，并抽象出应用程序运行的底层链。
+
+![Superchain Explainer Diagram.](./.William-02-02.assets/imageurl=%252F_next%252Fstatic%252Fmedia%252Fsuperchain-diag.7fc0979f.png)
+
+### 2025.01.19
+
+diff between Etherem & OP Stack
+
+| **方面**         | **以太坊 (Ethereum)**                                        | **OP Stack链**                                               |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **桥接机制**     | 无内置桥接机制，资产转移需通过跨链桥接等外部解决方案。       | 支持L1⇔L2桥接交易，通过存款交易将资产从L1引入L2，通过提款交易和故障证明将资产从L2提取到L1。 |
+| **操作码行为**   | 操作码如COINBASE返回当前区块的矿工地址，PREVRANDAO返回上一个区块的随机数。 | - COINBASE返回Sequencer的费用钱包地址，通常不变。<br>- PREVRANDAO返回L1起源区块的PREVRANDAO值。 |
+| **地址别名**     | 无地址别名机制，地址在链上保持一致。                         | 从L1合约触发的L2交易会使用地址别名，以防止地址冒充。         |
+| **交易费用**     | 仅支付执行gas费，由矿工打包交易。                            | 除了支付执行gas费外，还需支付L1数据费。                      |
+| **EIP-1559参数** | 使用统一的EIP-1559参数，基础费用由全网交易需求决定。         | 基础费用通过EIP-1559机制计算，但参数因OP Stack链而异。       |
+| **内存池规则**   | 公共内存池，交易由矿工按gas价格排序并打包。                  | 没有公共内存池，交易由Sequencer按优先费用顺序执行。          |
+| **链的最终性**   | 区块最终性由共识机制（如PoS）决定，通常具有高确定性。        | 区块最终性分为Unsafe、Safe和Finalized Heads，提款交易的最终性依赖于故障证明。 |
+| **交易发起者**   | 交易由外部账户或合约直接发起，地址保持一致。                 | - 外部账户从L1到L2交易时，地址不变。<br>- 合约从L1到L2交易时，地址会别名化。 |
+| **应用场景**     | 通用智能合约平台，适用于各种去中心化应用。                   | 专注于扩展性优化，适合对交易速度和成本敏感的应用，如DeFi和NFT。 |
+
+> 地址别名：当L1存在合约中介时，C->L1->L2的交易会错误的交易到L1合约地址。于是引入固定偏移量来获取地址的别名。 就是说将L1的用户和合约通过别名的方式区分开来。
+>
+> ​	实际用途：如果没有地址别名，可以伪装成L1上的某个合法合约，混淆别人，实际使用了恶意代码。
+>
+> ![image-20250120220328489](./.William-02-02.assets/image-20250120220328489.png)
+
+### 2025.01.20
+
+EIP 1559：https://notes.ethereum.org/@vbuterin/eip-1559-faq
+
+
+
 <!-- Content_END -->

@@ -309,10 +309,29 @@ Superchain 的属性
 
 
 |Property 属性  |	Purpose  目的  |
+|---|---|
 |Shared L1 blockchain  共享L1区块链	| Provides a total ordering of transactions across all OP Chains.提供所有 OP 链上交易的总排序。  |
 |Shared bridge for all OP Chains 所有 OP 链的共享桥	| Enables OP Chains to have standardized security properties.使OP链具有标准化的安全属性。  |
 |Cheap OP Chain deployment 廉价的OP链部署 | Enables deploying and transacting on OP Chains without the high fees of transacting on L1.允许在 OP 链上部署和交易，而无需支付 L1 交易的高额费用。 | 
 |Configuration options for OP Chains OP 链的配置选项 | Enables OP Chains to configure their data availability provider, sequencer address, etc. 使 OP Chain 能够配置其数据可用性提供者、定序器地址等。|
 |Secure transactions and cross-chain messages 安全交易和跨链消息| Enables users to safely migrate state between OP Chains.使用户能够在 OP 链之间安全地迁移状态。|
 
+### 2025.01.19  
+升级Optimism，成为Superchain
+- 将Bedrock bridge升级为链工厂
+   Bedrock引入了SystemConfig合约，开始直接用L1智能合约定义一些L2链。这可以扩展为将定义 L2 的所有信息放在 L1 上。包括生成唯一的链ID、区块gas limit等关键配置值等。
+  一旦链数据完全在链上，就可以创建一个工厂，为每个链部署配置和所有其他所需的合约。这可以通过使用 CREATE2 使合约地址具有确定性来进一步扩展，这意味着给定链配置，可以确定与该链关联的所有桥地址。这也使得链能够进行交互，而无需部署桥接合约，使（反事实）链部署几乎免费，并允许链继承标准安全属性。
+- 使用链工厂导出OP Chain数据
+Bedrock引入了L1链衍生的L2链，所有链数据都可以基于L1区块进行同步。随着 L1 链工厂扩展此功能以将所有配置放在链上，Optimism节点应该可以在给定单个 L1 地址和到 L1 的连接的情况下确定性地同步任何OP 链。  
+- 无需许可的证明系统即可提款
+  在 Bedrock 中，用户提交提款需要一个许可角色（“提议者”角色）。此外，提案者必须按照设定的时间间隔向 L1 提交提案。随着超级链中链数量的增加，这会引入线性开销，甚至由于 L1 资源有限而引入链数量上限。
+  为了解决这些问题，可以引入两个功能：
+  - 提款声明（又名无许可提案）——允许任何人提交提款（又名提案），而不仅仅是指定的提案者。这将从系统中删除许可角色，使用户能够提交自己的提款消息。
+  - 无提交间隔的按需提案——仅当用户需要撤回时才提出撤回声明。这消除了部署新 OP 链时产生的开销。
+
+- 每个 OP 链可配置的定序器
+ Bedrock 引入了在 SystemConfig 合约中设置定序器地址的功能。当引入具有自己的 SystemConfig 合约的多个链时，可以启用 OP Chain 部署者配置定序器地址。
+  这种可配置的定序器设计称为模块化定序。这使得 OP 链能够由不同的实体进行排序，同时保留标准的安全模型——这是实现排序器去中心化的关键一步。
+
+  
 <!-- Content_END -->

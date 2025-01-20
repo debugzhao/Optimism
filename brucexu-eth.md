@@ -828,4 +828,51 @@ TODO 可以深度研究每一轮 RetroPGF 的资料和数据，产出一个 Retr
 
 按照 Public Goods 的投票和 RetroPGF 的理念，其实有一个 Public Goods 的 https://www.producthunt.com/ 是很重要的，因为这是来自大众的评分，可以作为重要的参考依据。
 
+### 2025.01.20
+
+## Superchain explainer https://docs.optimism.io/superchain/superchain-explainer
+
+Superchain = OP Mainnet + OP Chains
+
+Superchain 的设计逻辑推演：
+
+- 水平扩张需要并行链
+- 并行链的问题：每个有自己的安全模型，每个启动都需要新的 validator 等基础设施
+- 因此 Superchain 解决方案：1. 所有链的安全模型一致。2 不用 validator，都用 L1 的
+
+Superchain 是一个 L2 chains 的 network，包括 OP Chains（安全、通信、开源技术栈）。
+
+Bedrock 使用了 SystemConfig contract 来配置 L2 的各种参数的定义，包括 chain ID、block gas limit 等。
+
+```
+/// @notice Initializer.
+///         The resource config must be set before the require check.
+/// @param _owner             Initial owner of the contract.
+/// @param _basefeeScalar     Initial basefee scalar value.
+/// @param _blobbasefeeScalar Initial blobbasefee scalar value.
+/// @param _batcherHash       Initial batcher hash. 用于验证批量交易提交者
+/// @param _gasLimit          Initial gas limit.
+/// @param _unsafeBlockSigner Initial unsafe block signer address.
+/// @param _config            Initial ResourceConfig.
+/// @param _batchInbox        Batch inbox address. An identifier for the op-node to find
+///                           canonical data.
+/// @param _addresses         Set of L1 contract addresses. These should be the proxies.
+
+
+/// @notice Internal setter for the gas paying token address, includes validation.
+///         The token must not already be set and must be non zero and not the ether address
+///         to set the token address. This prevents the token address from being changed
+///         and makes it explicitly opt-in to use custom gas token.
+/// @param _token Address of the gas paying token.
+function _setGasPayingToken(address _token) internal virtual {
+
+可以支持自定义 gas token，包括 contract 和 decimals。
+```
+
+通过 CREATE2 和 config，可以推测出 bridge addresses 等。
+
+OP Chain data 可以在给定 L1 address + connection 之后，进行整个链的恢复。
+
+每个人都可以提交 withdrawal proposal。
+
 <!-- Content_END -->

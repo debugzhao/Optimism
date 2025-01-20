@@ -164,4 +164,110 @@ Superchain 的目标是将 OP 主网（OP Mainnet）和其他链合并为一个�
 
 听 ZhouQi 老师的分享：https://www.youtube.com/watch?v=VGxzUxryiqE
 
+### 2025.01.18
+
+Optimism 是一个极大地促进 Ethereum 可范围性和用户体验的 Layer 2 可扩展解决方案。它基于 Optimistic Rollup 技术构建。通过将大量交易紧凑地合并并在 Ethereum 上查证一些关键信息，Optimism 可以大大降低运营成本。本笔记将总结 Optimism 的起步指南，以便创建者和应用开发者快速上手。
+
+基础概念
+
+1. 介绍 Optimism
+
+Optimism 是屏蔽上下文构造和进行警告确认的最终安全方案。其重要特性包括：
+
+高度兼容现有 Ethereum 应用和工具，包括智能合约。
+
+以优化结构和减少 Layer 1 输入为目标，达到运行成本的最大化优化。
+
+支持公共利益的开放性。
+
+2. 优势
+
+Optimism 拥有以下优势：
+
+以用户为核心：与 Ethereum 高度兼容，充分利用现有应用和工具。
+
+应用带来体验优化：大量减少涉及成本，为应用和用户提供性价比更高的服务。
+
+适用的加密和检验机制：通过涉及成本和核心警告，确保安全性和选择权。
+
+3. Optimistic Rollup
+
+Optimistic Rollup 依赖于“想信举警”，即比较应用之间不透明性和代理局限。它通过保存带有检验机制的存货，确保安全与放垂功能。
+
+### 2025.01.19
+
+实践步骤
+
+1. 环境准备
+
+在实现 Optimism 应用之前，需要下列工具：
+
+安装 Node.js (v14 以上)和 npm，完善环境构建：
+
+```
+node -v
+npm -v
+```
+
+使用 Truffle 或 Hardhat 进行智能合约开发与部署。
+
+利用 Remix IDE 快速测试和调试智能合约。
+
+2. 部署和测试应用
+
+在 Optimism 上开发和测试应用的基本流程包括：
+
+设置开发环境：
+安装必要的库和工具，例如 @ethereum-optimism/contracts，并配置 Hardhat 项目。
+
+npm install --save-dev @ethereum-optimism/contracts
+
+编写和编译智能合约：
+使用 Solidity 编写智能合约，并使用 Hardhat 或 Truffle 编译。
+
+npx hardhat compile
+
+部署到 Optimism 网络：
+配置网络信息，例如 Optimism Goerli 测试网，并部署合约。
+
+```
+module.exports = {
+   networks: {
+      optimismGoerli: {
+         url: "https://goerli.optimism.io",
+         accounts: ["<YOUR_PRIVATE_KEY>"]
+      }
+   }
+};
+```
+
+然后运行部署脚本：
+
+```
+npx hardhat run scripts/deploy.js --network optimismGoerli
+```
+
+测试应用功能：
+使用 Optimism 的工具，例如 Optimism Explorer，验证合约是否正确部署并运行。
+
+3. 迁移现有应用到 Optimism
+
+将现有的 Ethereum 应用迁移到 Optimism 通常只需做少量更改：
+
+升级合约部署工具：支持 Optimism 的网络。
+
+配置交易参数：确保使用 Optimism 的 gas 参数。
+
+测试和验证：通过模拟器或测试网验证功能是否正常。
+
+4. 调试和优化
+
+使用 Optimism 提供的调试工具，例如 Debugging Proxies，分析交易和性能。
+
+优化智能合约逻辑以适应 Rollup 模式，减少不必要的操作。
+
+### 2025.01.20
+
+查看项目[Bitget](https://www.superchain.eco/ecosystem-projects/bitget)
+
 <!-- Content_END -->
