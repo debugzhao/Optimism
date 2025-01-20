@@ -194,4 +194,80 @@ Optimism 拥有以下优势：
 
 Optimistic Rollup 依赖于“想信举警”，即比较应用之间不透明性和代理局限。它通过保存带有检验机制的存货，确保安全与放垂功能。
 
+### 2025.01.19
+
+实践步骤
+
+1. 环境准备
+
+在实现 Optimism 应用之前，需要下列工具：
+
+安装 Node.js (v14 以上)和 npm，完善环境构建：
+
+```
+node -v
+npm -v
+```
+
+使用 Truffle 或 Hardhat 进行智能合约开发与部署。
+
+利用 Remix IDE 快速测试和调试智能合约。
+
+2. 部署和测试应用
+
+在 Optimism 上开发和测试应用的基本流程包括：
+
+设置开发环境：
+安装必要的库和工具，例如 @ethereum-optimism/contracts，并配置 Hardhat 项目。
+
+npm install --save-dev @ethereum-optimism/contracts
+
+编写和编译智能合约：
+使用 Solidity 编写智能合约，并使用 Hardhat 或 Truffle 编译。
+
+npx hardhat compile
+
+部署到 Optimism 网络：
+配置网络信息，例如 Optimism Goerli 测试网，并部署合约。
+
+```
+module.exports = {
+   networks: {
+      optimismGoerli: {
+         url: "https://goerli.optimism.io",
+         accounts: ["<YOUR_PRIVATE_KEY>"]
+      }
+   }
+};
+```
+
+然后运行部署脚本：
+
+```
+npx hardhat run scripts/deploy.js --network optimismGoerli
+```
+
+测试应用功能：
+使用 Optimism 的工具，例如 Optimism Explorer，验证合约是否正确部署并运行。
+
+3. 迁移现有应用到 Optimism
+
+将现有的 Ethereum 应用迁移到 Optimism 通常只需做少量更改：
+
+升级合约部署工具：支持 Optimism 的网络。
+
+配置交易参数：确保使用 Optimism 的 gas 参数。
+
+测试和验证：通过模拟器或测试网验证功能是否正常。
+
+4. 调试和优化
+
+使用 Optimism 提供的调试工具，例如 Debugging Proxies，分析交易和性能。
+
+优化智能合约逻辑以适应 Rollup 模式，减少不必要的操作。
+
+### 2025.01.20
+
+查看项目[Bitget](https://www.superchain.eco/ecosystem-projects/bitget)
+
 <!-- Content_END -->
