@@ -256,5 +256,44 @@ Superchain的愿景是一个去中心化区块链平台，由众多 L2 链集合
 - OP 链的配置，可以自行决定data availability的提供者和sequencer地址
 - 安全的交易和跨链消息。
 
+### 2025.01.21
+#### Superchain Project: LayerZero
+LayerZero属于跨链通信协议，是一种开源、不可变的消息传递协议，旨在促进全链、可互操作应用程序的创建。开发人员可以通过全链消息轻松发送任意数据、外部函数调用和代币，同时保留对其应用程序的完全自主权和控制权。
 
+**技术原理**
+- https://docs.layerzero.network/v2/home/protocol/protocol-overview
+- https://layerzero.network/how-it-works
+
+*Step 1. Send (On-chain, Source Chain)*
+1. Sender Contract: 用户调用发送者 OApp 合约内的“lzSend”方法，指定消息、Destination LayerZero Endpoint、目标 OApp 地址和其他协议处理选项。
+2. Source Endpoint根据发送方OApp 的消息数据生成数据包，为每个数据包分配一个唯一的、连续递增的编号（即nonce随机数）。
+3. MessageLib Registry: Layerzero Endpoint使用 OApp 指定的 MessageLib 对数据包进行编码，以将消息发送到选定的Security Stack和Executor，通过 PacketSent 事件完成发送事务。
+
+*Step 2. Verify (Off-chain)*
+配置的 DVN 独立验证消息。目标 MessageLib 强制只有 OApp 配置的 DVN 才能提交验证。
+
+*Step 3. Commit (On-chain, Destination Chain)*
+1. Message Library: 一旦 OApp 安全堆栈中的所有 DVN 都验证了该消息，目标 MessageLib 就会将该消息标记为可验证的 (Verifiable)。
+2. Executor (Off-chain): Executor 将此数据包的验证提交给Endpoint，将数据包暂存以在Destination Endpoint中执行。
+
+*Step 4. Receive (On-chain, Destination Chain)*
+1. Destination Endpoint: 确保Executor传送的数据包与 DVN 验证的消息相匹配。
+2. Executor (Off-chain): 对提交的消息调用“lzReceive”函数，以使用接收器 OApp 的逻辑处理数据包。
+3. Receiver Contract: 消息由目标链上的接收方 OApp 合约接收。
+
+**Tokenomics**
+- ZRO 充当其生态系统内的治理代币。 ZRO持有者可以参与协议治理，对影响平台发展和政策的提案进行投票。
+- \$ZRO: [0x6985884C4392D348587B19cb9eAAf157F13271cd](https://etherscan.io/token/0x6985884C4392D348587B19cb9eAAf157F13271cd)
+
+**融资信息**
+LayerZero Labs 在多轮融资中总共筹集了 \$263 million。
+2023年4月，该公司在B轮融资中获得了\$120 million，估值\$3 billion。
+
+**参考文章**
+- 官网：https://layerzero.network/
+- 文档：https://docs.layerzero.network/v2
+
+- 生态系统：https://layerzero.network/ecosystem/dapps
+- 数据看板：https://layerzeroscan.com/
+- 支持网络：https://docs.layerzero.network/v2/developers/evm/technical-reference/deployed-contracts
 <!-- Content_END -->
