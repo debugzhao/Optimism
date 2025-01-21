@@ -433,9 +433,9 @@ RetroPGF 获奖项目：https://round6.retrolist.app/
 
 ### 2025.01.21
 
-今日学习第16天：OP Stack 基本概述
-[
-](https://docs.optimism.io/stack/differences)
+今日学习第16天：
+
+OP Stack 基本概述
 
 1.OP Stack 是一套为 Optimism 提供支持的软件——目前以 OP Mainnet 背后的软件的形式出现，最终以 Optimism Superchain 及其治理的形式出现。
 
