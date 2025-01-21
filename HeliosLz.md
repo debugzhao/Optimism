@@ -678,6 +678,75 @@ contract VirtualAddressMultisig {
 
 ### 2025.01.21
 
+Cannon 是 Optimism 的默认故障证明虚拟机（Fault Proof Virtual Machine，FPVM），用于在 OP Stack 区块链的争议游戏（Dispute Game）中处理故障证明。
+
+### Cannon 由两个主要组件组成
+
+1. 链上组件：MIPS.sol
+* 这是一个智能合约，实现了 32 位、大端序的 MIPS III 指令集架构（ISA）。
+* 它在以太坊虚拟机（EVM）中验证单个 MIPS 指令的执行。
+* 该合约是无状态的，需要外部提供执行所需的状态信息。
+2. 链下组件：mipsevm
+* 这是用 Go 语言编写的实现，生成可在链上验证的 MIPS 指令执行证明。
+* 它与 MIPS.sol 合约协同工作，确保在争议过程中正确执行指令。
+
+在争议游戏中，当参与者对某个 L2 区块状态转换存在分歧时，Cannon 被用于执行 MIPS 指令，以验证争议状态的正确性。
+
+需要注意的是，Cannon 只是可用于解决争议的 FPVM 实例之一，OP Stack 的模块化设计允许集成其他证明机制。
+
+
+![image](https://github.com/user-attachments/assets/1513bd3f-3294-479c-a6d1-ae793b9b0cd4)
+
+Offchain（链下部分）：
+* 包含链下运行的逻辑和组件，主要负责生成、验证以及提交 MIPS 指令的执行证明。
+* 包括 op-challenger、Cannon、op-program 和 op-preimage。
+
+Onchain（链上部分）：
+* 包含部署在以太坊区块链上的智能合约，主要负责验证链下提交的证明是否正确。
+* 包括 DisputeGameFactory、FaultDisputeGame、MIPS.sol 和 PreimageOracle。
+
+### 组件详细解析
+
+链下组件（Offchain）
+1. op-challenger：
+* 负责触发争议游戏（Dispute Game），挑战不合法的状态更新。
+* 与链上合约交互，提交或验证争议的中间状态。
+2. Cannon：
+* 是核心的链下故障证明虚拟机（FPVM），模拟 MIPS 指令的执行并生成证明。
+* 提交执行过程和结果给链上合约进行验证。
+3. op-program：
+* 定义要验证的具体程序逻辑，包含 Layer 2 状态转换的详细实现。
+* Cannon 使用它来模拟和执行 MIPS 指令。
+4. op-preimage：
+* 负责存储和提供 Cannon 需要的前映像（Preimage），即状态或数据的细节。
+* 为 Cannon 提供验证数据。
+
+链上组件（Onchain）
+1. DisputeGameFactory：
+* 负责创建新的争议游戏实例（FaultDisputeGame）。
+* 是争议游戏的入口点。
+2. FaultDisputeGame：
+* 核心争议游戏逻辑所在，协调挑战者与被挑战者的交互。
+* 管理链下提交的状态和证明，并调用 MIPS.sol 验证结果。
+3. MIPS.sol：
+* 智能合约实现，用于验证链下 Cannon 提交的 MIPS 指令执行证明。
+* 解析和执行单条 MIPS 指令，确保其合法性。
+4. PreimageOracle：
+* 提供链上数据验证服务，用于验证提交的数据与原始状态的一致性。
+* 与 MIPS.sol 配合工作，确保证明的完整性。
+
+### 工作流程
+1. 争议的触发：
+* 当某个状态更新被质疑时，op-challenger 向 DisputeGameFactory 提交挑战，启动争议游戏。
+2. 链下生成证明：
+* Cannon 使用 op-program 和 op-preimage，模拟 MIPS 指令的执行，生成执行证明。
+3. 链上验证：
+* FaultDisputeGame 接受 Cannon 提交的证明，并调用 MIPS.sol 验证每条指令的正确性。
+* PreimageOracle 提供链上数据，确保提交的证明与原始状态一致。
+4. 争议解决：
+* 如果验证通过，证明被接受，状态更新被确认。
+* 如果验证失败，状态更新被拒绝，争议游戏结束。
+
 ### 2025.01.22
 
 ### 2025.01.23
