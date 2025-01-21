@@ -151,7 +151,15 @@ kzg 证明：kzg 证明是一种零知识证明技术，它允许用户对数据
 
 ### 2025.01.20
 
-笔记内容
+DAC
+以太坊 2.0 LSD Eigenlayer 重新质押 继承了以太坊的共识安全性，实现了对智能合约的透明性，并允许用户重新质押其质押的代币以获得更多的奖励。
+ovm Op-stack
+Optimism 是以太坊的第 2 层（L2）扩展解决方案，旨在以低廉的成本提供闪电般的交易速度。Optimism 通过在以太坊架构之上构建一个名为 Superchain 的平台，将 OP 主网与其他 L2 链合并，从而实现可互操作且可组合的生态系统，简化 L2s 的集成。
+ovm 
+ctc scc
+batch-submitted
+sequencer proposal dtt
+l2 geth(seq) verifier rpc
 
 ### 2025.01.21
 

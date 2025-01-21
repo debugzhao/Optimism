@@ -145,4 +145,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. 今天了解到 依托 coinbase 的 Base 链 ，竟然是使用 OP Stack 来构建的，而且已经加入的 Superchain 中了，牛
 
+### 2025.01.20
+
+1. Superchain Bridges：https://app.optimism.io/bridge/deposit 第三方服务商提供的，可以在 以 OP Stack 为基础构建链之间相互转账
+   1. https://www.brid.gg/op-mainnet
+   2. https://superbridge.app/optimism
+
 <!-- Content_END -->
