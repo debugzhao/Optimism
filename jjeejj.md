@@ -151,4 +151,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
    1. https://www.brid.gg/op-mainnet
    2. https://superbridge.app/optimism
 
+### 2025.01.21
+
+1. 在 Superchain 上面的 app 类型还挺还挺全的: Defi、NFT、Bridge、On-Ramp、Wallet、Infra、DAO
+
 <!-- Content_END -->
