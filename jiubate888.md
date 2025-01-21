@@ -433,6 +433,24 @@ RetroPGF 获奖项目：https://round6.retrolist.app/
 
 ### 2025.01.21
 
+今日学习第16天：OP Stack 基本概述
+[
+](https://docs.optimism.io/stack/differences)
+
+1.OP Stack 是一套为 Optimism 提供支持的软件——目前以 OP Mainnet 背后的软件的形式出现，最终以 Optimism Superchain 及其治理的形式出现。
+
+这里该如何理解呢，OP Stack 个人视作模块工具箱，这里的工具，可以为想加入 Optimism Superchain的去组合定制一条二层链，其中OP Mainnet就是其中的一条二层链，好多个类似的这样二层链组合的集合，就是 Optimism Superchain。
+
+![image-18](https://github.com/user-attachments/assets/ca41ae23-025d-464f-be9a-ea1e0efbb425)
+
+2.OP Stack，那么这个箱子里有什么呢？
+
+数据可用性，测序，单序列发生器，多序列发生器，推导，汇总，索引器，执行，以太坊虚拟机，沉降层，基于证明的故障证明，防错乐观结算，有效性证明结算，治理，多重签名合约，治理代币。
+
+3.官方如何，将技术性的东西，简单通俗化讲给用户，用户一听马上就明白，这样有利于传播。
+
+### 2025.01.21
+
 <!-- Content_END -->
 
 
