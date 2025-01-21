@@ -479,6 +479,29 @@ diff between Etherem & OP Stack
 
 EIP 1559：https://notes.ethereum.org/@vbuterin/eip-1559-faq
 
+Blob空间不足：https://www.theblockbeats.info/news/56624
+
+L2增多导致争抢Blob空间
+
+#### EIP 1559
+
+> 简单来说就是base fee动态调整
+>
+> - The current gas limit is replaced by two values: a “long-term average target” (equal to the current gas limit), and a “hard per-block cap” (twice the current gas limit)
+>   当前的气体限制被两个值取代：一个“长期平均目标”（等于当前的气体限制），和一个“每块硬上限”（当前气体限制的两倍）
+> - There is a BASEFEE (which is burned) which transactions are required to pay, which gets adjusted on a block-by-block basis with the goal of targeting a value so that average block gas usage remains at a level close to the current gas limit.
+>   存在一个 BASEFEE（会被销毁），交易需要支付该费用，它会逐块调整，目标是使平均区块 gas 使用量保持在接近当前 gas 限制的水平。
+
+之前市场的劣势
+
+- **Mismatch between volatility of transaction fee levels and social cost of transactions**交易过多时 gasfee飙升
+- **Inefficiencies of first price auctions** 优先高价交易机制低效
+- **Instability of blockchains with no block reward**
+
+
+
+
+
 
 
 <!-- Content_END -->
