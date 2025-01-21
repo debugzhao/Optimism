@@ -589,4 +589,43 @@ OP 堆栈是用于构建和维护 OP 链网络的核心技术栈。在超级链�
 扩展性：通过多个链的协作，整体网络的吞吐量和处理能力得到大幅提升。
 去中心化：超级链保持了去中心化的特点，避免单一中心化控制。
 灵活性：每个链可以根据自身特点进行优化，专注于特定领域的应用和任务。
+
+### 2025.01.21
+
+OP Stack（Optimism 堆栈）是什么？
+OP Stack 是由 Optimism（OP）团队 开发的一套 模块化 Layer 2 区块链架构，用于构建高效、低成本、可扩展的以太坊二层网络。
+
+它的目标是：
+✅ 让任何人都能轻松部署自己的 Layer 2 区块链（如 Base、Zora Network）。
+✅ 提高以太坊的可扩展性，降低 Gas 费用。
+✅ 促进 Layer 2 互操作性，让不同的 L2 共享安全性和流动性。
+
+🔍 OP Stack 的核心特点
+1️⃣ 模块化架构
+OP Stack 像乐高一样，允许开发者自由组合不同组件，构建自己的 Layer 2 区块链。
+主要包含：
+执行层（Execution Layer） → 处理智能合约和交易（兼容 EVM）。
+共识层（Consensus Layer） → 负责交易排序和打包。
+结算层（Settlement Layer） → 处理 Layer 1 交互，确保最终性。
+数据可用性层（DA Layer） → 存储和共享交易数据。
+2️⃣ 兼容以太坊（EVM 兼容）
+OP Stack 完全兼容 EVM，开发者可以直接迁移 Solidity 智能合约，无需修改代码。
+3️⃣ Optimistic Rollup 技术
+交易在 Layer 2 执行，并定期提交至以太坊主网（L1）进行结算。
+采用 欺诈证明（Fraud Proofs），确保 Layer 2 交易的正确性。
+4️⃣ 超链（Superchain）愿景
+未来，所有基于 OP Stack 的 Layer 2 共享安全性和流动性，形成一个 Superchain。
+例如 Base（Coinbase L2） 和 Zora Network 都使用 OP Stack，并计划互通。
+🛠️ 已采用 OP Stack 的区块链
+目前，多个 Layer 2 采用 OP Stack，包括：
+✅ Optimism Mainnet（Optimism 官方 L2）
+✅ Base（Coinbase 的 Layer 2）
+✅ Zora Network（NFT 生态 Layer 2）
+✅ Mode Network（DeFi 生态）
+
+未来更多项目可能会加入 OP Stack 生态！ 🚀
+
+🛠️ 如何使用 OP Stack 构建自己的 L2？
+如果你想基于 OP Stack 部署自己的 Layer 2 网络，可以参考官方文档：
+📌 Optimism OP Stack GitHub
 <!-- Content_END -->
