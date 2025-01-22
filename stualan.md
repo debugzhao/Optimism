@@ -175,12 +175,19 @@ Validium < ZK Rollup < Optimistic Rollup < 以太坊主网
 - Stage 1 — Limited Training Wheels: In this stage, the rollup transitions to being governed by smart contracts. However, a Security Council might remain in place to address potential bugs. This stage is characterized by the implementation of a fully functional proof system, decentralization of fraud proof submission, and provision for user exits without operator coordination. The Security Council, comprised of a diverse set of participants, provides a safety net, but its power also poses a potential risk.
 - Stage 2 — No Training Wheels: This is the final stage where the rollup becomes fully managed by smart contracts. At this point, the fraud proof system is permissionless, and users are given ample time to exit in the event of unwanted upgrades. The Security Council’s role is strictly confined to addressing soundness errors that can be adjudicated on-chain, and users are protected from governance attacks.
 ### 2025.01.10
+- 学习OP的代币智力体系
+- optimism collective的治理由token house和citizen house组成，两者相互制衡
 ### 2025.01.11
+- 周六请假
 ### 2025.01.12
+- 周日请假
 ### 2025.01.13
 ### 2025.01.14
 ### 2025.01.15
 ### 2025.01.16
 ### 2025.01.17
 ### 2025.01.18
+- 周六请假
+# 2025.01.19
+- 周日请假
 <!-- Content_END -->
