@@ -167,7 +167,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | bxmyzzbc | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | Zhangdajiang | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | |
 | Alexliwenhao | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
-| stualan | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | |
+| stualan | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | |
 | CHENFANGC | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | |
 | zhengjunhe | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | |
 | goudanxiaokui | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
@@ -196,6 +196,7 @@ OP 中文力量：https://vote.optimism.io/delegates/optimismcn.eth
 | Tianxibi-web3 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | | | | |
 | 183Aaros | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ⭕️ | ⭕️ | ✅ | ✅ | ❌ | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
