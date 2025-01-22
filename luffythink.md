@@ -211,6 +211,20 @@ OP Stack当前的核心是运行L2区块链的基础设施，但理论上OP Stac
 
 OP Stack是一个不断发展的概念。随着Optimism的发展，OP Stack也将发展。今天，OP Stack的Bedrock版本简化了部署新的L2 Rollup的过程。随着对堆栈工作的继续，插入和配置不同的模块应该会更容易。随着超级链开始成形，OP Stack可以与其一起发展，以包含允许不同链无缝互操作的消息传递基础设施。最终，OP Stack将成为Optimism所需的东西。
 
+### 2025.01.22
+
+学习主题：体验和分析一下 Superchain 项目 https://www.superchain.eco/projects
+
+[DeFiLlama](https://www.superchain.eco/ecosystem-projects/defillama) 是一个自筹资金的开源平台，提供超过 240 个区块链上 3000 多个DeFi项目的实时、透明数据。它没有正式的治理结构和原生代币，依靠 grants for funding 。其价值主张是通过社区协作，为用户提供准确和全面的 DeFi 分析数据。
+
+DefiLlama 的主要功能包括：
+
+- **实时数据：** DefiLlama 持续更新其数据，提供关于 DeFi 项目的最新信息。
+- **多链支持：** 它支持许多不同的区块链，包括以太坊、币安智能链、Polygon 等。
+- **全面数据：** 它提供各种 DeFi 项目指标，例如 TVL、交易量、流动性、代币价格等。
+- **开源：** DefiLlama 的代码是开源的，这允许社区贡献和审核其数据。
+- **易于使用：** 其网站和 API 设计直观易用，方便用户访问和使用数据。需要注意的是，DefiLlama 的数据依赖于各个 DeFi 项目提供的 API，因此数据的准确性和完整性取决于这些 API 的质量。
+
 
 
 <!-- Content_END -->
