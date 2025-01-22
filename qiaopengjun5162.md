@@ -155,7 +155,7 @@ DAC
 以太坊 2.0 LSD Eigenlayer 重新质押 继承了以太坊的共识安全性，实现了对智能合约的透明性，并允许用户重新质押其质押的代币以获得更多的奖励。
 ovm Op-stack
 Optimism 是以太坊的第 2 层（L2）扩展解决方案，旨在以低廉的成本提供闪电般的交易速度。Optimism 通过在以太坊架构之上构建一个名为 Superchain 的平台，将 OP 主网与其他 L2 链合并，从而实现可互操作且可组合的生态系统，简化 L2s 的集成。
-ovm 
+ovm
 ctc scc
 batch-submitted
 sequencer proposal dtt
@@ -163,11 +163,45 @@ l2 geth(seq) verifier rpc
 
 ### 2025.01.21
 
-笔记内容
+同步充值数据
+同步交易数据
+状态通道
+侧链
+侧链是一条独立的链
+Rollups
+
+Layer2
+扩展性
+成本降低
+提高速度
+安全性
 
 ### 2025.01.22
 
-笔记内容
+DataAvailabilityChallenge 数据挑战 EIP4844
+mantle/manta L2OutputOracle
+DisputeGameFactory 欺诈挑战
+OptimismPortal2
+L1CrossDomainMessenger 信使合约
+L1StandardBridge 桥
+
+op-batcher 服务：负责将交易数据提交到 DA EIP4844 DataAvailabilityChallenge
+op-proposer 服务：负责将交易状态定期提交到 Layer1 的 L2OutputOracle 合约
+Sequencer：交易排序器 提交交易数据到DA, 提交交易状态到L1
+op-node：监听同步 l1 区块
+op-geth
+engineAPI
+
+Verifier：交易验证器 链下交易证明生成器
+RPC
+数据炸弹（Data Bomb）通常指的是一种恶意软件或攻击手段，它通过在数据中嵌入恶意代码或指令，导致在特定条件下触发并执行这些代码，从而造成数据损坏、系统崩溃或其他不良后果。数据炸弹可以在特定时间、特定事件或特定条件下被激活，给系统带来潜在的威胁。
+在某些情况下，数据炸弹也可以指代一种数据结构或算法的设计缺陷，导致在处理数据时出现性能问题或资源耗尽的情况。
+
+op-node 是 Optimism 的一个核心组件，负责处理 Layer 2 的交易和状态更新。它监听以太坊主链（Layer 1）上的事件，并在 Layer 2 上执行相应的操作。op-node 主要负责将交易数据提交到 Layer 1 的地址，并处理与 Layer 2 相关的所有事务。
+
+op-geth 是 Optimism 的一个以太坊客户端，基于 Go-Ethereum（Geth）构建。它用于支持 Optimism 的 Layer 2 解决方案，提供与以太坊主链的交互能力。op-geth 处理与以太坊网络的连接，执行智能合约，并支持 Optimism 的特定功能。
+
+Sequence 是交易处理的一个重要概念，而 op-node 和 op-geth 是实现这一概念的具体技术组件。
 
 ### 2025.01.23
 
