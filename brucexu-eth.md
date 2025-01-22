@@ -910,4 +910,25 @@ TODO 安全委员会关闭 bridge 的流程和代码是怎么样的？
 
 TODO 我在思考一个问题，chain 会不会是一个应用？如果把 chain 做成一个应用，那么将其视为数据库吗？还是什么。正在体验 hyperliquid 这种 trading L1。
 
+# 2025.1.22
+
+## [Getting started with the OP Stack](https://docs.optimism.io/stack/getting-started）
+
+The OP Stack is the set of software that powers Optimism — currently in the form of the software behind OP Mainnet and eventually in the form of the Optimism Superchain and its governance.
+
+所以 Optimism Superchain 是指 Superchain 生态，Optimism 通常是 OP Mainnet，然后 Optimism Collective 是指包括 Mainnet + Superchain 等等，所有的东西？TODO 这个 OP Branding 确实比较混乱。
+
+The OP Stack is all of the software that powers Optimism.
+
+## [OP Stack components](https://docs.optimism.io/stack/components）
+
+关键组成部分，不同的 Layers：
+
+- DA：以太坊
+- Sequencing：打包用户 tx 然后发到 DA
+- Derivation：处理原始 DA 的数据，发送到执行层进行执行
+- Execution：EVM，轻度改造，支持 L2 txs 添加 L1 data fee
+- Settlement layer：偏外部的结算层，例如 Fault Proof 证明等。TODO 没有完全理解
+- Goverance：治理层，包括系统配置、升级等
+
 <!-- Content_END -->
