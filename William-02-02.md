@@ -498,6 +498,26 @@ L2增多导致争抢Blob空间
 - **Inefficiencies of first price auctions** 优先高价交易机制低效
 - **Instability of blockchains with no block reward**
 
+### 2025.01.21
+
+> **Permissionless proposals 无需许可的提案**
+>
+> "Proposals" or "State Proposals" are claims about the state of an OP Stack chain that are submitted to Ethereum through the `DisputeGameFactory` contract. Proposals can be used for many things but are most commonly used by end-users to prove that they created a withdrawal on an OP Stack chain. With the Fault Proofs upgrade to the OP Stack, proposals become permissionless and can be submitted by anyone.
+> “提案”或“状态提案”是关于 OP Stack 链状态的声明，通过 `DisputeGameFactory` 合约提交至以太坊。提案可用于多种用途，但最常见的是由终端用户用来证明他们在 OP Stack 链上创建了提款。随着 OP Stack 的故障证明升级，提案变为无需许可，任何人都可以提交。
+
+> 2024 年 6 月 10 日，Fault Proofs 正式加入 OP Stack 并在 OP Mainnet 上激活。此次 Fault Proofs 升级通过以下方式使 OP Stack 更接近技术去中心化：
+>
+> - allowing anyone to make proposals about the state of the L2
+>   允许任何人就 L2 的状态提出建议
+> - allowing anyone to challenge proposals made by other users
+>   允许任何人挑战其他用户提出的提案
+> - allowing users to send messages from L2 to L1 without the need for a trusted third party
+>   允许用户从 L2 向 L1 发送消息，无需可信第三方
+> - allowing users to trigger withdrawals from L2 to L1 without the need for a trusted third party
+>   允许用户从 L2 触发提款到 L1，无需依赖可信第三方
+> - introducing a modular fault proof design that can easily integrate additional proving mechanisms
+>   引入模块化防错设计，可轻松集成额外的验证机制
+
 
 
 
