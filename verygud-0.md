@@ -796,6 +796,36 @@ Alt-DA 链的结算使用与 Rollup 链几乎相同的故障证明系统，唯�
 
 ### 2025.01.22
 
+OP Stack 基本概述
+
+OP Stack 是 Optimism 的核心开发框架，它是一个标准化、共享且开源的技术栈，由 Optimism Collective 维护，旨在简化和规范化构建二层（L2）区块链的流程。以下是快速入门指南：
+
+1. 了解 OP Stack
+    什么是 OP Stack：
+OP Stack 是支撑 Optimism 的开源软件集，服务于以太坊和 Optimism 生态系统，是一种公共产品。它通过模块化设计支持创建高质量的 L2 区块链。
+    Optimism Superchain：
+OP Stack 支持构建兼容 Optimism Superchain 的 L2 区块链，Superchain 是未来的多链网络，提供共享的安全性和通信层。
+    核心功能：
+OP Stack 不仅包含运行 L2 区块链的基础设施，还涉及数据可用性层、消息传递机制、治理系统等。
+
+2. OP Stack 的主要特性
+    Optimism Bedrock：
+OP Stack 的当前版本。Bedrock 提供了一整套工具，用于部署生产级的 Optimistic Rollup 区块链。
+    Superchain 兼容性：
+使用 Bedrock 构建的链将完全兼容未来的 Superchain 网络，支持多链间的互操作性。
+    模块化与扩展性：
+OP Stack 的模块化设计允许开发者在不同层级进行自定义和扩展，但修改代码可能导致与 Superchain 不兼容。
+
+3. 高级功能与实验
+   实验性的 OP Stack Hacks：
+OP Stack 支持开发者进行实验性修改，但请注意，这些修改可能导致与你的 L2 无法兼容 Superchain。
+
+4. OP Stack 的未来
+
+随着 Optimism 的发展，OP Stack 将不断演进：
+	1.提供更强的模块化能力，便于开发者轻松配置和扩展不同的功能模块。
+	2.支持 Superchain 的消息传递基础设施，实现多链间的无缝互操作性。
+	3.成为以太坊扩容的重要基石，推动生态系统的发展。
 
 ### 2025.01.23
 

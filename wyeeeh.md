@@ -270,7 +270,8 @@ LayerZero属于跨链通信协议，是一种开源、不可变的消息传递�
 3. MessageLib Registry: Layerzero Endpoint使用 OApp 指定的 MessageLib 对数据包进行编码，以将消息发送到选定的Security Stack和Executor，通过 PacketSent 事件完成发送事务。
 
 *Step 2. Verify (Off-chain)*
-配置的 DVN 独立验证消息。目标 MessageLib 强制只有 OApp 配置的 DVN 才能提交验证。
+
+配置的 DVN 独立验证消息：目标 MessageLib 强制只有 OApp 配置的 DVN 才能提交验证。
 
 *Step 3. Commit (On-chain, Destination Chain)*
 1. Message Library: 一旦 OApp 安全堆栈中的所有 DVN 都验证了该消息，目标 MessageLib 就会将该消息标记为可验证的 (Verifiable)。
@@ -286,6 +287,7 @@ LayerZero属于跨链通信协议，是一种开源、不可变的消息传递�
 - \$ZRO: [0x6985884C4392D348587B19cb9eAAf157F13271cd](https://etherscan.io/token/0x6985884C4392D348587B19cb9eAAf157F13271cd)
 
 **融资信息**
+
 LayerZero Labs 在多轮融资中总共筹集了 \$263 million。
 2023年4月，该公司在B轮融资中获得了\$120 million，估值\$3 billion。
 
@@ -296,4 +298,15 @@ LayerZero Labs 在多轮融资中总共筹集了 \$263 million。
 - 生态系统：https://layerzero.network/ecosystem/dapps
 - 数据看板：https://layerzeroscan.com/
 - 支持网络：https://docs.layerzero.network/v2/developers/evm/technical-reference/deployed-contracts
+
+
+### 2025.01.22
+#### Superchain Project: DefiLlama
+- 参考链接：https://www.superchain.eco/ecosystem-projects/defillama
+
+*PS. 这里的官网链接有问题，指向的是[https://chainanalysis.com](https://chainanalysis.com)，应该是[https://defillama.com/](https://defillama.com/)*
+
+DefiLlama是一个DeFi产品的数据看板，主要提供各个链生态和DeFi协议的TVL价值。
+举例：可以在[Compare Chains](https://defillama.com/compare?chains=Optimism&chains=Base)比较不同链的TVL，Fee，Revenue等metrics
+
 <!-- Content_END -->

@@ -749,6 +749,90 @@ Onchain（链上部分）：
 
 ### 2025.01.22
 
+![image](https://github.com/user-attachments/assets/39ce8241-5cdb-4b6c-90c2-265cc93d7b90)
+
+这张图展示了 Cannon 组件的整体架构（Cannon Component Overview），这是 Optimism 的故障证明虚拟机（Fault Proof Virtual Machine, FPVM）的核心设计部分，用于模拟和验证 MIPS 指令的执行。以下是图中各个模块的详细解释：
+
+1. 核心模块
+
+1.1 Cannon Runner
+
+文件：run.go 和 instrumented.go
+作用：
+* Cannon 的运行引擎，负责协调整个执行流程。
+* 调用其他模块来执行指令、管理状态和生成证明。
+交互：
+* 调用 Witness Proof Generation 来生成证明。
+* 调用 Memory and State Management 处理内存和状态管理。
+
+1.2 Witness Proof Generation
+
+文件：witness.go
+作用：
+* 生成用于链上验证的执行证明（Witness Proof）。
+* 将链下执行的操作记录为可以验证的链上数据。
+交互：
+* 接收来自 Cannon Runner 的调用，生成证明。
+
+1.3 Memory and State Management
+
+文件：memory.go、page.go、state.go
+作用：
+* 管理 MIPS 虚拟机的内存和状态，包括内存分页和状态快照。
+* 确保指令执行时的数据一致性。
+交互：
+* 与 MIPSEVM 协作，提供内存和状态支持。
+
+1.4 MIPSEVM
+
+文件：mips.go
+作用：
+* MIPS 虚拟机核心，负责执行单个 MIPS 指令。
+* 验证 MIPS 指令的合法性，并模拟指令的执行过程。
+交互：
+* 调用 PreimageOracle Server 获取预映像数据。
+* 与 Memory and State Management 协作，处理指令所需的内存和状态。
+
+1.5 ELF Loader
+
+文件：load_elf.go、patch.go 和 metadata.go
+作用：
+* 负责加载和解析 ELF 格式的可执行文件（程序）。
+* 将 MIPS 程序加载到虚拟机中，为模拟执行做好准备。
+交互：
+* 提供程序数据供 MIPSEVM 执行。
+
+1.6 PreimageOracle Server
+作用：
+* 提供 MIPS 执行所需的外部数据或状态的前映像（Preimage）。
+* 是链下和链上之间的数据桥梁。
+交互：
+* 被 MIPSEVM 调用，用于验证和获取外部状态。
+
+2. 组件间的工作流程
+
+程序加载：ELF Loader 从 ELF 文件加载 MIPS 程序，并将其提供给 MIPSEVM。
+
+指令执行：
+* MIPSEVM 模拟执行 MIPS 指令，调用 Memory and State Management 管理虚拟机的状态。
+* 在需要外部数据时，调用 PreimageOracle Server 获取验证所需的前映像。
+
+状态管理：Memory and State Management 负责保存和更新内存页和状态快照，支持指令的执行。
+
+生成证明：Witness Proof Generation 在指令执行后生成证明数据，并将其返回给 Cannon Runner。
+
+执行协调：Cannon Runner 作为核心协调者，负责调用各模块并管理整体流程。
+----
+链下执行 的 MIPS 程序通过模块化的设计完成指令执行、状态管理和证明生成。
+
+关键功能：
+* Cannon Runner 协调整体流程。
+* MIPSEVM 模拟 MIPS 指令执行。
+* PreimageOracle Server 提供外部数据支持。
+* Witness Proof Generation 生成可供链上验证的证明。
+
+通过这些模块的协作，Cannon 能够有效支持 Optimism 的争议解决和状态验证过程。
+
 ### 2025.01.23
 
 ### 2025.01.24

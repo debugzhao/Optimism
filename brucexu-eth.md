@@ -931,4 +931,34 @@ The OP Stack is all of the software that powers Optimism.
 - Settlement layer：偏外部的结算层，例如 Fault Proof 证明等。TODO 没有完全理解
 - Goverance：治理层，包括系统配置、升级等
 
+# 2025.1.23
+
+## [Differences between Ethereum and OP Stack Chains](https://docs.optimism.io/stack/differences)
+
+首先是 EVM 等效的，但是有一点更改：
+
+### Bridging
+
+- Deposit txs：L1 ETH 到 L2 的方式
+- Withdrawal txs 和 Fault Proofs：提款等特殊的交易逻辑是不存在的
+
+### Opcodes
+
+- COINBASE Returns the address of the current Sequencer's fee wallet.
+- PREVRANDAO Returns the PREVRANDAO (the most recent RANDAO) value of L1 at the current L1 origin block. TODO RANDAO 是什么
+- ORIGIN 类似 tx.origin 有一点特殊逻辑是如果 tx 从 L1 -》L2 的话，就是 aliased address TODO aliased address 和 address aliasing 是什么
+- CALLER 类似 msg.sender 有一些特殊逻辑
+
+### Address aliasing
+
+如果一个 L1 -> L2 的 tx 被 L1 的 smart contract 执行，sender 的 address 是不同的。这是因为 CREATE opcode 的不同，即便是两个链拥有相同的 address，但是 bytecode 是不同的，也是两个。
+
+### Transactions
+
+- Transaction fees 需要额外增加 L1 data fee
+- 也是基于 EIP-1559 的机制
+- 没有 public mempool，然后仅仅暴露给 Sequencer
+
+TODO https://docs.optimism.io/stack/smart-contracts 可以深入下面的话题，把 OP Stack 的工作细节看看，然后进入部署的节点服务器，亲自观察一下具体的数据和代码
+
 <!-- Content_END -->
