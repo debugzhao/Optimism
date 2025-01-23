@@ -309,4 +309,22 @@ LayerZero Labs 在多轮融资中总共筹集了 \$263 million。
 DefiLlama是一个DeFi产品的数据看板，主要提供各个链生态和DeFi协议的TVL价值。
 举例：可以在[Compare Chains](https://defillama.com/compare?chains=Optimism&chains=Base)比较不同链的TVL，Fee，Revenue等metrics
 
+### 2025.01.23
+#### Superchain Ecosystem: Base
+参考文章
+- [行业研究：一文详细解读 Coinbase Layer2 网络 Base 与 OP Stack](https://web3caff.com/zh/archives/54027)
+
+1. 为什么BCoinbase选择了OP Stack做Layer2？
+- 未来将会有许多 Layer2 网络，那么 Layer2 之间的战争也不可避免。如果 Layer2 网络之间还是像公链那般用跨链桥链接起来，这就和当前的糟糕情况一样：不同的网络之间依然割裂，跨链桥的风险与成本摩擦依然存在。
+
+- OP Stack的模块化：Optimism 的团队正在将他们原先的开发工作拆解成多个层面的模块（Data Availability Layer，Derivation Layer，Execution Layer 和 Settlement Layer）并开发了 OP Stack。
+   - OP Stack 是一套完整可行的构建模块化 Layer2 的方案，通过模块化解耦区块链各功能，并以 API 来组合各模块。只要某个功能模块 API 符合 OP Stack 的标准，那么就可以作为一个模块加入到 OP Chain 的搭建中。这使得其他开发者能快速地构建一个 Layer2 网络。而通过 OP Stack 构建的 OP Chain 不仅可以复用已有的 Optimism 的开发成果，还可以继续改造或者创新为 OP Stack 提供不同层面的不同模块，丰富 OP Stack 的生态。
+   - Bedrock 的 Consensus Layer（由 Data Availability Layer 和 Derivation Layer 组成）采用的是 Rollup，执行层为 EVM，而结算层为 Governance。
+
+2. Base对OP Stack的影响
+- 帮助 Coinbase 为下一阶段去中心化应用的大规模采用做好准备。Base 将承载未来 Coinbase（2022 年 Q3 Coinbase 有近 1.1 亿用户数和超过 800 万的月交易用户）、Layer2 以及 Layer1 的流量。
+- 未来 Base 的部分手续费也会流入 OP Collective，继续推动 OP Stack 的发展。
+- 进一步确定以太坊和 Layer2 的地位。Coinbase 明确表示没有发币计划，使用以太坊作为网络汽油费。此外 Coinbase 加入了 OP Stack 的开发，并宣布继续投资和建设 Layer2 基础设施和相关工具。
+
+
 <!-- Content_END -->
