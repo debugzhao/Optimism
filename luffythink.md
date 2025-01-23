@@ -129,7 +129,7 @@ Optimism Collective 的治理由两院组成：代币持有者议院 (Token Hous
 
 学习主题：RetroPGF https://community.optimism.io/citizens-house/how-retro-funding-works
 
-回溯式公共产品资助（Retro Funding）基于这样一个理念：相较于预测未来哪些项目有用，评估过去哪些项目有用更容易达成共识。这是一系列实验，Optimism Collective 的公民议会成员将剩余协议收入或 Retro Funding 代币分配的一部分，分配给那些他们认为对 Optimism Collective 和整个超级链产生了积极影响的项目。这是 Optimism “影响=利润”价值观的核心：对集体产生积极影响应该与个人获得的利润成比例地奖励。
+回溯式公共产品资助（Retro Funding）基于这样一个理念：相较于预测未来哪些项目有用，评估过去哪些项目有用更容易达成共识。这是一系列实验，Optimism Collective 的公民议会成员将剩余协议收入或 Retro Funding 代币分配的一部分，分配给那些他们认为对 Optimism Collective 和整个超级链产生了积极影响的项目。这是 Optimism “影响=利润”价值观的核心：**对集体产生积极影响应该与个人获得的利润成比例地奖励。**
 
 这些奖励为人们构建有益于 Optimism Collective 的公共产品创造了强大的激励。其累积效应是一个更容易构建、学习和连接的生态系统，进而推动应用程序的使用并产生对区块空间的更多需求。通过可持续地资助公共产品，集体可以创建一个丰富的生态系统和更好的经济。
 
@@ -191,9 +191,58 @@ Positive impact to the community should be rewarded with profit to the builder.
 
 学习主题：Superchain 基本介绍 https://docs.optimism.io/stack/explainer
 
-在Bedrock之后，OP Stack的下一个重大可扩展性改进是引入超级链的概念：一个共享桥接、去中心化治理、升级、通信层等等的链网络——所有这些都构建在OP Stack之上。超级链的启动将把OP主网和其他链合并成一个统一的OP链网络（即超级链中的链），标志着向为世界带来可扩展和去中心化计算迈出的重要一步。
+超级链的概念：一个共享桥接、去中心化治理、升级、通信层等等的链网络——所有这些都构建在OP Stack之上。超级链的启动将把OP主网和其他链合并成一个统一的OP链网络（即超级链中的链），标志着向为世界带来可扩展和去中心化计算迈出的重要一步。
 
 Optimism 的超级链旨在通过创建一个共享安全、通信层和开源技术栈的 L2 链网络来解决区块链的可扩展性问题。 虽然超级链的发布将是一个重要的里程碑，但仍需解决一些关键痛点，例如依赖可信证明者、跨链交易速度慢和异步性、L1 的容量限制、缺乏易于使用的开发和钱包工具等。 解决这些问题将使构建复杂 Web2 应用的去中心化替代方案成为可能，最终实现完全可扩展的区块链愿景。
+
+Superchain 致力于通过**标准化和模块化的技术栈**（OP Stack）来实现跨链数据和资产的无缝流转，同时共享以太坊的安全和资源，从而在 L2/L3 多链世界中形成规模化网络效应。
+
+Superchain 内的每条链都需要将排序器（Sequencer）总收入或利润的 15% 支付给 **Optimism Collective**，以在多链之间聚合流动性并引导形成更大网络效应。
+
+### 2025.01.21
+
+学习主题：OP Stack 基本概述 https://docs.optimism.io/stack/getting-started
+
+OP Stack是驱动Optimism的软件集合——目前以OP主网背后的软件形式存在，最终将以Optimism超级链及其治理的形式存在。随着超级链概念的出现，Optimism轻松支持在拟议的超级链生态系统中互操作的新链的安全创建变得越来越重要。因此，OP Stack主要关注于创建一个共享的、高质量的和完全开源的系统，用于创建新的L2区块链。通过协调共享标准，Optimism Collective可以避免重复地在孤岛中重建相同的软件。
+
+OP Stack大大简化了创建L2区块链的过程，但重要的是要注意，这并没有从根本上定义OP Stack是什么。OP Stack是所有驱动Optimism的软件。随着Optimism的发展，OP Stack也将发展。OP Stack可以被认为是软件组件，这些组件要么帮助定义Optimism生态系统的特定层，要么作为现有层中的模块发挥作用。
+
+OP Stack当前的核心是运行L2区块链的基础设施，但理论上OP Stack扩展到底层区块链之上的层，包括区块浏览器、消息传递机制、治理系统等工具。**层通常在堆栈底部（如数据可用性层）定义得更严格，但在堆栈顶部（如治理层）定义得更宽松。**
+
+OP Stack是一个不断发展的概念。随着Optimism的发展，OP Stack也将发展。今天，OP Stack的Bedrock版本简化了部署新的L2 Rollup的过程。随着对堆栈工作的继续，插入和配置不同的模块应该会更容易。随着超级链开始成形，OP Stack可以与其一起发展，以包含允许不同链无缝互操作的消息传递基础设施。最终，OP Stack将成为Optimism所需的东西。
+
+### 2025.01.22
+
+学习主题：体验和分析一下 Superchain 项目 https://www.superchain.eco/projects
+
+[DeFiLlama](https://www.superchain.eco/ecosystem-projects/defillama) 是一个自筹资金的开源平台，提供超过 240 个区块链上 3000 多个DeFi项目的实时、透明数据。它没有正式的治理结构和原生代币，依靠 grants for funding 。其价值主张是通过社区协作，为用户提供准确和全面的 DeFi 分析数据。
+
+DefiLlama 的主要功能包括：
+
+- **实时数据：** DefiLlama 持续更新其数据，提供关于 DeFi 项目的最新信息。
+- **多链支持：** 它支持许多不同的区块链，包括以太坊、币安智能链、Polygon 等。
+- **全面数据：** 它提供各种 DeFi 项目指标，例如 TVL、交易量、流动性、代币价格等。
+- **开源：** DefiLlama 的代码是开源的，这允许社区贡献和审核其数据。
+- **易于使用：** 其网站和 API 设计直观易用，方便用户访问和使用数据。需要注意的是，DefiLlama 的数据依赖于各个 DeFi 项目提供的 API，因此数据的准确性和完整性取决于这些 API 的质量。
+
+### 2025.01.23
+
+学习主题：了解 Superchain Eco 超级链指数 https://www.superchain.eco/superchain-index
+
+旨在为以太坊生态系统提供清晰的链状态可视化。该指数根据链的配置和标准性，将链分为三种状态：
+
+1. 绿色链：完全符合标准要求，使用最新治理批准的 OP Stack 版本，由安全委员会管理桥接升级。
+2. 黄色链：标准配置，但仍在完成最终升级或安全委员会迁移。
+3. 灰色链：使用旧版本或偏离标准配置，但仍为生态系统做出贡献。
+
+关键重点：
+
+- 仅绿色和黄色链构成"Superchain"
+- 灰色链可以通过逐步调整达到标准要求
+- Season 7 将仅支持标准化和安全委员会的链
+- 目标是促进生态系统互操作性和标准化
+
+目前只看到 OP Mainnet 处于 Stage1 阶段，大多数还是 Stage 0 阶段。
 
 
 

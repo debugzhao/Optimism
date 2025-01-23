@@ -875,4 +875,90 @@ OP Chain data 可以在给定 L1 address + connection 之后，进行整个链�
 
 每个人都可以提交 withdrawal proposal。
 
+# 2025.01.21
+
+https://docs.optimism.io/superchain/superchain-explainer
+
+In the future, the attestation proof will be incrementally phased out and replaced with trust-minimized proofs such as the Cannon proof system
+
+TODO 有一些内容不是很好理解。
+
+Modular sequencing also enables permissionless experimentation with different sequencing models. 排序器也有相关的协议和不同的算法。
+
+安全委员会可以紧急暂停 bridge 的能力。遵循“safety over liveness”的设计原则，就是宁愿 L1 bridge 冻结，链不能用，但是也不能导致 ETH 丢失。
+
+TODO 安全委员会关闭 bridge 的流程和代码是怎么样的？
+
+可以通过 L1 soft fork 的方式，启动 bridge。机制有点复杂，然后可能会给以太坊引入系统性风险，暂时不推荐采用此方法。软分叉升级完成之后可以去掉，所以不会对以太坊代码库带来影响。预计由于这个机制的存在，这个逃生舱口永远不会使用。
+
+目前在实现超级链愿景之前，还有一些痛点需要解决：
+
+1. Withdrawal claims rely on a trusted set of chain attestors.
+2. Cross-chain transactions are slow because they require waiting a challenge period.
+3. Cross-chain transactions are asynchronous, breaking the ability to perform atomic cross-chain transactions (like flash loans).
+4. Posting transactions to the Superchain is not-scalable because the transaction data must be submitted to L1 which has limited capacity.
+5. There are no easy-to-use frameworks for building scalable apps which utilize many OP Chains.
+6. There is no easy-to-use wallet for managing tokens and apps across many OP Chains.
+
+潜在的解决方案：
+
+1. Multi-proof security。通过多重证明系统，提供冗余作为安全保障。
+2. Low latency L2 to L2 message passing。跨链速度慢，因为需要等待挑战起。Fault proofs 需要等待挑战期，但是 validity proofs 不需要。但是通常使用 ZKPs 技术实现，目前成本高，如果要达到跨链通信协议的线上版本，还需要数年时间。可以使用 OP Stack 的 modular proof system 来实现。
+3. Synchronous cross-chain transactions。在两条 OP 链上引入同步跨链消息传递，并实现原子跨链交互。
+4. Alt-Data availability layer — Alt-DA Protocol。目前 L1 作为 DA 也是不足以支持互联网级别的规模。通过 Alt-DA 协议，可以让替代 DA 服务商提供额外补充。
+5. Multi-chain app frameworks。包括：Content-addressable smart contracts、Cross-chain contract state management standards、Superchain RPC endpoint。
+
+TODO 我在思考一个问题，chain 会不会是一个应用？如果把 chain 做成一个应用，那么将其视为数据库吗？还是什么。正在体验 hyperliquid 这种 trading L1。
+
+# 2025.1.22
+
+## [Getting started with the OP Stack](https://docs.optimism.io/stack/getting-started）
+
+The OP Stack is the set of software that powers Optimism — currently in the form of the software behind OP Mainnet and eventually in the form of the Optimism Superchain and its governance.
+
+所以 Optimism Superchain 是指 Superchain 生态，Optimism 通常是 OP Mainnet，然后 Optimism Collective 是指包括 Mainnet + Superchain 等等，所有的东西？TODO 这个 OP Branding 确实比较混乱。
+
+The OP Stack is all of the software that powers Optimism.
+
+## [OP Stack components](https://docs.optimism.io/stack/components）
+
+关键组成部分，不同的 Layers：
+
+- DA：以太坊
+- Sequencing：打包用户 tx 然后发到 DA
+- Derivation：处理原始 DA 的数据，发送到执行层进行执行
+- Execution：EVM，轻度改造，支持 L2 txs 添加 L1 data fee
+- Settlement layer：偏外部的结算层，例如 Fault Proof 证明等。TODO 没有完全理解
+- Goverance：治理层，包括系统配置、升级等
+
+# 2025.1.23
+
+## [Differences between Ethereum and OP Stack Chains](https://docs.optimism.io/stack/differences)
+
+首先是 EVM 等效的，但是有一点更改：
+
+### Bridging
+
+- Deposit txs：L1 ETH 到 L2 的方式
+- Withdrawal txs 和 Fault Proofs：提款等特殊的交易逻辑是不存在的
+
+### Opcodes
+
+- COINBASE Returns the address of the current Sequencer's fee wallet.
+- PREVRANDAO Returns the PREVRANDAO (the most recent RANDAO) value of L1 at the current L1 origin block. TODO RANDAO 是什么
+- ORIGIN 类似 tx.origin 有一点特殊逻辑是如果 tx 从 L1 -》L2 的话，就是 aliased address TODO aliased address 和 address aliasing 是什么
+- CALLER 类似 msg.sender 有一些特殊逻辑
+
+### Address aliasing
+
+如果一个 L1 -> L2 的 tx 被 L1 的 smart contract 执行，sender 的 address 是不同的。这是因为 CREATE opcode 的不同，即便是两个链拥有相同的 address，但是 bytecode 是不同的，也是两个。
+
+### Transactions
+
+- Transaction fees 需要额外增加 L1 data fee
+- 也是基于 EIP-1559 的机制
+- 没有 public mempool，然后仅仅暴露给 Sequencer
+
+TODO https://docs.optimism.io/stack/smart-contracts 可以深入下面的话题，把 OP Stack 的工作细节看看，然后进入部署的节点服务器，亲自观察一下具体的数据和代码
+
 <!-- Content_END -->

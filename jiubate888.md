@@ -433,6 +433,47 @@ RetroPGF 获奖项目：https://round6.retrolist.app/
 
 ### 2025.01.21
 
+今日学习第16天：
+
+OP Stack 基本概述
+
+1.OP Stack 是一套为 Optimism 提供支持的软件——目前以 OP Mainnet 背后的软件的形式出现，最终以 Optimism Superchain 及其治理的形式出现。
+
+这里该如何理解呢，OP Stack 个人视作模块工具箱，这里的工具，可以为想加入 Optimism Superchain的去组合定制一条二层链，其中OP Mainnet就是其中的一条二层链，好多个类似的这样二层链组合的集合，就是 Optimism Superchain。
+
+![image-18](https://github.com/user-attachments/assets/ca41ae23-025d-464f-be9a-ea1e0efbb425)
+
+2.OP Stack，那么这个箱子里有什么呢？
+
+数据可用性，测序，单序列发生器，多序列发生器，推导，汇总，索引器，执行，以太坊虚拟机，沉降层，基于证明的故障证明，防错乐观结算，有效性证明结算，治理，多重签名合约，治理代币。
+
+3.关于layer2与layer3之间的定义，找到下图。
+
+
+<img width="853" alt="截屏2025-01-21 18 09 09" src="https://github.com/user-attachments/assets/be4dd9b2-7f6e-498d-96e6-94622b7d3bf0" />
+
+
+
+4.官方如何，将技术性的东西，简单通俗化讲给用户，用户一听马上就明白，这样有利于传播。
+
+### 2025.01.22
+
+今日学习第17天：
+
+体验和分析一下 Superchain 项目：
+
+1.今天是小年，在我这是祭灶日，有点节日喜庆的味道，正好看到了OP更新了品牌定位，符合我对，OP的期待，OP主网现在成了超级链里的其中一份子，op则代表整个超级链。
+
+<img width="1450" alt="截屏2025-01-22 16 50 53" src="https://github.com/user-attachments/assets/613c8e32-f2bf-4cc7-9f9c-1be9d693c534" />
+
+2.目前在超级链上，给我的影响中，OP主网，BASE，UNI，在就想不起来，有啥能打的。
+
+3.看到V神与大佬之间互战，当利益与理想冲突时，该怎么选择？
+
+从时间框架来说：短期利益，与长期利益的冲突，能够不被短期诱惑，隔绝压力，以平常心回归到事物本质，保持一定的定力，这个实在是太难得了，我呢在现实中，常常被干扰，随风漂泊。值得一辈子学习。
+
+### 2025.01.23
+
 <!-- Content_END -->
 
 
