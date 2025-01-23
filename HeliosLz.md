@@ -564,9 +564,274 @@ OP Stack 的核心贡献者在 2024 年推出了多个重要功能，惠及 Supe
 
 ### 2025.01.20
 
+**虚拟地址是什么？ 为什么要引入虚拟地址？虚拟地址能投票吗？如何实现的**
+1. 什么是虚拟地址？
+
+虚拟地址 是在多签治理系统中引入的一种抽象机制，用于代表系统内特定默认行为的“自动投票权”。它不是由真实的用户或实体控制的地址，而是一种逻辑上的设计，旨在增强系统的默认行为权重，例如支持智能合约证明系统的默认决定。
+
+虚拟地址的特点：
+* 逻辑存在：虚拟地址只存在于系统逻辑中，不对应真实的账户或私钥。
+* 自动投票：它的投票行为是预定义的，例如默认支持证明系统的决定。
+* 不可独立控制：虚拟地址不受多签成员的直接控制，不能改变其行为。
+
+2. 为什么要引入虚拟地址？
+
+引入虚拟地址的原因在于 平衡治理权重 和 增强系统安全性：
+
+(1) 增强证明系统的影响力
+* 在多签中，虚拟地址代表 智能合约证明系统 的默认投票权，使得默认行为更难被推翻。
+* 通过虚拟地址，系统在未达到足够多真实成员反对的情况下，可以自动接受证明系统的结果。
+
+(2) 防止恶意篡改
+* 如果没有虚拟地址，少数成员可能更容易联合推翻证明系统的决定，增加安全风险。
+* 引入虚拟地址后，推翻默认决定需要更多成员一致同意，提高了篡改的难度。
+
+(3) 简化默认决策流程
+* 虚拟地址通过默认投票简化了系统治理流程，使得在大多数情况下不需要所有成员参与投票即可达成决定。
+* 例如，证明系统的默认行为本身是可信的，虚拟地址可以直接支持它，无需额外表决。
+
+3. 虚拟地址能投票吗？
+
+是的，虚拟地址可以投票，但它的行为是预定义的，无法像真实成员一样灵活调整。
+自动投票行为：
+* 虚拟地址始终支持特定的默认行为，例如接受证明系统的决定。
+* 如果提案是“推翻证明系统的决定”，虚拟地址不会参与支持。
+不可变更性：
+* 虚拟地址的投票权是通过智能合约内置的逻辑定义的，不能被外部操作或更改。
+
+4. 虚拟地址如何实现？
+
+虚拟地址的实现依赖于 智能合约逻辑，并与多签系统紧密结合。以下是具体实现方式：
+
+(1) 智能合约内置逻辑
+* 在多签合约中，虚拟地址被预定义为支持某些特定决策。
+例如：
+* 如果提案是“接受证明系统的默认决定”，虚拟地址会自动投票支持。
+* 如果提案是“推翻证明系统的默认决定”，虚拟地址不会投票。
+
+(2) 将虚拟地址计入投票机制
+* 虚拟地址被视为多签系统中的签署者（签名者）。
+* 当多签合约检测到提案触发时，会自动将虚拟地址的预定义投票结果计入总票数。
+
+(3) 动态调整虚拟地址数量
+* 根据系统需求，可以通过合约逻辑动态调整虚拟地址的数量。
+调整方式：
+* 增加虚拟地址数量：提升证明系统的权重，使其更难被推翻。
+* 减少虚拟地址数量：降低证明系统的权重，增加真实成员的决策影响力。
+
+(4) 示例代码结构
+
+在 Solidity 合约中，可以实现虚拟地址逻辑如下：
+
+~~~
+contract VirtualAddressMultisig {
+
+    uint256 public threshold;
+    uint256 public totalSigners;
+    uint256 public virtualVotes;
+    
+    constructor(uint256 _threshold, uint256 _totalSigners, uint256 _virtualVotes) {
+        threshold = _threshold;
+        totalSigners = _totalSigners;
+        virtualVotes = _virtualVotes;
+    }
+
+    function calculateVotes(uint256 realVotes) public view returns (bool) {
+        uint256 totalVotes = realVotes + virtualVotes; // 加上虚拟地址的票数
+        return totalVotes >= threshold;
+    }
+}
+~~~
+
+(5) 实现虚拟地址动态调整
+
+通过动态增加虚拟地址，可以调整门槛。例如：
+* 多签成员总数为 8，门槛为 7/8。
+* 添加 5 个虚拟地址后，总投票数变为 13，门槛调整为 7/13。
+
+5. 举例说明
+
+假设：
+* 多签规模：8 名真实成员。
+* 门槛：7/8（87.5%）。
+* 虚拟地址：5。
+* 等效规模：8（真实成员）+ 5（虚拟地址）= 13。
+
+决策场景：
+1. 接受证明系统的默认决定：
+* 虚拟地址提供 5 票支持。
+* 只需要另外 2 名真实成员的支持即可达成 7 票（7/13，51%），决策通过。
+2. 推翻证明系统的默认决定：
+* 至少需要 7 名真实成员一致同意，才能达成 7 票（7/13），推翻默认决定。
+
+总结
+1.虚拟地址的定义：虚拟地址是多签系统中的逻辑实体，代表系统内的默认行为。
+
+2. 引入目的：
+* 增强证明系统的权重，防止恶意篡改。
+* 简化治理流程，提高系统安全性。
+
+3. 投票行为：虚拟地址能够投票，但行为是预定义的，始终支持证明系统的默认决定。
+	
+4. 实现方式：通过智能合约逻辑将虚拟地址集成到多签中，动态调整其数量以影响决策权重。
+
+
 ### 2025.01.21
 
+Cannon 是 Optimism 的默认故障证明虚拟机（Fault Proof Virtual Machine，FPVM），用于在 OP Stack 区块链的争议游戏（Dispute Game）中处理故障证明。
+
+### Cannon 由两个主要组件组成
+
+1. 链上组件：MIPS.sol
+* 这是一个智能合约，实现了 32 位、大端序的 MIPS III 指令集架构（ISA）。
+* 它在以太坊虚拟机（EVM）中验证单个 MIPS 指令的执行。
+* 该合约是无状态的，需要外部提供执行所需的状态信息。
+2. 链下组件：mipsevm
+* 这是用 Go 语言编写的实现，生成可在链上验证的 MIPS 指令执行证明。
+* 它与 MIPS.sol 合约协同工作，确保在争议过程中正确执行指令。
+
+在争议游戏中，当参与者对某个 L2 区块状态转换存在分歧时，Cannon 被用于执行 MIPS 指令，以验证争议状态的正确性。
+
+需要注意的是，Cannon 只是可用于解决争议的 FPVM 实例之一，OP Stack 的模块化设计允许集成其他证明机制。
+
+
+![image](https://github.com/user-attachments/assets/1513bd3f-3294-479c-a6d1-ae793b9b0cd4)
+
+Offchain（链下部分）：
+* 包含链下运行的逻辑和组件，主要负责生成、验证以及提交 MIPS 指令的执行证明。
+* 包括 op-challenger、Cannon、op-program 和 op-preimage。
+
+Onchain（链上部分）：
+* 包含部署在以太坊区块链上的智能合约，主要负责验证链下提交的证明是否正确。
+* 包括 DisputeGameFactory、FaultDisputeGame、MIPS.sol 和 PreimageOracle。
+
+### 组件详细解析
+
+链下组件（Offchain）
+1. op-challenger：
+* 负责触发争议游戏（Dispute Game），挑战不合法的状态更新。
+* 与链上合约交互，提交或验证争议的中间状态。
+2. Cannon：
+* 是核心的链下故障证明虚拟机（FPVM），模拟 MIPS 指令的执行并生成证明。
+* 提交执行过程和结果给链上合约进行验证。
+3. op-program：
+* 定义要验证的具体程序逻辑，包含 Layer 2 状态转换的详细实现。
+* Cannon 使用它来模拟和执行 MIPS 指令。
+4. op-preimage：
+* 负责存储和提供 Cannon 需要的前映像（Preimage），即状态或数据的细节。
+* 为 Cannon 提供验证数据。
+
+链上组件（Onchain）
+1. DisputeGameFactory：
+* 负责创建新的争议游戏实例（FaultDisputeGame）。
+* 是争议游戏的入口点。
+2. FaultDisputeGame：
+* 核心争议游戏逻辑所在，协调挑战者与被挑战者的交互。
+* 管理链下提交的状态和证明，并调用 MIPS.sol 验证结果。
+3. MIPS.sol：
+* 智能合约实现，用于验证链下 Cannon 提交的 MIPS 指令执行证明。
+* 解析和执行单条 MIPS 指令，确保其合法性。
+4. PreimageOracle：
+* 提供链上数据验证服务，用于验证提交的数据与原始状态的一致性。
+* 与 MIPS.sol 配合工作，确保证明的完整性。
+
+### 工作流程
+1. 争议的触发：
+* 当某个状态更新被质疑时，op-challenger 向 DisputeGameFactory 提交挑战，启动争议游戏。
+2. 链下生成证明：
+* Cannon 使用 op-program 和 op-preimage，模拟 MIPS 指令的执行，生成执行证明。
+3. 链上验证：
+* FaultDisputeGame 接受 Cannon 提交的证明，并调用 MIPS.sol 验证每条指令的正确性。
+* PreimageOracle 提供链上数据，确保提交的证明与原始状态一致。
+4. 争议解决：
+* 如果验证通过，证明被接受，状态更新被确认。
+* 如果验证失败，状态更新被拒绝，争议游戏结束。
+
 ### 2025.01.22
+
+![image](https://github.com/user-attachments/assets/39ce8241-5cdb-4b6c-90c2-265cc93d7b90)
+
+这张图展示了 Cannon 组件的整体架构（Cannon Component Overview），这是 Optimism 的故障证明虚拟机（Fault Proof Virtual Machine, FPVM）的核心设计部分，用于模拟和验证 MIPS 指令的执行。以下是图中各个模块的详细解释：
+
+1. 核心模块
+
+1.1 Cannon Runner
+
+文件：run.go 和 instrumented.go
+作用：
+* Cannon 的运行引擎，负责协调整个执行流程。
+* 调用其他模块来执行指令、管理状态和生成证明。
+交互：
+* 调用 Witness Proof Generation 来生成证明。
+* 调用 Memory and State Management 处理内存和状态管理。
+
+1.2 Witness Proof Generation
+
+文件：witness.go
+作用：
+* 生成用于链上验证的执行证明（Witness Proof）。
+* 将链下执行的操作记录为可以验证的链上数据。
+交互：
+* 接收来自 Cannon Runner 的调用，生成证明。
+
+1.3 Memory and State Management
+
+文件：memory.go、page.go、state.go
+作用：
+* 管理 MIPS 虚拟机的内存和状态，包括内存分页和状态快照。
+* 确保指令执行时的数据一致性。
+交互：
+* 与 MIPSEVM 协作，提供内存和状态支持。
+
+1.4 MIPSEVM
+
+文件：mips.go
+作用：
+* MIPS 虚拟机核心，负责执行单个 MIPS 指令。
+* 验证 MIPS 指令的合法性，并模拟指令的执行过程。
+交互：
+* 调用 PreimageOracle Server 获取预映像数据。
+* 与 Memory and State Management 协作，处理指令所需的内存和状态。
+
+1.5 ELF Loader
+
+文件：load_elf.go、patch.go 和 metadata.go
+作用：
+* 负责加载和解析 ELF 格式的可执行文件（程序）。
+* 将 MIPS 程序加载到虚拟机中，为模拟执行做好准备。
+交互：
+* 提供程序数据供 MIPSEVM 执行。
+
+1.6 PreimageOracle Server
+作用：
+* 提供 MIPS 执行所需的外部数据或状态的前映像（Preimage）。
+* 是链下和链上之间的数据桥梁。
+交互：
+* 被 MIPSEVM 调用，用于验证和获取外部状态。
+
+2. 组件间的工作流程
+
+程序加载：ELF Loader 从 ELF 文件加载 MIPS 程序，并将其提供给 MIPSEVM。
+
+指令执行：
+* MIPSEVM 模拟执行 MIPS 指令，调用 Memory and State Management 管理虚拟机的状态。
+* 在需要外部数据时，调用 PreimageOracle Server 获取验证所需的前映像。
+
+状态管理：Memory and State Management 负责保存和更新内存页和状态快照，支持指令的执行。
+
+生成证明：Witness Proof Generation 在指令执行后生成证明数据，并将其返回给 Cannon Runner。
+
+执行协调：Cannon Runner 作为核心协调者，负责调用各模块并管理整体流程。
+----
+链下执行 的 MIPS 程序通过模块化的设计完成指令执行、状态管理和证明生成。
+
+关键功能：
+* Cannon Runner 协调整体流程。
+* MIPSEVM 模拟 MIPS 指令执行。
+* PreimageOracle Server 提供外部数据支持。
+* Witness Proof Generation 生成可供链上验证的证明。
+
+通过这些模块的协作，Cannon 能够有效支持 Optimism 的争议解决和状态验证过程。
 
 ### 2025.01.23
 

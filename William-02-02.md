@@ -453,6 +453,73 @@ Voting results from a total of 643 projects participating in Optimism’s RetroP
 
 ![Superchain Explainer Diagram.](./.William-02-02.assets/imageurl=%252F_next%252Fstatic%252Fmedia%252Fsuperchain-diag.7fc0979f.png)
 
+### 2025.01.19
+
+diff between Etherem & OP Stack
+
+| **方面**         | **以太坊 (Ethereum)**                                        | **OP Stack链**                                               |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **桥接机制**     | 无内置桥接机制，资产转移需通过跨链桥接等外部解决方案。       | 支持L1⇔L2桥接交易，通过存款交易将资产从L1引入L2，通过提款交易和故障证明将资产从L2提取到L1。 |
+| **操作码行为**   | 操作码如COINBASE返回当前区块的矿工地址，PREVRANDAO返回上一个区块的随机数。 | - COINBASE返回Sequencer的费用钱包地址，通常不变。<br>- PREVRANDAO返回L1起源区块的PREVRANDAO值。 |
+| **地址别名**     | 无地址别名机制，地址在链上保持一致。                         | 从L1合约触发的L2交易会使用地址别名，以防止地址冒充。         |
+| **交易费用**     | 仅支付执行gas费，由矿工打包交易。                            | 除了支付执行gas费外，还需支付L1数据费。                      |
+| **EIP-1559参数** | 使用统一的EIP-1559参数，基础费用由全网交易需求决定。         | 基础费用通过EIP-1559机制计算，但参数因OP Stack链而异。       |
+| **内存池规则**   | 公共内存池，交易由矿工按gas价格排序并打包。                  | 没有公共内存池，交易由Sequencer按优先费用顺序执行。          |
+| **链的最终性**   | 区块最终性由共识机制（如PoS）决定，通常具有高确定性。        | 区块最终性分为Unsafe、Safe和Finalized Heads，提款交易的最终性依赖于故障证明。 |
+| **交易发起者**   | 交易由外部账户或合约直接发起，地址保持一致。                 | - 外部账户从L1到L2交易时，地址不变。<br>- 合约从L1到L2交易时，地址会别名化。 |
+| **应用场景**     | 通用智能合约平台，适用于各种去中心化应用。                   | 专注于扩展性优化，适合对交易速度和成本敏感的应用，如DeFi和NFT。 |
+
+> 地址别名：当L1存在合约中介时，C->L1->L2的交易会错误的交易到L1合约地址。于是引入固定偏移量来获取地址的别名。 就是说将L1的用户和合约通过别名的方式区分开来。
+>
+> ​	实际用途：如果没有地址别名，可以伪装成L1上的某个合法合约，混淆别人，实际使用了恶意代码。
+>
+> ![image-20250120220328489](./.William-02-02.assets/image-20250120220328489.png)
+
+### 2025.01.20
+
+EIP 1559：https://notes.ethereum.org/@vbuterin/eip-1559-faq
+
+Blob空间不足：https://www.theblockbeats.info/news/56624
+
+L2增多导致争抢Blob空间
+
+#### EIP 1559
+
+> 简单来说就是base fee动态调整
+>
+> - The current gas limit is replaced by two values: a “long-term average target” (equal to the current gas limit), and a “hard per-block cap” (twice the current gas limit)
+>   当前的气体限制被两个值取代：一个“长期平均目标”（等于当前的气体限制），和一个“每块硬上限”（当前气体限制的两倍）
+> - There is a BASEFEE (which is burned) which transactions are required to pay, which gets adjusted on a block-by-block basis with the goal of targeting a value so that average block gas usage remains at a level close to the current gas limit.
+>   存在一个 BASEFEE（会被销毁），交易需要支付该费用，它会逐块调整，目标是使平均区块 gas 使用量保持在接近当前 gas 限制的水平。
+
+之前市场的劣势
+
+- **Mismatch between volatility of transaction fee levels and social cost of transactions**交易过多时 gasfee飙升
+- **Inefficiencies of first price auctions** 优先高价交易机制低效
+- **Instability of blockchains with no block reward**
+
+### 2025.01.21
+
+> **Permissionless proposals 无需许可的提案**
+>
+> "Proposals" or "State Proposals" are claims about the state of an OP Stack chain that are submitted to Ethereum through the `DisputeGameFactory` contract. Proposals can be used for many things but are most commonly used by end-users to prove that they created a withdrawal on an OP Stack chain. With the Fault Proofs upgrade to the OP Stack, proposals become permissionless and can be submitted by anyone.
+> “提案”或“状态提案”是关于 OP Stack 链状态的声明，通过 `DisputeGameFactory` 合约提交至以太坊。提案可用于多种用途，但最常见的是由终端用户用来证明他们在 OP Stack 链上创建了提款。随着 OP Stack 的故障证明升级，提案变为无需许可，任何人都可以提交。
+
+> 2024 年 6 月 10 日，Fault Proofs 正式加入 OP Stack 并在 OP Mainnet 上激活。此次 Fault Proofs 升级通过以下方式使 OP Stack 更接近技术去中心化：
+>
+> - allowing anyone to make proposals about the state of the L2
+>   允许任何人就 L2 的状态提出建议
+> - allowing anyone to challenge proposals made by other users
+>   允许任何人挑战其他用户提出的提案
+> - allowing users to send messages from L2 to L1 without the need for a trusted third party
+>   允许用户从 L2 向 L1 发送消息，无需可信第三方
+> - allowing users to trigger withdrawals from L2 to L1 without the need for a trusted third party
+>   允许用户从 L2 触发提款到 L1，无需依赖可信第三方
+> - introducing a modular fault proof design that can easily integrate additional proving mechanisms
+>   引入模块化防错设计，可轻松集成额外的验证机制
+
+
+
 
 
 

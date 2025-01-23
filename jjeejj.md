@@ -145,4 +145,18 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. 今天了解到 依托 coinbase 的 Base 链 ，竟然是使用 OP Stack 来构建的，而且已经加入的 Superchain 中了，牛
 
+### 2025.01.20
+
+1. Superchain Bridges：https://app.optimism.io/bridge/deposit 第三方服务商提供的，可以在 以 OP Stack 为基础构建链之间相互转账
+   1. https://www.brid.gg/op-mainnet
+   2. https://superbridge.app/optimism
+
+### 2025.01.21
+
+1. 在 Superchain 上面的 app 类型还挺还挺全的: Defi、NFT、Bridge、On-Ramp、Wallet、Infra、DAO
+
+### 2025.01.22
+
+1. 今天再看 optimistic.etherscan.io 的时候 想到： 有没有一个地方 可以看所有 加入 SuperChain 的链的信息，各种交易，而且可以看到各种链跨链交易的信息的关联关系 【想法，点子】
+
 <!-- Content_END -->

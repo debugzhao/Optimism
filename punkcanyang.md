@@ -475,4 +475,77 @@ superchain是我觉得OP生态中非常有趣的一个设计
 - 结算层（Settlement Layer）：将 OP Stack 链的状态与外部链（包括其他 OP Stack 链）的状态进行同步，包括乐观故障证明（Fault Proof Optimistic Settlement）跟有效性证明（Validity Proof Settlement）
 - 治理层（Governance Layer）：管理系统配置、升级和设计决策的工具与流程集合，例如多签合约（MultiSig Contracts），治理代币（Governance Tokens）等等
 
+### 2025.01.20
+
+尝试假设一个测试网的OP Stack，还搞不太懂
+我尝试用Podman的环境建置
+参考： https://docs.optimism.io/builders/chain-operators/tools/op-deployer
+
+利用op-deployer，先在L1的测试网布署一个对应合约
+
+首先要初始化
+`./bin/op-deployer init --l1-chain-id 11155111 --l2-chain-ids <l2-chain-id> --workdir .deployer`
+
+产生初始档案后，可以自己进去改
+
+
+`configType = "standard"`
+`l1ChainID = 11155111`
+`fundDevAccounts = false`
+`useInterop = false`
+`l1ContractsLocator = "tag://op-contracts/v1.8.0-rc.4"`
+`l2ContractsLocator = "tag://op-contracts/v1.7.0-beta.1+l2-contracts"`
+
+`[superchainRoles]`
+  `proxyAdminOwner = "0x1eb2ffc903729a0f03966b917003800b145f56e2"`
+  `protocolVersionsOwner = "0x79add5713b383daa0a138d3c4780c7a1804a8090"`
+  `guardian = "0x7a50f00e8d05b95f98fe38d8bee366a7324dcf7e"`
+
+`[[chains]]`
+  `id = "0x0000000000000000000000000000000000000000000000000000000005f5e0fe"`
+  `baseFeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `l1FeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `sequencerFeeVaultRecipient = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+  `eip1559DenominatorCanyon = 250`
+  `eip1559Denominator = 50`
+  `eip1559Elasticity = 6`
+  `[chains.roles]`
+    `l1ProxyAdminOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `l2ProxyAdminOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `systemConfigOwner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `unsafeBlockSigner = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `batcher = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `proposer = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+    `challenger = "0xd48E34c1b95b7dA633e86534482F50c32b243F2d"`
+
+总之按照步骤将环境设定好了之后
+
+就可以下载op-node op-geth op-batcher op-proposer
+
+
+### 2025.01.22
+
+体验了OP的一键发链后，我们回到 Superchain
+
+Superchain 是Optimism接下来的大计划，也可以说是Optimism在L2逐渐奠定的产业门槛，可以逐渐巩固Optimism成为L2龙头的条件。
+
+目前看来有几个重点：
+- 共享基础设施和标准化协议
+- 多个链之间能够无缝交互和高效协作，资产多链之间跨转更快，合约资源可以互相调度
+- 多条区块链组成的去中心化网络，共享相同的协议、工具和安全性
+- 符合共同协议下可以针对各自的需求去扩展
+- 每个链又可以有独立的自有经济体
+
+从一键发链的过程中可以看到 Superchain的组成
+- L1：设置打包的合约，用来储存验证跟数据
+- L2：设置各种治理角色
+	- Proxy Admin Owner：负责管理合约的代理设置和升级
+	- Protocol Versions Owner：负责管理协议版本的发布和更新
+	- Guardian：负责紧急情况下的治理决策，例如暂停网络或修复漏洞
+
+同样地如果Protocol Versions必须要控制在同一个范围内，确保跨链操作的一致性
+
+这个设计也促进了未来链游的可能性，例如Redstone上采用的Gas费用更低，更好的index效能，但又同享跨链操作跟安全性。
+
+
 <!-- Content_END -->

@@ -194,4 +194,146 @@ Optimism 拥有以下优势：
 
 Optimistic Rollup 依赖于“想信举警”，即比较应用之间不透明性和代理局限。它通过保存带有检验机制的存货，确保安全与放垂功能。
 
+### 2025.01.19
+
+实践步骤
+
+1. 环境准备
+
+在实现 Optimism 应用之前，需要下列工具：
+
+安装 Node.js (v14 以上)和 npm，完善环境构建：
+
+```
+node -v
+npm -v
+```
+
+使用 Truffle 或 Hardhat 进行智能合约开发与部署。
+
+利用 Remix IDE 快速测试和调试智能合约。
+
+2. 部署和测试应用
+
+在 Optimism 上开发和测试应用的基本流程包括：
+
+设置开发环境：
+安装必要的库和工具，例如 @ethereum-optimism/contracts，并配置 Hardhat 项目。
+
+npm install --save-dev @ethereum-optimism/contracts
+
+编写和编译智能合约：
+使用 Solidity 编写智能合约，并使用 Hardhat 或 Truffle 编译。
+
+npx hardhat compile
+
+部署到 Optimism 网络：
+配置网络信息，例如 Optimism Goerli 测试网，并部署合约。
+
+```
+module.exports = {
+   networks: {
+      optimismGoerli: {
+         url: "https://goerli.optimism.io",
+         accounts: ["<YOUR_PRIVATE_KEY>"]
+      }
+   }
+};
+```
+
+然后运行部署脚本：
+
+```
+npx hardhat run scripts/deploy.js --network optimismGoerli
+```
+
+测试应用功能：
+使用 Optimism 的工具，例如 Optimism Explorer，验证合约是否正确部署并运行。
+
+3. 迁移现有应用到 Optimism
+
+将现有的 Ethereum 应用迁移到 Optimism 通常只需做少量更改：
+
+升级合约部署工具：支持 Optimism 的网络。
+
+配置交易参数：确保使用 Optimism 的 gas 参数。
+
+测试和验证：通过模拟器或测试网验证功能是否正常。
+
+4. 调试和优化
+
+使用 Optimism 提供的调试工具，例如 Debugging Proxies，分析交易和性能。
+
+优化智能合约逻辑以适应 Rollup 模式，减少不必要的操作。
+
+### 2025.01.20
+
+查看项目[Bitget](https://www.superchain.eco/ecosystem-projects/bitget)
+
+### 2025.01.22
+
+查看项目[Rainbow Wallet](https://www.superchain.eco/ecosystem-projects/rainbow-wallet)
+
+Rainbow Wallet 是一款非托管的以太坊钱包，旨在简化数字资产管理和与去中心化应用（dApps）的交互。它支持 iOS、Android 平台，并提供浏览器扩展，功能丰富，适合初学者和有经验的用户。
+
+**主要功能：**
+
+- **以太坊名称服务（ENS）集成：** 允许用户将复杂的钱包地址替换为易于识别的可读名称，减少错误，简化交易过程。
+
+- **内置代币交换：** 用户可以直接在应用内进行代币交换，无需依赖外部平台。
+
+- **NFT 支持：** 用户可以在钱包中管理和展示他们的非同质化代币（NFT）收藏。
+
+**价值主张：**
+
+Rainbow Wallet 通过提供无缝的界面来管理基于以太坊的资产，提升了 Web3 体验。其对 ENS 的支持使用户能够用可读名称替换复杂的钱包地址，减少错误，简化交易。
+
+**治理与代币经济学：**
+
+Rainbow Wallet 没有正式的治理流程，也没有原生代币。
+
+**融资历史：**
+
+- 2020 年，完成了 150 万美元的种子轮融资。
+
+- 2021 年，完成了 1800 万美元的 A 轮融资。
+
+**用户评价：**
+
+根据 App Store 的评价，Rainbow Wallet 在台湾地区的评分为 4.9（满分 5 分），用户普遍对其设计和易用性表示满意。
+
+**优缺点分析：**
+
+**优点：**
+
+- 支持以太坊和 EVM 兼容链，如 Polygon、Optimism、Arbitrum 等。
+
+- 支持 Web3，可连接去中心化应用、DeFi 工具、NFT 市场等。
+
+- 提供移动应用程序，适用于 iOS 和 Android。
+
+- 完全免费使用/下载。
+
+- 开源，代码透明。
+
+**缺点：**
+
+- 不支持比特币、Cosmos 生态系统、Polkadot 生态系统、Tron、Algorand 等。
+
+- 没有独立的桌面应用程序。
+
+- 不支持作为浏览器扩展使用，因此不支持 Chrome、Firefox、Edge、Opera 等浏览器。
+
+**安全性：**
+
+Rainbow Wallet 是一个非托管钱包，用户完全控制他们的私钥和资产。此外，Rainbow Wallet 是开源的，代码透明，用户可以查看和验证其安全性。
+
+**总结：**
+
+Rainbow Wallet 是一款功能丰富且用户友好的以太坊钱包，适合希望简化数字资产管理和与 dApps 交互的用户。其对 ENS 的支持、内置代币交换和 NFT 管理功能，使其在众多以太坊钱包中脱颖而出。
+
+### 2025.01.23
+
+回顾记录
+
 <!-- Content_END -->
