@@ -843,8 +843,7 @@ swap：uniswap、baseswap，非常好用的swap，uniswap更是defi的开山鼻�
 
 
 ### 2025.01.24
-
-温习前几天所学
+复习巩固前几天所学
 
 ### 2025.01.25
 
