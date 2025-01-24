@@ -685,4 +685,31 @@ MakerDAO（MKR）：MKR 代币持有者投票决定 DAI 的稳定性参数。
 
 📌 结论
 Governance = 项目的决策机制，可以是 中心化（由团队管理） 或 去中心化（社区投票决定），对于 DeFi 和 DAO 项目来说，治理是非常关键的机制。
+
+### 2025.01.24
+
+Optimism的缺点
+
+1. 取款延迟时间长
+提款到以太坊主网需要 7 天，因为 Optimistic Rollup 机制要求有一段时间来验证交易是否被欺诈。
+这对于急需资金的用户不太友好，不过一些流动性提供商（如 Hop、Across）可以帮助加快提现。
+❌ 2. 生态系统相对较小
+相比于 Arbitrum 和 zkSync，Optimism 的生态系统相对较小，可用的 DApp 数量较少，TVL（锁仓量）也低于 Arbitrum。
+这意味着流动性、市场深度可能不如竞争对手，用户选择也更有限。
+❌ 3. 去中心化程度较低
+Optimism 目前依赖于中心化的 Sequencer（排序器） 处理交易，这意味着它不像以太坊那样完全去中心化。
+如果 Sequencer 发生故障或恶意行为，可能会影响交易排序和网络可用性。
+❌ 4. 交易费用仍然比 ZK Rollup 高
+虽然比以太坊主网便宜，但 Optimism 的 Gas 费用仍然高于 Arbitrum 和 ZK Rollup（如 zkSync、Starknet），因为它仍然需要把数据提交到以太坊 L1。
+❌ 5. 依赖以太坊的安全性
+Optimistic Rollup 仍然依赖以太坊主网的安全性，如果以太坊 Gas 费用大幅上升，会影响 Optimism 的整体成本效益。
+📌 2️⃣ 其他潜在风险
+欺诈证明机制还不够完善：虽然设计上允许挑战欺诈交易，但目前只有官方团队在运行验证者，社区还没有完全参与。
+MEV（矿工可提取价值）问题：由于 Sequencer 目前是中心化的，它有可能优先执行某些交易，从而带来 MEV 相关风险。
+📌 3️⃣ 未来改进方向
+Optimism 计划通过 OP Stack 和 Superchain 计划 进一步优化，目标包括：
+
+让更多团队运行 Sequencer，提升去中心化程度
+通过 EIP-4844（Blob 交易）降低 Gas 费用
+推动跨 Rollup 互操作性，增强与其他 Layer 2（如 Base、Zora）的联动
 <!-- Content_END -->
