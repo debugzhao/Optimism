@@ -837,6 +837,45 @@ Onchain（链上部分）：
 
 ### 2025.01.24
 
+<img width="846" alt="image" src="https://github.com/user-attachments/assets/275651dd-e2c5-44c0-a87a-570933ce5e17" />
+
+各个组件说明
+
+**OP-Challenger（挑战者）：**
+* 功能：挑战者的角色是监控并对无效的输出根（Invalid Output Root Proposals）提出挑战。
+* 监控（Monitors）：挑战者不断监控提议的区块状态更新（例如，输出根），确保其正确性。
+* 挑战（Challenges）：如果发现提议的输出根无效，挑战者可以提出挑战，阻止该提议被接受。
+* 防御有效输出根提案（Defends Valid Output Root Proposals）：如果输出根是有效的，挑战者不会对其提出挑战。
+
+与 OP-Proposer 的交互：
+* 协助（Assists）：挑战者协助 OP-Proposer（提议者）解决争议和验证提案。
+
+**OP-Proposer（提议者）：**
+* 功能：提议者负责提出有效的输出根提案，并解决与挑战者的争议。
+* 解决索赔（Resolves Claims）：当有争议或挑战时，提议者需要解决这些问题，确保提案的有效性。
+
+与 OP-Challenger 的交互：
+* 参与争议游戏（Dispute Games）：当挑战者提出挑战时，提议者参与争议解决的过程。
+* 支付索赔（Claims Paid）：如果提案被判定无效，提议者需要支付与挑战者相关的赔偿。
+
+**争议游戏（Dispute Games）：**
+* 功能：当有争议时，挑战者和提议者通过争议游戏解决分歧，验证提案是否有效。
+
+**保证金（Bonds for Challenger and Proposer）：**
+* 功能：为了激励诚实参与并避免滥用，挑战者和提议者都需要为争议游戏支付保证金。
+* 作用：如果挑战者的挑战被证明是有效的，他们可以从提议者那里获得赔偿；如果提议者胜诉，则挑战者的保证金将被没收。
+
+### 流程概述
+
+提议的提交：OP-Proposer 提交一个输出根提案（Valid Output Root Proposal）。
+
+监控和挑战：OP-Challenger 监控这些提案，若发现无效的输出根提案（Invalid Output Root Proposal），就会提出挑战。
+
+争议解决：当挑战发生时，OP-Proposer 和 OP-Challenger 进入争议游戏，争议得到解决。
+
+保证金支付：根据争议的结果，OP-Proposer 或 OP-Challenger 可能需要支付保证金。
+
+ 
 ### 2025.01.25
 
 ### 2025.01.26
