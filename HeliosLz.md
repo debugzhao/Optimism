@@ -837,8 +837,249 @@ Onchain（链上部分）：
 
 ### 2025.01.24
 
+<img width="846" alt="image" src="https://github.com/user-attachments/assets/275651dd-e2c5-44c0-a87a-570933ce5e17" />
+
+各个组件说明
+
+**OP-Challenger（挑战者）：**
+* 功能：挑战者的角色是监控并对无效的输出根（Invalid Output Root Proposals）提出挑战。
+* 监控（Monitors）：挑战者不断监控提议的区块状态更新（例如，输出根），确保其正确性。
+* 挑战（Challenges）：如果发现提议的输出根无效，挑战者可以提出挑战，阻止该提议被接受。
+* 防御有效输出根提案（Defends Valid Output Root Proposals）：如果输出根是有效的，挑战者不会对其提出挑战。
+
+与 OP-Proposer 的交互：
+* 协助（Assists）：挑战者协助 OP-Proposer（提议者）解决争议和验证提案。
+
+**OP-Proposer（提议者）：**
+* 功能：提议者负责提出有效的输出根提案，并解决与挑战者的争议。
+* 解决索赔（Resolves Claims）：当有争议或挑战时，提议者需要解决这些问题，确保提案的有效性。
+
+与 OP-Challenger 的交互：
+* 参与争议游戏（Dispute Games）：当挑战者提出挑战时，提议者参与争议解决的过程。
+* 支付索赔（Claims Paid）：如果提案被判定无效，提议者需要支付与挑战者相关的赔偿。
+
+**争议游戏（Dispute Games）：**
+* 功能：当有争议时，挑战者和提议者通过争议游戏解决分歧，验证提案是否有效。
+
+**保证金（Bonds for Challenger and Proposer）：**
+* 功能：为了激励诚实参与并避免滥用，挑战者和提议者都需要为争议游戏支付保证金。
+* 作用：如果挑战者的挑战被证明是有效的，他们可以从提议者那里获得赔偿；如果提议者胜诉，则挑战者的保证金将被没收。
+
+### 流程概述
+
+提议的提交：OP-Proposer 提交一个输出根提案（Valid Output Root Proposal）。
+
+监控和挑战：OP-Challenger 监控这些提案，若发现无效的输出根提案（Invalid Output Root Proposal），就会提出挑战。
+
+争议解决：当挑战发生时，OP-Proposer 和 OP-Challenger 进入争议游戏，争议得到解决。
+
+保证金支付：根据争议的结果，OP-Proposer 或 OP-Challenger 可能需要支付保证金。
+
+ 总结
+
+* OP-Challenger 和 OP-Proposer 通过争议游戏和保证金制度共同参与协议的安全性验证。
+* OP-Challenger 主要负责监控提案并在发现无效提案时提出挑战，而 OP-Proposer 则解决这些挑战并支付相关赔偿。
 ### 2025.01.25
 
+![image](https://github.com/user-attachments/assets/7f35e0c3-d724-4af4-ae6a-b008426f6ce5)
+
+1. Fault Dispute Game（故障争议游戏）
+
+* 作用：这是争议解决的核心，主要用于处理 Layer 2 状态更新的争议。参与者通过此游戏验证某个状态更新是否存在错误。
+
+交互：
+* 挑战者网络（Challenger Network） 监听和参与游戏，检查是否有任何故障。
+
+2. Challenger Network（挑战者网络）
+
+* 作用：挑战者网络负责监听和接收正在进行的争议游戏的状态更新，随时准备对新的错误状态提出挑战。
+
+工作流程：
+* 新索赔被发现（New claim detected in a game）：当游戏中发现新的错误或不合法的状态更新时，挑战者会接收到该信息。
+* 挑战者随后会判断是否存在有效的反击步骤。
+
+3. Game Solver（游戏解算器）
+
+* 作用：这是一个负责审查并判断错误主张（claim）是否有效的角色。解算器根据争议的深度来确定下一步的操作。
+
+工作流程：
+* 有效的操作被发现（Valid move found）：
+* 如果发现了一个有效的错误操作，解算器根据争议的深度进行攻击、防御或其他步骤。
+* 这可能会触发争议的进一步处理，如调整状态或对抗错误。
+
+没有有效的操作（No valid move）：
+* 如果没有发现有效的错误或没有有效的操作步骤，解算器则不会采取任何行动，游戏继续。
+
+总结
+* Fault Dispute Game 是争议解决的关键组件，依靠 Challenger Network 来监听和检测潜在的错误状态。
+* 当发现错误时， Game Solver 会根据错误的性质决定是否采取行动，如进行反击、挑战或忽略该错误。
+
+这种机制确保了 Optimism 网络中的状态更新能够经过有效的验证和纠正，增强了其去中心化治理和透明性。
+
 ### 2025.01.26
+
+**Optimism Interoperability**
+
+互操作性 是一组协议和服务，允许 OP Stack 区块链相互读取对方的状态。
+
+它提供以下好处：
+* 1 块延迟的资产转移：解决了资本碎片化问题，提高了资本效率。
+* 改善用户和开发者体验：简化了跨链交互，提升了整体体验。
+* 安全的资产转移：如 ETH 和 ERC-20 代币，可以在不同的 Layer 2 之间安全地转移。
+* 水平扩展性：满足需要的应用程序的扩展需求。
+
+**互操作性架构**
+
+在互操作性之前，OP Stack 节点由两部分软件组成：
+* 共识客户端（例如 op-node）
+* 执行客户端：负责处理用户交易和构建区块（例如 op-geth）
+
+互操作性通过一个名为 OP Supervisor 的新服务来实现。
+每个节点操作员除了运行 Rollup 节点和执行客户端外，还需要运行此服务。
+
+**消息传递流程**
+
+跨链消息需要两笔交易：
+1. 初始化消息：在源链上创建，作为日志事件。
+2. 执行消息：在目标链上创建，可能导致目标链上合约函数的执行。
+
+目标链上的交易调用名为 CrossL2Inbox 的合约，执行或验证消息。
+此调用需要唯一标识初始化消息，包括源链的链 ID、区块号、日志事件在该区块中的索引等信息。
+
+**安全性**
+
+跨链消息的安全性取决于块的安全级别：
+* 本地安全：块已写入 Layer 1。
+* 跨链安全：块及其所有依赖的块都已写入 Layer 1。
+
+如果序列化器选择接受不安全的消息，它必须信任生成入站消息的序列化器，以及从传递依赖集中生成的任何引用的不安全消息。
+
+**互操作性集群**
+
+互操作性协议通过依赖集工作，依赖集在每个链上配置。
+依赖集定义了可以与特定链发送和接收消息的链集。
+
+例如，链 B 的依赖集可能包括链 A 和链 C。
+要将资产从链 E 移动到链 B，需要先从链 E 移动到链 A，然后从链 A 移动到链 C，因为 B 和 E 之间没有直接的依赖关系。
+
+**超级链互操作性集群**
+
+超级链建立在互操作性协议之上，实现了一个具有完整依赖关系的单一网状网络。
+在此模型中，超级链互操作性集群中的每个区块链都与其他每个区块链直接连接，创建一个完全连接的网状网络。
+这种模型提供了最高级别的互操作性，因为任何区块链都可以直接与任何其他区块链进行交易。
+
+超级链互操作性集群中的每个区块链共享相同的安全模型，以减轻最弱环节的风险。
+如《标准 Rollup 宪章》所述，这些链共享相同的 Layer 1 ProxyAdmin 所有者。
+对超级链互操作性集群的任何更改必须遵循标准的协议升级投票程序——这是超级链修改的既定治理流程。
+
+<img width="860" alt="image" src="https://github.com/user-attachments/assets/09ca8e87-8c5f-4ace-ac4d-493f1d39cd87" />
+
+各个组件说明
+1. OP Stack chain #1, OP Stack chain #2, OP Stack chain #3
+* 这些代表了不同的 OP Stack 链，它们在不同的区块链上运行并管理不同的交易和状态。每条链都负责自己的数据存储和计算。
+* 每条链都通过 log events（日志事件）与 OP-Supervisor 进行通信，确保信息的一致性。
+2. L1 Consensus Layer
+* 这是一个连接 OP Stack 链和 Layer 1（例如，以太坊）的组件。它负责提供最终的共识层并同步 OP Stack 上的状态到 Layer 1。
+* block status（区块状态）指示 Layer 1 上区块的最终状态，帮助 OP Stack 链同步区块数据。
+3. OP-Supervisor
+* 这是一个中央协调组件，负责管理所有 OP Stack 链之间的操作。它与每条链交互，接收来自不同链的日志事件并根据这些事件进行决策。
+* 它的主要作用是管理链的交互和确保多个链之间的一致性，特别是在跨链消息传递和状态更新方面。
+4. Execution Engine
+* 这个组件位于 OP Stack chain #1 中，负责执行从 OP-Supervisor 传递的命令。
+* Execution Engine 执行区块链上的操作，如计算和状态更新，确保在多个链之间同步这些操作。
+5. OP Node
+* 这是每个 OP Stack 链的核心节点，处理并验证事务的真实性。
+* 这些节点通过 OP-Supervisor 进行交互，并通过执行引擎来处理实际的区块和事务。
+
+工作流程
+
+1. 跨链消息传递：
+* 每条 OP Stack 链通过 log events 向 OP-Supervisor 提交日志事件。这些事件通常包含有关区块更新、交易和其他状态变更的信息。
+2. OP-Supervisor 协调：
+* OP-Supervisor 收到来自不同链的日志事件后，它根据这些事件进行协调和处理。它确保每条链都按照适当的顺序和规则执行跨链操作。
+3. 执行操作：
+* Execution Engine 执行从 OP-Supervisor 提交的操作。执行引擎确保这些操作正确地应用于区块链的状态更新。
+4. Layer 1 同步：
+* OP Stack 链通过 L1 Consensus Layer 与 Layer 1（如以太坊）同步，以确保区块数据的最终一致性。
+
+<img width="815" alt="image" src="https://github.com/user-attachments/assets/a9a50855-3007-4e58-ad54-a4ae6f89c44b" />
+
+这张图展示了 跨链消息传递 的过程，具体是如何在 Optimism 的 OP Stack 系统中实现跨链通信的。以下是图中各个组件和流程的详细解释：
+
+1. 流程说明
+
+(1) 应用层（Application）
+* 事务提交：
+* 应用程序发起一笔交易（Transaction），该交易将在源链（Source Chain）上进行处理。
+
+(2) 源链（Source Chain）
+* 生成日志事件（Log Event）：
+* 源链在交易执行时生成 日志事件，这时该事件被标记为 “Initializing Message”（初始化消息），表示消息的开始，准备向目标链传递。
+* 这条消息会通过 OP-Supervisor 发送。
+
+(3) OP-Supervisor
+* OP-Supervisor 协调跨链消息的发送和接收：
+* 它接收到来自源链的日志事件，并将其处理后发送到目标链，确保消息的正确性和完整性。
+* 它负责处理消息的传递，并监控目标链是否成功接收并处理该消息。
+
+(4) 目标链（Destination Chain）
+* 执行消息（Execution Message）：
+* 在目标链上，OP-Supervisor 向目标链的执行引擎发送请求，调用 CrossL2Inbox 来执行或验证传递过来的消息。
+* 目标链检查是否收到来自源链的初始化消息。
+* 如果接收到该消息，目标链将继续执行消息，生成 Executing Message（执行消息）。
+
+(5) CrossL2Inbox
+* CrossL2Inbox 是目标链上的合约，负责执行和验证跨链消息：
+* 它检查是否成功接收到来自源链的消息，并确保消息的有效性。
+* 如果成功执行消息，它会发出 Executing Message，并确认消息已被成功处理。
+
+(6) 执行引擎（Execution Engine）
+* 执行最终操作：
+* 执行引擎根据目标链收到的消息更新目标链的状态，完成跨链操作。
+
+2. 关键步骤
+* 源链生成日志事件，发送初始化消息。
+* OP-Supervisor 将消息转发到目标链。
+* 目标链上的 CrossL2Inbox 验证和执行消息。
+* 如果目标链成功接收并执行该消息，Executing Message 被发出。
+
+<img width="771" alt="image" src="https://github.com/user-attachments/assets/4fa2d8d3-9f9a-4d97-8431-2a51d05009dc" />
+
+这张图展示了 跨链消息传递的时序，说明了不同区块链之间如何在多个区块之间进行消息传递和执行。图中的主要概念是 初始化消息（Initiating Messages） 和 执行消息（Executing Messages） 之间的交互。
+
+各个组件与流程解释
+
+1. Chain A 和 Chain B（链 A 和 链 B）
+* Chain A 和 Chain B 是两个不同的链（可以视为 Optimism 上的不同 Rollup 链）。这两条链上的区块包含了 初始化消息（Initiating Messages），这些消息用于在不同链之间传递数据。
+* 每个链中都包含不同的区块，例如：
+* Chain A 上有 Block n，Block n+100 和 Block n+105。
+* Chain B 上有 Block m 和 Block m+3。
+
+2. Chain C（链 C）
+* Chain C 是接收跨链消息并执行的目标链。
+* 在 Chain C 上，所有接收到的初始化消息会被处理，并且在目标链上执行时生成 执行消息（Executing Messages）。
+* Block with executing messages 表示该链中的区块已经成功执行了来自其他链的消息。
+
+3. 过程与时间顺序
+* 初始化消息的传播：
+* Chain A 上的区块（如 Block n、Block n+100、Block n+105）和 Chain B 上的区块（如 Block m 和 Block m+3）会依次生成和发送 初始化消息。
+* 这些初始化消息通过 OP-Supervisor 被转发到 Chain C。
+* 执行消息的生成：
+* Chain C 接收到这些初始化消息后，会执行与这些消息相关的操作。
+* Chain C 上的 Block with executing messages 就是一个标记，表示该区块包含已经执行并处理的跨链消息。
+
+4. 消息同步与时延
+* 不同链的区块会存在时间上的差异。例如，链 A 和链 B 中的区块在不同时间生成和提交消息。Chain C 必须等待接收到这些初始化消息，并在相应的区块中执行这些消息，最终生成执行结果。
+
+总结
+
+这张图清楚地展示了在多个链之间如何通过 初始化消息 和 执行消息 来进行跨链通信。每个链生成消息并通过 OP-Supervisor 进行协调，最终在 Chain C 上执行这些消息。图中的时序和跨链消息传递展示了如何确保不同链之间的数据一致性和操作同步。
+
+
+
+
+
+
+
 
 <!-- Content_END -->

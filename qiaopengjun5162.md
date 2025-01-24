@@ -212,7 +212,7 @@ Sequence 是交易处理的一个重要概念，而 op-node 和 op-geth 是实�
 
 ### 2025.01.24
 
-笔记内容
+op-batcher 会从 op-node syncStatus, 从 op-geth syncData 获取数据，然后进行打包，打包完成之后，会调用 op-node 的 submitBatch 方法，将打包好的数据提交到 DA
 
 ### 2025.01.25
 
