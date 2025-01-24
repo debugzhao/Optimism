@@ -326,5 +326,19 @@ DefiLlama是一个DeFi产品的数据看板，主要提供各个链生态和DeFi
 - 未来 Base 的部分手续费也会流入 OP Collective，继续推动 OP Stack 的发展。
 - 进一步确定以太坊和 Layer2 的地位。Coinbase 明确表示没有发币计划，使用以太坊作为网络汽油费。此外 Coinbase 加入了 OP Stack 的开发，并宣布继续投资和建设 Layer2 基础设施和相关工具。
 
+### 2025.01.24
+#### OP Superchain 补充阅读
+- [构建以太坊的未来：超级链和原生互操作性](https://mirror.xyz/optimismcn.eth/CvGXTALKqVxVZ4UK_dJ0DUFUQe00rUwVYZ-3_IF2rbE)
+- [OP 超级链的崛起](https://mirror.xyz/optimismcn.eth/8G03SGSXi_G_eJgqqCMJGHKwOkIaffXHyt7MbV9mS1Y)
+- [详解 “超级链” 概念：Base 只是 Optimism 的小“野心”](https://www.chaincatcher.com/article/2088168)
+- [解密超级链 —— 如何与 Optimism 集体共享收益](https://mirror.xyz/optimismcn.eth/VpIfmzutbHG3pD-H4uyDiBLIexKSgjV0kTNj79FjcVg)
+
+Optimism Collective 2025 路线图的重点：建立一组进入互操作性第一阶段的链，每月可进行 2.5 亿美元的跨链资产转移。（互操作性也是[Season 7的唯一重点intent](https://mirror.xyz/optimismcn.eth/E1V-QmzXxB5kthlmhoA3u13Unh60mqXwf7Lc50q8_NM)）
+
+- **消息传递协议**：实现安全的跨链消息传递，让数据和交易在超级链内自由流动。
+- **ERC 7802**：简化跨链代币转移的标准代币桥接接口，如 SuperchainERC20。超级链内部跨链交易速度更快、更便宜。
+- **互操作性故障证明**：一个将链的安全性结合在一起的安全层，无需引入全新的假设或可信方。
+- **收入共享**：超级链中的每个 OP 链都采用标准化的收入分享模式，确保所有链公平公正地贡献，没有例外或特殊待遇。根据标准 Rollup 章程，每条链都将部分收入通过网络范围内遵守的费用分成返还给 Optimism 集体。费用分成计算为链收入的 2.5% 或链上利润的 15% 中的较大者，其中链上利润定义为手续费收入减去 L1 gas 费用。
+- **OP Stack模块共享**：只要 OP 链自愿选择进入相同的共享sequencer，所有的 OP 链都可以享受原子式的跨链组合。如果 OP 链可能不想运行自己的sequencer，那么他们可以支付一定的费用来使用他们信任的 Optimism 的共享sequencer。这为 Optimism 开辟了另一种盈利模式，而不仅仅是目前 Optimism 链上的 dapp。
 
 <!-- Content_END -->
