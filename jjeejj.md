@@ -159,4 +159,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. 今天再看 optimistic.etherscan.io 的时候 想到： 有没有一个地方 可以看所有 加入 SuperChain 的链的信息，各种交易，而且可以看到各种链跨链交易的信息的关联关系 【想法，点子】
 
+### 2025.01.24
+
+1. 今天就一句话：**believe in somETHing**
+
 <!-- Content_END -->
