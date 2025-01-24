@@ -1002,5 +1002,84 @@ Onchain（链上部分）：
 4. Layer 1 同步：
 * OP Stack 链通过 L1 Consensus Layer 与 Layer 1（如以太坊）同步，以确保区块数据的最终一致性。
 
+<img width="815" alt="image" src="https://github.com/user-attachments/assets/a9a50855-3007-4e58-ad54-a4ae6f89c44b" />
+
+这张图展示了 跨链消息传递 的过程，具体是如何在 Optimism 的 OP Stack 系统中实现跨链通信的。以下是图中各个组件和流程的详细解释：
+
+1. 流程说明
+
+(1) 应用层（Application）
+* 事务提交：
+* 应用程序发起一笔交易（Transaction），该交易将在源链（Source Chain）上进行处理。
+
+(2) 源链（Source Chain）
+* 生成日志事件（Log Event）：
+* 源链在交易执行时生成 日志事件，这时该事件被标记为 “Initializing Message”（初始化消息），表示消息的开始，准备向目标链传递。
+* 这条消息会通过 OP-Supervisor 发送。
+
+(3) OP-Supervisor
+* OP-Supervisor 协调跨链消息的发送和接收：
+* 它接收到来自源链的日志事件，并将其处理后发送到目标链，确保消息的正确性和完整性。
+* 它负责处理消息的传递，并监控目标链是否成功接收并处理该消息。
+
+(4) 目标链（Destination Chain）
+* 执行消息（Execution Message）：
+* 在目标链上，OP-Supervisor 向目标链的执行引擎发送请求，调用 CrossL2Inbox 来执行或验证传递过来的消息。
+* 目标链检查是否收到来自源链的初始化消息。
+* 如果接收到该消息，目标链将继续执行消息，生成 Executing Message（执行消息）。
+
+(5) CrossL2Inbox
+* CrossL2Inbox 是目标链上的合约，负责执行和验证跨链消息：
+* 它检查是否成功接收到来自源链的消息，并确保消息的有效性。
+* 如果成功执行消息，它会发出 Executing Message，并确认消息已被成功处理。
+
+(6) 执行引擎（Execution Engine）
+* 执行最终操作：
+* 执行引擎根据目标链收到的消息更新目标链的状态，完成跨链操作。
+
+2. 关键步骤
+* 源链生成日志事件，发送初始化消息。
+* OP-Supervisor 将消息转发到目标链。
+* 目标链上的 CrossL2Inbox 验证和执行消息。
+* 如果目标链成功接收并执行该消息，Executing Message 被发出。
+
+<img width="771" alt="image" src="https://github.com/user-attachments/assets/4fa2d8d3-9f9a-4d97-8431-2a51d05009dc" />
+
+这张图展示了 跨链消息传递的时序，说明了不同区块链之间如何在多个区块之间进行消息传递和执行。图中的主要概念是 初始化消息（Initiating Messages） 和 执行消息（Executing Messages） 之间的交互。
+
+各个组件与流程解释
+
+1. Chain A 和 Chain B（链 A 和 链 B）
+* Chain A 和 Chain B 是两个不同的链（可以视为 Optimism 上的不同 Rollup 链）。这两条链上的区块包含了 初始化消息（Initiating Messages），这些消息用于在不同链之间传递数据。
+* 每个链中都包含不同的区块，例如：
+* Chain A 上有 Block n，Block n+100 和 Block n+105。
+* Chain B 上有 Block m 和 Block m+3。
+
+2. Chain C（链 C）
+* Chain C 是接收跨链消息并执行的目标链。
+* 在 Chain C 上，所有接收到的初始化消息会被处理，并且在目标链上执行时生成 执行消息（Executing Messages）。
+* Block with executing messages 表示该链中的区块已经成功执行了来自其他链的消息。
+
+3. 过程与时间顺序
+* 初始化消息的传播：
+* Chain A 上的区块（如 Block n、Block n+100、Block n+105）和 Chain B 上的区块（如 Block m 和 Block m+3）会依次生成和发送 初始化消息。
+* 这些初始化消息通过 OP-Supervisor 被转发到 Chain C。
+* 执行消息的生成：
+* Chain C 接收到这些初始化消息后，会执行与这些消息相关的操作。
+* Chain C 上的 Block with executing messages 就是一个标记，表示该区块包含已经执行并处理的跨链消息。
+
+4. 消息同步与时延
+* 不同链的区块会存在时间上的差异。例如，链 A 和链 B 中的区块在不同时间生成和提交消息。Chain C 必须等待接收到这些初始化消息，并在相应的区块中执行这些消息，最终生成执行结果。
+
+总结
+
+这张图清楚地展示了在多个链之间如何通过 初始化消息 和 执行消息 来进行跨链通信。每个链生成消息并通过 OP-Supervisor 进行协调，最终在 Chain C 上执行这些消息。图中的时序和跨链消息传递展示了如何确保不同链之间的数据一致性和操作同步。
+
+
+
+
+
+
+
 
 <!-- Content_END -->
