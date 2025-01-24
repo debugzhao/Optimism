@@ -350,7 +350,13 @@ Retro Funding 更新了 S7 的目的细节，以下是要点总结，S7 将会�
 
 ### 2025.01.24
 
+今天看了一下 Superchain 黑马 INK，Ink 是 Kraken 推出的 Layer 2 解决方案，Superchain 是 Stage 评级就像是一种准入认证，在 Coinbase 之后又深度连接了 Kraken 从 RWA 到去中心化的世界里（区块链上）。
 
+关于互操作性的研究和 RPGF 如何激励互操作性的研究可以从 Ink 和 Base 的实际用例展开思考：
+
+Ink 的互操作性实践：Fault Proofs 功能，允许用户独立审查和质疑跨链交易，增强了互操作性的安全性和透明性。
+
+明天详细研究下。
 
 ### 2025.01.25
 
