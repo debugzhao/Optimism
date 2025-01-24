@@ -383,4 +383,27 @@ OP Stack 是支持 Optimism 的一组软件——目前以 OP 主网背后的软
 OP Stack 可以被认为是软件组件，它们要么帮助定义 Optimism 生态系统的特定层，要么在现有层中充当模块的角色。 尽管 OP Stack 目前的核心是运行 L2 区块链的基础设施，但 OP Stack 理论上扩展到底层区块链之上的各层，包括区块浏览器、消息传递机制、治理系统等工具。  
 Optimism Bedrock 是 OP Stack 的当前迭代。Bedrock 版本提供了启动生产质量 Optimistic Rollup 区块链的工具。此时，OP Stack 不同层的 API 仍然与堆栈的 Rollup 配置紧密耦合。  
 
+### 2025.01.23
+#### Layers  
+**Data availability  数据可用性**  
+数据可用性层定义了基于 OP Stack 的链的原始输入的发布位置。OP Stack 链可以使用单个 Data Availability 模块来获取其输入数据。由于 OP 堆栈链源自数据可用性层，因此所使用的数据可用性模块对系统的安全模型有重大影响。例如，如果无法再从 Data Availability Layer 检索到某条数据，则可能无法同步链。  
+Ethereum DA
+以太坊 DA 是目前 OP 堆栈中使用最广泛的数据可用性模块。使用 Ethereum DA 模块时，源数据可以从 Ethereum 区块链上可访问的任何信息中派生。这包括 Ethereum calldata、events 和 4844 数据 blob。  
+**Sequencing**  
+排序层确定如何收集 OP 堆栈链上的用户交易并将其发布到正在使用的数据可用性层模块。在 OP Stack 的默认 Rollup 配置中，Sequencing 通常由单个专用的 Sequencer 处理。Derivation Layer 中定义的规则通常会限制 Sequencer 将事务保留超过特定时间的能力。未来，Sequencing 将是模块化的，以便链可以轻松选择和更改控制其当前 Sequencer 的机制。  
+Single sequencer  单定序器  
+OP Stack 的默认 Sequencer 模块是 Single Sequencer 模块，其中专用角色能够充当 Sequencer。Single Sequencer 模块允许管理机制来确定在任何给定时间谁可以充当 Sequencer。  
+Multiple sequencer 多定序器  
+对 Single Sequencer 模块的一个简单修改是 Multiple Sequencer 模块，其中 Sequencer 在任何给定时间都是从一组预定义的可能角色中选择的。基于单个 OP Stack 的链将能够确定定义可能的 Sequencer 集的确切机制以及从集合中选择 Sequencer 的机制。  
+**Derivation**  
+派生层定义了如何处理数据可用性层中的原始数据，以形成通过标准 Ethereum Engine API 发送到执行层的已处理输入。Derivation Layer 还可以使用 Execution Layer 定义的当前系统状态来通知原始 input 数据的解析。可以修改 Derivation Layer 以从许多不同的数据源派生 Engine API 输入。派生层通常与数据可用性层密切相关，因为它必须了解如何解析任何原始输入数据。  
+Rollup   
+Rollup 模块从 Ethereum 区块数据、Sequencer 交易批次、Deposited 交易事件等中派生引擎 API 输入。  
+Indexer   
+索引器模块是一个派生层模块，当交易发送到数据可用性层模块（如 Ethereum DA）上的特定智能合约、发出事件或修改存储时，它将派生引擎 API 输入。  
+**Execution  执行**  
+执行层定义了 OP Stack 系统中的状态结构，并定义了改变此状态的状态转换函数。当通过 Engine API 从派生层接收输入时，将触发状态转换。执行层抽象为 EVM 修改或完全不同的底层 VM 打开了大门。  
+EVM  
+EVM 是一个执行层模块，使用与 Ethereum 虚拟机相同的状态表示和状态转换功能。OP 堆栈的以太坊 Rollup 配置中的 EVM 模块是 EVM 的略微修改版本，它增加了对在以太坊上发起的 L2 交易的支持，并为每笔交易增加了额外的 L1 数据费用，以考虑将交易发布到以太坊的成本。  
+
 <!-- Content_END -->
