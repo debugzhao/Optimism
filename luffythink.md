@@ -244,6 +244,27 @@ DefiLlama 的主要功能包括：
 
 目前只看到 OP Mainnet 处于 Stage1 阶段，大多数还是 Stage 0 阶段。
 
+### 2025.01.24
+
+学习主题： [Superchain 指标](https://s.foresightnews.pro/article/detail/70608)
+
+为了将这一探索建立在看得见的数据的基础上指向 Superchain 主导地位的关键指标：
+
+- 生态系统增长率：Superchain 的开发活动同比增长了 200%。
+- 互操作性里程碑：Superchain 内部跨链交易的确认时间减少了 30%，大大增强了用户体验。
+- 经济对齐：收入共享模式已经通过参与链为 Optimism 网络注入了超过 5000 万美元，推动了进一步的发展。
+- 安全性增强：**模块化 OP Stack 支持快速部署安全升级，与孤立的 L2 解决方案相比**，漏洞减少 40%。
+- 用户采用：Superchain 网络在累计用户维度仅在上季度就实现了 100 万用户的增长。
+
+Op-stack 主要的rollup由两个服务来承担：
+
+- op-batcher：负责将每隔一段时间读取sequencer上的交易内容，rollup到链上DA
+- op-proposer：负责将交易状态rollup到合约。
+
+![image.png](https://img.learnblockchain.cn/attachments/2024/06/15fp0ZQ6665ddad8ca47c.png)
+
+
+
 
 
 
