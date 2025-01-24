@@ -205,7 +205,10 @@ Sequence 是交易处理的一个重要概念，而 op-node 和 op-geth 是实�
 
 ### 2025.01.23
 
-笔记内容
+链下模块协同找到不一样 OpCode
+进行要 rollup 的 start 和 end 的组合，allUnsafeBlocks = &inclusiveBlockRange{newSyncStatus.SafeL2.Number + 1, newSyncStatus.UnsafeL2.Number}
+若历史的块都处理完成了，直接返回   allUnsafeBlocks 即可
+判断上一次没有 rollup 区块，这种情况需要清理 state,  处理 channel 和队列的 safe block 处理
 
 ### 2025.01.24
 

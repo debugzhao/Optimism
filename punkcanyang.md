@@ -548,4 +548,30 @@ Superchain 是Optimism接下来的大计划，也可以说是Optimism在L2逐渐
 这个设计也促进了未来链游的可能性，例如Redstone上采用的Gas费用更低，更好的index效能，但又同享跨链操作跟安全性。
 
 
+### 2025.01.24
+
+如何成为超级链？
+
+**技术要求**
+
+- 运行 Optimism Bedrock 架构：Bedrock 是 Optimism 的核心技术架构，支持模块化、可扩展的 L2 解决方案，实现 Rollup 功能。
+- 使用 Optimism 的标准桥接协议与以太坊（L1）通信，确保资产和数据能够在 L1 和 L2 之间无缝交互。
+- 采用 Superchain 的智能合约标准，例如 SuperchainConfig 和 ProtocolVersions，确保链上合约与 Superchain 的共享库兼容。
+- 使用 Superchain 提供的共享资源，例如 Sequencer（交易排序器）和跨链通信协议
+- 以上部分用 op-deployer 可以很容易达成
+
+**协议要求**
+- Superchain 要求所有成员链运行在同一协议版本下，以确保跨链操作的兼容性
+- 支持 Superchain 的跨链通信机制，通常基于 Optimism 的标准化 Rollup 架构。
+- 遵循 Superchain 的治理框架，包括更新链上参数和协议时的协调机制。
+
+**治理要求**
+
+- 提供明确的治理角色
+- 这些角色可以由项目团队自己担任，也可以由社区指定。
+- 加入 Superchain 的治理流程，例如通过 Optimism Collective 参与投票和提案。
+- 确保链的运营模式符合去中心化和透明化的原则。
+
+技术的部分在前几天有写过，比较复杂的反倒是紧密贴紧Superchain 的治理框架跟协议更新，但是通过与 Superchain 的其他成员合作，可以快速融入以太坊扩展生态系统，并从中受益。
+
 <!-- Content_END -->
