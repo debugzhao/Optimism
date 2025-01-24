@@ -433,5 +433,18 @@ Superchain 桥是治理所有 OP Chain 的 L1 桥合约。这个桥可以被 Opt
 
 模块化序列化还使开发者能够无许可地实验不同的序列化模型。他们可以设想实施各种序列化协议，如轮询序列化、序列器共识协议、PGA 排序或先进先出排序等。随着时间的推移，我们可以期待竞争序列化协议之间的竞争将产生用户友好的序列化标准。
 
+### 2025.01.24
+
+今天学习的内容是OP stack， OP Stack 是一个软件集合，用于驱动 Optimism。目前的形式是在 OP 主网背后运行的软件，并最终将演变成 Optimism 超级链及其治理形式。
+
+随着超级链概念的出现，对于 Optimism 来说，支持在提出的超级链生态系统内安全创建新的互操作性链变得越来越重要。因此，OP Stack 主要专注于创建共享、高质量且完全开源的新 L2 区块链系统。通过协调共享标准，Optimism 集体可以避免在孤立环境中反复重建相同的软件。
+
+虽然当今的 OP Stack 显著简化了创建 L2 区块链的过程，但需要注意的是，这并不从根本上定义什么是 OP Stack。OP Stack 是所有驱动 Optimism 的软件。随着 Optimism 的发展，OP Stack 也将不断发展。
+
+Optimism Bedrock是OP堆栈的当前版本。Bedrock发布提供了启动生产质量乐观卷积区块链的工具。目前，OP堆栈的不同层的API仍然紧密耦合于该堆栈的Rollup配置。
+
+当今的OP堆栈是为了支持Optimism超级链而构建的，这是一个提议的L2网络，共享安全、通信层和共同开发堆栈（即OP堆栈本身）。Bedrock版的OP堆栈使启动与超级链兼容的L2变得容易。如果您想启动Superchain准备就绪的L2，请查看基于Bedrock版OP堆栈运行链的指南https://docs.optimism.io/builders/chain-operators/hacks/overview
+
+明天的内容将围绕指南深入了解OP stack有哪些既有的具体内容，哪些既带发展
 
 <!-- Content_END -->
