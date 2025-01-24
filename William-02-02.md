@@ -518,6 +518,28 @@ L2增多导致争抢Blob空间
 > - introducing a modular fault proof design that can easily integrate additional proving mechanisms
 >   引入模块化防错设计，可轻松集成额外的验证机制
 
+### 2025.01.23
+
+LayerZero
+
+LayerZero is a technology that enables applications to move data across blockchains, uniquely supporting censorship-resistant messages and permissionless development through immutable smart contracts
+
+- LayerZero 为开发者提供了一个统一的框架来构建跨链应用，消除了对中介的需求，并减少了与区块链交互相关的复杂性。
+
+![image-20250124232734999](./.William-02-02.assets/image-20250124232734999.png)
+
+![image-20250124233237900](./.William-02-02.assets/image-20250124233237900.png)
+
+和polkadot什么区别呢？
+
+> layerzero是协议，翻译链上信息为不同链上下信息，实现跨链沟通
+>
+> polka是中心连配合上插槽接入不同链
+
+
+
+### 2025.01.24
+
 
 
 
