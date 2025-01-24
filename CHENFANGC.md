@@ -334,6 +334,48 @@ Rainbow Wallet 是一款功能丰富且用户友好的以太坊钱包，适合�
 
 ### 2025.01.23
 
-回顾记录
+查看项目[Sky Strife](https://www.superchain.eco/ecosystem-projects/sky-strife)
+
+Sky Strife 是由 Lattice 团队开发的一款全链实时战略游戏（RTS），旨在为玩家提供独特且沉浸式的多人在线战斗竞技场体验，强调战略玩法和角色定制。
+
+**游戏概述**
+
+Sky Strife 完全运行在区块链上，利用 MUD 引擎构建，确保游戏逻辑和数据的透明性和不可篡改性。 ([Medium](https://medium.com/%40awchangelog/sky-strife%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5-cn-c2e9fb7e247b?utm_source=chatgpt.com))游戏的核心资源是名为 Orbs 的 ERC-20 代币，玩家通过消耗 Orbs 创建比赛，并根据比赛结果获得相应的奖励。
+
+**主要功能**
+
+1. **全链架构**：Sky Strife 的所有游戏逻辑和数据都存储在区块链上，确保了游戏的透明性和公平性。这种全链设计使得游戏的每一个动作和事件都可被验证，增强了玩家对游戏的信任。 ([Medium](https://medium.com/%40awchangelog/sky-strife%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5-cn-c2e9fb7e247b?utm_source=chatgpt.com))
+
+2. **实时战略玩法**：不同于大多数全链游戏采用的回合制机制，Sky Strife 提供了实时战略体验，玩家需要在瞬息万变的战场上快速做出决策，增加了游戏的挑战性和趣味性。 ([ChainCatcher](https://www.chaincatcher.com/article/2126296?utm_source=chatgpt.com))
+
+3. **角色定制**：玩家可以根据自己的策略和喜好，自定义角色的技能和装备，打造独一无二的游戏角色，增强了游戏的深度和可玩性。
+
+**代币经济学**
+
+Sky Strife 的核心资源是 Orbs，总供应量固定为 1 亿枚，全部铸造并存储在名为 Sky Pool 的智能合约中。玩家每创建一场比赛需要消耗 100 枚 Orbs，比赛结束后，系统根据玩家的排名和最近的比赛活动，从 Sky Pool 中向获胜者发放奖励。这种设计确保了 Orbs 的稀缺性和价值稳定性。
+
+**季票（Season Pass）**
+
+Sky Strife 引入了季票机制，每个赛季开始前，玩家可以购买季票以获得特定的游戏特权。例如，在 Season 0 赛季中，季票售价为 0.03 ETH，持有者可以创建私人游戏、使用专属英雄和地图，以及参与专属对战。需要注意的是，每个季票仅在当前赛季有效，无法跨赛季使用。 ([Medium](https://medium.com/%40funblocksfun/sky-strife-season-0%E8%B5%9B%E5%AD%A3%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9%E9%80%9F%E8%A7%88-33c63e6c2da8?utm_source=chatgpt.com))
+
+**治理结构**
+
+目前，Sky Strife 尚未建立正式的治理流程。游戏的开发和管理由 Lattice 团队负责，团队资金来源于 0xPARC 基金会和 Optimism 基金会等组织的资助。
+
+**市场表现**
+
+Sky Strife 于 2024 年 5 月上线 Redstone 主网。截至目前，游戏已产生超过 1000 场对战，注册玩家数达到 798 人。这种活跃度显示了玩家对全链实时战略游戏的浓厚兴趣。 ([Bitget](https://www.bitgetapps.com/zh-CN/news/detail/12560603989352?utm_source=chatgpt.com))
+
+**用户体验与风险提示**
+
+作为一款全链游戏，Sky Strife 提供了透明、公平且不可篡改的游戏体验。然而，玩家在参与游戏时应注意区块链交易可能带来的延迟和交易费用。此外，游戏内的代币经济学可能涉及复杂的金融机制，建议玩家在参与前充分了解相关规则，理性参与，避免过度投入。
+
+**总结**
+
+Sky Strife 通过将实时战略玩法与区块链技术相结合，创造了一个独特且引人入胜的游戏生态系统。其全链架构确保了游戏的透明性和公平性，丰富的玩法和角色定制选项为玩家提供了多样化的体验。然而，玩家在参与时应保持谨慎，充分了解游戏机制和潜在风险，以获得最佳的游戏体验。
+
+### 2025.01.24
+
+听分享会议，主题：如何玩转欺诈证明
 
 <!-- Content_END -->
