@@ -961,4 +961,17 @@ The OP Stack is all of the software that powers Optimism.
 
 TODO https://docs.optimism.io/stack/smart-contracts 可以深入下面的话题，把 OP Stack 的工作细节看看，然后进入部署的节点服务器，亲自观察一下具体的数据和代码
 
+# 2025.1.24
+
+## [Smart Contract](https://docs.optimism.io/stack/smart-contracts)
+
+TODO 升级是怎么个流程和操作的？
+
+- L1 contracts
+   - 智能合约的版本和管理方案 https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts-bedrock/meta/VERSIONING.md
+- Layer 2 Contracts (Predeploys)
+   - 相当于提前烧录到 EVM 的固定地址的合约，用于简化实现和使用
+   - 例如 WETH9 0x4200000000000000000000000000000000000006 就是 Wrapped Ether 的标准实现
+   - EAS 居然也有 predeploy 在 0x4200000000000000000000000000000000000021 
+
 <!-- Content_END -->
