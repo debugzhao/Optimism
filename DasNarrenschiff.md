@@ -360,6 +360,9 @@ Ink 的互操作性实践：Fault Proofs 功能，允许用户独立审查和质
 
 ### 2025.01.25
 
+https://www.chaincatcher.com/article/2088168
+
+https://mirror.xyz/optimismcn.eth/CvGXTALKqVxVZ4UK_dJ0DUFUQe00rUwVYZ-3_IF2rbE
 
 
 ### 2025.01.26
@@ -368,8 +371,6 @@ Ink 的互操作性实践：Fault Proofs 功能，允许用户独立审查和质
 
 
 
-
-### 2025.02.01
 
 
 <!-- Content_END -->
