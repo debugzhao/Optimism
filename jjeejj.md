@@ -163,4 +163,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 1. 今天就一句话：**believe in somETHing**
 
+### 2025.01.25
+
+1. 不知道后面该学习啥了，X 上关注一波 Web3 相关的账号，后面多逛逛
+
 <!-- Content_END -->
