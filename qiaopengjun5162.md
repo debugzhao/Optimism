@@ -216,7 +216,12 @@ op-batcher 会从 op-node syncStatus, 从 op-geth syncData 获取数据，然后
 
 ### 2025.01.25
 
-笔记内容
+把数据提交到 EIP4844
+safe
+unsafe
+finalize
+数据摘要
+提交数据承诺 欺诈证明 7天
 
 ### 2025.01.26
 
