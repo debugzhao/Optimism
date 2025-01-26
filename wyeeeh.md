@@ -371,5 +371,27 @@ OP Stack 有多个逻辑层级，各有其作用。
 - OP Stack 的设计让代码分叉更容易，开发人员能轻松抽象区块链各部分，在一个链的不同执行、共识、结算和数据可用性层中切换模块，就像切换 API 一样。
 - 举个例子，比如如果想把 Optimistic rollup 可换成 ZK rollup，那么把欺诈证明模块换成结算层的有效性证明模块就行；数据可用性层也能把以太坊换成 Celestia。
 
+### 2025.01.26
+#### Futarchy治理模型
+参考文章
+- [Futarchy Meets Governance: Optimism and Uniswap Foundation](https://uniswapfoundation.mirror.xyz/iUps06RQxXqFZ5xVeta1Zd-TL0mtlw3od2uHUh4T8qA)
+- [Futarchy: Redefining DAO Governance](https://medium.com/@netrovert/futarchy-redefining-dao-governance-5f554d523dee)
+
+##### 什么是Futarchy？
+- Futarchy是一种新型政府管理模式理论，即一种由预测市场进行决策的管理模式。delegates提出可能对组织产生积极或消极影响的措施，然后社区的成员市场参与者将使用预测市场来押注测哪些提案对组织具有最积极的影响。
+- 举例：针对“改善学校”的措施议案，如果民主代表delegate选择通过了“取消考试”这个提案，对应会创造两个预测市场：该议案改善学校的结果是“1. 成功”或“2. 失败”。那么，投票小组就会深入思考，“删除考试”是否是改善学校的最佳方式。认为“是”的人，会在“成功”市场中购买和交易token，认为“不是”的人，则会在“失败”市场上购买token。
+
+##### 为什么治理需要Futarchy?
+- 在治理投票中，大多数人倾向于只投票，而不会对投票的结果或后果进行太多思考。然而，如果这个结果在Futarchy系统中会对投票者的重要拥有物（比如金钱）造成威胁，他们就会被动地进行研究，并更深入地思考行动的后果。
+
+##### Uniswap Foundation和Optimism Foundation宣布进行Futarchy治理实验
+- Uniswap Foundation和Optimism Foundation与Butter合作，进行Futarchy治理实验。Butter协议能让voter对资助项目的结果进行投票，通过预言机验证资助项目的里程碑，最终将futarchy系统结果集成到国库管理系统。Unichain是实施该协议的基础设施。
+- Futarchy体现了Superchain生态的原则：可靠的中立性，无许可和权力下放。治理的未来是可衡量的、可扩展的，并且向所有人开放。
+- 参与方案
+   - 对于Optimism Governance：Futarchy contest，预测者可以用游戏币投票，准确预测赠款获得者的影响的预测者可以获得 OP 奖励，预测者将最终决定哪些团队获得赠款。
+   - 对于 Uniswap Governance：有条件融资市场 (Conditional Funding Markets, CFM)，预测者可以存入 USDC 并通过预测结果获得奖励，最终决定哪些团队如何获得资金来推动 Unichain 上借贷协议的增长。
+
+> P.S. 速度报名了实验，很有意思的治理实验，就像有deposit要求的Intensive CoLearning一样，可以逼着自己去读proposal和投票！
+
 
 <!-- Content_END -->
