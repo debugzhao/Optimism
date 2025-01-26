@@ -574,4 +574,23 @@ Superchain 是Optimism接下来的大计划，也可以说是Optimism在L2逐渐
 
 技术的部分在前几天有写过，比较复杂的反倒是紧密贴紧Superchain 的治理框架跟协议更新，但是通过与 Superchain 的其他成员合作，可以快速融入以太坊扩展生态系统，并从中受益。
 
+
+### 2025.01.25
+
+# Supersim
+
+架设好一个Shuperchain，其中一个重点工作就是他的跨链交互
+
+OP提供了一个叫Supersim的工具，用来测试跨链交互是否正常
+
+SuperSim 可以模拟 Superchain 网络。
+
+Superchain 是由多个基于 OP Stack 构建的 Layer 2 链和一个 Layer 1 链组成的网络。SuperSim 的主要优势在于其简洁性：开发者只需通过一条命令即可运行多个本地节点，从而简化了这些链之间消息传递的协调工作。
+
+不过这次我没有时间实操 ，详细的安装手册在 https://supersim.pages.dev/getting-started/installation
+
+按照他的说法，他有一个工具可以将合约同时布署到多个L2上,可以更有效率的测试这些合约在不同链上的交互。
+
+而且他不需要实际的网络，就可以建置模拟环境
+
 <!-- Content_END -->

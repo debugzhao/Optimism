@@ -518,7 +518,43 @@ L2增多导致争抢Blob空间
 > - introducing a modular fault proof design that can easily integrate additional proving mechanisms
 >   引入模块化防错设计，可轻松集成额外的验证机制
 
+### 2025.01.23
 
+LayerZero
+
+LayerZero is a technology that enables applications to move data across blockchains, uniquely supporting censorship-resistant messages and permissionless development through immutable smart contracts
+
+- LayerZero 为开发者提供了一个统一的框架来构建跨链应用，消除了对中介的需求，并减少了与区块链交互相关的复杂性。
+
+![image-20250124232734999](./.William-02-02.assets/image-20250124232734999.png)
+
+![image-20250124233237900](./.William-02-02.assets/image-20250124233237900.png)
+
+和polkadot什么区别呢？
+
+> layerzero是协议，翻译链上信息为不同链上下信息，实现跨链沟通
+>
+> polka是中心连配合上插槽接入不同链
+
+
+
+### 2025.01.24
+
+> LaProp offers a blockchain-based platform that allows individuals to invest in real estate fractions starting from $10. Investors earn monthly rental income and potential property appreciation without managing the properties themselves. The platform provides a simple process to invest and earn passive income. LaProp currently has no formal governance process, public funding records, or a token.
+> LaProp 提供了一个基于区块链的平台，允许个人以低至 10 美元的投资额参与房地产份额投资。投资者无需亲自管理物业，即可获得月租金收入及潜在的房产增值收益。该平台简化了投资流程，助力用户赚取被动收入。目前，LaProp 尚未建立正式的治理流程、公开的融资记录或发行代币。
+
+### 2025.01.25
+
+> Layerswap：https://layerswap.io/  主要用于简化跨链和跨平台资产交易（cex->chain）
+>
+> - Layerswap
+>   - **跨链转移**：支持多种区块链之间的资产转移，解决了不同区块链之间资产转移的复杂性和高成本问题。
+>   - **与中心化交易所的直接交互**：允许用户直接从CEX（如Coinbase、Binance等）将资产转移到区块链网络，或者从区块链网络将资产转移到CEX。
+>   - **支持多种资产和网络**：用户可以转移多种加密货币和代币，而不仅仅是主流资产。
+> - Uniswap
+>   - **交易功能**：用户可以在Uniswap上交易各种加密货币和代币，尤其是那些在中心化交易所可能无法交易的长尾资产。
+>   - **流动性提供**：用户可以将自己的资产存入流动性池，为交易对提供流动性，并获得交易费用的分成。
+>   - **去中心化治理**：通过UNI代币，用户可以参与平台的治理和决策。
 
 
 
