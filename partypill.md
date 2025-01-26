@@ -581,5 +581,11 @@ Superchain 的目标是将 OP 主网（OP Mainnet）和其他链合并为一个�
 
     Optimism 社区：https://community.optimism.io/
 
+### 2025.01.26
+
+https://www.chaincatcher.com/article/2088168
+
+https://mirror.xyz/optimismcn.eth/CvGXTALKqVxVZ4UK_dJ0DUFUQe00rUwVYZ-3_IF2rbE
+
 ### 2024.07.12
 <!-- Content_END -->
