@@ -808,6 +808,42 @@ SuperchainERC20的推出基于 ERC-7802 代币标准，旨在改变 Superchain �
 
 今天睡醒再继续补卡学习
 
+‍
+# 2025.01.25
 
 
+# 2025.01.26
+今天是最后一天了，系统的学习一下soneium 链，也就是最近刚出的 Layer2
+### 什么是 Soneium
+Soneium 是 Sony 公司和 Startline 共同开发的基于 OP Stack 开发的 layer2
+Soneium 是一种多功能、通用的区块链，可满足所有垂直行业的各种需求并为全球用户提供支持。
+
+我们的目标是为开发者、创作者和社区提供强大、开发者友好的环境，并以可扩展技术为后盾。Soneium 将把区块链技术 (Web3) 与日常互联网服务 (Web2) 连接起来。这种连接将使用户使用起来更加方便，帮助更多人开始使用区块链。
+
+借助 Soneium，用户可以期待突破区块链技术界限的创新应用程序、现有第 2 层环境中的竞争功能以及娱乐、游戏、金融和其他无限可能性的独特融合。
+
+索尼链目前推出的应用
+目前索尼链最大应用来自于 SNFT Inc. 这是一个粉丝营销平台，主要通过销售一些粉丝经济化的 NFT
+![image](https://github.com/user-attachments/assets/6e8041e3-64a9-4f99-af4f-bae30764b9ae)
+
+
+
+索尼链目前的出块情况
+![image](https://github.com/user-attachments/assets/1192b782-833d-44e2-bce5-b51963ff505a)
+
+
+索尼链目前的生态情况
+
+
+整体来说生态比较薄弱，很多项目都还在孵化阶段，最大的项目为借贷和 Dex，总TVL为 20 KW 刀
+![image](https://github.com/user-attachments/assets/93e130f6-3fd2-4566-a3f1-197d9f4364e6)
+
+
+![image](https://github.com/user-attachments/assets/9fdd8331-44ca-4d92-a636-77b000fb4d72)
+
+
+
+### 为什么要选择 Soneium
+我想 OP 选择 soneium 的原因目的是，Sony 公司本身具有的粉丝经济以及在游戏，动画领域的非常深厚的用户基础，基于粉丝经济的市场规模是非常巨大的，整体来说生态比较薄弱，很多项目都还在孵化阶段，最大的项目为借贷和 Dex，总TVL 
+我其实在思考 Optimism 选择超级链的布局，他选择的超级链都是有一定范围的，比如 Mint 主要面向于 NFT 开发者，Sony 链针对的用户群体是传统的粉丝经济，Base 主打消费链，每一个链之间其实还是有很多不同点，有比较侧重的方向，其实后面可以系统的分析一下不同的 superchain 的最大化特点
 <!-- Content_END -->
