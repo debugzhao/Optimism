@@ -974,4 +974,13 @@ TODO 升级是怎么个流程和操作的？
    - 例如 WETH9 0x4200000000000000000000000000000000000006 就是 Wrapped Ether 的标准实现
    - EAS 居然也有 predeploy 在 0x4200000000000000000000000000000000000021 
 
+# 2025.1.26
+
+## [Rollup](https://docs.optimism.io/stack/rollup/overview)
+
+- L1 是最大的 OP mainnet tx costs，然后目前是写入一个压缩后的 format 来实现。TODO 测试还原的算法？
+- derivation pipeline 是负责处理和验证 optimism 交易的组件。通过从 sequenced transactions 和 batches 中派生成一致的 state 来确保区块链的有效性和安全性
+- 当 Sequencer 中断的时候，可以通过将 L2 tx 直接发到 OptimismPortal 合约来实现，排序器不应阻止用户向 L2 提交交易，可以绕过，直接将 L2 的交易发送上去，并且包含在 L2 链上 TODO 在 L1 上测试一下如何发送一个，然后看看 L2 能否收到。通过在 OptimismPortal 合约上调用 depositTransaction 函数，可以在 L1 上触发 L2 交易。
+
+
 <!-- Content_END -->
