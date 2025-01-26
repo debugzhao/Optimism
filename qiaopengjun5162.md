@@ -225,6 +225,9 @@ finalize
 
 ### 2025.01.26
 
-笔记内容
+op-batcher 会从 op-node syncStatus, 从 op-geth syncData 获取数据，然后进行打包，打包完成之后，会调用 op-node 的 submitBatch 方法，将打包好的数据提交到 DA
+Rollup Services 运行在 L2 上，负责处理 L2 上的交易和状态更新。它与 L1 的交互通过 RPC 协议进行，并通过引擎 API 与 L1 的引擎节点进行通信。Rollup Services 主要负责将交易数据提交到 L1 的地址，并处理与 L2 相关的所有事务。
+充值交易会调用到 depositTransaction; depositTransaction 会抛出 TransactionDeposited 事件，事件里面携带信息如下 emit TransactionDeposited(from, _to, DEPOSIT_VERSION, opaqueData); op-node 监听到该合约事件之后，会在二层去执行充值交易
+提现交易会调用到 withdrawTransaction; withdrawTransaction 会抛出 WithdrawalInitiated 事件，事件里面携带信息如下 emit WithdrawalInitiated(from, _to,_amount); op-node 监听到该合约事件之后，会在二层去执行提现交易
 
 <!-- Content_END -->
