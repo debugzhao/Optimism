@@ -587,5 +587,8 @@ https://www.chaincatcher.com/article/2088168
 
 https://mirror.xyz/optimismcn.eth/CvGXTALKqVxVZ4UK_dJ0DUFUQe00rUwVYZ-3_IF2rbE
 
+### 2025.01.27
+今天赶路回家，忙了一天，请假一次。
+
 ### 2024.07.12
 <!-- Content_END -->
