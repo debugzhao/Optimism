@@ -467,4 +467,41 @@ OP实现安全性需要一个security council 去完成合约升级，暂停桥�
 简而言之，“L1软分叉升级恢复”机制允许L1在不受到其他权限限制的情况下，通过软分叉的方式进行桥接升级。此外，该机制还提供了一种保障措施，即任何人在挑战期内都可以提交挑战以取消升级并领取保证金。这种机制为解决冻结桥梁问题提供了一种创新的解决方案。
 
 明天学习的是OP的Alt-DA Protocol，cross chain Multi-proof security
+
+### 2025.01.26
+
+### 2025.01.27
+
+今天学习的内容是OP的Alt-DA Protocol，cross chain Multi-proof security
+针对六个痛点，分别有六个不同的proposed solutions
+1.Withdrawal claims rely on a trusted set of chain attestors.
+2.Cross-chain transactions are slow because they require waiting a challenge period.
+3.Cross-chain transactions are asynchronous, breaking the ability to perform atomic cross-chain transactions (like flash loans).
+4.Posting transactions to the Superchain is not-scalable because the transaction data must be submitted to L1 which has limited capacity.
+5.There are no easy-to-use frameworks for building scalable apps which utilize many OP Chains.
+6.There is no easy-to-use wallet for managing tokens and apps across many OP Chains.
+
+1.多证明安全机制（Multi-proof security）
+痛点：提款声明依赖于一组可信的链验证者。
+解决方案：通过引入无需许可的证明系统（如Cannon），可以完全在链上解决争议，取代对可信验证者的依赖。进一步，通过引入多重证明系统提供冗余以确保系统的安全性。
+
+2.L2到L2消息传递低延迟
+痛点：跨链交易缓慢，因为需要等待挑战期。
+解决方案：使用有效性证明而非错误证明，实现即时跨链转账。虽然零知识证明(ZKP)是实现这一目标的方法之一，但目前成本高且易出错。短期内可以通过OP Stack的模块化证明系统来实现低延迟和高低安全性之间的权衡。
+
+3.同步跨链交易
+痛点：跨链交易异步执行，无法进行原子性跨链交易（如闪电贷）。
+解决方案：通过共享排序协议实现同步跨链消息传递，使得跨链交易能够原子化执行。这允许开发者构建复杂交易，如跨链闪电贷，并可能创建EVM抽象，使智能合约或存储槽存在于不同链上。
+替代数据可用性层——Alt-DA协议
+
+4.痛点：将交易提交至Superchain不具扩展性，因为必须提交到容量有限的L1。
+解决方案：使用Alt-DA协议，让其他DA提供商补充L1 DA，增加可访问的数据量。Alt-DA通过仅下载感兴趣的用户所需的数据，实现了比L1更高的可扩展性，尽管其安全性模型不如L1强。
+多链应用框架
+
+5.痛点：缺乏易于使用的框架来构建利用多个OP Chains的可扩展应用程序。
+解决方案：开发工具以改善部署到Superchain的体验，如内容可寻址智能合约和跨链合约状态管理标准，帮助开发者在多链上分片他们的应用，并在钱包中统一显示用户的跨链资产。
+
+6.支持多链的钱包
+痛点：没有易于使用的钱包来管理分布于多个OP Chains上的ETH、代币和应用程序。
+解决方案：开发工具和标准，以便钱包能有效地管理分布在多个OP Chains上的资产，为用户提供无缝体验，好像所有资产都在同一个链上一样。
 <!-- Content_END -->
