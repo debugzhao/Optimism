@@ -51,11 +51,11 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {Punkcan}
+# {你的名字}
 
-1. Optimism 治理新手...
-2. 你认为你会完成本次残酷学习吗？
-	- 应该是可以的
+1. yiwen4
+
+2. 你认为你会完成本次残酷学习吗？也许
 
 ## Notes
 
@@ -65,11 +65,6 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 笔记内容
 
-### 2025.01.07
-
-
-### 2025.01.08
-
-
+### 2024.07.12
 
 <!-- Content_END -->
